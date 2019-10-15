@@ -1,0 +1,252 @@
+/*!
+ * Start Bootstrap - Scrolling Nav (https://startbootstrap.com/template-overviews/scrolling-nav)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/master/LICENSE)
+ */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+/*@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css);*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.container p {
+  font-size: 1.1em;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+}
+
+.navbar-brand b {
+  font-weight: 600;
+}
+
+.card {
+  transition: all .2s ease-in-out;
+}
+
+.card:hover, .card:focus {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px gray;
+}
+
+.invisible-link {
+  text-decoration: none;
+  cursor: inherit;
+  color: inherit;
+}
+
+.invisible-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.stats {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.stats .fa {
+  color: white;
+  font-size: 60px;
+}
+
+#statistics {
+  background-color: #FEC224;
+}
+
+.testimonials-header {
+  font-size: 18pt;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 6px;
+}
+
+#reviews {
+  color: #5d564f;
+  background: #f7f7f7;
+}
+
+#reviews h2 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.review-body {
+  margin: 0 25px;
+}
+
+.fa-quote-left {
+  padding-right: 10px;
+}
+
+.fa-quote-right {
+  padding-left: 10px;
+}
+
+.stars {
+  color: #BB8B41;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.socials .fa {
+  font-size: 30px;
+  transition: all .2s ease-in-out;
+}
+
+.socials .fa:hover {
+  transform: scale(1.2);
+}
+
+.avatar {
+  box-shadow: 0 10px 20px gray;
+}
+
+.footer i {
+  color: white;
+  font-size: 2em;
+  opacity: 0.5;
+}
+
+.footer i:hover{
+  opacity: 1;
+}
+
+.landing {
+  height: 100vh;
+  min-height: 500px;
+  /*
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  */
+}
+
+.landing video {
+  position: absolute;
+  z-index:-98;
+  height:100%;
+  width: 100%;
+  object-fit:cover;
+  filter: brightness(30%);
+}
+
+.landing h1 {
+  font-size: 3em;
+}
+
+.landing .lead {
+  opacity: 0.5;
+}
+
+.landing .bg {
+  z-index:-99;
+  background-color: white;
+  filter: brightness(30%);
+  height:100%;
+  width: 100%;
+  position: absolute;
+}
+
+#faq {
+  padding-top: 0px;
+}
+
+/*FAQ courtesy of https://codepen.io/moso/pen/vKGxMx?editors=1100*/
+.faq-nav {
+  flex-direction: column;
+  margin: 0 0 32px;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+}
+.faq-nav .nav-link {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 13px 16px;
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  color: #616161;
+  transition: background-color .2s ease;
+}
+.faq-nav .nav-link:hover {
+  background-color: #f6f6f6;
+}
+.faq-nav .nav-link.active {
+  background-color: #f6f6f6;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+}
+.faq-nav .nav-link:last-of-type {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom: 0;
+}
+.faq-nav .nav-link i.mdi {
+  margin-right: 5px;
+  font-size: 18px;
+  position: relative;
+}
+
+.tab-content {
+  box-shadow: 0 1px 5px rgba(85, 85, 85, 0.15);
+}
+.tab-content .card {
+  border-radius: 0;
+}
+.tab-content .card-header {
+  padding: 15px 16px;
+  border-radius: 0;
+  background-color: #f6f6f6;
+}
+.tab-content .card-header h5 {
+  margin: 0;
+}
+.tab-content .card-header h5 button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+  white-space: normal;
+}
+.tab-content .card-header h5 button:hover, .tab-content .card-header h5 button:focus, .tab-content .card-header h5 button:active, .tab-content .card-header h5 button:hover:active {
+  text-decoration: none;
+}
+.tab-content .card-body p {
+  color: #616161;
+}
+.tab-content .card-body p:last-of-type {
+  margin: 0;
+}
+
+.accordion > .card:not(:first-child) {
+  border-top: 0;
+}
+
+.collapse.show .card-body {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
