@@ -24,6 +24,7 @@
 
   <?php
 
+    //UDEMY STATS
     ini_set("allow_url_fopen", 1);
 
     $json = file_get_contents('https://www.udemy.com/api-2.0/courses/1705118?fields[course]=title,num_subscribers,num_lectures,num_reviews');
@@ -40,6 +41,26 @@
     $reviews = $lpic101->num_reviews + $lpic102->num_reviews + $essentials->num_reviews;
 
     $lessons = $lpic101->num_lectures + $lpic102->num_lectures + $essentials->num_lectures;
+
+    //UDEMY COUPONS
+    $essentials = $e101 = $e102 = "";
+
+    $json_data = file_get_contents('udemy_coupons.json');
+    $data = json_decode($json_data, true);
+
+    $essentials = $data["Essentials"];
+    $e101 = $data["101"];
+    $e102 = $data["102"];
+
+    if(empty($essentials)){
+      $essentials = "https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD";
+    }
+    if(empty($e101)){
+      $e101 = "https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione/?referralCode=51B7A99838177C89C187";
+    }
+    if(empty($e102)){
+      $e102 = "https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione-lpi-exam-102/?referralCode=7018A3D9DC7C34281A3F";
+    }
 
   ?>
 
@@ -133,7 +154,7 @@
         Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma, dandoti la giusta preparazione a superarlo.
       </p>
       <div class="card-deck">
-        <a class="invisible-link" href="https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD">
+        <a class="invisible-link" href="<?php echo $essentials; ?>">
           <div class="card">
             <img src="assets/corso-lpi-linux-essentials-cover.jpg" class="card-img-top" alt="Copertina corso LPI Linux Essentials" title="Corso per certificazione LPI Linux Essentials online in italiano">
             <div class="card-body d-flex flex-column">
@@ -143,11 +164,11 @@
                 Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
                 Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.
               </p>
-              <a title="Corso LPI Linux Essentials" href="https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD" class="btn btn-primary mt-auto">Vai al corso</a>
+              <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
           </div>
         </a>
-        <a class="invisible-link" href="https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione/?referralCode=51B7A99838177C89C187">
+        <a class="invisible-link" href="<?php echo $e101; ?>">
           <div class="card">
             <img src="assets/corso-lpic-1-exam-101-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 101" title="Corso per certificazione LPIC-1 esame 101">
             <div class="card-body d-flex flex-column">
@@ -158,11 +179,11 @@
             		dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
             		Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.
   	          </p>
-              <a title="Corso LPIC-1 | Exam 101" href="https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione/?referralCode=51B7A99838177C89C187" class="btn btn-primary mt-auto">Vai al corso</a>
+              <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
           </div>
         </a>
-        <a class="invisible-link" href="https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione-lpi-exam-102/?referralCode=7018A3D9DC7C34281A3F">
+        <a class="invisible-link" href="<?php echo $e102; ?>">
           <div class="card">
             <img src="assets/corso-lpic-1-exam-102-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 102" title="Corso per certificazione LPIC-1 esame 102">
             <div class="card-body d-flex flex-column">
@@ -174,7 +195,7 @@
             		Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
             		otterai la certificazione professionale in ambito Linux
   	          </p>
-              <a title="Corso LPIC-1 | Exam 102" href="https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione-lpi-exam-102/?referralCode=7018A3D9DC7C34281A3F" class="btn btn-primary mt-auto">Vai al corso</a>
+              <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
           </div>
         </a>
