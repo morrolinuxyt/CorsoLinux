@@ -113,7 +113,7 @@
         Linux è anche molto in voga fra gli hobbisti/makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
       </p>
       <div class="yt_video">
-         <iframe src="https://www.youtube.com/embed/IpfcahnPknM" frameborder="0" allowfullscreen></iframe><br /><br />
+         <iframe src="https://www.youtube-nocookie.com/embed/IpfcahnPknM" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
