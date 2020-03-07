@@ -49,8 +49,8 @@
     $data = json_decode($json_data, true);
 
     $essentials = $data["Essentials"];
-    $e101 = $data["101"];
-    $e102 = $data["102"];
+    $e101 = $data["EXAM 101"];
+    $e102 = $data["EXAM 102"];
 
     if(empty($essentials)){
       $essentials = "https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD";
