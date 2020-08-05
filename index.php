@@ -208,8 +208,8 @@
       <h2 class="mb-5 text-center">Indeciso?</h2>
       <p class="text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un set di competenze e una serie di requisiti. Lo schema qui sotto riassume queste caratteristiche e dovrebbe aiutarti a decidere quale corso fa per te.
-        <img src="assets/courses-comparison.png" width="100%" class="mt-5 text-center">
       </p>
+      <img src="assets/courses-comparison.png" width="100%" class="mt-5 text-center">
     </div>
   </section>
 
