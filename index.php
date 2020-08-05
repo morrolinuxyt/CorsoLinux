@@ -207,7 +207,9 @@
     <div class="container">
       <h2 class="mb-5 text-center">Indeciso?</h2>
       <p class="text-justify">
-        Ogni corso del programma LPI è caratterizzato da un livello di partenza, un set di competenze e una serie di requisiti. Lo schema qui sotto riassume queste caratteristiche e dovrebbe aiutarti a decidere quale corso fa per te.
+        Ogni corso del programma LPI è caratterizzato da un livello di partenza, un set di competenze e una serie di requisiti d'accesso.<br>
+        Ad esempio, non è possibile sostenere la certificazione LPIC-2 senza aver sostenuto LPIC-1, mentre non è necessario "Linux Essentials" per accedere ad LPIC-1.<br>
+        Lo schema seguente riassume queste caratteristiche per aiutarti a decidere quale corso fa per te.
       </p>
       <img src="assets/courses-comparison.png" width="100%" class="mt-5 text-center">
     </div>
