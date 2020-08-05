@@ -170,6 +170,11 @@ section {
   padding-top: 0px;
 }
 
+#comparison{
+  background-color: #525252;
+  color: white;
+}
+
 /*FAQ courtesy of https://codepen.io/moso/pen/vKGxMx?editors=1100*/
 .faq-nav {
   flex-direction: column;
