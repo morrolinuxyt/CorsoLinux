@@ -479,18 +479,32 @@
             <a href="https://twitter.com/morrolinux/" target="_blank"><i class="fa fa-twitter-square mx-2" aria-hidden="true" style="color:#00acee;"></i></a>
             <a href="https://telegram.me/morrolinux_feed" target="_blank"><i class="fa fa-comment mx-2" aria-hidden="true" style="color:#0088cc;"></i></a>
           </h2>
-          <img class="avatar float-left rounded-circle mr-4" src="assets/docente-corso-linux-moreno-razzoli.jpg" alt="avatar docente corso linux: Moreno Razzoli" title="Docente del corso Linux: Moreno Razzoli">
+          <img class="avatar float-left rounded-circle mr-4" src="assets/docente-corso-linux-moreno-razzoli.jpg" alt="avatar docente corso Reti: Moreno Razzoli" title="Docente del corso Networking 101: Moreno Razzoli">
           <div class="text-center my-5 socials">
 
           </div>
           <p>
-            Mi chiamo <b>Moreno Razzoli</b>,<br>
-        	  Nella vita sono un Linux System Administrator sempre alla ricerca di nuove tecnologie,
-		        ho conseguito le certificazioni LPI, CompTIA Linux+ e Suse CLA, e sono attivo nell'ambito
-		        GNU/Linux dal 2008 con i miei corsi e tutorial su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a> e sul
-		        mio <a href="https://morrolinux.it"> sito ufficiale.</a><br><br>
-            La divulgazione informatica di qualità è per me una priorità, assieme ad un continuo lavoro
-		        di ricerca per le opportunità del settore.
+                        Mi chiamo <b>Moreno Razzoli</b>,<br>
+                        Sono laureato in Scienze Informatiche, ho conseguito le certificazioni Linux <b>LPI</b>, <b>CompTIA Linux+</b> e <b>Suse CLA</b>,
+                        ho realizzato diversi <a href="https://morrolinux.it/progetti">progetti Open Source</a>,
+                        contribuito allo sviluppo di nuove funzionalità in altrettanti progetti già avviati su GitHub e 
+                        realizzo <b>video didattici dal 2008</b> su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a> e sul
+                        mio <a href="https://morrolinux.it"> sito ufficiale.</a><br><br>
+          </p>
+          <p> 
+                        <b>Credo nella formazione di qualità.</b><br>
+                        Saper trasmettere le proprie competenze in modo efficace è importante tanto quanto avere delle competenze in primo luogo. 
+                        Durante il mio corso di studi ho imparato che essere massimo esperto di qualcosa non ti rende automaticamente capace di insegnare.<br><br>
+
+                        Numerosi studi hanno dimostrato che il picco dell'attenzione dura soltanto 15 minuti, perciò <b>non sprecherò il tuo tempo prezioso</b>
+                        con inutili giri di parole e prolissi monologhi. 
+                        Ho uno stile molto diretto: mi piace andare dritto al punto, accompagnando le spiegazioni con <b>esempi pratici ed efficaci</b>.<br><br>
+
+                        Insegnare non significa recitare un elenco di nozioni sparse: 
+                        è importante collocare ogni argomento come un tassello al proprio posto e dare allo studente una <b>visione d'insieme</b> sulla disciplina.<br><br>
+
+                        Se condividi i miei valori sono sicuro che apprezzerai i miei corsi.
+           
           </p>
 
         </div>
