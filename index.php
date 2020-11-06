@@ -309,6 +309,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-6">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-6" aria-expanded="false" aria-controls="accordion-tab-1-content-6">
+                              Dove trovo l'argomento X?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-6" aria-labelledby="accordion-tab-1-heading-6" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+			    <p>
+				Puoi trovare l'elenco degli argomenti trattati in ciascun corso nella scaletta della relativa pagina di presentazione prima dell'acquisto. 
+				Per i corsi orientati alle certificazioni (LPI) è anche disponibile un elenco dettagliato di tutti i termini e concetti trattati sul sito ufficiale della certificazione in questione:
+                              <br>LPIC-1 Exam 101: <a href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
+                              <br>LPIC-1 Exam 102: <a href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
+                              <br>Linux Essentials: <a href="https://www.lpi.org/our-certifications/exam-010-objectives">https://www.lpi.org/our-certifications/exam-010-objectives</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-7">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-7" aria-expanded="false" aria-controls="accordion-tab-1-content-7">
+                              Come posso individuare il mio livello di partenza?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-7" aria-labelledby="accordion-tab-1-heading-7" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+			    <p>
+				Ti consiglio di leggere attentamente il programma di ciascun corso, partendo dal più semplice, 
+				fino a trovare i primi argomenti a te sconosciuti. 
+				Terminato questo inquadramento saprai perfettamente da quale corso iniziare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
