@@ -10013,9 +10013,9 @@
      inkscape:window-height="1016"
      id="namedview4"
      showgrid="false"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="101.7226"
-     inkscape:cy="703.11774"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="165.16494"
+     inkscape:cy="557.31906"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
@@ -10046,7 +10046,7 @@
        id="path6368"
        inkscape:connector-curvature="0" /></g></g><g
    id="g6370"
-   transform="matrix(0.63003151,0,0,0.63003151,877.22634,1247.7372)"><g
+   transform="matrix(0.63003151,0,0,0.63003151,877.22633,1243.9972)"><g
      id="g6372"
      clip-path="url(#clipPath6376)"><path
        d="m 506.98,2097.41 305.868,-305.87 305.862,305.87 c 168.93,168.92 168.93,442.8 0,611.72 -168.925,168.93 -442.804,168.93 -611.726,0 h -0.004 c -168.921,-168.92 -168.921,-442.8 0,-611.72"
@@ -10071,6 +10071,7 @@
 
 
 
+
 </g><g
    id="g6536"
    transform="matrix(0.56966143,0,0,0.56966143,-83.498958,-946.7292)"><g
@@ -10081,7 +10082,7 @@
        id="path6550"
        inkscape:connector-curvature="0" /></g></g><g
    id="g6552"
-   transform="matrix(0.56966143,0,0,0.56966143,-83.501094,-946.7292)"><g
+   transform="matrix(0.56966143,0,0,0.56966143,-83.501094,-950.45009)"><g
      id="g6554"
      clip-path="url(#clipPath6558)"><path
        d="m 2248.88,688.52 336.6,-336.598 336.59,336.598 c 185.9,185.89 185.9,487.29 0,673.18 v 0 c -185.89,185.9 -487.29,185.9 -673.18,0 h -0.01 c -185.89,-185.89 -185.89,-487.29 0,-673.18"
@@ -10106,6 +10107,7 @@
 
 
 
+
 <text
    transform="matrix(1,0,0,-1,357.744,93.616)"
    style="font-variant:normal;font-weight:bold;font-size:7.00788021px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Bold;writing-mode:lr-tb;fill:#fdb319;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10114,6 +10116,7 @@
      id="tspan6680"
      x="0"
      y="6.2003317" /></text>
+
 
 
 
@@ -10132,7 +10135,7 @@
        id="path6714"
        inkscape:connector-curvature="0" /></g></g><g
    id="g6716"
-   transform="matrix(0.74718411,0,0,0.74718411,642.35014,1119.0344)"><g
+   transform="matrix(0.74718411,0,0,0.74718411,642.35014,1115.2901)"><g
      id="g6718"
      clip-path="url(#clipPath6722)"><path
        d="m 741.355,4014.63 258.391,-258.4 258.394,258.4 c 142.71,142.7 142.71,374.07 0,516.78 -142.71,142.7 -374.077,142.7 -516.785,0 v 0 c -142.707,-142.71 -142.707,-374.08 0,-516.78"
@@ -10140,7 +10143,7 @@
        id="path6730"
        inkscape:connector-curvature="0" /></g></g><g
    id="g6732"
-   transform="matrix(6.3003151,0,0,6.3003151,753.95992,1627.3451)"><text
+   transform="matrix(6.3003151,0,0,6.3003151,753.58679,1605.9928)"><text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:bold;font-size:29.25099945px;font-family:Antonio;-inkscape-font-specification:Antonio-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
    id="text6736"
@@ -10159,6 +10162,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:500;font-size:6.75022984px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Medium;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10169,12 +10173,13 @@
      x="100.70823"
      y="-435.91205"
      id="tspan12175"
-     style="text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
+     style="font-size:9.57095051px;text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
      sodipodi:role="line"
      x="100.70823"
-     y="-407.78842"
+     y="-406.75821"
      id="tspan12167"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29px;font-family:Antonio;-inkscape-font-specification:'Antonio Bold';text-align:center;text-anchor:middle">0</tspan></text>
+
 
 
 
@@ -10202,6 +10207,7 @@
 
 
 
+
 <text
    transform="matrix(1,0,0,-1,174.617,423.495)"
    style="font-variant:normal;font-weight:bold;font-size:7.00788021px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Bold;writing-mode:lr-tb;fill:#1189c7;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10218,9 +10224,10 @@
 
 
 
+
 </g><g
    id="g6732-4"
-   transform="matrix(6.3003151,0,0,6.3003151,753.95992,70.836738)"><text
+   transform="matrix(6.3003151,0,0,6.3003151,753.58678,24.769827)"><text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:bold;font-size:29.25099945px;font-family:Antonio;-inkscape-font-specification:Antonio-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
    id="text6736-4"
@@ -10239,22 +10246,26 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:500;font-size:6.75022984px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Medium;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
    id="text6740-7"
    x="100.70823"
-   y="-435.91205"><tspan
+   y="-440.69751"><tspan
      sodipodi:role="line"
      x="100.70823"
-     y="-435.91205"
+     y="-440.69751"
      id="tspan12175-6"
-     style="text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
+     style="text-align:center;text-anchor:middle"><tspan
+       style="font-size:9.57095051px"
+       id="tspan2639">LIVELLO</tspan></tspan><tspan
      sodipodi:role="line"
      x="100.70823"
-     y="-407.78842"
+     y="-411.54367"
      id="tspan12167-3"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29px;font-family:Antonio;-inkscape-font-specification:'Antonio Bold';text-align:center;text-anchor:middle">1</tspan></text>
+
 
 
 
@@ -10273,7 +10284,7 @@
        id="path7120"
        inkscape:connector-curvature="0" /></g></g><g
    id="g7122"
-   transform="matrix(0.63003151,0,0,0.63003151,-1644.0844,-550.57695)"><g
+   transform="matrix(0.63003151,0,0,0.63003151,-1644.0844,-554.31697)"><g
      id="g7124"
      clip-path="url(#clipPath7128)"><path
        d="m 4508.86,2449.13 305.87,-305.86 305.86,305.86 c 168.93,168.93 168.93,442.81 0,611.73 v 0 c -168.92,168.93 -442.8,168.93 -611.73,0 v 0 c -168.92,-168.92 -168.92,-442.8 0,-611.73"
@@ -10281,7 +10292,7 @@
        id="path7136"
        inkscape:connector-curvature="0" /></g></g><g
    id="g6732-4-9"
-   transform="matrix(6.3003151,0,0,6.3003151,753.95992,-1501.3742)"><text
+   transform="matrix(6.3003151,0,0,6.3003151,753.58681,-1521.7933)"><text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:bold;font-size:29.25099945px;font-family:Antonio;-inkscape-font-specification:Antonio-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
    id="text6736-4-1"
@@ -10299,6 +10310,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:500;font-size:6.75022984px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Medium;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10309,12 +10321,13 @@
      x="100.70823"
      y="-435.91205"
      id="tspan12175-6-2"
-     style="text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
+     style="font-size:9.57095051px;text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
      sodipodi:role="line"
      x="100.70823"
-     y="-407.78842"
+     y="-406.75821"
      id="tspan12167-3-5"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29px;font-family:Antonio;-inkscape-font-specification:'Antonio Bold';text-align:center;text-anchor:middle">2</tspan></text>
+
 
 
 
@@ -10341,6 +10354,7 @@
 
 
 
+
 <text
    transform="matrix(1,0,0,-1,568.0966,272.761)"
    style="font-variant:normal;font-weight:bold;font-size:7.00788021px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Bold;writing-mode:lr-tb;fill:#e546a4;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10349,6 +10363,7 @@
      id="tspan7274"
      x="0"
      y="6.2003317" /></text>
+
 
 
 
@@ -10376,6 +10391,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:500;font-size:8.58197975px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Medium;writing-mode:lr-tb;fill:#757070;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10392,6 +10408,7 @@
      y="-334.48373"
      id="tspan2898"
      style="text-align:center;text-anchor:middle;font-size:10.05000031px">Percorso formativo</tspan></text>
+
 
 
 
@@ -10430,6 +10447,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:300px;line-height:0;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.5"
@@ -10460,9 +10478,10 @@
 
 
 
+
 <g
    id="g6732-4-9-4"
-   transform="matrix(6.408358,0,0,6.408358,743.0638,-3103.7165)"><text
+   transform="matrix(6.408358,0,0,6.408358,742.70598,-3113.8117)"><text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:bold;font-size:29.25099945px;font-family:Antonio;-inkscape-font-specification:Antonio-Bold;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
    id="text6736-4-1-4"
@@ -10480,6 +10499,7 @@
 
 
 
+
 <text
    transform="scale(1,-1)"
    style="font-variant:normal;font-weight:500;font-size:6.75022984px;font-family:Montserrat;-inkscape-font-specification:Montserrat-Medium;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
@@ -10490,12 +10510,13 @@
      x="100.70823"
      y="-435.91205"
      id="tspan12175-6-2-3"
-     style="text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
+     style="font-size:9.40958691px;text-align:center;text-anchor:middle">LIVELLO</tspan><tspan
      sodipodi:role="line"
      x="100.70823"
-     y="-407.78842"
+     y="-406.81714"
      id="tspan12167-3-5-6"
      style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:29px;font-family:Antonio;-inkscape-font-specification:'Antonio Bold';text-align:center;text-anchor:middle">3</tspan></text>
+
 
 
 
@@ -10515,6 +10536,7 @@
      x="5404.0635"
      y="-1908.9236"
      style="stroke-width:7.5" /></text>
+
 
 
 
@@ -10551,6 +10573,7 @@
 
 
 
+
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:300px;line-height:0;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.5"
@@ -10578,6 +10601,7 @@
      y="1529.5638"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:120px;line-height:1;font-family:AlArabiya;-inkscape-font-specification:AlArabiya;text-align:center;text-anchor:middle;fill:#999999;fill-opacity:1;stroke-width:7.5"
      id="tspan8788">Richiedono certificazione LPIC-2</tspan></text>
+
 
 
 
