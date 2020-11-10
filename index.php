@@ -108,9 +108,9 @@
     <div class="container text-center">
       <h2 class="my-5">PERCHÈ IMPARARE LINUX?</h2>
       <p class="my-5 text-justify">
-        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, dal <i>server</i> in un <i>datacenter</i>, al mini router di casa nostra.
-        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni: dall'<i>automotive</i> (sistemi di <i>infotainment</i>) all'<b>IoT</b> e alla <b>domotica</b>, passando per le nostre tasche (Android) e perfino nei nostri <b>elettrodomestici</b> (televisori, frigoriferi, e molto altro) senza tralasciare il suo <b>importante ruolo nei sistemi <i>real-time</i></b> come la guida autonoma ed i nuovi sistemi di controllo industriali, rendendo la sua conoscenza <b>un requisito per una vastissima varietà di ambiti</b> tecnologici e posizioni lavorative.<br>
-        Linux è anche molto in voga fra gli hobbisti/makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
+        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al mini router di casa nostra.<br>
+        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b> senza tralasciare il suo <b>importante ruolo nei sistemi <i>real-time</i></b> come la guida autonoma ed i nuovi sistemi di controllo industriali. <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
+        Linux è anche molto usato da hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
       </p>
       <div class="yt_video">
          <iframe src="https://www.youtube-nocookie.com/embed/IpfcahnPknM" frameborder="0" allowfullscreen></iframe><br /><br />
@@ -122,7 +122,7 @@
     <div class="container text-center">
       <p class="mb-5">
         Pronto per entrare in classe?<br>
-        Unisciti agli oltre duemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, Costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
+        Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
       </p>
       <div class="row">
         <div class="col-lg-4 stats">
@@ -147,12 +147,21 @@
 
   <section id="courses">
     <div class="container">
-      <p class="mb-5 text-justify">
-        Tutti possono imparare Linux. Qualunque sia il tuo livello di partenza e il tuo obiettivo, troverai di seguito il corso che fa per te.<br>
-        Qui imparerai tutto ciò che c'è da sapere su Linux ed il suo ecosistema, tramite spiegazioni ed <b>esempi concreti</b> di utilizzo. Al termine, se vorrai, potrai anche affrontare gli <b>esami ufficiali LPI</b> e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br>
-        Preoccupato per l'esame?<br>
-        Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma, dandoti la giusta preparazione a superarlo.
+	<h5>Tutti possono imparare Linux</h5>
+      <p class="mb-1 text-justify">
+        Qualunque sia il tuo livello di partenza e il tuo obiettivo, troverai di seguito il corso che fa per te.<br>
+	Qui imparerai tutto ciò che c'è da sapere su Linux ed il suo ecosistema, tramite spiegazioni ed <b>esempi concreti</b>
+	di utilizzo. <br>
+	Al termine, se vorrai, potrai affrontare gli <b>esami ufficiali LPI</b>
+        e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
       </p>
+        <h5>Preoccupato per l'esame?</h5>
+      <p class="mb-2 text-justify">
+	Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma di certificazione.<br>
+	Ti fornirò la giusta preparazione per superare tutti i test.
+	<span class="keeptogether"><b>Non sono necessarie risorse aggiuntive!</b></span>
+      </p>
+      <br>
       <div class="card-deck">
         <a class="invisible-link" href="<?php echo $essentials; ?>">
           <div class="card">
@@ -162,7 +171,7 @@
               <p class="card-text">
                 Il corso LPI Linux Essentials parte "da zero" e introduce a GNU/Linux e al mondo dell'Open Source.<br><br>
                 Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
-                Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.
+                Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.<br><br>
               </p>
               <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
@@ -177,7 +186,7 @@
             		LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
             		Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto,
             		dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
-            		Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.
+            		Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
   	          </p>
               <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
@@ -191,9 +200,9 @@
               <p class="card-text">
             		Seconda parte del programma di certificazione LPI di primo livello. <br><br>
             		Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo
-            		esame per la certificazione professionale di primo livello<br>(Exam 102)<br><br>
+            		esame per la certificazione professionale di primo livello<br><br>
             		Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
-            		otterai la certificazione professionale in ambito Linux
+            		otterai la certificazione professionale in ambito Linux<br><br>
   	          </p>
               <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
@@ -207,7 +216,7 @@
     <div class="container">
       <h2 class="mb-5 text-center">Indeciso?</h2>
       <p class="text-justify">
-        Ogni corso del programma LPI è caratterizzato da un livello di partenza, un set di competenze e una serie di requisiti d'accesso.
+        Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
         Ad esempio, non è possibile sostenere la certificazione LPIC-2 senza aver sostenuto LPIC-1, mentre non è necessario "Linux Essentials" per accedere ad LPIC-1.
         Lo schema seguente riassume queste caratteristiche per aiutarti a decidere quale corso fa per te.
       </p>
@@ -389,7 +398,8 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Ottima esposizione, fluida e senza pause. Preciso e completo nella spiegazione degli argomenti, che forniscono una ottima e solida base di conoscenza del mondo Linux.
+	      Ottima esposizione, fluida e senza pause. <br>
+	      Preciso e completo nella spiegazione degli argomenti, che forniscono una ottima e solida base di conoscenza del mondo Linux.
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
             <p class="review-name">Daniele, studente "Linux Essentials"</p>
@@ -453,17 +463,21 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Morro è un ottimo insegnante, molto chiaro e preciso, da molti esempi e sa spiegare.<br>
-              Una piccola nota: sarebbe stato forse da 5 stelle invece di 4,5 se ci fossero stati anche dei compiti da fare per lezione, con output spiegato brevemente a fine lezione, ma in se il resto è perfetto!
+		Utilizzo Linux già da molti anni e questo corso mi ha aiutato a comprendere nuovi aspetti 
+		e ad approfondire quelli che già conoscevo.<br>
+		Queste 13 ore di video sono super consigliate sia al novizio che si avvicina a Linux per la prima volta, 
+		sia all'utente più esperto che vuole consolidare le proprie basi.<br>
+		Insegnante sempre disponibile a chiarire ogni dubbio e tempi di risposta molto rapidi.<br>
+		Bravo Morro! Non vedo l'ora di iniziare la sezione 102!
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Andrea, studente "LPIC 101"</p>
+            <p class="review-name">Manuel, studente "LPIC 101"</p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
             </div>
           </div>
 
