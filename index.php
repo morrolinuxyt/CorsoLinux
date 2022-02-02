@@ -43,7 +43,7 @@
     $lessons = $lpic101->num_lectures + $lpic102->num_lectures + $essentials->num_lectures;
 
     //UDEMY COUPONS
-    $essentials = $e101 = $e102 = "";
+    $archlinux = $essentials = $e101 = $e102 = "";
 
     $json_data = file_get_contents('udemy_coupons.json');
     $data = json_decode($json_data, true);
@@ -51,7 +51,11 @@
     $essentials = $data["Essentials"];
     $e101 = $data["EXAM 101"];
     $e102 = $data["EXAM 102"];
+    $archlinux = $data["Arch"];
 
+    if(empty($archlinux)){
+      $archlinux = "https://www.udemy.com/course/arch-linux-per-comuni-mortali/?referralCode=34016D9C6656A83ABF5D";
+    }
     if(empty($essentials)){
       $essentials = "https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD";
     }
@@ -155,6 +159,11 @@
 	Al termine, se vorrai, potrai affrontare gli <b>esami ufficiali LPI</b>
         e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
       </p>
+
+      <div class="mb-5 text-center">
+        <a style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="#dazero" class="btn btn-primary mt-auto js-scroll-trigger">Vuoi iniziare da zero?</a>
+      </div>
+
         <h5>Preoccupato per l'esame?</h5>
       <p class="mb-2 text-justify">
 	Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma di certificazione.<br>
@@ -227,6 +236,36 @@
 	 <source srcset="assets/lpi-path.png" width="100%" media="(min-width: 600px)">
 	 <img src="assets/lpi-path-mobile.png" width="100%" alt="LPI Path (mobile)">
       </picture>
+
+      <br><br><br><br>
+      <h2 id="dazero" class="mb-5 text-center">Cerchi un approccio più graduale?</h2>
+      <p class="mb-2 text-justify">
+        Lo sappaimo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
+        Se non ti senti pronto, dà un'occhiata a questo <b>corso introduttivo</b> non orientato alle certificazioni.
+        È pensato per <b>guidarti passo passo</b> attraverso ogni aspetto di una distribuzione GNU/Linux: dalla sua <b>anatomia</b>
+        all'installazione accanto a Windows, fino all'utilizzo come <b>sistema operativo principale</b>!
+        <br><br>
+        <div class="card-deck row">
+          <div class="col-6" style="margin: 10px auto;">
+            <a class="invisible-link" href="<?php echo $archlinux; ?>">
+              <div class="card">
+                <img src="assets/arch-linux-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Arch Linux Per Comuni Mortali" title="Arch Linux Per Comuni Mortali">
+                <div class="card-body d-flex flex-column">
+                  <h3 class="card-title">Arch Linux Per Comuni Mortali</h3>
+                  <p class="card-text">
+                    Questo corso si rivolge a chi ha poca o nessuna esperienza e vuole imparare Linux su una distribuzione fresca, <b>stimolante</b> e sfidante al punto giusto.<br><br>
+
+                    Ti insegnerò <b>teoria e pratica</b>, con illustrazioni animate ed esempi concreti che potrai applicare alla tua installazione per ottenere il massimo dalla tua distro preferita.<br><br>
+
+                    L'obbiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile per tutti i nuovi utenti.<br><br>
+                  </p>
+                  <a title="Arch Linux Per Comuni Mortali" href="<?php echo $archlinux; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+                </div>
+              </div>
+          </a>
+        </div>
+      </p>
+
 
     </div>
   </section>
@@ -337,7 +376,7 @@
                     <div class="collapse" id="accordion-tab-1-content-6" aria-labelledby="accordion-tab-1-heading-6" data-parent="#accordion-tab-1">
                         <div class="card-body">
 			    <p>
-				Puoi trovare l'elenco degli argomenti trattati in ciascun corso nella scaletta della relativa pagina di presentazione prima dell'acquisto. 
+				Puoi trovare l'elenco degli argomenti trattati in ciascun corso nella scaletta della relativa pagina di presentazione prima dell'acquisto.
 				Per i corsi orientati alle certificazioni (LPI) è anche disponibile un elenco dettagliato di tutti i termini e concetti trattati sul sito ufficiale della certificazione in questione:
                               <br>LPIC-1 Exam 101: <a href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
                               <br>LPIC-1 Exam 102: <a href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
@@ -358,8 +397,8 @@
                     <div class="collapse" id="accordion-tab-1-content-7" aria-labelledby="accordion-tab-1-heading-7" data-parent="#accordion-tab-1">
                         <div class="card-body">
 			    <p>
-				Ti consiglio di leggere attentamente il programma di ciascun corso, partendo dal più semplice, 
-				fino a trovare i primi argomenti a te sconosciuti. 
+				Ti consiglio di leggere attentamente il programma di ciascun corso, partendo dal più semplice,
+				fino a trovare i primi argomenti a te sconosciuti.
 				Terminato questo inquadramento saprai perfettamente da quale corso iniziare.
                             </p>
                         </div>
@@ -481,9 +520,9 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-		Utilizzo Linux già da molti anni e questo corso mi ha aiutato a comprendere nuovi aspetti 
+		Utilizzo Linux già da molti anni e questo corso mi ha aiutato a comprendere nuovi aspetti
 		e ad approfondire quelli che già conoscevo.<br>
-		Queste 13 ore di video sono super consigliate sia al novizio che si avvicina a Linux per la prima volta, 
+		Queste 13 ore di video sono super consigliate sia al novizio che si avvicina a Linux per la prima volta,
 		sia all'utente più esperto che vuole consolidare le proprie basi.<br>
 		Insegnante sempre disponibile a chiarire ogni dubbio e tempi di risposta molto rapidi.<br>
 		Bravo Morro! Non vedo l'ora di iniziare la sezione 102!
@@ -565,24 +604,24 @@
                         Mi chiamo <b>Moreno Razzoli</b>,<br>
                         Sono laureato in Scienze Informatiche, ho conseguito le certificazioni Linux <b>LPI</b>, <b>CompTIA Linux+</b> e <b>Suse CLA</b>,
                         ho realizzato diversi <a href="https://morrolinux.it/progetti">progetti Open Source</a>,
-                        contribuito allo sviluppo di nuove funzionalità in altrettanti progetti già avviati su GitHub e 
+                        contribuito allo sviluppo di nuove funzionalità in altrettanti progetti già avviati su GitHub e
                         realizzo <b>video didattici dal 2008</b> su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a> e sul
                         mio <a href="https://morrolinux.it"> sito ufficiale.</a><br><br>
           </p>
-          <p> 
+          <p>
                         <b>Credo nella formazione di qualità.</b><br>
-                        Saper trasmettere le proprie competenze in modo efficace è importante tanto quanto avere delle competenze in primo luogo. 
+                        Saper trasmettere le proprie competenze in modo efficace è importante tanto quanto avere delle competenze in primo luogo.
                         Durante il mio corso di studi ho imparato che essere massimo esperto di qualcosa non ti rende automaticamente capace di insegnare.<br><br>
 
                         Numerosi studi hanno dimostrato che il picco dell'attenzione dura soltanto 15 minuti, perciò <b>non sprecherò il tuo tempo prezioso</b>
-                        con inutili giri di parole e prolissi monologhi. 
+                        con inutili giri di parole e prolissi monologhi.
                         Ho uno stile molto diretto: mi piace andare dritto al punto, accompagnando le spiegazioni con <b>esempi pratici ed efficaci</b>.<br><br>
 
-                        Insegnare non significa recitare un elenco di nozioni sparse: 
+                        Insegnare non significa recitare un elenco di nozioni sparse:
                         è importante collocare ogni argomento come un tassello al proprio posto e dare allo studente una <b>visione d'insieme</b> sulla disciplina.<br><br>
 
                         Se condividi i miei valori sono sicuro che apprezzerai i miei corsi.
-           
+
           </p>
 
         </div>
@@ -594,7 +633,7 @@
   <footer class="py-5 bg-dark">
     <div class="container footer">
       <p class="m-0 text-center text-white">
-        Made with ❤️ by <a href="https://github.com/mrriky54" target="_blank">Riccardo Carissimi</a> <br> 
+        Made with ❤️ by <a href="https://github.com/mrriky54" target="_blank">Riccardo Carissimi</a> <br>
         <a style="opacity:0.5;color:white;" href="https://it.freepik.com/vettori/infografica">Infografica vettore creata da pikisuperstar - it.freepik.com</a><br>
         Parte del progetto <a href="https://morrolinux.it">morrolinux.it</a><br><br>
         <a href="https://github.com/morrolinuxyt/CorsoLinux" target="_blank"><i class="fa fa-github-square mx-2" aria-hidden="true"></i></a>
