@@ -321,7 +321,7 @@
                     <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere l'esame in un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino a casa tua visita <a href="http://www.pearsonvue.com/servlet/vue.web2.core.Dispatcher?webContext=CandidateSite&webApp=TestCenterLocator&requestedAction=register&cid=374"> questo link</a>.
+                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere l'esame in un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino a casa tua visita <a href="https://www.pearsonvue.com/servlet/vue.web2.core.Dispatcher?webContext=CandidateSite&webApp=TestCenterLocator&requestedAction=register&cid=374"> questo link</a>.
                             </p>
                         </div>
                     </div>
