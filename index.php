@@ -112,9 +112,26 @@
     <div class="container text-center">
       <h2 class="my-5">PERCHÈ IMPARARE LINUX?</h2>
       <p class="my-5 text-justify">
-        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al mini router di casa nostra.<br>
-        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b> senza tralasciare il suo <b>importante ruolo nei sistemi <i>real-time</i></b> come la guida autonoma ed i nuovi sistemi di controllo industriali. <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
-        Linux è anche molto usato da hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
+        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al router multifunzione domestico. 
+        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b>, senza tralasciare il suo <b>importante ruolo nei sistemi industriali di ultima generazione</b>. 
+        <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
+        Linux è anche molto in voga tra hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
+      </p>
+      <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
+      <p class="my-5 text-justify">
+        Secondo l'<a href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
+        il 97% dei responsabili delle assunzioni indica 
+        <b>assumere talenti Open Source</b> come una priorità e il 92% afferma di riscontrare difficoltà 
+        nel reperire personale qualificato.
+        L'88% dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione 
+        di <b>professionisti certificati</b> per svolgere il lavoro ed il 39% delle aziende dichiara di aver fornito 
+        maggiori <b>aumenti salariali</b> rispetto ad altre aree di business come forma di ritenzione del personale.
+        Tra le competenze Open Source più richieste, Linux risulta al secondo posto con il 32% di domanda complessiva,
+        surclassato soltanto dalle tecnologie <b>Cloud</b> per cui <i>Linux è tipicamente un prerequisito</i>.
+        Il dominio di applicazione delle competenze Linux e Open Source più in generale non è limitato 
+        all'amministrazione di sistemi e infrastrutture IT: Un numero sempre crescente di aziende sta adottando
+        approcci e metodolige <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
+        o di sviluppo sulla piattaforma.
       </p>
       <div class="yt_video">
          <iframe src="https://www.youtube-nocookie.com/embed/IpfcahnPknM" frameborder="0" allowfullscreen></iframe><br /><br />
