@@ -592,7 +592,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2 class="text-center my-5">IL DOCENTE<br>
-            <a href="https://www.facebook.com/MorrolinuxOfficial/" target="_blank"><i class="fa fa-facebook-official mx-2" aria-hidden="true" style="color:#3c5a99;"></i></a>
+            <a href="https://www.linkedin.com/in/morenorazzoli/" target="_blank"><i class="fa fa-linkedin-square mx-2" aria-hidden="true" style="color:#3c5a99;"></i></a>
             <a href="https://twitter.com/morrolinux/" target="_blank"><i class="fa fa-twitter-square mx-2" aria-hidden="true" style="color:#00acee;"></i></a>
             <a href="https://telegram.me/morrolinux_feed" target="_blank"><i class="fa fa-comment mx-2" aria-hidden="true" style="color:#0088cc;"></i></a>
           </h2>
@@ -602,9 +602,10 @@
           </div>
           <p>
                         Mi chiamo <b>Moreno Razzoli</b>,<br>
-                        Sono laureato in Scienze Informatiche, ho conseguito le certificazioni Linux <b>LPI</b>, <b>CompTIA Linux+</b> e <b>Suse CLA</b>,
-                        ho realizzato diversi <a href="https://morrolinux.it/progetti">progetti Open Source</a>,
-                        contribuito allo sviluppo di nuove funzionalità in altrettanti progetti già avviati su GitHub e
+                        Sono laureato in Scienze Informatiche, ho conseguito le certificazioni Linux <b>LPI</b>, <b>CompTIA Linux+</b>, <b>Suse CLA</b>
+                        e sono un <b>Training Partner autorizzato</b> Linux Professional Institute.<br>
+                        Ho realizzato diversi <a href="https://morrolinux.it/progetti">progetti Open Source</a>,
+                        contribuito ad altrettanti progetti già avviati su GitHub e
                         realizzo <b>video didattici dal 2008</b> su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a> e sul
                         mio <a href="https://morrolinux.it"> sito ufficiale.</a><br><br>
           </p>
