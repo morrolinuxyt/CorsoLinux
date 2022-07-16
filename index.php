@@ -133,6 +133,35 @@
         approcci e metodolige <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
         o di sviluppo sulla piattaforma.
       </p>
+
+      <div id="lpi-statistics" class="container text-center">
+        <div class="row">
+
+          <div style="line-height:50%;" class="col-lg-4 stats">
+            <canvas id="statsChart1">
+            </canvas>
+            <br>
+            <h5>dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità</h5>
+          </div>
+
+          <div style="line-height:50%;" class="col-lg-4 stats">
+            <canvas id="statsChart2">
+            </canvas>
+            <br>
+            <h5>afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo</h5>
+          </div>
+
+          <div style="line-height:50%;" class="col-lg-4 stats">
+            <canvas id="statsChart3">
+            </canvas>
+            <br>
+            <h5>dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati</b></h5>
+          </div>
+
+        </div>
+      </div>
+
+      <br><br><br>
       <div class="yt_video">
          <iframe src="https://www.youtube-nocookie.com/embed/IpfcahnPknM" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
@@ -673,7 +702,10 @@
 
   <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="js/doughnut.js" value="97" color="#D1509F" where="statsChart1"></script>     
+  <script src="js/doughnut.js" value="92" color="#F4BD47" where="statsChart2"></script>     
+  <script src="js/doughnut.js" value="88" color="#6960C4" where="statsChart3"></script>     
 
 </body>
 
