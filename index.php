@@ -280,7 +280,7 @@
         all'installazione accanto a Windows, fino all'utilizzo come <b>sistema operativo principale</b>!
         <br><br>
         <div class="card-deck row">
-          <div class="col-6" style="margin: 10px auto;">
+          <div class="col-md-6" style="margin: 10px auto;">
             <a class="invisible-link" href="<?php echo $archlinux; ?>">
               <div class="card">
                 <img src="assets/arch-linux-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Arch Linux Per Comuni Mortali" title="Arch Linux Per Comuni Mortali">
