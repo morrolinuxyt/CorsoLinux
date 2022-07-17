@@ -42,21 +42,22 @@ function isInViewport(el, partially) {
   var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
   var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
 
-  // Partially in view
-  if (partially) {
-    var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-    var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
-    return (vertInView && horInView);
-  }
+  partialCoeff = 1;
+  if (partially)
+    partialCoeff = 2;
 
-  // Completely in view
-  else {
-    return ((rect.left >= 0) && (rect.top >= 0) && ((rect.left + rect.width) <= windowWidth) && ((rect.top + rect.height) <= windowHeight));
-  }
+  return ((rect.left >= 0) && (rect.top >= 0) && 
+  ((rect.left + rect.width) <= windowWidth) && 
+  ((rect.top + rect.height/partialCoeff) <= windowHeight));
 }
 
+var countersVisible = false;
+
 function increment(){
-  if(isInViewport($('#statistics'), true)){
+  if(isInViewport($('#counters'), true)){
+    if(countersVisible) return;
+    countersVisible = true;
+
     $('.counting').each(function() {
       var $this = $(this),
           countTo = $this.attr('data-count');

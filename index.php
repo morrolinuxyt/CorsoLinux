@@ -137,25 +137,13 @@
       <div id="lpi-statistics" class="container text-center">
         <div class="row">
 
-          <div style="line-height:50%;" class="col-lg-4 stats">
-            <canvas id="statsChart1">
-            </canvas>
-            <br>
-            <h5>dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità</h5>
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#D1509F" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
           </div>
 
-          <div style="line-height:50%;" class="col-lg-4 stats">
-            <canvas id="statsChart2">
-            </canvas>
-            <br>
-            <h5>afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo</h5>
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="#F4BD47" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
           </div>
 
-          <div style="line-height:50%;" class="col-lg-4 stats">
-            <canvas id="statsChart3">
-            </canvas>
-            <br>
-            <h5>dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati</b></h5>
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#6960C4" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
           </div>
 
         </div>
@@ -174,7 +162,7 @@
         Pronto per entrare in classe?<br>
         Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
       </p>
-      <div class="row">
+      <div id="counters" class="row">
         <div class="col-lg-4 stats">
           <i class="fa fa-users" aria-hidden="true"></i>
           <div class="counting" data-count="<?php echo $subs; ?>">0</div>
@@ -703,9 +691,7 @@
   <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  <script src="js/doughnut.js" value="97" color="#D1509F" where="statsChart1"></script>     
-  <script src="js/doughnut.js" value="92" color="#F4BD47" where="statsChart2"></script>     
-  <script src="js/doughnut.js" value="88" color="#6960C4" where="statsChart3"></script>     
+  <script src="js/doughnut.js"></script>     
 
 </body>
 
