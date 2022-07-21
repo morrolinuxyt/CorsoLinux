@@ -31,7 +31,7 @@
 function isInViewport(el, partially) {
 
   if (typeof(partially) === 'undefined') {
-    var partially = false;
+    var partially = 0;
   }
 
   if (typeof jQuery === "function" && el instanceof jQuery) {
@@ -43,8 +43,13 @@ function isInViewport(el, partially) {
   var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
 
   partialCoeff = 1;
-  if (partially)
-    partialCoeff = 2;
+
+  if (partially == 1) {
+    var vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+    var horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+    return (vertInView && horInView);
+  } else if (partially > 1)
+    partialCoeff = partially;
 
   return ((rect.left >= 0) && (rect.top >= 0) && 
   ((rect.left + rect.width) <= windowWidth) && 
@@ -54,7 +59,7 @@ function isInViewport(el, partially) {
 var countersVisible = false;
 
 function increment(){
-  if(isInViewport($('#counters'), true)){
+  if(isInViewport($('#counters'), 1)){
     if(countersVisible) return;
     countersVisible = true;
 

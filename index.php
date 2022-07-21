@@ -134,7 +134,7 @@
         o di sviluppo sulla piattaforma.
       </p>
 
-      <div id="lpi-statistics" class="container text-center">
+      <div id="lf-statistics" class="container text-center">
         <div class="row">
 
           <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#D1509F" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">

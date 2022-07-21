@@ -4,7 +4,7 @@ if (!LFStatsChartsVisible) {
 
 function drawChart(){
   // create and animate charts only when they become visible
-  if(!isInViewport($('#lpi-statistics'), true)) return;
+  if(!isInViewport($('#lf-statistics'), 2)) return;
   if(LFStatsChartsVisible) return;
   LFStatsChartsVisible = true;
 
