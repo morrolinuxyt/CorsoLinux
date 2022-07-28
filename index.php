@@ -137,13 +137,13 @@
       <div id="lf-statistics" class="container text-center">
         <div class="row">
 
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#D1509F" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#6960C4" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
           </div>
 
           <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="#F4BD47" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
           </div>
 
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#6960C4" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#D1509F" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
           </div>
 
         </div>
