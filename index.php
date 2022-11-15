@@ -185,20 +185,27 @@
 
   <section id="courses">
     <div class="container">
-	<h5>Tutti possono imparare Linux</h5>
+	<h4>Tutti possono imparare Linux</h4>
       <p class="mb-1 text-justify">
         Qualunque sia il tuo livello di partenza e il tuo obiettivo, troverai di seguito il corso che fa per te.<br>
 	Qui imparerai tutto ciò che c'è da sapere su Linux ed il suo ecosistema, tramite spiegazioni ed <b>esempi concreti</b>
 	di utilizzo. <br>
 	Al termine, se vorrai, potrai affrontare gli <b>esami ufficiali LPI</b>
-        e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
+        e conseguire una <b><a target=”_blank” href="https://youtu.be/N-7Uan8tML0?t=71">certificazione professionale riconosciuta internazionalmente</a></b>.<br><br>
       </p>
 
+
       <div class="mb-5 text-center">
-        <a style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="#dazero" class="btn btn-primary mt-auto js-scroll-trigger">Vuoi iniziare da zero?</a>
+        <!-- <a style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="#dazero" class="btn btn-primary mt-auto js-scroll-trigger">Vuoi iniziare da zero?</a> -->
+
+        <div style="padding: 10px;">
+          <b>Pronto per l'esame?</b>
+        </div>
+
+        <a target=”_blank” style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
       </div>
 
-        <h5>Preoccupato per l'esame?</h5>
+        <h4>Batterie incluse</h4>
       <p class="mb-2 text-justify">
 	Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma di certificazione.<br>
 	Ti fornirò la giusta preparazione per superare tutti i test.
