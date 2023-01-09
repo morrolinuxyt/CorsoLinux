@@ -322,35 +322,56 @@
                     <div class="card-header" id="accordion-tab-1-heading-1">
                         <h5>
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-1" aria-expanded="false" aria-controls="accordion-tab-1-content-1">
-                              Ci sono limitazioni alla consultazione? Una volta terminato il corso posso continuare a consultarlo o scade l'accesso?
+                              Dove si svolge il corso?
                             </button>
                         </h5>
                     </div>
                     <div class="collapse show" id="accordion-tab-1-content-1" aria-labelledby="accordion-tab-1-heading-1" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Non c'è nessun limite di tempo per l'accesso ai corsi. Puoi studiare con calma e ritornare quando vuoi per ripassare: le video lezioni rimangono a tua disposizione per sempre.
+			      Il corso si svolge completamente <b>on-line</b> in modalità <b>on-demand</b>: 
+			      potrai seguire le lezioni comodamente da casa e quando vuoi. <br>
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-9">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-9" aria-expanded="false" aria-controls="accordion-tab-1-content-9">
+			      Quanto dura l'accesso al corso?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-9" aria-labelledby="accordion-tab-1-heading-9" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+                            <p>
+			      Una volta acquistato, <b>il corso è tuo per sempre</b>:
+			      potrai studiare con calma e tornare quando vuoi per ripassare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card">
                     <div class="card-header" id="accordion-tab-1-heading-2">
                         <h5>
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-2" aria-expanded="false" aria-controls="accordion-tab-1-content-2">
-                              A chi posso rivolgermi in caso di dubbi durante il corso?
+                              A chi posso rivolgermi in caso di dubbi?
                             </button>
                         </h5>
                     </div>
                     <div class="collapse" id="accordion-tab-1-content-2" aria-labelledby="accordion-tab-1-heading-2" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Il docente è sempre a disposizione sulla piattaforma via messaggistica privata o nella sezione D&amp;R per qualsiasi dubbio/domanda/perplessità inerente al corso.
+                              Il docente è sempre a disposizione nella sezione "Domande e Risposte" del corso per qualsiasi domanda inerente al corso.
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header" id="accordion-tab-1-heading-3">
                         <h5>
@@ -362,11 +383,12 @@
                     <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere l'esame in un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino a casa tua visita <a href="https://www.pearsonvue.com/servlet/vue.web2.core.Dispatcher?webContext=CandidateSite&webApp=TestCenterLocator&requestedAction=register&cid=374"> questo link</a>.
+                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere il rispettivo esame on-line o presso un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino, visita <a target=blank href="https://www.pearsonvue.com/servlet/vue.web2.core.Dispatcher?webContext=CandidateSite&webApp=TestCenterLocator&requestedAction=register&cid=374"> questo link</a>.
                             </p>
                         </div>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="card-header" id="accordion-tab-1-heading-4">
                         <h5>
@@ -378,13 +400,35 @@
                     <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              L'esame "Linux Essentials" è composto di 40 domande da rispondere in 60 minuti, mentre tutti gli esami LPIC sono 60 domande in 90 minuti.
-                              <br>Tutti gli esami consistono in domande aperte (es: "con quale comando creo un nuovo file vuoto?") e a scelta multipla.
-                              <br>Per maggiori informazioni su esami e certificazioni LPI visita le FAQ sul sito ufficiale lpi.org: <a href="https://www.lpi.org/it/about-lpi/frequently-asked-questions">https://www.lpi.org/it/about-lpi/frequently-asked-questions</a>
+                              L'esame "Linux Essentials" è composto di 40 domande da rispondere in 60 minuti, mentre tutti gli esami LPIC comprendono 60 domande da rispondere in 90 minuti.
+                              <br>Tutti gli esami comprendono domande aperte non discorsive (es: "con quale comando creo un nuovo file vuoto?") e a scelta multipla.
+                              <br>Per maggiori informazioni su esami e certificazioni LPI visita le FAQ sul sito ufficiale <a target=blank href="https://www.lpi.org/it/about-lpi/frequently-asked-questions">lpi.org</a>
                             </p>
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-10">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-10" aria-expanded="false" aria-controls="accordion-tab-1-content-10">
+                              Quanto costa l'esame di certificazione?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-10" aria-labelledby="accordion-tab-1-heading-10" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+                            <p>
+			      Per ottenere la certificazione LPI devi sostenere un esame per ciascun modulo di apprendimento. <br>
+			      Ad esempio, LPIC-1 è composto da due moduli: 101 e 102, mentre Linux Essentials è costituito da un solo esame.<br>
+			      Gli esami LPIC hanno un costo di 140€ mentre gli Essentials di 85€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a href=https://forms.gle/9vxTEVDftBzioDat8> questo modulo </a>.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="card">
                     <div class="card-header" id="accordion-tab-1-heading-5">
                         <h5>
@@ -399,9 +443,9 @@
                               Il programma LPI si aggiorna ogni 5 anni. Ad ogni aggiornamento vengono aggiunti nuovi video integrativi per mantenere il corso aggiornato.
                               <br>Ad esempio a inizio 2019 c'è stato un aggiornamento degli obiettivi d'esame per "LPIC-1" dalla versione "4" alla versione "5", ed il corso è stato aggiornato per coprire le nuove competenze. Il prossimo aggiornamento cadrà entro il 2024.
                               <br><br>Per maggiori dettagli su programma del corso e obiettivi d'esame visita:
-                              <br>LPIC-1: Exam 101: <a href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
-                              <br>Exam 102: <a href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
-                              <br>Linux Essentials: <a href="https://www.lpi.org/our-certifications/exam-010-objectives">https://www.lpi.org/our-certifications/exam-010-objectives</a>
+                              <br>LPIC-1: Exam 101: <a target=blank href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
+                              <br>Exam 102: <a target=blank href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
+                              <br>Linux Essentials: <a target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">https://www.lpi.org/our-certifications/exam-010-objectives</a>
                             </p>
                         </div>
                     </div>
@@ -419,9 +463,9 @@
 			    <p>
 				Puoi trovare l'elenco degli argomenti trattati in ciascun corso nella scaletta della relativa pagina di presentazione prima dell'acquisto.
 				Per i corsi orientati alle certificazioni (LPI) è anche disponibile un elenco dettagliato di tutti i termini e concetti trattati sul sito ufficiale della certificazione in questione:
-                              <br>LPIC-1 Exam 101: <a href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
-                              <br>LPIC-1 Exam 102: <a href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
-                              <br>Linux Essentials: <a href="https://www.lpi.org/our-certifications/exam-010-objectives">https://www.lpi.org/our-certifications/exam-010-objectives</a>
+                              <br>LPIC-1 Exam 101: <a target=blank href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
+                              <br>LPIC-1 Exam 102: <a target=blank href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
+                              <br>Linux Essentials: <a target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">https://www.lpi.org/our-certifications/exam-010-objectives</a>
                             </p>
                         </div>
                     </div>
