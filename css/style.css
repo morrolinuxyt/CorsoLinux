@@ -17,7 +17,8 @@ h1, h2, h3, h4, .navbar-brand {
 }
 
 section {
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 6rem 0;
 }
 
 .container p {
