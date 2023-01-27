@@ -78,13 +78,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#courses">Corsi</a>
+            <a class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#reviews">Recensioni</a>
+            <a class="nav-link js-scroll-trigger" href="#recensioni">Recensioni</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
@@ -102,7 +102,7 @@
         <div class="col-12 text-center text-white">
           <h1 class="font-weight-light">Il corso bestseller italiano su Linux</h1>
           <p class="lead">inizia la tua carriera come professionista in un settore in rapida crescita!</p>
-          <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#courses">Scopri</a>
+          <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
         </div>
       </div>
     </div>
@@ -183,7 +183,7 @@
     </div>
   </section>
 
-  <section id="courses">
+  <section id="corsi">
     <div class="container">
 	<h4>Tutti possono imparare Linux</h4>
       <p class="mb-1 text-justify">
@@ -543,7 +543,7 @@
 
   </section>
 
-  <section id="reviews">
+  <section id="recensioni">
     <div class="text-center">
       <h2>Fidati di chi l'ha già acquistato</h2>
       <div id="slider" class="carousel slide" data-ride="carousel">
