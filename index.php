@@ -192,28 +192,27 @@
     </div>
   </section>
 
-  <section>
+  <section id="lpi">
     <div class="container text-center">
-      <h2 class="my-5">TUTTI POSSONO IMPARARE LINUX</h2>
-
-	    <!-- <h4>Tutti possono imparare Linux</h4> -->
-      <p class="mb-1 text-justify">
-        Qualunque sia il tuo livello di partenza e il tuo obiettivo, troverai di seguito il corso che fa per te.<br>
-        Qui imparerai tutto ciò che c'è da sapere su <b>GNU/Linux</b> e l'ecosistema <b>Open Source</b> tramite spiegazioni approfondite ed <b>esempi pratici</b>.<br>
-        
-        Al termine, se vorrai, potrai affrontare gli <b>esami ufficiali</b> di <i>Linux Professional Institute</i>
-        e conseguire una <b><a target=”_blank” href="https://youtu.be/N-7Uan8tML0?t=71">certificazione professionale riconosciuta internazionalmente</a></b>.<br>
-        <br><br>
+      <h2 class="my-5">BATTERIE INCLUSE</h2>
+      <p class="mb-2 text-justify">
+        Qui imparerai tutto ciò che c'è da sapere su GNU/Linux e l'ecosistema Open Source tramite <b>spiegazioni approfondite</b> e comprensibili ed <b>esempi pratici</b> ad accompagnare ogni concetto teorico.<br>  
+        <br>
+        Al termine, se vorrai, potrai affrontare gli esami ufficiali di <b><a target=”_blank” href="https://www.lpi.org/it">Linux Professional Institute</a></b>
+        e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
+        Tutti i miei corsi marchiati <b>LPI</b> seguono fedelmente il programma di certificazione ufficiale: ti fornirò la giusta preparazione per superare ogni test, <b>non sono necessarie risorse aggiuntive!</b>  
+        Consulta le <a href="#faq">FAQ</a> e il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più.
       </p>
 
-
+      <br><br>
+      <h4>Pronto per l'esame?</h4>
+      <br>
+      <p class="mb-2 text-justify">
+        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
+        <b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
+      </p>
       <div class="mb-5 text-center">
-        <!-- <a style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="#dazero" class="btn btn-primary mt-auto js-scroll-trigger">Vuoi iniziare da zero?</a> -->
-
-        <div style="padding: 10px;">
-          <b>Pronto per l'esame?</b>
-        </div>
-
+        <br>
         <a target=”_blank” style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
       </div>
     </div>
@@ -222,15 +221,21 @@
 
   <section id="corsi" style="margin-top: -9rem;">
     <div class="container text-center">
-        <!-- <h4>Batterie incluse</h4> -->
-        <h2 class="my-5">BATTERIE INCLUSE</h2>
+      <h2 class="my-5">TUTTI POSSONO IMPARARE LINUX</h2>
+      <p class="mb-1 text-justify">
+        Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
+        Ciascuna delle seguenti schede è relativa ad un corso di <b><a href="#lpi">certificazione LPI</a></b>.
+        Consulta <a href="#percorso"> questo diagramma</a> e guarda il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più sul percorso formativo completo.
+        <br>
+        <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a href="#dazero">approccio più graduale</a>.
+        <br>
+        <b>Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a href="#compara"> comparativa</a> e sarà tutto più chiaro :)
 
-        <p class="mb-2 text-justify">
-          Nei miei corsi troverai tutte le risorse necessarie a coprire ogni argomento del programma di certificazione professionale <b>LPI</b>.
-          Ti fornirò la giusta preparazione per superare tutti i test.
-          <span class="keeptogether"><b>Non sono necessarie risorse aggiuntive!</b></span>
-        </p>
-      <br>
+        <br><br><br>
+      </p>
+    </div>
+
+    <div class="container text-center">
       <div class="card-deck">
         <a class="invisible-link" href="<?php echo $essentials; ?>">
           <div class="card">
@@ -252,11 +257,11 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 101</h3>
               <p class="card-text">
-            		LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
-            		Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto,
-            		dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
-            		Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
-  	          </p>
+                LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
+                Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto,
+                dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
+                Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
+              </p>
               <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
           </div>
@@ -267,12 +272,12 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 102</h3>
               <p class="card-text">
-            		Seconda parte del programma di certificazione LPI di primo livello. <br><br>
-            		Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo
-            		esame per la certificazione professionale di primo livello<br><br>
-            		Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
-            		otterai la certificazione professionale in ambito Linux<br><br>
-  	          </p>
+                Seconda parte del programma di certificazione LPI di primo livello. <br><br>
+                Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo
+                esame per la certificazione professionale di primo livello<br><br>
+                Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
+                otterai la certificazione professionale in ambito Linux<br><br>
+              </p>
               <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
             </div>
           </div>
@@ -337,7 +342,7 @@
       <p class="text-justify">
         La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare: 
         <br><br>
-        <h5><b>Arch Linux Per Comuni Mortali</b> </h5>
+        <h5><b><a href="#dazero">Arch Linux Per Comuni Mortali</a></b> </h5>
         È un corso teorico e pratico rivolto a chi ha <b>poca o nessuna esperienza</b> e vuole imparare ad installare, configurare e gestire un sistema Linux flessibile e moderno sul proprio PC. 
         Studiamo assieme l’<b>anatomia</b> di una distribuzione Linux per capirne a fondo il funzionamento e iniziamo a mettere le mani in pasta con una serie di <b>lezioni pratiche</b> 
         che spaziano dalle <b>basi della riga di comando</b> al backup, ripristino e <b>modifica delle configurazioni</b> software, <b>monitoraggio</b> delle risorse e gestione delle applicazioni in <b>avvio automatico</b>. 
@@ -345,14 +350,14 @@
         L'obiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile <a href="<?php echo $archlinux; ?>">per tutti i nuovi utenti</a>.
         <br><br>
         
-        <h5><b>Linux Essentials</b></h5> È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
+        <h5><b><a href="#corsi">Linux Essentials</a></b></h5> È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
         ci soffermiamo sulla distinzione tra <b>licenze</b> Open Source, Copyleft e Permissive, studiamo i <b>business model</b> dell'Open Source, le <b>opportunità lavorative</b> 
         e naturalmente tutte le basi per la <b>gestione personale di un sistema LINUX</b>.<br>
         Il <a href="<?php echo $essentials; ?>">programma del corso</a> segue fedelmente l'omonimo percorso LPI, perciò al termine, se vorrai, potrai sostenere l'esame <a target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">010 - Linux Essentials</a> 
         ed ottenere un certificato che attesta le tue competenze linux in ambito lavorativo.
         <br><br>
         
-        <h5><b>LPIC-1</b></h5> È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
+        <h5><b><a href="#corsi">LPIC-1</a></b></h5> È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
         dalla gestione delle <b>quote</b> e dei limiti sulle risorse condivise all’<b>automazione</b>, senza tralasciare i concetti fondamentali di <b>sicurezza</b> informatica 
         e <b>networking</b> che caratterizzano questo tipo di sistemi. Il livello di partenza è più alto rispetto ai precedenti e si presuppone la conoscenza della terminologia di base. <br>
         Il percorso è diviso in due moduli, <a target=blank href="<?php echo $e101; ?>">101</a> e <a target=blank href="<?php echo $e102; ?>">102</a>, al termine dei quali potrai sostenere i rispettivi esami LPI  
