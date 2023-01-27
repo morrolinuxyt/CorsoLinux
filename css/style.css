@@ -63,7 +63,7 @@ section {
   font-size: 60px;
 }
 
-#statistics {
+#statistiche {
   background-color: #FEC224;
 }
 
@@ -75,12 +75,12 @@ section {
   padding: 6px;
 }
 
-#reviews {
+#recensioni {
   color: #5d564f;
   background: #f7f7f7;
 }
 
-#reviews h2 {
+#recensioni h2 {
   font-size: 1.75rem;
   text-transform: uppercase;
   margin-bottom: 50px;
@@ -170,7 +170,7 @@ section {
   padding-top: 0px;
 }
 
-#comparison{
+#percorso{
   background-color: #FFFFFF;
   color: black;
 }

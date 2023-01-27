@@ -87,7 +87,7 @@
             <a class="nav-link js-scroll-trigger" href="#recensioni">Recensioni</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            <a class="nav-link js-scroll-trigger" href="#docente">Docente</a>
           </li>
         </ul>
       </div>
@@ -117,6 +117,12 @@
         <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
         Linux è anche molto in voga tra hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
       </p>
+    </div>
+  </section>
+
+  <section id="lavoro" style="margin-top: -12rem;">
+    <div class="container text-center">
+
       <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
       <p class="my-5 text-justify">
         Secondo l'<a href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
@@ -156,7 +162,7 @@
     </div>
   </section>
 
-  <section id="statistics">
+  <section id="statistiche">
     <div class="container text-center">
       <p class="mb-5">
         Pronto per entrare in classe?<br>
@@ -262,9 +268,9 @@
     </div>
   </section>
 
-  <section id="comparison">
+  <section id="percorso">
     <div class="container">
-      <h2 class="mb-5 text-center">Indeciso?</h2>
+      <h2 class="mb-5 text-center">Percorso formativo</h2>
       <p class="text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
         Ad esempio, non è possibile sostenere la certificazione LPIC-2 senza aver sostenuto LPIC-1, mentre non è necessario "Linux Essentials" per accedere ad LPIC-1.
@@ -701,7 +707,7 @@
     </div>
   </section>
 
-  <section id="about">
+  <section id="docente">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
