@@ -456,7 +456,8 @@
                     <div class="collapse" id="accordion-tab-1-content-4" aria-labelledby="accordion-tab-1-heading-4" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              L'esame "Linux Essentials" è composto di 40 domande da rispondere in 60 minuti, mentre tutti gli esami LPIC comprendono 60 domande da rispondere in 90 minuti.
+			      L'esame "Linux Essentials" è composto di 40 domande da rispondere in 60 minuti, mentre tutti gli esami LPIC comprendono 60 domande da rispondere in 90 minuti.<br>
+				Per superare l'esame dovrai rispondere correttamente almeno all'80% delle domande.
                               <br>Tutti gli esami comprendono domande aperte non discorsive (es: "con quale comando creo un nuovo file vuoto?") e a scelta multipla.
                               <br>Per maggiori informazioni su esami e certificazioni LPI visita le FAQ sul sito ufficiale <a target=blank href="https://www.lpi.org/it/about-lpi/frequently-asked-questions">lpi.org</a>
                             </p>
