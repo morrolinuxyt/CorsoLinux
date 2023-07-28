@@ -77,11 +77,22 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#lavoro">Lavoro</a>
           </li>
+<!--
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
+            <a class="nav-link js-scroll-trigger" href="#esame">Esame</a>
+          </li>
+--->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#percorso">Percorso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#compara">Compara</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
@@ -111,122 +122,14 @@
     </div>
   </header>
 
-  <section id="why">
-    <div class="container text-center">
-      <h2 class="my-5">PERCHÈ IMPARARE LINUX?</h2>
-      <p class="my-5 text-justify">
-        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al router multifunzione domestico. 
-        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b>, senza tralasciare il suo <b>importante ruolo nei sistemi industriali di ultima generazione</b>. 
-        <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
-        Linux è anche molto in voga tra hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
-      </p>
-    </div>
-  </section>
-
-  <section id="lavoro" style="margin-top: -12rem;">
-    <div class="container text-center">
-
-      <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
-      <p class="my-5 text-justify">
-        Secondo l'<a href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
-        il 97% dei responsabili delle assunzioni indica 
-        <b>assumere talenti Open Source</b> come una priorità e il 92% afferma di riscontrare difficoltà 
-        nel reperire personale qualificato.
-        L'88% dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione 
-        di <b>professionisti certificati</b> per svolgere il lavoro ed il 39% delle aziende dichiara di aver fornito 
-        maggiori <b>aumenti salariali</b> rispetto ad altre aree di business come forma di ritenzione del personale.
-        Tra le competenze Open Source più richieste, Linux risulta al secondo posto con il 32% di domanda complessiva,
-        surclassato soltanto dalle tecnologie <b>Cloud</b> per cui <i>Linux è tipicamente un prerequisito</i>.
-        Il dominio di applicazione delle competenze Linux e Open Source più in generale non è limitato 
-        all'amministrazione di sistemi e infrastrutture IT: Un numero sempre crescente di aziende sta adottando
-        approcci e metodolige <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
-        o di sviluppo sulla piattaforma.
-      </p>
-
-      <div id="lf-statistics" class="container text-center">
-        <div class="row">
-
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#6960C4" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
-          </div>
-
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="#F4BD47" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
-          </div>
-
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#D1509F" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
-          </div>
-
-        </div>
-      </div>
-
-      <br><br><br>
-      <div class="yt_video">
-         <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
-      </div>
-    </div>
-  </section>
-
-  <section id="statistiche">
-    <div class="container text-center">
-      <p class="mb-5">
-        Pronto per entrare in classe?<br>
-        Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
-      </p>
-      <div id="counters" class="row">
-        <div class="col-lg-4 stats">
-          <i class="fa fa-users" aria-hidden="true"></i>
-          <div class="counting" data-count="<?php echo $subs; ?>">0</div>
-          <h5>Iscrizioni</h5>
-        </div>
-        <div class="col-lg-4 stats">
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-          <div class="counting" data-count="<?php echo $lessons; ?>">0</div>
-          <h5>Lezioni</h5>
-        </div>
-        <div class="col-lg-4 stats">
-          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
-          <div class="counting" data-count="<?php echo $reviews; ?>">0</div>
-          <h5>Recensioni</h5>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="lpi">
-    <div class="container text-center">
-      <h2 class="my-5">BATTERIE INCLUSE</h2>
-      <p class="mb-2 text-justify">
-        Qui imparerai tutto ciò che c'è da sapere su GNU/Linux e l'ecosistema Open Source tramite <b>spiegazioni approfondite</b> e comprensibili ed <b>esempi pratici</b> ad accompagnare ogni concetto teorico.<br>  
-        <br>
-        Al termine, se vorrai, potrai affrontare gli esami ufficiali di <b><a target=”_blank” href="https://www.lpi.org/it">Linux Professional Institute</a></b>
-        e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
-        Tutti i miei corsi marchiati <b>LPI</b> seguono fedelmente il programma di certificazione ufficiale: ti fornirò la giusta preparazione per superare ogni test, <b>non sono necessarie risorse aggiuntive!</b>  
-        Consulta le <a href="#faq">FAQ</a> e il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più.
-      </p>
-
-      <br><br>
-      <h4>Pronto per l'esame?</h4>
-      <br>
-      <p class="mb-2 text-justify">
-        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
-        <b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
-      </p>
-      <div class="mb-5 text-center">
-        <br>
-        <a target=”_blank” style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="corsi" style="margin-top: -9rem;">
+  <section id="corsi"> <!-- style="margin-top: -9rem;"> -->
     <div class="container text-center">
       <h2 class="my-5">TUTTI POSSONO IMPARARE LINUX</h2>
       <p class="mb-1 text-justify">
         Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
         Ciascuna delle seguenti schede è relativa ad un corso di <b><a href="#lpi">certificazione LPI</a></b>.
         Consulta <a href="#percorso"> questo diagramma</a> e guarda il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più sul percorso formativo completo.
-        <br>
+        <br><br>
         <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a href="#dazero">approccio più graduale</a>.
         <br>
         <b>Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a href="#compara"> comparativa</a> e sarà tutto più chiaro :)
@@ -286,8 +189,173 @@
     </div>
   </section>
 
+  <!---
+  <section id="why" style="margin-top: -9rem;">
+    <div class="container text-center">
+      <h2 class="my-5">PERCHÈ IMPARARE LINUX?</h2>
+      <p class="my-5 text-justify">
+        Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al router multifunzione domestico. 
+        Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b>, senza tralasciare il suo <b>importante ruolo nei sistemi industriali di ultima generazione</b>. 
+        <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
+        Linux è anche molto in voga tra hobbisti e makers grazie alla popolarità di piattaforme di sviluppo <i>embedded</i> come <b>Raspberry Pi</b>, per la realizzazione di progetti "fai da te" spesso in accoppiata con Arduino.
+      </p>
+    </div>
+  </section>
+  --->
+
+  <section id="lavoro" style="margin-top: -9rem;">
+    <div class="container text-center">
+
+      <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
+      <p class="my-5 text-justify">
+        Secondo l'<a href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
+        il 97% dei responsabili delle assunzioni indica 
+        <b>assumere talenti Open Source</b> come una priorità e il 92% afferma di riscontrare difficoltà 
+        nel reperire personale qualificato.
+        L'88% dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione 
+        di <b>professionisti certificati</b> per svolgere il lavoro ed il 39% delle aziende dichiara di aver fornito 
+        maggiori <b>aumenti salariali</b> rispetto ad altre aree di business come forma di ritenzione del personale.
+        Tra le competenze Open Source più richieste, Linux risulta al secondo posto con il 32% di domanda complessiva,
+        surclassato soltanto dalle tecnologie <b>Cloud</b> per cui <i>Linux è tipicamente un prerequisito</i>.
+        Il dominio di applicazione delle competenze Linux e Open Source più in generale non è limitato 
+        all'amministrazione di sistemi e infrastrutture IT: Un numero sempre crescente di aziende sta adottando
+        approcci e metodolige <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
+        o di sviluppo sulla piattaforma.
+      </p>
+
+      <div id="lf-statistics" class="container text-center">
+        <div class="row">
+
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#6960C4" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
+          </div>
+
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="#F4BD47" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
+          </div>
+
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#D1509F" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
+          </div>
+
+        </div>
+      </div>
+
+      <br><br><br>
+      <div class="yt_video">
+         <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
+      </div>
+    </div>
+  </section>
+
+  <section id="esame" style="margin-top: -9rem;">
+    <div class="container text-center">
+      <h2 class="my-5">Pronto per l'esame?</h2>
+      <p class="mb-2 text-center">
+        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
+        <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
+      </p>
+      <div class="mb-5 text-center">
+        <br>
+        <a target=”_blank” style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="statistiche">
+    <div class="container text-center">
+      <p class="mb-5">
+        Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
+      </p>
+      <div id="counters" class="row">
+        <div class="col-lg-4 stats">
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <div class="counting" data-count="<?php echo $subs; ?>">0</div>
+          <h5>Iscrizioni</h5>
+        </div>
+        <div class="col-lg-4 stats">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          <div class="counting" data-count="<?php echo $lessons; ?>">0</div>
+          <h5>Lezioni</h5>
+        </div>
+        <div class="col-lg-4 stats">
+          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          <div class="counting" data-count="<?php echo $reviews; ?>">0</div>
+          <h5>Recensioni</h5>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="lpi">
+    <div class="container text-center">
+      <h2 class="my-5">BATTERIE INCLUSE</h2>
+      <p class="mb-2 text-justify">
+        Qui imparerai tutto ciò che c'è da sapere su GNU/Linux e l'ecosistema Open Source tramite <b>spiegazioni approfondite</b> e comprensibili ed <b>esempi pratici</b> ad accompagnare ogni concetto teorico.
+        <br><br>
+        Al termine, se vorrai, potrai affrontare gli esami ufficiali di <b><a target=”_blank” href="https://www.lpi.org/it">Linux Professional Institute</a></b>
+        e conseguire una <b>certificazione professionale riconosciuta internazionalmente</b>.<br><br>
+
+        I corsi a marchio LPI (<b>Linux Professional Institute</b>) sono realizzati appositamente <b>per l'inserimento lavorativo</b> in ambito professionale 
+        e seguono fedelmente il programma di certificazione ufficiale: ti fornirò la giusta preparazione per superare ogni test, <b>non sono necessarie risorse aggiuntive!</b>  
+        <br><br>
+        Consulta le <a href="#faq">FAQ</a> e il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più. 
+        <!-- Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a href="#dazero">approccio più graduale</a>. --->
+        <br><br><br><br>
+      </p>
+
+    <div class="container text-center">
+      <div class="card-deck">
+        <a class="invisible-link" href="<?php echo $essentials; ?>">
+          <div class="card">
+            <img src="assets/corso-lpi-linux-essentials-cover.jpg" class="card-img-top" alt="Copertina corso LPI Linux Essentials" title="Corso per certificazione LPI Linux Essentials online in italiano">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Linux Essentials</h3>
+              <p class="card-text">
+                Il corso LPI Linux Essentials parte "da zero" e introduce a GNU/Linux e al mondo dell'Open Source.<br><br>
+                Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
+                Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.<br><br>
+              </p>
+              <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+            </div>
+          </div>
+        </a>
+        <a class="invisible-link" href="<?php echo $e101; ?>">
+          <div class="card">
+            <img src="assets/corso-lpic-1-exam-101-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 101" title="Corso per certificazione LPIC-1 esame 101">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">LPIC-1 | Exam 101</h3>
+              <p class="card-text">
+                LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
+                Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto,
+                dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
+                Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
+              </p>
+              <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+            </div>
+          </div>
+        </a>
+        <a class="invisible-link" href="<?php echo $e102; ?>">
+          <div class="card">
+            <img src="assets/corso-lpic-1-exam-102-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 102" title="Corso per certificazione LPIC-1 esame 102">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">LPIC-1 | Exam 102</h3>
+              <p class="card-text">
+                Seconda parte del programma di certificazione LPI di primo livello. <br><br>
+                Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo
+                esame per la certificazione professionale di primo livello<br><br>
+                Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
+                otterai la certificazione professionale in ambito Linux<br><br>
+              </p>
+              <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </section>
   <section id="percorso">
-    <div class="container">
+    <div class="container" style="margin-top: -3rem;">
       <h2 class="mb-5 text-center">PERCORSO FORMATIVO</h2>
       <p class="text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
@@ -305,7 +373,7 @@
   </section>
 
   <section id="dazero">
-    <div class="container">
+    <div class="container" style="margin-top: -6rem;">
       <h2 class="mb-5 text-center">Cerchi un approccio più graduale?</h2>
       <p class="mb-2 text-justify">
         Lo sappaimo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
@@ -337,7 +405,7 @@
   </section>
 
   <section id="compara">
-    <div class="container">
+    <div class="container" style="margin-top: -3rem;">
       <h2 class="mb-5 text-center">Quale corso scegliere?</h2>
       <p class="text-justify">
         La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare: 
