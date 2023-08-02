@@ -83,14 +83,14 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#lavoro">Lavoro</a>
           </li>
-<!--
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#esame">Esame</a>
           </li>
---->
+<!---
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#percorso">Percorso</a>
           </li>
+--->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#compara">Compara</a>
           </li>
@@ -127,12 +127,12 @@
       <h2 class="my-5">TUTTI POSSONO IMPARARE LINUX</h2>
       <p class="mb-1 text-justify">
         Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
-        Ciascuna delle seguenti schede è relativa ad un corso di <b><a href="#lpi">certificazione LPI</a></b>.
-        Consulta <a href="#percorso"> questo diagramma</a> e guarda il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più sul percorso formativo completo.
+        Ciascuna delle seguenti schede è relativa ad un corso di <b><a class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
+        Consulta <a class="js-scroll-trigger" href="#percorso"> questo diagramma</a> e guarda il <a class="js-scroll-trigger" href="#video_lpi"> video dedicato</a> per saperne di più sul percorso formativo completo.
         <br><br>
-        <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a href="#dazero">approccio più graduale</a>.
+        <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a class="js-scroll-trigger" href="#dazero">approccio più graduale</a>.
         <br>
-        <b>Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a href="#compara"> comparativa</a> e sarà tutto più chiaro :)
+        <b>Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a class="js-scroll-trigger" href="#compara"> comparativa</a> e sarà tutto più chiaro :)
 
         <br><br><br>
       </p>
@@ -208,7 +208,7 @@
 
       <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
       <p class="my-5 text-justify">
-        Secondo l'<a href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
+        Secondo l'<a target="_blank" href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
         il 97% dei responsabili delle assunzioni indica 
         <b>assumere talenti Open Source</b> come una priorità e il 92% afferma di riscontrare difficoltà 
         nel reperire personale qualificato.
@@ -239,26 +239,11 @@
       </div>
 
       <br><br><br>
-      <div class="yt_video">
+      <div id="video_lpi" class="yt_video">
          <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
-
-  <section id="esame" style="margin-top: -9rem;">
-    <div class="container text-center">
-      <h2 class="my-5">Pronto per l'esame?</h2>
-      <p class="mb-2 text-center">
-        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
-        <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
-      </p>
-      <div class="mb-5 text-center">
-        <br>
-        <a target=”_blank” style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
-      </div>
-    </div>
-  </section>
-
 
   <section id="statistiche">
     <div class="container text-center">
@@ -286,7 +271,30 @@
     </div>
   </section>
 
-  <section id="lpi">
+
+  <section id="esame" style="margin-top: -3rem;">
+    <div class="container text-center">
+      <h2 class="my-5">Pronto per l'esame?</h2>
+      <p class="mb-2 text-center">
+        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
+        <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
+      </p>
+      <div class="mb-5 text-center">
+        <br>
+        <a target="_blank" style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+      </div>
+      <h2 class="my-5"><br>Il tuo successo è il mio successo.</h2>
+      <p class="mb-2 text-center">
+        Guarda questo video con i miei consigli su come <b>affrontare al meglio l'esame</b> di certificazione:
+      </p>
+      <br><br>
+      <div class="yt_video">
+         <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw" frameborder="0" allowfullscreen></iframe><br /><br />
+      </div>
+    </div>
+  </section>
+
+  <section id="lpi" style="margin-top: -9rem;">
     <div class="container text-center">
       <h2 class="my-5">BATTERIE INCLUSE</h2>
       <p class="mb-2 text-justify">
@@ -298,7 +306,7 @@
         I corsi a marchio LPI (<b>Linux Professional Institute</b>) sono realizzati appositamente <b>per l'inserimento lavorativo</b> in ambito professionale 
         e seguono fedelmente il programma di certificazione ufficiale: ti fornirò la giusta preparazione per superare ogni test, <b>non sono necessarie risorse aggiuntive!</b>  
         <br><br>
-        Consulta le <a href="#faq">FAQ</a> e il <a target=”_blank” href="https://www.youtube.com/watch?v=N-7Uan8tML0"> video dedicato</a> per saperne di più. 
+        Consulta le <a class="js-scroll-trigger" href="#faq">FAQ</a> e il <a class="js-scroll-trigger" href="#video_lpi"> video dedicato</a> per saperne di più. 
         <!-- Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a href="#dazero">approccio più graduale</a>. --->
         <br><br><br><br>
       </p>
@@ -410,7 +418,7 @@
       <p class="text-justify">
         La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare: 
         <br><br>
-        <h5><b><a href="#dazero">Arch Linux Per Comuni Mortali</a></b> </h5>
+        <h5><b><a class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></b> </h5>
         È un corso teorico e pratico rivolto a chi ha <b>poca o nessuna esperienza</b> e vuole imparare ad installare, configurare e gestire un sistema Linux flessibile e moderno sul proprio PC. 
         Studiamo assieme l’<b>anatomia</b> di una distribuzione Linux per capirne a fondo il funzionamento e iniziamo a mettere le mani in pasta con una serie di <b>lezioni pratiche</b> 
         che spaziano dalle <b>basi della riga di comando</b> al backup, ripristino e <b>modifica delle configurazioni</b> software, <b>monitoraggio</b> delle risorse e gestione delle applicazioni in <b>avvio automatico</b>. 
@@ -418,14 +426,14 @@
         L'obiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile <a href="<?php echo $archlinux; ?>">per tutti i nuovi utenti</a>.
         <br><br>
         
-        <h5><b><a href="#corsi">Linux Essentials</a></b></h5> È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
+        <h5><b><a class="js-scroll-trigger" href="#corsi">Linux Essentials</a></b></h5> È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
         ci soffermiamo sulla distinzione tra <b>licenze</b> Open Source, Copyleft e Permissive, studiamo i <b>business model</b> dell'Open Source, le <b>opportunità lavorative</b> 
         e naturalmente tutte le basi per la <b>gestione personale di un sistema LINUX</b>.<br>
         Il <a href="<?php echo $essentials; ?>">programma del corso</a> segue fedelmente l'omonimo percorso LPI, perciò al termine, se vorrai, potrai sostenere l'esame <a target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">010 - Linux Essentials</a> 
         ed ottenere un certificato che attesta le tue competenze linux in ambito lavorativo.
         <br><br>
         
-        <h5><b><a href="#corsi">LPIC-1</a></b></h5> È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
+        <h5><b><a class="js-scroll-trigger" href="#corsi">LPIC-1</a></b></h5> È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
         dalla gestione delle <b>quote</b> e dei limiti sulle risorse condivise all’<b>automazione</b>, senza tralasciare i concetti fondamentali di <b>sicurezza</b> informatica 
         e <b>networking</b> che caratterizzano questo tipo di sistemi. Il livello di partenza è più alto rispetto ai precedenti e si presuppone la conoscenza della terminologia di base. <br>
         Il percorso è diviso in due moduli, <a target=blank href="<?php echo $e101; ?>">101</a> e <a target=blank href="<?php echo $e102; ?>">102</a>, al termine dei quali potrai sostenere i rispettivi esami LPI  
