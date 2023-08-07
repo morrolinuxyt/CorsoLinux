@@ -508,14 +508,14 @@
                     <div class="card-header" id="accordion-tab-1-heading-3">
                         <h5>
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-3" aria-expanded="false" aria-controls="accordion-tab-1-content-3">
-                              Ho seguito il corso, come posso ottenere la certificazione?
+                              Come posso ottenere la certificazione?
                             </button>
                         </h5>
                     </div>
                     <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere il rispettivo esame on-line o presso un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino, visita <a target=blank href="https://www.pearsonvue.com/servlet/vue.web2.core.Dispatcher?webContext=CandidateSite&webApp=TestCenterLocator&requestedAction=register&cid=374"> questo link</a>.
+                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere il rispettivo esame on-line o presso un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino, visita <a target=blank href="https://wsr.pearsonvue.com/testtaker/registration/SelectTestCenterProximity/LINUXPROFESSION?conversationId=507283"> questo link</a>.
                             </p>
                         </div>
                     </div>
@@ -554,7 +554,7 @@
                             <p>
 			      Per ottenere la certificazione LPI devi sostenere un esame per ciascun modulo di apprendimento. <br>
 			      Ad esempio, LPIC-1 è composto da due moduli: 101 e 102, mentre Linux Essentials è costituito da un solo esame.<br>
-			      Gli esami LPIC hanno un costo di 140€ mentre gli Essentials di 85€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a href=https://forms.gle/9vxTEVDftBzioDat8> questo modulo </a>.
+			      Gli esami Essentials hanno un costo di 110€ e gli LPIC di 176€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a href=https://forms.gle/9vxTEVDftBzioDat8> questo modulo </a>.
 
                             </p>
                         </div>
