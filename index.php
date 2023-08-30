@@ -219,7 +219,7 @@
         surclassato soltanto dalle tecnologie <b>Cloud</b> per cui <i>Linux è tipicamente un prerequisito</i>.
         Il dominio di applicazione delle competenze Linux e Open Source più in generale non è limitato 
         all'amministrazione di sistemi e infrastrutture IT: Un numero sempre crescente di aziende sta adottando
-        approcci e metodolige <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
+        approcci e metodologie <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
         o di sviluppo sulla piattaforma.
       </p>
 
@@ -240,7 +240,7 @@
 
       <br><br><br>
       <div id="video_lpi" class="yt_video">
-         <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
+        <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
@@ -289,7 +289,7 @@
       </p>
       <br><br>
       <div class="yt_video">
-         <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw" frameborder="0" allowfullscreen></iframe><br /><br />
+        <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
@@ -384,7 +384,7 @@
     <div class="container" style="margin-top: -6rem;">
       <h2 class="mb-5 text-center">Cerchi un approccio più graduale?</h2>
       <p class="mb-2 text-justify">
-        Lo sappaimo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
+        Lo sappiamo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
         Se non ti senti pronto, dà un'occhiata a questo <b>corso introduttivo</b> non orientato alle certificazioni.
         È pensato per <b>guidarti passo passo</b> attraverso ogni aspetto di una distribuzione GNU/Linux: dalla sua <b>anatomia</b>
         all'installazione accanto a Windows, fino all'utilizzo come <b>sistema operativo principale</b>!
@@ -634,7 +634,7 @@
                     <div class="collapse " id="accordion-tab-1-content-8" aria-labelledby="accordion-tab-1-heading-8" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                             Il corso è sempre disponibile offline su dispositivi iOS e Android. Tramite l'app potrai scaricare i video per vederli sucessivamente offline.
+                              Il corso è sempre disponibile offline su dispositivi iOS e Android. Tramite l'app potrai scaricare i video per vederli sucessivamente offline.
                             </p>
                         </div>
                     </div>
