@@ -240,7 +240,7 @@
 
       <br><br><br>
       <div id="video_lpi" class="yt_video">
-        <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0" frameborder="0" allowfullscreen></iframe><br /><br />
+        <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
@@ -289,7 +289,7 @@
       </p>
       <br><br>
       <div class="yt_video">
-        <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw" frameborder="0" allowfullscreen></iframe><br /><br />
+        <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
     </div>
   </section>
