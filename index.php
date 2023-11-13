@@ -508,14 +508,48 @@
                     <div class="card-header" id="accordion-tab-1-heading-3">
                         <h5>
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-3" aria-expanded="false" aria-controls="accordion-tab-1-content-3">
-                              Come posso ottenere la certificazione?
+                              Come posso ottenere la certificazione? 
                             </button>
                         </h5>
                     </div>
                     <div class="collapse" id="accordion-tab-1-content-3" aria-labelledby="accordion-tab-1-heading-3" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere il rispettivo esame on-line o presso un centro esami autorizzato Pearson VUE. Ce ne sono in ogni città, per trovare il centro più vicino, visita <a target=blank href="https://wsr.pearsonvue.com/testtaker/registration/SelectTestCenterProximity/LINUXPROFESSION?conversationId=507283"> questo link</a>.
+                              Per ottenere la certificazione LPI relativa al corso frequentato ("Linux Essentials" o "LPIC-1") devi sostenere il rispettivo esame on-line o presso un centro esami autorizzato Pearson VUE. Visita <a target=blank href="https://home.pearsonvue.com/lpi"> questo link</a> per saperne di più e trovare il test center più vicino a casa tua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-11">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-11" aria-expanded="false" aria-controls="accordion-tab-1-content-11">
+                              Dove si svolge l'esame di certificazione?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-11" aria-labelledby="accordion-tab-1-heading-11" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+                            <p>
+                              Gli esami LPI possono essere sostenuti on-line tramite la piattaforma onVUE oppure presso un centro esami autorizzato Pearson VUE. Visita <a target=blank href="https://home.pearsonvue.com/lpi"> questo link</a> per saperne di più e trovare il test center più vicino a casa tua.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="accordion-tab-1-heading-12">
+                        <h5>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-tab-1-content-12" aria-expanded="false" aria-controls="accordion-tab-1-content-12">
+                              Come si prenota l'esame?
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="collapse" id="accordion-tab-1-content-12" aria-labelledby="accordion-tab-1-heading-12" data-parent="#accordion-tab-1">
+                        <div class="card-body">
+                            <p>
+                              Per prenotare l'esame è sufficiente collegarsi al <a target=blank href="https://home.pearsonvue.com/lpi"> portale Pearson VUE</a> e selezionare "Schedule your exam", poi "View Exams" e selezionare il tipo di esame (ad es: Linux Professionals - LPIC-1). Qui è possibile selezionare l'esame desiderato sia in modalità "classica" che on-line (con suffisso "v").
                             </p>
                         </div>
                     </div>
