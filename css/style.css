@@ -42,6 +42,43 @@ section {
   box-shadow: 0 10px 20px gray;
 }
 
+.testimonial {
+  box-shadow: 0 5px 10px gray;
+  border-radius: 5px;
+  margin-bottom: 2rem; 
+  margin-top: 2rem;
+  transition: all .2s ease-in-out;
+
+}
+
+.testimonial:hover, .testimonial:focus {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px gray;
+}
+
+img.rounded-corners {
+  border-radius: 5px;
+  mix-blend-mode: multiply;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
 .invisible-link {
   text-decoration: none;
   cursor: inherit;

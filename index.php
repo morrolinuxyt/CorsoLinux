@@ -281,7 +281,7 @@
       </p>
       <div class="mb-5 text-center">
         <br>
-        <a target="_blank" style="margin: 0 auto;" title="Arch Linux Per Comuni Mortali" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+        <a target="_blank" style="margin: 0 auto;" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
       </div>
       <h2 class="my-5"><br>Il tuo successo è il mio successo.</h2>
       <p class="mb-2 text-center">
@@ -362,8 +362,58 @@
 
     </div>
   </section>
-  <section id="percorso">
+
+  <section id="testimonianze">
     <div class="container" style="margin-top: -3rem;">
+      <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
+      <p class="text-justify">
+      Una domanda che ricevo spesso: 
+      <blockquote>
+        <p>il corso è davvero sufficiente per superare l'esame?</p>
+        <footer><cite><b>Assolutamente sì!</b></cite></footer>
+      </blockquote>
+      <br>
+      In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
+      è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
+      Per levare ogni dubbio, vi lascio alcune testimonianze dei miei studenti.
+      </p>
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Michele-LE.png" width="100%">
+      </div>
+
+      <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Fil-LPIC-1.png" width="100%">
+        </div>
+
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Ruggiero-LE.png" width="100%">
+      </div>
+
+      <div id="altre_testimonianze">
+        <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Ivan-LPIC-1.png" width="100%">
+        </div>
+
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Matteo-LE.png" width="100%">
+      </div>
+
+        <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Odo-LPIC-1.png" width="100%">
+        </div>
+      </div>
+
+      <div class="mb-5 text-center">
+        <br>
+        <button id="testimonials_load_more" class="text-center btn btn-primary mt-auto js-scroll-trigger" onclick="hideMyDiv()">Carica ancora</button> 
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="percorso">
+    <div class="container" style="margin-top: -6rem;">
       <h2 class="mb-5 text-center">PERCORSO FORMATIVO</h2>
       <p class="text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
@@ -411,7 +461,6 @@
       </p>
     </div>
   </section>
-
   <section id="compara">
     <div class="container" style="margin-top: -3rem;">
       <h2 class="mb-5 text-center">Quale corso scegliere?</h2>
@@ -882,6 +931,14 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script src="js/doughnut.js"></script>     
 
+  <script type="text/javascript">
+            document.getElementById("altre_testimonianze").style.display = "none";
+            function hideMyDiv(){
+              document.getElementById("altre_testimonianze").style.display = "block";
+              document.getElementById("testimonials_load_more").style.display = "none";
+            }
+  </script>
+  
 </body>
 
 </html>
