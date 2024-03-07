@@ -311,3 +311,44 @@ span.keeptogether {
   white-space: nowrap ;
 }
 
+.banner {
+  margin:0 auto;padding:10px
+}
+
+.banner:hover {
+  text-decoration:none
+}
+
+.banner div {
+  background-color:#ff651c;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  color:rgb(255, 255, 255);
+  font-size:1.1em;
+  opacity:1
+}
+
+.banner div:hover {
+  opacity:1
+}
+
+.banner img {
+  animation:blinker 1s linear infinite;
+  width:15px;
+  height:15px;
+  margin-top:-3px
+}
+
+.btn-special-offer {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #ff651c;
+  border-color: #ffffff;
+}
+
+.btn-special-offer:hover {
+  color: #ffffff;
+  background-color: #ff5100;
+  border-color: #ffffff;
+}

@@ -42,6 +42,25 @@
 
     $lessons = $lpic101->num_lectures + $lpic102->num_lectures + $essentials->num_lectures;
 
+
+    // SHOW PROMO BANNER?
+    // promo.json example: {"expire_str": "termina l'8 marzo", "expire_date": "07-03-2024 23:59:59"}
+    $show_promo = false;
+    if (file_exists('promo.json')){
+      $json_data = file_get_contents('promo.json');
+      $data = json_decode($json_data, true);
+
+      $promo_expire_str = $data["expire_str"];
+      $promo_expire_date = strtotime($data["expire_date"]);
+      $now = date(time());
+
+      if ($now <= $promo_expire_date) {
+        $show_promo = true;
+      }
+
+      $promo_cta_text = "Vai all'offerta!";
+    } 
+
     //UDEMY COUPONS
     $archlinux = $essentials = $e101 = $e102 = "";
 
@@ -116,15 +135,20 @@
         <div class="col-12 text-center text-white">
           <h1 class="font-weight-light">Il corso bestseller italiano su Linux</h1>
           <p class="lead">inizia la tua carriera come professionista in un settore in rapida crescita!</p>
-          <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
+
+          <?php if($show_promo): ?>
+            <a id="promo" class="js-scroll-trigger banner" href="#corsi"><div> Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99€<br> <b><?php echo $promo_expire_str; ?></b></div></a>
+          <?php else: ?>
+            <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
+          <?php endif ?>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="corsi"> <!-- style="margin-top: -9rem;"> -->
+  <section> <!-- style="margin-top: -9rem;"> -->
     <div class="container text-center">
-      <h2 class="my-5">TUTTI POSSONO IMPARARE LINUX</h2>
+      <h2 id="corsi" class="my-5">SCEGLI IL TUO CORSO</h2>
       <p class="mb-1 text-justify">
         Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
         Ciascuna delle seguenti schede è relativa ad un corso di <b><a class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
@@ -150,7 +174,13 @@
                 Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
                 Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.<br><br>
               </p>
-              <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+
             </div>
           </div>
         </a>
@@ -165,7 +195,13 @@
                 dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
                 Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
               </p>
-              <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+
             </div>
           </div>
         </a>
@@ -181,7 +217,13 @@
                 Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
                 otterai la certificazione professionale in ambito Linux<br><br>
               </p>
-              <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+
             </div>
           </div>
         </a>
