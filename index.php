@@ -137,7 +137,7 @@
           <p class="lead">inizia la tua carriera come professionista in un settore in rapida crescita!</p>
 
           <?php if($show_promo): ?>
-            <a id="promo" class="js-scroll-trigger banner" href="#corsi"><div> Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99€<br> <b><?php echo $promo_expire_str; ?></b></div></a>
+            <a id="promo" class="js-scroll-trigger banner" href="#corsi"><div> Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99 €<br> <?php echo $promo_expire_str; ?></div></a>
           <?php else: ?>
             <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
           <?php endif ?>
