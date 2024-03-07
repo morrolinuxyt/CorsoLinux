@@ -44,17 +44,17 @@
 
 
     // SHOW PROMO BANNER?
-    // promo.json example: {"expire_str": "termina l'8 marzo", "expire_date": "07-03-2024 23:59:59"}
+    // promo.json example: {"promo_str": "Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99 €<br>termina venerdì 8 marzo", "expire_date": "07-03-2024 23:59:59"}
     $show_promo = false;
     if (file_exists('promo.json')){
       $json_data = file_get_contents('promo.json');
       $data = json_decode($json_data, true);
 
-      $promo_expire_str = $data["expire_str"];
+      $promo_str = $data["promo_str"];
       $promo_expire_date = strtotime($data["expire_date"]);
       $now = date(time());
 
-      if ($now <= $promo_expire_date) {
+      if ($now <= $promo_expire_date && $promo_str != "") {
         $show_promo = true;
       }
 
@@ -137,7 +137,7 @@
           <p class="lead">inizia la tua carriera come professionista in un settore in rapida crescita!</p>
 
           <?php if($show_promo): ?>
-            <a id="promo" class="js-scroll-trigger banner" href="#corsi"><div> Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99 €<br> <?php echo $promo_expire_str; ?></div></a>
+            <a id="promo" class="js-scroll-trigger banner" href="#corsi"><div><?php echo $promo_str; ?></div></a>
           <?php else: ?>
             <a class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
           <?php endif ?>
