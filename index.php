@@ -488,6 +488,55 @@
     </div>
   </section>
 
+
+  <section id="testimonianze">
+    <div class="container" style="margin-top: -3rem;">
+      <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
+      <p class="text-justify">
+      Una domanda che ricevo spesso: 
+      <blockquote>
+        <p>il video corso è davvero sufficiente per superare l'esame?</p>
+        <footer><cite><b>Assolutamente sì!</b></cite></footer>
+      </blockquote>
+      <br>
+      In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
+      è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
+      Per levare ogni dubbio, vi lascio alcune testimonianze dei miei studenti.
+      </p>
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Michele-LE.png" width="100%">
+      </div>
+
+      <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Fil-LPIC-1.png" width="100%">
+        </div>
+
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Ruggiero-LE.png" width="100%">
+      </div>
+
+      <div id="altre_testimonianze">
+        <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Ivan-LPIC-1.png" width="100%">
+        </div>
+
+      <div class="testimonial">
+        <img class="rounded-corners" src="assets/testimonianze/Matteo-LE.png" width="100%">
+      </div>
+
+        <div class="testimonial">
+          <img class="rounded-corners" src="assets/testimonianze/Odo-LPIC-1.png" width="100%">
+        </div>
+      </div>
+
+      <div class="mb-5 text-center">
+        <br>
+        <button id="testimonials_load_more" class="text-center btn btn-primary mt-auto js-scroll-trigger" onclick="hideMyDiv()">Carica ancora</button> 
+      </div>
+
+    </div>
+  </section>
+
   <section id="lpi" style="margin-top: -9rem;">
     <div class="container text-center">
       <h2 class="my-5">BATTERIE INCLUSE</h2>
@@ -574,55 +623,6 @@
 
     </div>
   </section>
-
-  <section id="testimonianze">
-    <div class="container" style="margin-top: -3rem;">
-      <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
-      <p class="text-justify">
-      Una domanda che ricevo spesso: 
-      <blockquote>
-        <p>il video corso è davvero sufficiente per superare l'esame?</p>
-        <footer><cite><b>Assolutamente sì!</b></cite></footer>
-      </blockquote>
-      <br>
-      In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
-      è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
-      Per levare ogni dubbio, vi lascio alcune testimonianze dei miei studenti.
-      </p>
-      <div class="testimonial">
-        <img class="rounded-corners" src="assets/testimonianze/Michele-LE.png" width="100%">
-      </div>
-
-      <div class="testimonial">
-          <img class="rounded-corners" src="assets/testimonianze/Fil-LPIC-1.png" width="100%">
-        </div>
-
-      <div class="testimonial">
-        <img class="rounded-corners" src="assets/testimonianze/Ruggiero-LE.png" width="100%">
-      </div>
-
-      <div id="altre_testimonianze">
-        <div class="testimonial">
-          <img class="rounded-corners" src="assets/testimonianze/Ivan-LPIC-1.png" width="100%">
-        </div>
-
-      <div class="testimonial">
-        <img class="rounded-corners" src="assets/testimonianze/Matteo-LE.png" width="100%">
-      </div>
-
-        <div class="testimonial">
-          <img class="rounded-corners" src="assets/testimonianze/Odo-LPIC-1.png" width="100%">
-        </div>
-      </div>
-
-      <div class="mb-5 text-center">
-        <br>
-        <button id="testimonials_load_more" class="text-center btn btn-primary mt-auto js-scroll-trigger" onclick="hideMyDiv()">Carica ancora</button> 
-      </div>
-
-    </div>
-  </section>
-
 
   <section id="percorso">
     <div class="container" style="margin-top: -6rem;">
