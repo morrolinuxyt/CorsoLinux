@@ -170,9 +170,8 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">Linux Essentials</h3>
               <p class="card-text">
-                Il corso LPI Linux Essentials parte "da zero" e introduce a GNU/Linux e al mondo dell'Open Source.<br><br>
-                Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
-                Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.<br><br>
+                Perfetto per utenti <b>alle prime armi con Linux</b>, ma anche per chi ha qualche lacuna da appianare.<br><br>
+                Al termine del corso è possibile ottenere il certificato "Linux Essentials" sostenendo il relativo esame LPI.<br><br>
               </p>
 
               <?php if($show_promo): ?>
@@ -190,10 +189,9 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 101</h3>
               <p class="card-text">
-                LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
-                Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto,
+                Certificazione professionale LPI di primo livello, per aspiranti <b>System Administrator</b>.<br><br>
+                Arriverai a conoscere Linux in ogni suo aspetto,
                 dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
-                Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
               </p>
 
               <?php if($show_promo): ?>
@@ -211,11 +209,9 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 102</h3>
               <p class="card-text">
-                Seconda parte del programma di certificazione LPI di primo livello. <br><br>
-                Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo
-                esame per la certificazione professionale di primo livello<br><br>
+                Secondo e ultimo esame per la <b>certificazione professionale</b> di primo livello<br><br>
                 Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
-                otterai la certificazione professionale in ambito Linux<br><br>
+                otterai la certificazione professionale di System Administrator Linux.<br><br>
               </p>
 
               <?php if($show_promo): ?>
@@ -365,7 +361,13 @@
                 Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
                 Il programma completo del corso è diviso in 5 sezioni, e spazia su tutti gli aspetti generali di una distribuzione Linux.<br><br>
               </p>
-              <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+
             </div>
           </div>
         </a>
@@ -380,7 +382,13 @@
                 dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
                 Questo corso parte dalle basi, ma si rivolge ad una utenza leggermente più consapevole.<br><br>
               </p>
-              <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+
             </div>
           </div>
         </a>
@@ -396,7 +404,13 @@
                 Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
                 otterai la certificazione professionale in ambito Linux<br><br>
               </p>
-              <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+
+              <?php if($show_promo): ?>
+                <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+                <a title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <?php endif ?>
+              
             </div>
           </div>
         </a>
@@ -411,7 +425,7 @@
       <p class="text-justify">
       Una domanda che ricevo spesso: 
       <blockquote>
-        <p>il corso è davvero sufficiente per superare l'esame?</p>
+        <p>il video corso è davvero sufficiente per superare l'esame?</p>
         <footer><cite><b>Assolutamente sì!</b></cite></footer>
       </blockquote>
       <br>
