@@ -490,7 +490,7 @@
 
 
   <section id="testimonianze">
-    <div class="container" style="margin-top: -3rem;">
+    <div class="container" style="margin-top: -3rem; margin-bottom: -3rem;">
       <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
       <p class="text-justify">
       Una domanda che ricevo spesso: 
