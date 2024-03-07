@@ -189,9 +189,8 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 101</h3>
               <p class="card-text">
-                Certificazione professionale LPI di primo livello, per aspiranti <b>System Administrator</b>.<br><br>
-                Arriverai a conoscere Linux in ogni suo aspetto,
-                dalla diagnostica dei problemi più comuni all'amministrazione di Server e PC Desktop.<br><br>
+                Certificazione professionale LPI di primo livello, per aspiranti <span class="keeptogether"><b>System Administrator</b>.</span><br><br>
+                Conoscerai Linux in ogni suo dettaglio e potrai eseguire la diagnostica di sistemi server e desktop.<br><br>
               </p>
 
               <?php if($show_promo): ?>
@@ -209,9 +208,8 @@
             <div class="card-body d-flex flex-column">
               <h3 class="card-title">LPIC-1 | Exam 102</h3>
               <p class="card-text">
-                Secondo e ultimo esame per la <b>certificazione professionale</b> di primo livello<br><br>
-                Al superamento degli esami 101 e 102 presso un centro autorizzato Pearson VUE,
-                otterai la certificazione professionale di System Administrator Linux.<br><br>
+                Secondo e ultimo esame per la <b>certificazione professionale</b> di primo livello.<br><br>
+                Al superamento degli esami 101 e 102, otterai la certificazione professionale di Linux System Administrator.<br><br>
               </p>
 
               <?php if($show_promo): ?>
