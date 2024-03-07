@@ -964,7 +964,7 @@
                         realizzo <b>video didattici dal 2008</b> su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a>.
           </p>
           <p>
-                        <b>Credo nella formazione di qualità.</b><br>
+                        <b><br>Credo nella formazione di qualità.</b><br>
                         Saper trasmettere le proprie competenze in modo efficace è importante tanto quanto avere delle competenze in primo luogo.
                         Durante il mio corso di studi ho imparato che essere massimo esperto di qualcosa non ti rende automaticamente capace di insegnare.<br><br>
 
