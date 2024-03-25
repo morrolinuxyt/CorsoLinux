@@ -869,7 +869,7 @@
                         <div class="card-body">
                             <p>
                               <b>Il corso è in continuo aggiornamento!</b>
-                              Il programma LPI viene aggiornato <i>ogni 5 anni</i>. Ad ogni aggiornamento del programma, il corso viene aggiornato di conseguenza.
+                              <br>Il programma LPI viene aggiornato <i>ogni 5 anni</i>. Ad ogni aggiornamento del programma, il corso viene aggiornato di conseguenza.
                               <br>Ad esempio a inizio 2019 c'è stato un aggiornamento degli obiettivi d'esame per "LPIC-1" dalla versione "4" alla versione "5", ed il corso è stato aggiornato per coprire le nuove competenze.
                               <br>Il prossimo aggiornamento cadrà nel corso del 2024 e per 1 anno sarà possibile sostenere l'esame sia nella vecchia che nella nuova versione.
                               <br><br>Per maggiori dettagli su programma del corso e obiettivi d'esame visita:
