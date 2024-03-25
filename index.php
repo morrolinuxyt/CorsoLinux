@@ -868,8 +868,10 @@
                     <div class="collapse" id="accordion-tab-1-content-5" aria-labelledby="accordion-tab-1-heading-5" data-parent="#accordion-tab-1">
                         <div class="card-body">
                             <p>
-                              Il programma LPI si aggiorna ogni 5 anni. Ad ogni aggiornamento vengono aggiunti nuovi video integrativi per mantenere il corso aggiornato.
-                              <br>Ad esempio a inizio 2019 c'è stato un aggiornamento degli obiettivi d'esame per "LPIC-1" dalla versione "4" alla versione "5", ed il corso è stato aggiornato per coprire le nuove competenze. Il prossimo aggiornamento cadrà entro il 2024.
+                              <b>Il corso è in continuo aggiornamento!</b>
+                              Il programma LPI viene aggiornato <i>ogni 5 anni</i>. Ad ogni aggiornamento del programma, il corso viene aggiornato di conseguenza.
+                              <br>Ad esempio a inizio 2019 c'è stato un aggiornamento degli obiettivi d'esame per "LPIC-1" dalla versione "4" alla versione "5", ed il corso è stato aggiornato per coprire le nuove competenze.
+                              <br>Il prossimo aggiornamento cadrà nel corso del 2024 e per 1 anno sarà possibile sostenere l'esame sia nella vecchia che nella nuova versione.
                               <br><br>Per maggiori dettagli su programma del corso e obiettivi d'esame visita:
                               <br>LPIC-1: Exam 101: <a target=blank href="https://www.lpi.org/our-certifications/exam-101-objectives">https://www.lpi.org/our-certifications/exam-101-objectives</a>
                               <br>Exam 102: <a target=blank href="https://www.lpi.org/our-certifications/exam-102-objectives">https://www.lpi.org/our-certifications/exam-102-objectives</a>
