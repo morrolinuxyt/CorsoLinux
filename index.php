@@ -17,7 +17,7 @@
 
   <meta name="description" content="Ottieni la certificazione Linux e inizia la tua carriera come professionista IT in un settore in rapida crescita grazie al corso bestseller italiano su Linux. Scopri la nostra selezione di corsi ideati su misura per te!">
 
-  <title>Impara Linux: il corso bestseller in italiano | Corso Linux</title>
+  <title>Impara Linux: il corso bestseller in italiano di Morrolinux | Corso Linux</title>
 </head>
 
 <body id="page-top">
