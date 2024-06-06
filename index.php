@@ -223,7 +223,7 @@
   <section id="recensioni">
     <div class="text-center">
       <h2>Fidati di chi l'ha già acquistato</h2>
-      <div id="slider" class="carousel slide" data-ride="carousel">
+      <div id="slider" class="carousel slide" data-ride="carousel" style="width:100%; height: 150px !important;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
           <div class="carousel-item active">
