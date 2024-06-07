@@ -8,6 +8,8 @@ function drawChart(){
   if(LFStatsChartsVisible) return;
   LFStatsChartsVisible = true;
 
+  umami.track('scroll_doughnut-chart');
+
   // loop over all html-defined doughnut charts
   var charts = document.getElementsByClassName("doughnut");
   for (var i = 0; i < charts.length; i++) {

@@ -63,6 +63,8 @@ function increment(){
     if(countersVisible) return;
     countersVisible = true;
 
+    umami.track('scroll_counters');
+
     $('.counting').each(function() {
       var $this = $(this),
           countTo = $this.attr('data-count');
@@ -84,9 +86,46 @@ function increment(){
   }
 }
 
+var recensioniVisible = false;
+var testimonianzeVisible = false;
+var percorsoVisible = false;
+var comparaVisible = false;
+
+function track_scroll(){
+  if(isInViewport($('#recensioni'), 1)){
+    if(recensioniVisible) return;
+    recensioniVisible = true;
+    umami.track('scroll_recensioni');
+    return;
+  }
+  if(isInViewport($('#testimonianze'), 1)){
+    if(testimonianzeVisible) return;
+    testimonianzeVisible = true;
+    umami.track('scroll_testimonianze');
+    return;
+  }
+  if(isInViewport($('#percorso'), 1)){
+    if(percorsoVisible) return;
+    percorsoVisible = true;
+    umami.track('scroll_percorso');
+    return;
+  }
+  if(isInViewport($('#compara'), 1)){
+    if(comparaVisible) return;
+    comparaVisible = true;
+    umami.track('scroll_compara');
+    return;
+  }
+}
+
 $('.yt_video').fitVids();
 
 $(window).scroll(function(){
+  track_scroll();
   increment();
 });
-$(document).ready(increment());
+
+$(document).ready(function(){
+  track_scroll();
+  increment();
+});
