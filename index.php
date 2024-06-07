@@ -223,34 +223,19 @@
   <section id="recensioni">
     <div class="text-center">
       <h2>Fidati di chi l'ha già acquistato</h2>
-      <div id="slider" class="carousel slide" data-ride="carousel" style="width:100%; height: 150px !important;">
+      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
           <div class="carousel-item active">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Il Corso è molto ben organizzato, e copre tutti gli argomenti essenziali per apprendere le basi di Linux. Le spiegazioni sono chiare, e permettono di comprendere anche i concetti più complessi. Per esempio, ho finalmente compreso
-              meglio il funzionamento dei file log e dei permessi. Sicuramente continuerò con i corsi successivi!
+              È stato un video corso molto utile nello studio contestuale della guida ufficiale. <br>
+              Con il voucher fornito da Moreno ho usufruito di un piccolo sconto <br>
+              per sostenere l’esame, che è andato alla grande. 
+              Consigliato.              
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Raffaele, studente "Linux Essentials"</p>
-            <div class="stars">
-              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
-            </div>
-          </div>
-
-          <div class="carousel-item">
-            <p class="review-body">
-              <i class="fa fa-quote-left" aria-hidden="true"></i>
-	      Ottima esposizione, fluida e senza pause. <br>
-	      Preciso e completo nella spiegazione degli argomenti, che forniscono una ottima e solida base di conoscenza del mondo Linux.
-              <i class="fa fa-quote-right" aria-hidden="true"></i>
-            </p>
-            <p class="review-name">Daniele, studente "Linux Essentials"</p>
+            <p class="review-name"><i>Chiara, studentessa "Linux Essentials"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -263,10 +248,11 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Il corso è di buon livello. Affronta i comandi base di Linux e gli esempi sono facilmente riproducibili.
+              Ottimo Corso!! Grazie Moreno di tutto.
+              Ora ho capito e fatto mie tante nozioni che prima mi erano ostiche!!
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Emanuele, studente "Linux Essentials"</p>
+            <p class="review-name"><i>Roberto, studente "LPIC 101"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -279,10 +265,27 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Le spiegazioni sono ben fatte, fluide e ricche di esempi.
+              Riesce a far comprendere in maniera semplice argomenti difficili. <br>Corso completo. Dà sempre una risposta esauriente ai quesiti posti.
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Nazzareno, studente "Linux Essentials"</p>
+            <p class="review-name"><i>Michele, studente "LPIC 102"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Docente preparatissimo e molto simpatico! Ho imparato molto senza annoiarmi un secondo!<br>
+              Corso consigliatissimo per chi, come me, parte da zero!
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Luca, studente "Arch Linux Per Comuni Mortali"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -298,7 +301,7 @@
               Ho trovato un sacco di cose che non sapevo e adesso ho tante idee per la testa che cercherò di realizzare. Grazie Moreno, è un corso davvero ben fatto.
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Dog, studente "LPIC 102"</p>
+            <p class="review-name"><i>Dog, studente "LPIC 102"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -311,15 +314,11 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-		Utilizzo Linux già da molti anni e questo corso mi ha aiutato a comprendere nuovi aspetti
-		e ad approfondire quelli che già conoscevo.<br>
-		Queste 13 ore di video sono super consigliate sia al novizio che si avvicina a Linux per la prima volta,
-		sia all'utente più esperto che vuole consolidare le proprie basi.<br>
-		Insegnante sempre disponibile a chiarire ogni dubbio e tempi di risposta molto rapidi.<br>
-		Bravo Morro! Non vedo l'ora di iniziare la sezione 102!
+              Il corso è stato splendido, divertente e anche molto più interessante di quanto mi aspettassi.<br>
+              Questo perchè c'è passione in chi spiega e si nota! Penso proprio che continuerò con i prossimi corsi Linux :D
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Manuel, studente "LPIC 101"</p>
+            <p class="review-name"><i>Marco, studente "Linux Essentials"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -332,13 +331,12 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Ho imparato molto dai due corsi LPI di Moreno e sono molto soddisfatto del livello a cui portano. Mi sono riguardato tutti i video più di una volta ed è ottimo averli sempre a disposizione per ripassare gli argomenti al volo. Non posso
-              che dargli 5 stelle per la modalità di esposizione e per gli argomenti trattati.
-              <br>Soddisfattissimo.
-              <br>Grazie
+              Consiglio questo corso e lo metto nei preferiti. Morro ti trasmette la sua passione per Linux. <br>
+              Il corso è conforme al 100% agli argomenti d'esame, e non solo, ogni tanto ti regala dei fuori programma.<br>
+              P.S. l'esame l'ho passato.
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Simone, studente "LPIC 101"</p>
+            <p class="review-name">Paolo, studente "LPIC 101"</p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
@@ -351,29 +349,30 @@
           <div class="carousel-item">
             <p class="review-body">
               <i class="fa fa-quote-left" aria-hidden="true"></i>
-              Un ottimo corso, spiegato in maniera chiara e ricco di appunti per lo studio. Complimenti all'insegnante!
+              Ottimo corso, piacevole da seguire. Morro ha una grande capacità divulgativa che si adatta<br>
+               ad utenti con esperienza e a chi come me di esperienza ne ha da fare. <br>
+              Mai troppo prolisso o troppo conciso, è l'equilibrio che caratterizza questo percorso: grazie Moreno.
               <i class="fa fa-quote-right" aria-hidden="true"></i>
             </p>
-            <p class="review-name">Giovanni, studente "LPIC 101"</p>
+            <p class="review-name"><i>Alessandro, studente "Arch Linux Per Comuni Mortali"</i></p>
             <div class="stars">
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
               <i class="fa fa-star fa-lg" aria-hidden="true"></i>
-              <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
             </div>
           </div>
 
         </div>
-<!--        <a data-umami-event="carousel-control-prev" class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a data-umami-event="carousel-control-next" class="carousel-control-next" href="#slider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
--->
+          <a style="margin-top: -3rem;" class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a style="margin-top: -3rem;" class="carousel-control-next" href="#slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
       </div>
     </div>
   </section>
