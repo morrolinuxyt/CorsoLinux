@@ -459,31 +459,36 @@
   </section>
 
 
-  <section id="esame" style="margin-top: -3rem;">
+  <section id="esame" style="margin-top: -6rem;">
     <div class="container text-center">
-      <h2 class="my-5">Pronto per l'esame?</h2>
-      <p class="mb-2 text-center">
-        Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
-        <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
-      </p>
-      <div class="mb-5 text-center">
-        <br>
-        <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+        <h2 class="my-5"><br>Il tuo successo è il mio successo.</h2>
+        <p class="mb-2 text-center">
+          Guarda questo video con i miei consigli su come <b>affrontare al meglio l'esame</b> di certificazione:
+        </p>
+        <br><br>
+        <div class="yt_video">
+          <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
       </div>
-      <h2 class="my-5"><br>Il tuo successo è il mio successo.</h2>
-      <p class="mb-2 text-center">
-        Guarda questo video con i miei consigli su come <b>affrontare al meglio l'esame</b> di certificazione:
-      </p>
-      <br><br>
-      <div class="yt_video">
-        <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
-      </div>
+    </div>
+
+    <br>
+    <div class="container text-center">
+      <div class="my-5" style="padding: 1em; background:#FEC224;">
+          <h2>Pronto per l'esame?</h2>
+          <p  class="mb-2 text-center">
+            <br>
+            Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
+            <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
+          </p>
+          <br>
+          <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+        </div>
     </div>
   </section>
 
 
   <section id="testimonianze">
-    <div class="container" style="margin-top: -3rem; margin-bottom: -3rem;">
+    <div class="container" style="margin-top: -6rem; margin-bottom: -3rem;">
       <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
       <p class="text-justify">
       Una domanda che ricevo spesso: 
@@ -494,7 +499,7 @@
       <br>
       In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
       è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
-      Per levare ogni dubbio, vi lascio alcune testimonianze dei miei studenti.
+      Per levare ogni dubbio, ti lascio alcune testimonianze dei miei studenti.
       </p>
       <div class="testimonial">
         <img class="rounded-corners" src="assets/testimonianze/Michele-LE.png" width="100%">
