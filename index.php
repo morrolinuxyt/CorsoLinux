@@ -1021,7 +1021,6 @@
   <!-- Custom JavaScript -->
   <script src="js/script.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-  <script src="js/doughnut.js"></script>     
 
   <script type="text/javascript">
             document.getElementById("altre_testimonianze").style.display = "none";
