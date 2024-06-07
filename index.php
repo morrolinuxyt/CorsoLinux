@@ -365,15 +365,15 @@
           </div>
 
         </div>
-        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+<!--        <a data-umami-event="carousel-control-prev" class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+        <a data-umami-event="carousel-control-next" class="carousel-control-next" href="#slider" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-
+-->
       </div>
     </div>
   </section>
@@ -433,7 +433,7 @@
     </div>
   </section>
 
-  <section id="statistiche">
+  <section data-umami-event="section_statistiche" id="statistiche">
     <div class="container text-center">
       <p class="mb-5">
         Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
