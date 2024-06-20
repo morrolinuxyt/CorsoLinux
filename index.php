@@ -481,7 +481,7 @@
             <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
           </p>
           <br>
-          <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://forms.gle/9vxTEVDftBzioDat8" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+          <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://budibase.morrolinux.it/app/lpi-form" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
         </div>
     </div>
   </section>
