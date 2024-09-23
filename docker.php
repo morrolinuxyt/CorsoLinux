@@ -148,9 +148,9 @@
                   L'obbiettivo di questo corso è rendere Docker alla portata di tutti riducendo il più possibile la curva di apprendimento.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Arch Linux Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="docker_goto_Docker" title="Arch Linux Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+                <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>
@@ -456,9 +456,9 @@
                 L'obbiettivo di questo corso è rendere Docker alla portata di tutti riducendo il più possibile la curva di apprendimento.<br><br>
               </p>
               <?php if($show_promo): ?>
-              <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Arch Linux Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
               <?php else: ?>
-              <a data-umami-event="docker_goto_Docker" title="Arch Linux Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
+              <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
               <?php endif ?>
 
             </div>
