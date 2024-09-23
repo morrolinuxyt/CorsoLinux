@@ -72,7 +72,11 @@
     $e101 = $data["EXAM 101"];
     $e102 = $data["EXAM 102"];
     $archlinux = $data["Arch"];
+    $DPCM = $data["Docker"];
 
+    if(empty($DPCM)){
+      $DPCM = "https://www.udemy.com/course/docker-per-comuni-mortali/?referralCode=6E99545A195DEC330347"; // TODO: check if this is correct
+    }
     if(empty($archlinux)){
       $archlinux = "https://www.udemy.com/course/arch-linux-per-comuni-mortali/?referralCode=34016D9C6656A83ABF5D";
     }
@@ -97,15 +101,18 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a data-umami-event="navbar_corsi" class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
+          <li class="nav-item">
+            <a data-umami-event="navbar_docker" class="nav-link js-scroll-trigger" href="#docker">Docker</a>
+          </li>
+          <li class="nav-item">
+            <a data-umami-event="navbar_corsi" class="nav-link js-scroll-trigger" href="#corsi">Linux</a>
           </li>
           <li class="nav-item">
             <a data-umami-event="navbar_lavoro" class="nav-link js-scroll-trigger" href="#lavoro">Lavoro</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a data-umami-event="navbar_esame" class="nav-link js-scroll-trigger" href="#esame">Esame</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a data-umami-event="navbar_compara" class="nav-link js-scroll-trigger" href="#compara">Compara</a>
           </li>
@@ -134,16 +141,40 @@
           <?php if($show_promo): ?>
             <a data-umami-event="header_button_SPECIAL_OFFER" id="promo" class="js-scroll-trigger banner" href="#corsi"><div><?php echo $promo_str; ?></div></a>
           <?php else: ?>
-            <a data-umami-event="header_button_scopri" class="btn btn-lg btn-outline-light js-scroll-trigger" href="#corsi">Scopri</a>
+            <a data-umami-event="header_button_scopri" class="btn btn-lg btn-outline-light js-scroll-trigger" href="#docker">Scopri</a>
           <?php endif ?>
         </div>
       </div>
     </div>
   </header>
 
-  <section> <!-- style="margin-top: -9rem;"> -->
+  <section id="docker" tyle="margin-top: -9rem; margin-bottom: -12rem;">
+    <div class="container text-left">
+      <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
+      <div class="row no-gutters">
+          <div class="col-md-4">
+          <a class="invisible-link" href="<?php echo $DPCM; ?>">
+            <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><b>Qualcuno ha detto Docker?</b></h5>
+              <p class="card-text text-left">
+                <br> Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a href="docker.php">Leggi di più</a><br>
+              </p>
+              <a href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section style="margin-top: -9rem;"> 
     <div class="container text-center">
-      <h2 id="corsi" class="my-5">SCEGLI IL TUO CORSO</h2>
+      <h2 id="corsi" class="my-5">SCEGLI IL TUO CORSO LINUX</h2>
       <p class="mb-1 text-justify">
 		Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
 		Ciascuna delle seguenti schede è relativa ad un corso di <b><a data-umami-event="link_intro_LPI" class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
