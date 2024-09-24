@@ -153,16 +153,16 @@
       <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
       <div class="row no-gutters">
           <div class="col-md-4">
-          <a class="invisible-link" href="<?php echo $DPCM; ?>">
+          <a data-umami-event="goto_docker_INVISIBLE" class="invisible-link" href="<?php echo $DPCM; ?>">
             <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img">
           </div>
           <div class="col-md-8">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title"><b>Qualcuno ha detto Docker?</b></h5>
               <p class="card-text text-left">
-                <br> Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a href="docker.php">Leggi di più</a><br>
+                <br> Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a data-umami-event="goto_docker-page" href="docker.php">Leggi di più</a><br>
               </p>
-              <a href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+              <a data-umami-event="goto_docker" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
 
             </div>
           </div>
