@@ -75,7 +75,7 @@
     $DPCM = $data["Docker"];
 
     if(empty($DPCM)){
-      $DPCM = "https://www.udemy.com/course/docker-per-comuni-mortali/?referralCode=6E99545A195DEC330347"; // TODO: check if this is correct
+      $DPCM = "https://www.udemy.com/course/docker-per-comuni-mortali/?referralCode=6E99545A195DEC330347";
     }
     if(empty($archlinux)){
       $archlinux = "https://www.udemy.com/course/arch-linux-per-comuni-mortali/?referralCode=34016D9C6656A83ABF5D";
@@ -466,7 +466,7 @@
   <section data-umami-event="section_statistiche" id="statistiche">
     <div class="container text-center">
       <p class="mb-5">
-        Unisciti agli oltre novemila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
+        Unisciti agli oltre ventimila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
       </p>
       <div id="counters" class="row">
         <div class="col-lg-4 stats">
