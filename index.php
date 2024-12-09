@@ -509,7 +509,7 @@
           <p  class="mb-2 text-center">
             <br>
             Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
-            <br><b>Non sei mio studente?</b> Puoi comunque richiedere una riduzione qui:
+            Compila questo modulo per ottenere subito la riduzione: 
           </p>
           <br>
           <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://budibase.morrolinux.it/app/lpi-form" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
