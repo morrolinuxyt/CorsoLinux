@@ -883,7 +883,7 @@
                             <p>
 			      Per ottenere la certificazione LPI devi sostenere un esame per ciascun modulo di apprendimento. <br>
 			      Ad esempio, LPIC-1 è composto da due moduli: 101 e 102, mentre Linux Essentials è costituito da un solo esame.<br>
-            Gli esami Essentials hanno un costo di 110€ e gli LPIC di 176€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a data-umami-event="coupon_request_LPI_FAQ" href=https://forms.gle/9vxTEVDftBzioDat8> questo modulo </a>.
+            Gli esami Essentials hanno un costo di 110€ e gli LPIC di 176€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a data-umami-event="coupon_request_LPI_FAQ" href=https://budibase.morrolinux.it/app/lpi-form> questo modulo </a>.
 
                             </p>
                         </div>
