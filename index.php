@@ -65,7 +65,7 @@
     //UDEMY COUPONS
     $archlinux = $essentials = $e101 = $e102 = "";
 
-    $json_data = file_get_contents('udemy_coupons.json');
+    $json_data = file_get_contents('http://udemy-coupon-dump');
     $data = json_decode($json_data, true);
 
     $essentials = $data["Essentials"];
