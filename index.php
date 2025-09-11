@@ -47,8 +47,8 @@
     // SHOW PROMO BANNER?
     // promo.json example: {"promo_str": "Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99 €<br>termina venerdì 8 marzo", "expire_date": "07-03-2024 23:59:59"}
     $show_promo = false;
-    if (file_exists('promo.json')){
-      $json_data = file_get_contents('promo.json');
+    if (file_exists('promo/promo.json')){
+      $json_data = file_get_contents('promo/promo.json');
       $data = json_decode($json_data, true);
 
       $promo_str = $data["promo_str"];
