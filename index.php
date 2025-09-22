@@ -44,53 +44,10 @@
     $lessons = $lpic101->num_lectures + $lpic102->num_lectures + $essentials->num_lectures;
 
 
-    // SHOW PROMO BANNER?
-    // promo.json example: {"promo_str": "Offerta a tempo limitato!<br>Tutti i corsi in <b>offerta speciale</b> a 9,99 €<br>termina venerdì 8 marzo", "expire_date": "07-03-2024 23:59:59"}
-    $show_promo = false;
-    if (file_exists('promo/promo.json')){
-      $json_data = file_get_contents('promo/promo.json');
-      $data = json_decode($json_data, true);
-
-      $promo_str = $data["promo_str"];
-      $promo_expire_date = strtotime($data["expire_date"]);
-      $now = date(time());
-
-      if ($now <= $promo_expire_date && $promo_str != "") {
-        $show_promo = true;
-      }
-
-      $promo_cta_text = "Vai all'offerta!";
-    } 
-
-    //UDEMY COUPONS
-    $archlinux = $essentials = $e101 = $e102 = "";
-
-    $json_data = file_get_contents('http://udemy-coupon-dump');
-    $data = json_decode($json_data, true);
-
-    $essentials = $data["Essentials"];
-    $e101 = $data["EXAM 101"];
-    $e102 = $data["EXAM 102"];
-    $archlinux = $data["Arch"];
-    $DPCM = $data["Docker"];
-
-    if(empty($DPCM)){
-      $DPCM = "https://www.udemy.com/course/docker-per-comuni-mortali/?referralCode=6E99545A195DEC330347";
-    }
-    if(empty($archlinux)){
-      $archlinux = "https://www.udemy.com/course/arch-linux-per-comuni-mortali/?referralCode=34016D9C6656A83ABF5D";
-    }
-    if(empty($essentials)){
-      $essentials = "https://www.udemy.com/course/impara-linux-da-zero-lpi-linux-essentials/?referralCode=9F2C500B1DC009224ABD";
-    }
-    if(empty($e101)){
-      $e101 = "https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione/?referralCode=51B7A99838177C89C187";
-    }
-    if(empty($e102)){
-      $e102 = "https://www.udemy.com/course/impara-linux-dalle-basi-alla-certificazione-lpi-exam-102/?referralCode=7018A3D9DC7C34281A3F";
-    }
-
   ?>
+
+  <?php include 'snippets/promo-banner.php';?>
+  <?php include 'snippets/udemy-coupons.php';?>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -187,69 +144,9 @@
 	  </p>
 	</div>
 
-    <div class="container text-center">
-      <div class="card-deck"> 
-        <a data-umami-event="goto_LE_early_INVISIBLE" class="invisible-link" href="<?php echo $essentials; ?>">
-          <div class="card">
-            <img src="assets/corso-lpi-linux-essentials-cover.jpg" class="card-img-top" alt="Copertina corso LPI Linux Essentials" title="Corso per certificazione LPI Linux Essentials online in italiano">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">Linux Essentials</h3>
-              <p class="card-text">
-                Perfetto per utenti <b>alle prime armi con Linux</b>, ma anche per chi ha qualche lacuna da appianare.<br><br>
-                Al termine del corso è possibile ottenere il certificato "Linux Essentials" sostenendo il relativo esame LPI.<br><br>
-              </p>
+    <?php include 'snippets/schede-corsi-lpi.php';?>
 
-              <?php if($show_promo): ?>
-                <a data-umami-event="goto_LE_early_SPECIAL_OFFER" title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
-              <?php else: ?>
-                <a data-umami-event="goto_LE_early" title="Corso LPI Linux Essentials" href="<?php echo $essentials; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
-              <?php endif ?>
-
-            </div>
-          </div>
-        </a>
-        <a data-umami-event="goto_LPIC-101_early_INVISIBLE" class="invisible-link" href="<?php echo $e101; ?>">
-          <div class="card">
-            <img src="assets/corso-lpic-1-exam-101-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 101" title="Corso per certificazione LPIC-1 esame 101">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">LPIC-1 | Exam 101</h3>
-              <p class="card-text">
-                Certificazione professionale LPI di primo livello, per aspiranti <span class="keeptogether"><b>System Administrator</b>.</span><br><br>
-                Conoscerai Linux in ogni suo dettaglio e potrai eseguire la diagnostica di sistemi server e desktop.<br><br>
-              </p>
-
-              <?php if($show_promo): ?>
-              <a data-umami-event="goto_LPIC-101_early_SPECIAL_OFFER" title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
-              <?php else: ?>
-              <a data-umami-event="goto_LPIC-101_early" title="Corso LPIC-1 | Exam 101" href="<?php echo $e101; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
-              <?php endif ?>
-
-            </div>
-          </div>
-        </a>
-          <a data-umami-event="goto_LPIC-102_early_INVISIBLE" class="invisible-link" href="<?php echo $e102; ?>">
-          <div class="card">
-            <img src="assets/corso-lpic-1-exam-102-cover.jpg" class="card-img-top" alt="Copertina corso LPIC-1 Exam 102" title="Corso per certificazione LPIC-1 esame 102">
-            <div class="card-body d-flex flex-column">
-              <h3 class="card-title">LPIC-1 | Exam 102</h3>
-              <p class="card-text">
-                Secondo e ultimo esame per la <b>certificazione professionale</b> di primo livello.<br><br>
-                Al superamento degli esami 101 e 102, otterai la certificazione professionale di Linux System Administrator.<br><br>
-              </p>
-
-              <?php if($show_promo): ?>
-              <a data-umami-event="goto_LPIC-102_early_SPECIAL_OFFER" title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
-              <?php else: ?>
-              <a data-umami-event="goto_LPIC-102_early" title="Corso LPIC-1 | Exam 102" href="<?php echo $e102; ?>" class="btn btn-primary mt-auto">Vai al corso</a>
-              <?php endif ?>
-
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
   </section>
-
 
   <section id="recensioni">
     <div class="text-center">
@@ -978,68 +875,8 @@
 
   </section>
 
-  <section id="docente" style="margin-top: -6rem;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="text-center my-5">IL DOCENTE<br>
-            <a href="https://www.linkedin.com/in/morenorazzoli/" target="_blank"><i class="fa fa-linkedin-square mx-2" aria-hidden="true" style="color:#3c5a99;"></i></a>
-            <a href="https://twitter.com/morrolinux/" target="_blank"><i class="fa fa-twitter-square mx-2" aria-hidden="true" style="color:#00acee;"></i></a>
-            <a href="https://telegram.me/morrolinux_feed" target="_blank"><i class="fa fa-comment mx-2" aria-hidden="true" style="color:#0088cc;"></i></a>
-          </h2>
-          <img class="avatar float-left rounded-circle mr-4" src="assets/docente-corso-linux-moreno-razzoli.jpg" alt="avatar docente corso linux: Moreno Razzoli" title="Docente del corso Linux: Moreno Razzoli">
-          <div class="text-center my-5 socials">
-
-          </div>
-          <p>
-                        Mi chiamo <b>Moreno Razzoli</b>,<br>
-                        Sono laureato in Scienze Informatiche, ho conseguito le certificazioni Linux <b>LPI</b>, <b>CompTIA Linux+</b>, <b>Suse CLA</b>
-                        e sono un <b>Training Partner autorizzato</b> Linux Professional Institute.<br>
-                        Ho realizzato diversi <a href="https://morrolinux.it/progetti">progetti Open Source</a>,
-                        contribuito ad altrettanti progetti già avviati su GitHub e
-                        realizzo <b>video didattici dal 2008</b> su <a href="https://www.youtube.com/user/morrolinux/">YouTube</a>.
-          </p>
-          <p>
-                        <b><br>Credo nella formazione di qualità.</b><br>
-                        Saper trasmettere le proprie competenze in modo efficace è importante tanto quanto avere delle competenze in primo luogo.
-                        Durante il mio corso di studi ho imparato che essere massimo esperto di qualcosa non ti rende automaticamente capace di insegnare.<br><br>
-
-                        Numerosi studi hanno dimostrato che il picco dell'attenzione dura soltanto 15 minuti, perciò <b>non sprecherò il tuo tempo prezioso</b>
-                        con inutili giri di parole e prolissi monologhi.
-                        Ho uno stile molto diretto: mi piace andare dritto al punto, accompagnando le spiegazioni con <b>esempi pratici ed efficaci</b>.<br><br>
-
-                        Insegnare non significa recitare un elenco di nozioni sparse:
-                        è importante collocare ogni argomento come un tassello al proprio posto e dare allo studente una <b>visione d'insieme</b> sulla disciplina.<br><br>
-
-                        Se condividi i miei valori sono sicuro che apprezzerai i miei corsi.
-
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container footer">
-      <p class="m-0 text-center text-white">
-        Made with ❤️ by <a href="https://github.com/r-carissimi" target="_blank">Riccardo Carissimi</a> <br>
-        <a style="opacity:0.5;color:white;" href="https://it.freepik.com/vettori/infografica">Infografica vettore creata da pikisuperstar - it.freepik.com</a><br>
-        Parte del progetto <a href="https://morrolinux.it">morrolinux.it</a><br><br>
-        <a href="https://github.com/morrolinuxyt/CorsoLinux" target="_blank"><i class="fa fa-github-square mx-2" aria-hidden="true"></i></a>
-        <a href="https://www.facebook.com/MorrolinuxOfficial/" target="_blank"><i class="fa fa-facebook-square mx-2" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/morrolinux/" target="_blank"><i class="fa fa-twitter-square mx-2" aria-hidden="true"></i></a>
-        <a href="https://www.youtube.com/user/morrolinux/" target="_blank"><i class="fa fa-youtube-square mx-2" aria-hidden="true"></i></a>
-        <br>
-        <br>
-        <a style="opacity:0.5;color:white;" >Moreno Razzoli<br>P.IVA IT04063670360</a> <br>
-        <a style="opacity:0.5;color:white;" target="_blank" href="http://morrolinux.it/privacy_policy" title="Privacy Policy">Privacy Policy</a>
-        <br>
-      </p>
-
-    </div>
-  </footer>
+  <?php include 'snippets/docente.php';?>
+  <?php include 'snippets/footer.php';?>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
