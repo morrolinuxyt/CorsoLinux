@@ -59,7 +59,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a data-umami-event="navbar_docker" class="nav-link js-scroll-trigger" href="#docker">Docker</a>
+            <a data-umami-event="navbar_docker" class="nav-link js-scroll-trigger" href="#novita">Novità</a>
           </li>
           <li class="nav-item">
             <a data-umami-event="navbar_corsi" class="nav-link js-scroll-trigger" href="#corsi">Linux</a>
@@ -98,16 +98,36 @@
           <?php if($show_promo): ?>
             <a data-umami-event="header_button_SPECIAL_OFFER" id="promo" class="js-scroll-trigger banner" href="#corsi"><div><?php echo $promo_str; ?></div></a>
           <?php else: ?>
-            <a data-umami-event="header_button_scopri" class="btn btn-lg btn-outline-light js-scroll-trigger" href="#docker">Scopri</a>
+            <a data-umami-event="header_button_scopri" class="btn btn-lg btn-outline-light js-scroll-trigger" href="#novita">Scopri</a>
           <?php endif ?>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="docker" style="margin-top: -3rem; margin-bottom: -3rem;">
+  <section id="novita" style="margin-top: -3rem; margin-bottom: -3rem;">
     <div class="container text-center">
       <h2 id="corsi" class="my-5">NOVITÀ</h2>
+
+      <div class="container text-left">
+        <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
+        <div class="row no-gutters">
+            <div class="col-md-4">
+            <a data-umami-event="goto_proxmox_INVISIBLE" class="invisible-link" href="<?php echo $PPCM; ?>">
+              <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title"><b>Proxmox alla portata di tutti!</b></h5>
+                <p class="card-text text-left">
+                  <br> È online il nuovo corso <b>adatto a tutti</b> per iniziare il proprio <i>homelab</i> e <b>crescere professionalmente</b>, fino alla gestione di un'infrastruttura IT <i>aziendale</i>... <a data-umami-event="goto_proxmox-page" href="proxmox.php">Leggi di più</a><br>
+                </p>
+                <a data-umami-event="goto_proxmox" href="<?php echo $PPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container text-left">
         <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
