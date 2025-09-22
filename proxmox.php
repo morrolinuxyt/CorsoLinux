@@ -305,12 +305,11 @@
       <h2 class="my-5">BATTERIE INCLUSE</h2>
       <p class="mb-2 text-justify">
 
-      Qui imparerai tutto ciò che c'è da sapere su Proxmox, e l'ecosistema dei <i>container OCI</i> tramite <b>spiegazioni semplici</b> ed esempi.
-      <br><br>
+      Qui imparerai tutto ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponiblità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
 
-      Esploreremo Docker con un <b>approccio pratico</b>: dopo aver spiegato le basi, <b>ogni lezione sarà costruita intorno a un mini progetto funzionante</b>, e ti illustrerò ogni dettaglio rilevante strada facendo.<br><br>
+      Non tralasceremo proprio niente: dalla <b>sicurezza infrastrutturale</b> alla gestione di utenti e ruoli secondo il <i>principio del minimo privilegio</i>, oltre ai backup automatici secondo la <i>regola 3-2-1</i> con <b>Proxmox Backup Server</b> (PBS).<br><br>
 
-      Allegato a ciascuna lezione troverai <b>codice</b> e risorse utilizzate, <b>appunti riassuntivi</b> e link di approfondimento, e potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
+      Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
 
       A differenza dei corsi più avanzati, il focus è sull'accessibilità e la comprensione. <i>Il tono è discorsivo e rilassato</i>, ogni argomento viene trattato quando più opportuno e approfondito successivamente negli appositi capitoli.
       <br><br>
