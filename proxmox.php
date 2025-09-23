@@ -74,7 +74,7 @@
   <header class="landing">
     <div class="bg"></div>
     <video style="filter: brightness(25%);" autoplay loop muted>
-      <source src="assets/teaser-proxmox.mp4" width="100%" media="(min-width: 600px)">
+      <source src="assets/teaser-proxmox.mp4" width="100%">
     </video>
     <div class="container h-100">
       <div class="row h-100 align-items-center">
