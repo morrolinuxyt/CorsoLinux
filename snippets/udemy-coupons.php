@@ -29,6 +29,6 @@
       $DPCM = "https://www.udemy.com/course/docker-per-comuni-mortali/?referralCode=6E99545A195DEC330347";
     }
     if(empty($PPCM)){
-      $DPCM = "https://www.udemy.com/course/proxmox-per-comuni-mortali/?referralCode=3FEA50A193EC484BB14A";
+      $PPCM = "https://www.udemy.com/course/proxmox-per-comuni-mortali/?referralCode=3FEA50A193EC484BB14A";
     }
   ?>

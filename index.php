@@ -113,7 +113,7 @@
         <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
         <div class="row no-gutters">
             <div class="col-md-4">
-            <a data-umami-event="goto_proxmox_INVISIBLE" class="invisible-link" href="<?php echo $PPCM; ?>">
+            <a data-umami-event="goto_proxmox_INVISIBLE" class="invisible-link" href="proxmox.php">
               <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img">
             </div>
             <div class="col-md-8">
@@ -133,7 +133,7 @@
         <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
         <div class="row no-gutters">
             <div class="col-md-4">
-            <a data-umami-event="goto_docker_INVISIBLE" class="invisible-link" href="<?php echo $DPCM; ?>">
+            <a data-umami-event="goto_docker_INVISIBLE" class="invisible-link" href="docker.php">
               <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img">
             </div>
             <div class="col-md-8">

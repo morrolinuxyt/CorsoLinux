@@ -120,7 +120,7 @@
         <div class="col-md-6" style="margin: 10px auto;">
           <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
             <div class="card">
-              <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
+              <img src="assets/proxmox-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
                 <h3 class="card-title">Proxmox Per Comuni Mortali</h3>
                 <p class="card-text">
@@ -305,19 +305,19 @@
       <h2 class="my-5">BATTERIE INCLUSE</h2>
       <p class="mb-2 text-justify">
 
-      Qui imparerai tutto ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponiblità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
+      Ho realizzato questo corso con la partnership di <a href="https://axolserver.com"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
+      Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponiblità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
 
+      <img src="assets/axol-blade-crop.jpg" style="width:100%; !important;" alt="AXOL Server"><br><br>
+      
       Non tralasceremo proprio niente: dalla <b>sicurezza infrastrutturale</b> alla gestione di utenti e ruoli secondo il <i>principio del minimo privilegio</i>, oltre ai backup automatici secondo la <i>regola 3-2-1</i> con <b>Proxmox Backup Server</b> (PBS).<br><br>
 
       Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
-
-      A differenza dei corsi più avanzati, il focus è sull'accessibilità e la comprensione. <i>Il tono è discorsivo e rilassato</i>, ogni argomento viene trattato quando più opportuno e approfondito successivamente negli appositi capitoli.
-      <br><br>
       </p>
   </section>
 
-  <!--
-  <section data-umami-event="proxmox_section_statistiche" id="statistiche" style="background-color: #2495ed">
+  
+  <!-- <section data-umami-event="proxmox_section_statistiche" id="statistiche" style="margin-bottom: 9rem; background-color: #E57000;">
     <div class="container text-center">
     <h2>Numeri che parlano<br></h2>
       <p class="mb-5">
@@ -341,8 +341,8 @@
       </div>
 
     </div>
-  </section>
-  -->
+  </section> -->
+  
 
 
   <?php include 'snippets/generic-faq.php';?>
