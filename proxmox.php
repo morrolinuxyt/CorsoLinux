@@ -300,9 +300,9 @@
   </section>
   -->
 
-  <section id="batterie" style="margin-top: -6rem;">
+  <section id="esperti" style="margin-top: -6rem;">
     <div class="container text-center">
-      <h2 class="my-5">BATTERIE INCLUSE</h2>
+      <h2 class="my-5">Affidati agli esperti</h2>
       <p class="mb-2 text-justify">
 
       Ho realizzato questo corso con la partnership di <a href="https://axolserver.com"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
