@@ -111,7 +111,7 @@
 
       Questo corso è progettato per <i>homelabbers, sistemisti</i> e appassionati di informatica e <i>self-hosting</i> 
       che vogliono imparare a <b>gestire la propria infrastruttura</b> in maniera affidabile e <b>sicura</b>, senza downtime e senza perdite di dati.<br><br>
-      Partendo dalle basi, ti guiderò attraverso la creazione della tua prima macchina virtuale fino al deploy su un <b>cluster in Alta Disponiblità</b> (HA). Insieme, vedremo anche implementare <b>backup automatici</b>, accessi controllati e misure di <i>sicurezza infrastrutturale</i> per un setup <b>a prova di ransomware</b>.
+      Partendo dalle basi, ti guiderò attraverso la creazione della tua prima macchina virtuale fino al deploy su un <b>cluster in Alta Disponibilità</b> (HA). Insieme, vedremo anche implementare <b>backup automatici</b>, accessi controllati e misure di <i>sicurezza infrastrutturale</i> per un setup <b>a prova di ransomware</b>.
 	    </p>
 	  </div>
 
@@ -124,7 +124,7 @@
               <div class="card-body d-flex flex-column">
                 <h3 class="card-title">Proxmox Per Comuni Mortali</h3>
                 <p class="card-text">
-                  Questo corso adatto a tutti ti guiderà passo passo nella <b>gestione di una infrastruttura IT</b>, dal semplice <i>nodo singolo</i> al <i>cluster iperconvergente</i> in Alta Disponiblità.<br><br>
+                  Questo corso adatto a tutti ti guiderà passo passo nella <b>gestione di una infrastruttura IT</b>, dal semplice <i>nodo singolo</i> al <i>cluster iperconvergente</i> in Alta Disponibilità.<br><br>
 
                   Dopo ogni lezione, potrai replicare quanto visto nel tuo <i>homelab</i> o <i>in azienda</i>, per mettere in produzione servizi in modo <b>sicuro e affidabile</b> sulla tua infrastruttura.<br><br>
 
@@ -305,8 +305,8 @@
       <h2 class="my-5">Affidati agli esperti</h2>
       <p class="mb-2 text-justify">
 
-      Ho realizzato questo corso con la partnership di <a href="https://axolserver.com"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
-      Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponiblità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
+      Ho realizzato questo corso con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=proxmox"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
+      Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponibilità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
 
       <img src="assets/axol-blade-crop.jpg" style="width:100%; !important;" alt="AXOL Server"><br><br>
       
