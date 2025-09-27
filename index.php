@@ -153,9 +153,9 @@
   </section>
 
 
-  <section style="margin-top: -9rem;"> 
+  <section id="corsi" style="margin-top: -9rem;"> 
     <div class="container text-center">
-      <h2 id="corsi" class="my-5">SCEGLI IL TUO CORSO LINUX</h2>
+      <h2 class="my-5">SCEGLI IL TUO CORSO LINUX</h2>
       <p class="mb-1 text-justify">
 		Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
 		Ciascuna delle seguenti schede è relativa ad un corso di <b><a data-umami-event="link_intro_LPI" class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
@@ -911,6 +911,7 @@
   <script src="js/jquery.fitvids.js"></script>
 
   <!-- Custom JavaScript -->
+  <script src="js/common.js"></script>
   <script src="js/script.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
