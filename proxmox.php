@@ -53,16 +53,15 @@
         <li class="nav-item">
             <a data-umami-event="proxmox_navbar_corsi" class="nav-link js-scroll-trigger" href="#proxmox">Proxmox</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a data-umami-event="proxmox_navbar_recensioni" class="nav-link js-scroll-trigger" href="#recensioni">Recensioni</a>
+          </li> -->
+          <li class="nav-item">
+            <a data-umami-event="proxmox_navbar_faq" class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
             <a data-umami-event="proxmox_navbar_faq" class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
           </li>
-          <li class="nav-item">
-            <a data-umami-event="proxmox_navbar_faq" class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
-          </li>
-
           <li class="nav-item">
             <a data-umami-event="proxmox_navbar_docente" class="nav-link js-scroll-trigger" href="#docente">Docente</a>
           </li>
@@ -360,7 +359,8 @@
   <script src="js/jquery.fitvids.js"></script>
 
   <!-- Custom JavaScript -->
-  <script src="js/docker_script.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/proxmox_script.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
   

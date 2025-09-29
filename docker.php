@@ -355,6 +355,7 @@
   <script src="js/jquery.fitvids.js"></script>
 
   <!-- Custom JavaScript -->
+  <script src="js/common.js"></script>
   <script src="js/docker_script.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
