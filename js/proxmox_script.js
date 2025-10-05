@@ -2,12 +2,6 @@ var recensioniVisible = false;
 var countersVisible = false;
 
 function track_scroll(){
-  if(isInViewport($('#recensioni'), 1)){
-    if(recensioniVisible) return;
-    recensioniVisible = true;
-    umami.track('scroll_proxmox_recensioni');
-    return;
-  }
   if(isInViewport($('#counters'), 1)){
     if(countersVisible) return;
     countersVisible = true;
@@ -15,8 +9,13 @@ function track_scroll(){
     umami.track('scroll_proxmox_counters');
     return;
   }
+  if(isInViewport($('#recensioni'), 1)){
+    if(recensioniVisible) return;
+    recensioniVisible = true;
+    umami.track('scroll_proxmox_recensioni');
+    return;
+  }
 }
-
 
 $('.yt_video').fitVids();
 

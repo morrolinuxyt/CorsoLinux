@@ -316,7 +316,7 @@
   </section>
 
   
-  <!-- <section data-umami-event="proxmox_section_statistiche" id="statistiche" style="margin-bottom: 9rem; background-color: #E57000;">
+  <section data-umami-event="proxmox_section_statistiche" id="statistiche" style="margin-bottom: 9rem; color: #FFFFFF; background-color: #343a40;">
     <div class="container text-center">
     <h2>Numeri che parlano<br></h2>
       <p class="mb-5">
@@ -340,7 +340,7 @@
       </div>
 
     </div>
-  </section> -->
+  </section>
   
 
 
