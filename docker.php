@@ -2,7 +2,7 @@
 <html lang="it">
 
 <head>
-  <script defer src="https://analytics.morrolinux.it/script.js" data-website-id="c3d595bf-aa00-4953-8d69-5e3b8878793a"></script>
+  <script async defer data-website-id="8774eb88-5449-4247-866b-71a9216fa432" src="https://analytics.morrolinux.it/umami.js"></script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
