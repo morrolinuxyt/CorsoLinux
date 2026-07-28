@@ -122,7 +122,11 @@
                 <p class="card-text text-left">
                   <br> È online il nuovo corso <b>adatto a tutti</b> per iniziare il proprio <i>homelab</i> e <b>crescere professionalmente</b>, fino alla gestione di un'infrastruttura IT <i>aziendale</i>... <a data-umami-event="goto_proxmox-page" href="proxmox.php">Leggi di più</a><br>
                 </p>
+                <?php if($show_promo): ?>
+                <a data-umami-event="goto_proxmox_SPECIAL_OFFER" href="<?php echo $PPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>
+                <?php else: ?>
                 <a data-umami-event="goto_proxmox" href="<?php echo $PPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+                <?php endif ?>
               </div>
             </div>
           </div>
@@ -142,7 +146,11 @@
                 <p class="card-text text-left">
                   <br> Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a data-umami-event="goto_docker-page" href="docker.php">Leggi di più</a><br>
                 </p>
+                <?php if($show_promo): ?>
+                <a data-umami-event="goto_docker_SPECIAL_OFFER" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>
+                <?php else: ?>
                 <a data-umami-event="goto_docker" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+                <?php endif ?>
               </div>
             </div>
           </div>
