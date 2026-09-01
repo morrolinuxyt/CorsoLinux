@@ -8,8 +8,9 @@
         <br><br><br>
       </p>
 
-    <div class="card-deck"> 
-      <a data-umami-event="docker_goto_Arch_INVISIBLE" class="invisible-link" href="<?php echo $archlinux; ?>">
+    <div class="card-deck row">
+      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+        <a data-umami-event="docker_goto_Arch_INVISIBLE" class="invisible-link" href="<?php echo $archlinux; ?>">
           <div class="card">
             <img src="assets/arch-linux-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Arch Linux Per Comuni Mortali" title="Arch Linux Per Comuni Mortali">
             <div class="card-body d-flex flex-column">
@@ -30,7 +31,9 @@
             </div>
           </div>
         </a>
+      </div>
 
+      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
         <a data-umami-event="docker_goto_Docker" class="invisible-link" href="<?php echo $DPCM; ?>">
           <div class="card">
             <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Docker Per Comuni Mortali" title="Docker Per Comuni Mortali">
@@ -52,7 +55,9 @@
             </div>
           </div>
         </a>
+      </div>
 
+      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
         <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
           <div class="card">
             <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
@@ -74,6 +79,31 @@
             </div>
           </div>
         </a>
+      </div>
+
+      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+        <a data-umami-event="kubernetes_goto_Kubernetes_INVISIBLE" class="invisible-link" href="<?php echo $KPCM; ?>">
+          <div class="card">
+            <img src="assets/kubernetes-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title">Kubernetes Per Comuni Mortali</h3>
+              <p class="card-text">
+                Questo corso si rivolge a chi ha già <b>familiarità con Docker</b> e vuole fare il salto dalla gestione di singoli container all'<i>orchestrazione</i> vera e propria.<br><br>
+
+                Affronteremo <b>teoria e pratica</b>: ogni lezione è costruita intorno a un <b>mini progetto funzionante</b> che potrai replicare nel tuo <i>homelab</i> o <i>in azienda</i>.<br><br>
+
+                L'obbiettivo di questo corso è rendere Kubernetes <b>alla portata di tutti</b>, abbattendo la barriera d'ingresso di uno strumento solo all'apparenza ostico.<br><br>
+              </p>
+              <?php if($show_promo): ?>
+              <a data-umami-event="kubernetes_goto_Kubernetes_SPECIAL_OFFER" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+              <?php else: ?>
+              <a data-umami-event="kubernetes_goto_Kubernetes" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+              <?php endif ?>
+
+            </div>
+          </div>
+        </a>
+      </div>
 
     </div>
     </div>

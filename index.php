@@ -113,6 +113,31 @@
         <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
         <div class="row no-gutters">
             <div class="col-md-4">
+            <a data-umami-event="goto_kubernetes_INVISIBLE" class="invisible-link" href="kubernetes.php">
+              <img src="assets/kubernetes-per-comuni-mortali-notext.png" class="card-img">
+            </a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title"><b>Kubernetes non è solo roba da grandi aziende!</b></h5>
+                <p class="card-text text-left">
+                  <br> È online il nuovo corso per chi conosce già <b>Docker</b> e vuole fare il salto all'<b>orchestrazione</b>: dal primo <i>Pod</i> al cluster <i>k3s</i> con TLS automatico, storage persistente e Helm... <a data-umami-event="goto_kubernetes-page" href="kubernetes.php">Leggi di più</a><br>
+                </p>
+                <?php if($show_promo): ?>
+                <a data-umami-event="goto_kubernetes_SPECIAL_OFFER" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>
+                <?php else: ?>
+                <a data-umami-event="goto_kubernetes" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+                <?php endif ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-left">
+        <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
+        <div class="row no-gutters">
+            <div class="col-md-4">
             <a data-umami-event="goto_proxmox_INVISIBLE" class="invisible-link" href="proxmox.php">
               <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img">
             </div>

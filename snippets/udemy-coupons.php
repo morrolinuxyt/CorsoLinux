@@ -1,7 +1,7 @@
 <?php
 
     //UDEMY COUPONS
-    $archlinux = $essentials = $e101 = $e102 = $DPCM = $PPCM = "";
+    $archlinux = $essentials = $e101 = $e102 = $DPCM = $PPCM = $KPCM = "";
 
     $json_data = file_get_contents('http://udemy-coupon-dump');
     $data = json_decode($json_data, true);
@@ -12,6 +12,7 @@
     $e102 = $data["EXAM 102"];
     $DPCM = $data["Docker"];
     $PPCM = $data["Proxmox"];
+    $KPCM = $data["Kubernetes Per Comuni Mortali"];
 
     if(empty($archlinux)){
       $archlinux = "https://www.udemy.com/course/arch-linux-per-comuni-mortali/?referralCode=34016D9C6656A83ABF5D";
@@ -30,5 +31,9 @@
     }
     if(empty($PPCM)){
       $PPCM = "https://www.udemy.com/course/proxmox-per-comuni-mortali/?referralCode=3FEA50A193EC484BB14A";
+    }
+    if(empty($KPCM)){
+      // TODO: aggiungere il referralCode una volta pubblicato il corso
+      $KPCM = "https://www.udemy.com/course/kubernetes-per-comuni-mortali/";
     }
   ?>
