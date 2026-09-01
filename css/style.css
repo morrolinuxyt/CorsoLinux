@@ -689,10 +689,10 @@ span.keeptogether {
    dei teaser Docker/Proxmox). Qui il dim globale non crea contrasto — lo sfondo
    è già nero — spegne solo i tratti del video: si lavora dietro al testo. */
 .landing--dark video {
-  /* scurimento leggero: smorza i tratti luminosi del diagramma senza
-     impastare lo sfondo, che è già nero. Il contrasto col titolo lo fa
-     lo scrim qui sotto, non questo filtro. */
-  filter: brightness(75%);
+  /* Nessun filtro qui: tutto lo scurimento sta nello scrim, così la
+     "torcia" può bucarlo e scoprire il video originale. Il livello piatto
+     al 25% nello scrim equivale esattamente a brightness(75%). */
+  filter: none;
 }
 
 .landing--dark .bg {
@@ -707,10 +707,47 @@ span.keeptogether {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse 55% 60% at 50% 50%,
-              rgba(0, 0, 0, .88) 0%,
-              rgba(0, 0, 0, .72) 40%,
-              rgba(0, 0, 0, 0) 78%);
+  background:
+    radial-gradient(ellipse 55% 60% at 50% 50%,
+      rgba(0, 0, 0, .88) 0%,
+      rgba(0, 0, 0, .72) 40%,
+      rgba(0, 0, 0, 0) 78%),
+    linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
+}
+
+/* "Torcia": al passaggio del mouse il velo si buca e lascia vedere il
+   video com'è. Le variabili sono aggiornate da js/common.js; a riposo il
+   raggio è 0, quindi l'hero è identico alla versione senza effetto.
+   Solo su puntatori di precisione: su touch l'hover resterebbe incastrato. */
+@media (hover: hover) and (pointer: fine) {
+  .landing--dark .scrim {
+    -webkit-mask-image: radial-gradient(circle var(--torch-r, 0px) at var(--torch-x, -999px) var(--torch-y, -999px),
+                        transparent 0%, transparent 38%, #000 100%);
+    mask-image: radial-gradient(circle var(--torch-r, 0px) at var(--torch-x, -999px) var(--torch-y, -999px),
+                transparent 0%, transparent 38%, #000 100%);
+  }
+
+  /* Col cursore sul titolo il faro scoprirebbe il diagramma proprio dietro
+     alle scritte: il testo si fa da parte. La CTA resta piena. */
+  .landing--dark h1,
+  .landing--dark .lead {
+    transition: opacity .25s ease;
+  }
+
+  .landing--dark.is-peeking h1 {
+    opacity: .3;
+  }
+
+  .landing--dark.is-peeking .lead {
+    opacity: .2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing--dark h1,
+  .landing--dark .lead {
+    transition: none;
+  }
 }
 
 .landing--dark h1,
