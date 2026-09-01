@@ -238,9 +238,9 @@
           <div class="info-panel">
             <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
             <ul class="icon-list">
-              <li>Conoscenza base di <b>Linux</b></li>
-              <li>Buona conoscenza di <b>Docker</b> o <b>Podman</b></li>
-              <li>Fondamenti di <b>networking</b></li>
+              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Buona conoscenza di <a href="docker.php"><b>Docker</b> o <b>Podman</b></a></li>
+              <li>Fondamenti di <a href="https://corsoreti.it"><b>networking</b></a></li>
             </ul>
           </div>
         </div>
@@ -256,11 +256,7 @@
         Anche questo corso è realizzato con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=kubernetes"><b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
       </p>
 
-      <div class="row justify-content-center" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-        <div class="col-lg-10">
-          <img src="assets/axol-blade-crop.jpg" class="img-fluid rounded shadow" alt="AXOL Server">
-        </div>
-      </div>
+      <img src="assets/axol-blade-crop.jpg" class="section-figure" alt="AXOL Server">
 
       <p class="section-note text-justify">
         Costruiremo il nostro cluster su <b>Proxmox VE</b>, così da poter creare, clonare e ripristinare i nodi in pochi istanti e sperimentare <b>senza paura di rompere nulla</b>.<br><br>
@@ -458,11 +454,9 @@
   </section>
 
   <?php if($show_counters): ?>
-  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" style="color: #FFFFFF; background-color: var(--accent);">
+  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" class="section-accent">
     <div class="container text-center">
-    <h2>Numeri che parlano<br></h2>
-      <p class="mb-5">
-      </p>
+    <h2 class="section-title">Numeri che parlano</h2>
       <div id="counters" class="row">
         <div class="col-lg-4 stats">
           <i class="fa fa-users" aria-hidden="true"></i>

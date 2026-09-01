@@ -1,6 +1,6 @@
-  <section id="faq" style="margin-top: -3rem;">
+  <section id="faq">
     <div class="container">
-      <h2 class="my-5 text-center">FAQ - Domande Frequenti</h2>
+      <h2 class="section-title">FAQ - Domande Frequenti</h2>
       <div class="tab-content" id="faq-tab-content">
         <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
             <div class="accordion" id="accordion-tab-1">

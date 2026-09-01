@@ -1,8 +1,8 @@
-  <section id="docente" style="margin-top: -6rem;">
+  <section id="docente" style="margin-top: -3rem;">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2 class="text-center my-5">IL DOCENTE<br>
+          <h2 class="section-title">IL DOCENTE<br>
             <a href="https://www.linkedin.com/in/morenorazzoli/" target="_blank"><i class="fa fa-linkedin-square mx-2" aria-hidden="true" style="color:#3c5a99;"></i></a>
             <a href="https://twitter.com/morrolinux/" target="_blank"><i class="fa fa-twitter-square mx-2" aria-hidden="true" style="color:#00acee;"></i></a>
             <a href="https://telegram.me/morrolinux_feed" target="_blank"><i class="fa fa-comment mx-2" aria-hidden="true" style="color:#0088cc;"></i></a>

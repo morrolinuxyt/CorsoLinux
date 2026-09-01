@@ -50,6 +50,25 @@ section {
   box-shadow: var(--shadow-md);
 }
 
+/* Schede in griglia tutte alte quanto la più alta della riga.
+   Attenzione: qui NON si può agire sul link che avvolge la scheda. Quel link
+   ne contiene un altro (il pulsante "Vai al corso") e l'HTML non ammette
+   ancore annidate: il parser spezza quella esterna e lascia in pagina delle
+   ancore fantasma vuote, sorelle della scheda. Dando loro flex o larghezza
+   si prendono metà riga e strozzano la scheda.
+   Si lavora quindi sulla colonna, che è un elemento sano: diventa una
+   colonna flex e la scheda si stira dentro. */
+.card-deck > [class^="col-"],
+.card-deck > [class*=" col-"] {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-deck > [class^="col-"] > .card,
+.card-deck > [class*=" col-"] > .card {
+  flex: 1 1 auto;
+}
+
 .card-body {
   padding: 1.75rem;
 }
@@ -377,8 +396,6 @@ span.keeptogether {
   margin-top:-3px
 }
 
-/* Il giallo promo non regge il testo bianco (contrasto ~1.7:1): l'inchiostro
-   resta scuro in ogni tema, come nei riquadri a tinta fissa. */
 .btn-special-offer,
 .btn-special-offer:hover,
 .btn-special-offer:focus,
@@ -397,28 +414,26 @@ span.keeptogether {
 }
 
 .btn-special-offer:focus {
-  box-shadow: 0 0 0 .2rem rgba(254, 194, 36, .4);
+  box-shadow: 0 0 0 .2rem rgba(255, 101, 28, .4);
 }
 
-/* "Vai al corso" era blu Bootstrap su tutte e quattro le landing, unico
-   elemento sordo all'accento di pagina. */
 .btn-primary,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: var(--accent);
-  border-color: var(--accent);
-  color: #ffffff;
+  background-color: var(--cta);
+  border-color: var(--cta);
+  color: var(--cta-ink);
 }
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:not(:disabled):not(.disabled):active {
-  background-color: color-mix(in srgb, var(--accent) 85%, #000);
-  border-color: color-mix(in srgb, var(--accent) 85%, #000);
-  color: #ffffff;
+  background-color: var(--cta-hover);
+  border-color: var(--cta-hover);
+  color: var(--cta-ink);
 }
 
 .btn-primary:focus {
-  box-shadow: 0 0 0 .2rem var(--accent-soft);
+  box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
 }
 
 /* ============================================================
@@ -433,16 +448,23 @@ span.keeptogether {
   --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
 
-  /* Il giallo dell'offerta è uguale su ogni pagina: è il colore della promo,
-     non dell'accento, e deve restare distinguibile dalla CTA normale. */
   /* Colonna di lettura: testo, programma e FAQ condividono lo stesso bordo
      sinistro e destro. Le griglie (tessere, pannelli, schede) restano piene:
      due larghezze in tutta la pagina, non tre. */
   --measure: 780px;
 
-  --promo: #FEC224;
-  --promo-hover: #f0b400;
-  --promo-ink: #2f3437;
+  /* Il pulsante "Vai al corso" è lo stesso ovunque: la CTA è un elemento
+     dell'interfaccia, non dell'identità della singola landing. Riconoscibile
+     di pagina in pagina e sempre distinta dall'arancio dell'offerta. */
+  --cta: #326ce5;
+  --cta-hover: #2757b8;
+  --cta-ink: #ffffff;
+
+  /* L'arancio dell'offerta è uguale su ogni pagina: è il colore della promo,
+     non dell'accento, e deve restare distinguibile dalla CTA. */
+  --promo: #ff651c;
+  --promo-hover: #ff5100;
+  --promo-ink: #ffffff;
 
   --ink: #2f3437;
   --ink-muted: #6b7378;
@@ -465,6 +487,21 @@ span.keeptogether {
   /* le frecce del carosello sono bianche: invertite diventano nere,
      giusto su fondo chiaro, invisibili su fondo scuro */
   --carousel-invert: invert(100%);
+}
+
+/* Fascia a tinta piena (i contatori "Numeri che parlano"): prende l'accento
+   della pagina invece di un colore cablato diverso per landing. Il testo è
+   bianco fisso perché il fondo è saturo in entrambi i temi. */
+.section-accent {
+  background-color: var(--accent);
+}
+
+.section-accent,
+.section-accent h2,
+.section-accent h5,
+.section-accent .counting,
+.section-accent .fa {
+  color: #ffffff;
 }
 
 /* Ritmo verticale: sezioni alternate al posto dei margini negativi */
@@ -528,17 +565,28 @@ span.keeptogether {
 .container .section-claim {
   max-width: 620px;
   margin: 3rem auto;
-  padding-top: 1.75rem;
   color: var(--ink);
   font-size: 1.3rem;
   line-height: 1.6;
   text-align: center;
-  border-top: 3px solid var(--accent);
 }
 
 .section-claim b,
 .section-claim strong {
   font-weight: 700;
+}
+
+/* Immagini a corredo del testo: stessa colonna di lettura dei paragrafi,
+   così il blocco non sfonda la misura quando è in mezzo al discorso.
+   Vale anche per le <img> messe direttamente dentro a un .section-note. */
+.section-figure,
+.section-note > img {
+  display: block;
+  width: 100%;
+  max-width: var(--measure);
+  margin: 2.5rem auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
 }
 
 /* Tessere con icona (es. "Cosa imparerai") */
@@ -815,14 +863,6 @@ span.keeptogether {
 
 .landing-page #faq .collapse.show .card-body {
   border-bottom: 0;
-}
-
-/* Stesso trattamento dei titoli anche negli snippet condivisi */
-.landing-page #faq > .container > h2,
-.landing-page #corsi > .container > h2,
-.landing-page #docente h2 {
-  text-align: center;
-  margin-bottom: 2.5rem;
 }
 
 /* Su schermi stretti il testo giustificato crea "fiumi" di spazi */

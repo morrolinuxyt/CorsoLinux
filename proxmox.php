@@ -102,12 +102,11 @@
       Proxmox è una piattaforma di virtualizzazione <b>Open Source</b> incredibilmente <b>versatile e potente</b>, ma se non hai mai affrontato tematiche 
       come <i>storage distribuito, SDN</i> e <i>containerizzazione</i>, <b>potresti pensare che sia troppo difficile</b> e riservato solo a sysadmin esperti 
       e professionisti del settore.
-      <br><br>
       </p>
 
-      <p class="section-note text-center my-4">
+      <p class="section-claim">
       Bene, io non la penso così. <br>
-      Benvenuto su Proxmox Per Comuni Mortali. <br><br>
+      <b>Benvenuto su Proxmox Per Comuni Mortali.</b>
       </p>
 
       <p class="section-note text-justify">
@@ -151,7 +150,7 @@
   <!--
   <section id="recensioni">
     <div class="text-center">
-      <h2>Fidati di chi l'ha già acquistato</h2>
+      <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
       <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
@@ -311,21 +310,19 @@
       Ho realizzato questo corso con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=proxmox"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
       Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponibilità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
 
-      <img src="assets/axol-blade-crop.jpg" style="width:100%; !important;" alt="AXOL Server"><br><br>
+      <img src="assets/axol-blade-crop.jpg" alt="AXOL Server">
       
       Non tralasceremo proprio niente: dalla <b>sicurezza infrastrutturale</b> alla gestione di utenti e ruoli secondo il <i>principio del minimo privilegio</i>, oltre ai backup automatici secondo la <i>regola 3-2-1</i> con <b>Proxmox Backup Server</b> (PBS).<br><br>
 
-      Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
+      Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.
       </p>
     </div>
   </section>
 
   
-  <section data-umami-event="proxmox_section_statistiche" id="statistiche" style="margin-bottom: 9rem; color: #FFFFFF; background-color: #343a40;">
+  <section data-umami-event="proxmox_section_statistiche" id="statistiche" class="section-accent">
     <div class="container text-center">
-    <h2>Numeri che parlano<br></h2>
-      <p class="mb-5">
-      </p>
+    <h2 class="section-title">Numeri che parlano</h2>
       <div id="counters" class="row">
         <div class="col-lg-4 stats">
           <i class="fa fa-users" aria-hidden="true"></i>

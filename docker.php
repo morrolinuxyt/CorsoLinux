@@ -104,18 +104,17 @@
 
       Docker è uno strumento <b>potente</b> e versatile, in grado di <b>semplificare</b> i processi di <i>sviluppo</i>, <i>distribuzione</i> e <i>manutenzione</i> del software. 
       Ma se non hai mai affrontato la <i>containerizzazione</i>, potresti pensare che sia riservato solo a sistemisti, sviluppatori esperti e "addetti ai lavori".
-      <br><br>
       </p>
 
-      <p class="section-note text-center my-4">
+      <p class="section-claim">
       Bene, io non la penso così. <br>
-      Benvenuto su Docker Per Comuni Mortali. <br><br>
+      <b>Benvenuto su Docker Per Comuni Mortali.</b>
       </p>
 
       <p class="section-note text-justify">
       Questo corso è progettato per <b>sviluppatori</b>, <b>sistemisti</b> e appassionati di informatica e <b>self-hosting</b> che vogliono imparare Docker tramite esempi pratici e concreti. 
-      Partendo dalle basi, ti guiderò attraverso la <b>creazione delle tue prime immagini</b>, la <b>gestione dei container</b> e la <b>distribuzione</b> delle tue applicazioni senza la complessa gestione delle dipendenze o di complicate configurazioni.<br><br>
-	    </p>
+      Partendo dalle basi, ti guiderò attraverso la <b>creazione delle tue prime immagini</b>, la <b>gestione dei container</b> e la <b>distribuzione</b> delle tue applicazioni senza la complessa gestione delle dipendenze o di complicate configurazioni.
+      </p>
 	  </div>
 
     <div class="container text-center">
@@ -150,7 +149,7 @@
 
   <section id="recensioni">
     <div class="text-center">
-      <h2>Fidati di chi l'ha già acquistato</h2>
+      <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
       <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
@@ -314,16 +313,13 @@
       Allegato a ciascuna lezione troverai <b>codice</b> e risorse utilizzate, <b>appunti riassuntivi</b> e link di approfondimento, e potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
 
       A differenza dei corsi più avanzati, il focus è sull'accessibilità e la comprensione. <i>Il tono è discorsivo e rilassato</i>, ogni argomento viene trattato quando più opportuno e approfondito successivamente negli appositi capitoli.
-      <br><br>
       </p>
     </div>
   </section>
 
-  <section data-umami-event="docker_section_statistiche" id="statistiche" style="background-color: #2495ed">
+  <section data-umami-event="docker_section_statistiche" id="statistiche" class="section-accent">
     <div class="container text-center">
-    <h2>Numeri che parlano<br></h2>
-      <p class="mb-5">
-      </p>
+    <h2 class="section-title">Numeri che parlano</h2>
       <div id="counters" class="row">
         <div class="col-lg-4 stats">
           <i class="fa fa-users" aria-hidden="true"></i>
