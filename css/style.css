@@ -779,6 +779,21 @@ span.keeptogether {
   }
 }
 
+/* Su schermi stretti il titolo va a capo su più righe e il sottotitolo occupa
+   tutta la larghezza: la pozza centrale, tagliata al 78% del raggio, lasciava
+   i bordi del testo sopra al video non velato. Qui si allarga fino a coprire
+   l'intera larghezza, accorciandosi in altezza. */
+@media (max-width: 767.98px) {
+  .landing--dark .scrim {
+    background:
+      radial-gradient(ellipse 100% 42% at 50% 50%,
+        rgba(0, 0, 0, .88) 0%,
+        rgba(0, 0, 0, .80) 55%,
+        rgba(0, 0, 0, 0) 100%),
+      linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .25));
+  }
+}
+
 .landing--dark h1,
 .landing--dark .lead {
   text-shadow: 0 2px 18px rgba(0, 0, 0, .95), 0 0 50px rgba(0, 0, 0, .8);
