@@ -171,6 +171,9 @@ blockquote p::after {
 }
 
 .landing {
+  /* Ancora .bg, il video e lo scrim all'header invece che al viewport:
+     senza, restano incollati in cima appena qualcosa spinge giù l'header. */
+  position: relative;
   height: 100vh;
   min-height: 500px;
   /*
@@ -353,4 +356,368 @@ span.keeptogether {
   color: #ffffff;
   background-color: #ff5100;
   border-color: #ffffff;
+}
+
+/* ============================================================
+   Blocchi riutilizzabili per le landing dei corsi
+   L'accento è per-pagina, impostato sul body:
+     <body style="--accent: #326ce5; --accent-soft: rgba(50,108,229,.09)">
+   ============================================================ */
+
+:root {
+  --accent: #ff651c;
+  --accent-soft: rgba(255, 101, 28, 0.09);
+  --ink: #2f3437;
+  --ink-muted: #6b7378;
+  --surface: #f6f8fa;
+  --hairline: #e3e6ea;
+}
+
+/* Ritmo verticale: sezioni alternate al posto dei margini negativi */
+.section-alt {
+  background-color: var(--surface);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-lead {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--ink-muted);
+}
+
+.section-note {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tessere con icona (es. "Cosa imparerai") */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  padding: 1.25rem;
+  background-color: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+}
+
+.feature-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, .07);
+}
+
+.feature-item .fa {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 42px;
+  text-align: center;
+}
+
+.feature-item span {
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* Pannelli affiancati (es. "A chi è rivolto" / "Prerequisiti") */
+.info-panel {
+  height: 100%;
+  padding: 1.75rem;
+  background-color: #fff;
+  border: 1px solid var(--hairline);
+  border-top: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.info-panel h5 {
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon-list li {
+  position: relative;
+  padding-left: 1.9rem;
+  margin-bottom: .75rem;
+  color: var(--ink);
+}
+
+.icon-list li:last-child {
+  margin-bottom: 0;
+}
+
+.icon-list li::before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+}
+
+/* Programma del corso */
+.syllabus {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.syllabus-module {
+  margin-bottom: .75rem;
+  background-color: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+.syllabus-module:hover {
+  border-color: var(--accent);
+}
+
+.syllabus-toggle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.1rem 1.25rem;
+  background: none;
+  border: 0;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: left;
+  white-space: normal;
+}
+
+.syllabus-toggle:hover,
+.syllabus-toggle:focus,
+.syllabus-toggle:active {
+  color: var(--accent);
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.syllabus-num {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  margin-right: 1rem;
+  border-radius: 10px;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+}
+
+.syllabus-name {
+  flex: 1 1 auto;
+}
+
+.syllabus-chevron {
+  flex: 0 0 auto;
+  margin-left: 1rem;
+  color: var(--ink-muted);
+  transition: transform .2s ease-in-out;
+}
+
+.syllabus-toggle[aria-expanded="true"] .syllabus-chevron {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.syllabus-lessons {
+  list-style: none;
+  margin: 0;
+  padding: 0 1.25rem 1.25rem 4.6rem;
+}
+
+.syllabus-lessons li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .6rem;
+  color: var(--ink-muted);
+}
+
+.syllabus-lessons li:last-child {
+  margin-bottom: 0;
+}
+
+.syllabus-lessons li::before {
+  content: "\f01d";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  opacity: .55;
+}
+
+@media (max-width: 575.98px) {
+  .syllabus-lessons {
+    padding-left: 1.75rem;
+  }
+
+  .syllabus-toggle {
+    font-size: 1rem;
+  }
+}
+
+/* Ripristina il ritmo verticale sulle landing rinnovate: gli snippet
+   condivisi usano ancora margini negativi / padding azzerati. */
+.landing-page #faq {
+  padding-top: 6rem;
+}
+
+.landing-page #corsi {
+  padding-top: 4rem;
+}
+
+/* FAQ con lo stesso linguaggio visivo del programma.
+   Scoped a .landing-page: per estenderlo alle altre pagine
+   basta aggiungere la classe al loro <body>. */
+.landing-page #faq .tab-content {
+  box-shadow: none;
+}
+
+.landing-page #faq .accordion {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.landing-page #faq .accordion > .card {
+  margin-bottom: .75rem;
+  background-color: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color .2s ease-in-out;
+}
+
+.landing-page #faq .accordion > .card:hover,
+.landing-page #faq .accordion > .card:focus {
+  border-color: var(--accent);
+  box-shadow: none;
+  transform: none;
+}
+
+.landing-page #faq .card-header {
+  padding: 0;
+  background-color: #fff;
+  border-bottom: 0;
+}
+
+.landing-page #faq .card-header h5 button {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.landing-page #faq .card-header h5 button:hover,
+.landing-page #faq .card-header h5 button:focus {
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.landing-page #faq .card-header h5 button::after {
+  content: "\f078";
+  font-family: FontAwesome;
+  margin-left: auto;
+  padding-left: 1rem;
+  color: var(--ink-muted);
+  font-weight: normal;
+  transition: transform .2s ease-in-out;
+}
+
+.landing-page #faq .card-header h5 button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  color: var(--accent);
+}
+
+.landing-page #faq .card-body {
+  padding: 0 1.25rem 1.25rem;
+}
+
+.landing-page #faq .card-body p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+.landing-page #faq .collapse.show .card-body {
+  border-bottom: 0;
+}
+
+/* Stesso trattamento dei titoli anche negli snippet condivisi */
+.landing-page #faq > .container > h2,
+.landing-page #corsi > .container > h2,
+.landing-page #docente h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Su schermi stretti il testo giustificato crea "fiumi" di spazi */
+@media (max-width: 767.98px) {
+  .landing-page .text-justify {
+    text-align: left !important;
+  }
+}
+
+/* Hero con teaser scuro (es. Kubernetes: luminanza media 0.08 contro lo 0.95
+   dei teaser Docker/Proxmox). Qui il dim globale non crea contrasto — lo sfondo
+   è già nero — spegne solo i tratti del video: si lavora dietro al testo. */
+.landing--dark video {
+  /* scurimento leggero: smorza i tratti luminosi del diagramma senza
+     impastare lo sfondo, che è già nero. Il contrasto col titolo lo fa
+     lo scrim qui sotto, non questo filtro. */
+  filter: brightness(75%);
+}
+
+.landing--dark .bg {
+  background-color: #0b0b0b;
+  filter: none;
+}
+
+.landing--dark .scrim {
+  position: absolute;
+  z-index: -97;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse 55% 60% at 50% 50%,
+              rgba(0, 0, 0, .88) 0%,
+              rgba(0, 0, 0, .72) 40%,
+              rgba(0, 0, 0, 0) 78%);
+}
+
+.landing--dark h1,
+.landing--dark .lead {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .95), 0 0 50px rgba(0, 0, 0, .8);
+}
+
+.landing--dark .lead {
+  opacity: .75;
 }

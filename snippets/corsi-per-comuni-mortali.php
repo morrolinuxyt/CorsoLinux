@@ -9,7 +9,7 @@
       </p>
 
     <div class="card-deck row">
-      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+      <div class="col-lg-6 col-md-6 mb-4">
         <a data-umami-event="docker_goto_Arch_INVISIBLE" class="invisible-link" href="<?php echo $archlinux; ?>">
           <div class="card">
             <img src="assets/arch-linux-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Arch Linux Per Comuni Mortali" title="Arch Linux Per Comuni Mortali">
@@ -33,7 +33,7 @@
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+      <div class="col-lg-6 col-md-6 mb-4">
         <a data-umami-event="docker_goto_Docker" class="invisible-link" href="<?php echo $DPCM; ?>">
           <div class="card">
             <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Docker Per Comuni Mortali" title="Docker Per Comuni Mortali">
@@ -57,7 +57,7 @@
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+      <div class="col-lg-6 col-md-6 mb-4">
         <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
           <div class="card">
             <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
@@ -81,7 +81,7 @@
         </a>
       </div>
 
-      <div class="col-lg-3 col-md-6" style="margin: 10px auto;">
+      <div class="col-lg-6 col-md-6 mb-4">
         <a data-umami-event="kubernetes_goto_Kubernetes_INVISIBLE" class="invisible-link" href="<?php echo $KPCM; ?>">
           <div class="card">
             <img src="assets/kubernetes-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">

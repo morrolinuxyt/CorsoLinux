@@ -21,7 +21,7 @@
   <title>Kubernetes Per Comuni Mortali | Corso Linux</title>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="landing-page" style="--accent: #326ce5; --accent-soft: rgba(50, 108, 229, .09);">
 
   <?php
 
@@ -81,16 +81,17 @@
     </div>
   </nav>
 
-  <header class="landing">
+  <header class="landing landing--dark">
     <div class="bg"></div>
-    <video style="filter: brightness(25%);" autoplay loop muted>
-      <source src="assets/teaser-kubernetes.mp4" width="100%">
+    <video autoplay loop muted>
+      <source src="assets/teaser-kpcm.mp4" width="100%">
     </video>
+    <div class="scrim"></div>
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center text-white">
           <h1 class="font-weight-light">Impara Kubernetes divertendoti</h1>
-          <p class="lead">Fai il salto dal singolo container all'orchestrazione vera e propria!</p>
+          <p class="lead">Dal singolo container all'orchestrazione vera e propria!</p>
           <?php if($show_promo): ?>
             <a data-umami-event="kubernetes_header_button_SPECIAL_OFFER" id="promo" class="js-scroll-trigger banner" href="#kubernetes"><div><?php echo $promo_str; ?></div></a>
           <?php else: ?>
@@ -101,32 +102,28 @@
     </div>
   </header>
 
-  <section> <!-- style="margin-top: -9rem;"> -->
-    <div class="container text-center">
-      <h2 id="kubernetes" class="my-5">Perché imparare Kubernetes</h2>
-      <p class="mb-1 text-justify">
+  <section>
+    <div class="container">
+      <h2 id="kubernetes" class="section-title">Perché imparare Kubernetes</h2>
 
+      <p class="section-note text-justify">
       Kubernetes è la piattaforma di <b>orchestrazione dei container</b> più diffusa al mondo, ma se hai appena mosso i primi passi con <i>Docker</i>,
       <b>potresti pensare che sia roba da grandi aziende</b> con team <i>DevOps</i> dedicati e infrastrutture complesse.
-      <br><br>
       </p>
 
-      <p class="mb-1 text-center">
+      <p class="section-note text-center my-4">
       Bene, io non la penso così. <br>
-      Benvenuto su Kubernetes Per Comuni Mortali. <br><br>
+      <b>Benvenuto su Kubernetes Per Comuni Mortali.</b>
       </p>
 
-      <p class="mb-1 text-justify">
-
+      <p class="section-note text-justify">
       Questo corso è progettato per <i>sviluppatori, sistemisti</i> e appassionati di informatica e <i>self-hosting</i>
       che vogliono <b>fare il salto di qualità</b> dalla gestione di singoli container all'<b>orchestrazione vera e propria</b>, attraverso esempi pratici e concreti.<br><br>
       Partendo dalle basi, ti guiderò attraverso i concetti fondamentali di Kubernetes: dai <i>Pod</i> ai <i>Deployment</i>, dai <i>Service</i> agli <i>Ingress</i>, fino alla gestione della <b>configurazione</b> e della <b>persistenza dei dati</b>, senza perderti in astrazioni inutili o terminologie ostiche.
-	    </p>
-	  </div>
+      </p>
 
-    <div class="container text-center" style="margin-top: 3rem;">
-      <div class="card-deck row">
-        <div class="col-md-6" style="margin: 10px auto;">
+      <div class="row justify-content-center" style="margin-top: 3.5rem;">
+        <div class="col-lg-7 col-md-9">
           <a data-umami-event="kubernetes_goto_Kubernetes" class="invisible-link" href="<?php echo $KPCM; ?>">
             <div class="card">
               <img src="assets/kubernetes-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">
@@ -151,316 +148,290 @@
         </div>
       </div>
     </div>
-
   </section>
 
-  <section id="imparerai" style="margin-top: -6rem;">
-    <div class="container text-center">
-      <h2 class="my-5">Cosa imparerai</h2>
-      <p class="mb-2 text-justify">
-
-      Esploreremo Kubernetes con un <b>approccio pratico</b>: ogni lezione sarà costruita intorno a un <b>mini progetto funzionante</b>, e ti illustrerò ogni dettaglio rilevante strada facendo, nel momento in cui diventa necessario capirlo davvero.<br><br>
-
-      Al termine del corso sarai in grado di:
-      </p>
-
-      <div class="row text-left">
-        <div class="col-md-6">
-          <ul>
-            <li>Installare e configurare un <b>cluster k3s</b></li>
-            <li>Gestire workload Kubernetes con <b>kubectl</b> e approccio <i>dichiarativo</i></li>
-            <li>Esporre applicazioni con <b>Service</b>, <b>Ingress</b> e <b>TLS automatico</b></li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul>
-            <li>Gestire <b>configurazione</b>, <b>segreti</b> e <b>storage persistente</b></li>
-            <li>Installare e pacchettizzare applicazioni con <b>Helm</b></li>
-            <li><b>Diagnosticare e risolvere</b> i problemi più comuni nel cluster</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="mb-2 text-justify" style="margin-top: 2rem;">
-
-      Allegato a ciascuna lezione troverai <b>codice</b>, <b>appunti</b> e link di approfondimento, e potrai verificare il tuo apprendimento tramite gli appositi <b>quiz</b>.<br><br>
-
-      A differenza dei corsi più avanzati, il focus è sull'<b>accessibilità</b> e la <b>comprensione</b>. <i>Il tono è discorsivo e rilassato</i>, gli argomenti vengono introdotti con gradualità e approfonditi nei capitoli dedicati, man mano che il quadro d'insieme diventa più chiaro.<br><br>
-      </p>
-
-      <div class="row text-left">
-        <div class="col-md-6">
-          <h5 class="my-3"><b>A chi è rivolto</b></h5>
-          <ul>
-            <li>Appassionati di informatica e <i>self-hosting</i></li>
-            <li>Sistemisti</li>
-            <li>Sviluppatori</li>
-            <li>Chi ha già familiarità con <b>Docker</b> e vuole fare il passo successivo</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h5 class="my-3"><b>Prerequisiti</b></h5>
-          <ul>
-            <li>Conoscenza base di <b>Linux</b></li>
-            <li>Buona conoscenza di <b>Docker</b> o <b>Podman</b></li>
-            <li>Fondamenti di <b>networking</b></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="esperti" style="margin-top: -3rem;">
-    <div class="container text-center">
-      <h2 class="my-5">Affidati agli esperti</h2>
-      <p class="mb-2 text-justify">
-
-      Anche questo corso è realizzato con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=kubernetes"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
-      Costruiremo il nostro cluster su <b>Proxmox VE</b>, così da poter creare, clonare e ripristinare i nodi in pochi istanti e sperimentare <b>senza paura di rompere nulla</b>.<br><br>
-
-      <img src="assets/axol-blade-crop.jpg" style="width:100%; !important;" alt="AXOL Server"><br><br>
-
-      Non ci fermeremo al "deploy che funziona": vedremo anche come <b>mantenere</b> il cluster nel tempo, dagli <i>upgrade</i> di Kubernetes e del sistema operativo sottostante fino al <b>troubleshooting</b> dei problemi più comuni, con <i>snapshot</i> e <i>backup</i> preventivi a farci da rete di sicurezza.<br><br>
-
-      Affronteremo infine il tema dell'<b>Alta Disponibilità</b> (HA) con onestà intellettuale: quando conviene appoggiarsi all'HA infrastrutturale di Proxmox, quali sono i suoi <b>limiti reali</b> e quando invece serve davvero un cluster Kubernetes in HA.<br><br>
-      </p>
-    </div>
-  </section>
-
-  <section id="programma" style="margin-top: -3rem;">
+  <section id="imparerai" class="section-alt">
     <div class="container">
-      <h2 class="my-5 text-center">Programma del corso</h2>
-      <div class="tab-content" id="programma-tab-content">
-        <div class="tab-pane show active" id="programma-tab1" role="tabpanel" aria-labelledby="programma-tab1">
-          <div class="accordion" id="accordion-programma">
+      <h2 class="section-title">Cosa imparerai</h2>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-1">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-1" aria-expanded="true" aria-controls="accordion-programma-content-1">
-                    1 &mdash; Benvenuto
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse show" id="accordion-programma-content-1" aria-labelledby="accordion-programma-heading-1" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Presentazione del corso</li>
-                    <li>A chi si rivolge questo corso e prerequisiti</li>
-                    <li>Cosa imparerai e cosa NON copriremo</li>
-                    <li>Lo sponsor: AXOL Server e perché useremo Proxmox</li>
-                    <li>Come ottenere il massimo dal corso</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <p class="section-lead text-center">
+        Esploreremo Kubernetes con un <b>approccio pratico</b>: ogni lezione è costruita intorno a un <b>mini progetto funzionante</b>,
+        e ti illustrerò ogni dettaglio rilevante strada facendo, nel momento in cui diventa necessario capirlo davvero.
+      </p>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-2">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-2" aria-expanded="false" aria-controls="accordion-programma-content-2">
-                    2 &mdash; Installiamo k3s su Proxmox e prendiamo confidenza
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-2" aria-labelledby="accordion-programma-heading-2" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Come funziona k3s</li>
-                    <li>Setup dell'ambiente su Proxmox: VM con template e cloud-init</li>
-                    <li>Installazione di k3s e configurazione di kubectl</li>
-                    <li>Join di altri nodi worker al cluster</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <div class="row" style="margin-top: 3rem;">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            <span>Installare e configurare un <b>cluster k3s</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-terminal" aria-hidden="true"></i>
+            <span>Gestire i workload con <b>kubectl</b> e approccio <b>dichiarativo</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>Esporre applicazioni con <b>Service</b>, <b>Ingress</b> e <b>TLS automatico</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-database" aria-hidden="true"></i>
+            <span>Gestire <b>configurazione</b>, <b>segreti</b> e <b>storage persistente</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+            <span>Installare e pacchettizzare applicazioni con <b>Helm</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-wrench" aria-hidden="true"></i>
+            <span><b>Diagnosticare e risolvere</b> i problemi più comuni nel cluster</span>
+          </div>
+        </div>
+      </div>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-3">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-3" aria-expanded="false" aria-controls="accordion-programma-content-3">
-                    3 &mdash; Gli oggetti fondamentali: Pod, ReplicaSet, Deployment
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-3" aria-labelledby="accordion-programma-heading-3" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Deployment, Pod e ReplicaSet</li>
-                    <li>Approccio dichiarativo e reconciliation loop</li>
-                    <li>Namespace: organizzare e isolare i workload</li>
-                    <li>Labels e annotations: il collante invisibile di Kubernetes</li>
-                    <li>Lab completo: deploy, scale, update, rollback</li>
-                    <li>Multi-container Pod e sidecar pattern</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <p class="section-note text-justify" style="margin-top: 2rem;">
+        Allegato a ciascuna lezione troverai <b>codice</b>, <b>appunti</b> e link di approfondimento, e potrai verificare il tuo apprendimento tramite gli appositi <b>quiz</b>.<br><br>
+        A differenza dei corsi più avanzati, il focus è sull'<b>accessibilità</b> e la <b>comprensione</b>. <i>Il tono è discorsivo e rilassato</i>, gli argomenti vengono introdotti con gradualità e approfonditi nei capitoli dedicati, man mano che il quadro d'insieme diventa più chiaro.
+      </p>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-4">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-4" aria-expanded="false" aria-controls="accordion-programma-content-4">
-                    4 &mdash; Esporre le applicazioni: Service e Ingress
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-4" aria-labelledby="accordion-programma-heading-4" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Service ClusterIP, NodePort e LoadBalancer</li>
-                    <li>App frontend + backend con Service per entrambi</li>
-                    <li>Ingress: il reverse proxy nativo del cluster</li>
-                    <li>HTTP vs DNS challenge</li>
-                    <li>TLS automatico con cert-manager e Let's Encrypt</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <div class="row" style="margin-top: 3rem;">
+        <div class="col-md-6 mb-4">
+          <div class="info-panel">
+            <h5><i class="fa fa-users mr-2" aria-hidden="true"></i>A chi è rivolto</h5>
+            <ul class="icon-list">
+              <li>Appassionati di informatica e <i>self-hosting</i></li>
+              <li>Sistemisti</li>
+              <li>Sviluppatori</li>
+              <li>Chi ha già familiarità con <b>Docker</b> e vuole fare il passo successivo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="info-panel">
+            <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
+            <ul class="icon-list">
+              <li>Conoscenza base di <b>Linux</b></li>
+              <li>Buona conoscenza di <b>Docker</b> o <b>Podman</b></li>
+              <li>Fondamenti di <b>networking</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-5">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-5" aria-expanded="false" aria-controls="accordion-programma-content-5">
-                    5 &mdash; Storage: volumi, PV, PVC e StorageClass
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-5" aria-labelledby="accordion-programma-heading-5" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Come funziona lo storage su Kubernetes (CSI, PVC e modalità di accesso)</li>
-                    <li>Deployment con dati persistenti (PVC su local-path)</li>
-                    <li>SMB StorageClass</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+  <section id="esperti">
+    <div class="container">
+      <h2 class="section-title">Affidati agli esperti</h2>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-6">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-6" aria-expanded="false" aria-controls="accordion-programma-content-6">
-                    6 &mdash; Configurazione e segreti: ConfigMap e Secret
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-6" aria-labelledby="accordion-programma-heading-6" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>ConfigMap: cos'è e come si usa (env, envFrom)</li>
-                    <li>Montare una ConfigMap come un file</li>
-                    <li>Montare una ConfigMap come una cartella</li>
-                    <li>Secret: cosa sono e come funzionano</li>
-                    <li>Best practice sui Secret</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <p class="section-note text-justify">
+        Anche questo corso è realizzato con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=kubernetes"><b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
+      </p>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-7">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-7" aria-expanded="false" aria-controls="accordion-programma-content-7">
-                    7 &mdash; Health, risorse e ciclo di vita dei Pod
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-7" aria-labelledby="accordion-programma-heading-7" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Probe: liveness e readiness spiegate con esempi</li>
-                    <li>Monitoraggio base delle risorse (get pods -w, top pods, top nodes)</li>
-                    <li>Resource requests e limits: cosa succede se non li metti</li>
-                    <li>Init container</li>
-                    <li>Lifecycle hooks (postStart, preStop)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <div class="row justify-content-center" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+        <div class="col-lg-10">
+          <img src="assets/axol-blade-crop.jpg" class="img-fluid rounded shadow" alt="AXOL Server">
+        </div>
+      </div>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-8">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-8" aria-expanded="false" aria-controls="accordion-programma-content-8">
-                    8 &mdash; Workload oltre i Deployment: Job, CronJob, DaemonSet, StatefulSet
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-8" aria-labelledby="accordion-programma-heading-8" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Job: task una tantum (migrazioni, batch)</li>
-                    <li>CronJob: schedulare task in modo nativo</li>
-                    <li>DaemonSet: un Pod per nodo, casi d'uso reali</li>
-                    <li>StatefulSet: identità, ordering e storage stabile</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+      <p class="section-note text-justify">
+        Costruiremo il nostro cluster su <b>Proxmox VE</b>, così da poter creare, clonare e ripristinare i nodi in pochi istanti e sperimentare <b>senza paura di rompere nulla</b>.<br><br>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-9">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-9" aria-expanded="false" aria-controls="accordion-programma-content-9">
-                    9 &mdash; Helm e Kustomize
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-9" aria-labelledby="accordion-programma-heading-9" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Deployment di un'app completa</li>
-                    <li>Kustomize: quale problema risolve</li>
-                    <li>Deployment di un'app con Helm (e comandi essenziali)</li>
-                    <li>Anatomia di un chart Helm</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        Non ci fermeremo al "deploy che funziona": vedremo anche come <b>mantenere</b> il cluster nel tempo, dagli <i>upgrade</i> di Kubernetes e del sistema operativo sottostante fino al <b>troubleshooting</b> dei problemi più comuni, con <i>snapshot</i> e <i>backup</i> preventivi a farci da rete di sicurezza.<br><br>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-10">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-10" aria-expanded="false" aria-controls="accordion-programma-content-10">
-                    10 &mdash; HA infrastrutturale con Proxmox: la scorciatoia onesta
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-10" aria-labelledby="accordion-programma-heading-10" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Il dilemma dell'HA: Kubernetes nativo vs Proxmox VE</li>
-                    <li>Cosa serve a Proxmox per farlo: quorum, Corosync e storage condiviso o replicato</li>
-                    <li>Lab: configurazione HA, simulazione di guasto e analisi dei limiti</li>
-                    <li>HA applicativo vs infrastrutturale: cosa Proxmox non può fare per te</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+        Affronteremo infine il tema dell'<b>Alta Disponibilità</b> (HA) con onestà intellettuale: quando conviene appoggiarsi all'HA infrastrutturale di Proxmox, quali sono i suoi <b>limiti reali</b> e quando invece serve davvero un cluster Kubernetes in HA.
+      </p>
+    </div>
+  </section>
 
-            <div class="card">
-              <div class="card-header" id="accordion-programma-heading-11">
-                <h5>
-                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#accordion-programma-content-11" aria-expanded="false" aria-controls="accordion-programma-content-11">
-                    11 &mdash; Manutenzione e troubleshooting
-                  </button>
-                </h5>
-              </div>
-              <div class="collapse" id="accordion-programma-content-11" aria-labelledby="accordion-programma-heading-11" data-parent="#accordion-programma">
-                <div class="card-body">
-                  <ul>
-                    <li>Upgrade di Kubernetes con System Upgrade Controller</li>
-                    <li>Upgrade del sistema operativo sottostante</li>
-                    <li>Upgrade di Proxmox stesso</li>
-                    <li>Debugging: leggere describe e capire gli errori comuni</li>
-                    <li>kubectl debug ed ephemeral container</li>
-                    <li>Rimozione e sostituzione di un nodo dal cluster: cordon e drain</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+  <section id="programma" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Programma del corso</h2>
 
+      <p class="section-lead text-center">
+        Undici moduli, dal primo <i>Pod</i> alla manutenzione del cluster nel tempo.
+      </p>
+
+      <div class="syllabus" id="syllabus">
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-1" aria-expanded="true" aria-controls="modulo-1">
+            <span class="syllabus-num">1</span>
+            <span class="syllabus-name">Benvenuto</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse show" id="modulo-1" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Presentazione del corso</li>
+            <li>A chi si rivolge questo corso e prerequisiti</li>
+            <li>Cosa imparerai e cosa NON copriremo</li>
+            <li>Lo sponsor: AXOL Server e perché useremo Proxmox</li>
+            <li>Come ottenere il massimo dal corso</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-2" aria-expanded="false" aria-controls="modulo-2">
+            <span class="syllabus-num">2</span>
+            <span class="syllabus-name">Installiamo k3s su Proxmox e prendiamo confidenza</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-2" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Come funziona k3s</li>
+            <li>Setup dell'ambiente su Proxmox: VM con template e cloud-init</li>
+            <li>Installazione di k3s e configurazione di kubectl</li>
+            <li>Join di altri nodi worker al cluster</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-3" aria-expanded="false" aria-controls="modulo-3">
+            <span class="syllabus-num">3</span>
+            <span class="syllabus-name">Gli oggetti fondamentali: Pod, ReplicaSet, Deployment</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-3" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Deployment, Pod e ReplicaSet</li>
+            <li>Approccio dichiarativo e reconciliation loop</li>
+            <li>Namespace: organizzare e isolare i workload</li>
+            <li>Labels e annotations: il collante invisibile di Kubernetes</li>
+            <li>Lab completo: deploy, scale, update, rollback</li>
+            <li>Multi-container Pod e sidecar pattern</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-4" aria-expanded="false" aria-controls="modulo-4">
+            <span class="syllabus-num">4</span>
+            <span class="syllabus-name">Esporre le applicazioni: Service e Ingress</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-4" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Service ClusterIP, NodePort e LoadBalancer</li>
+            <li>App frontend + backend con Service per entrambi</li>
+            <li>Ingress: il reverse proxy nativo del cluster</li>
+            <li>HTTP vs DNS challenge</li>
+            <li>TLS automatico con cert-manager e Let's Encrypt</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-5" aria-expanded="false" aria-controls="modulo-5">
+            <span class="syllabus-num">5</span>
+            <span class="syllabus-name">Storage: volumi, PV, PVC e StorageClass</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-5" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Come funziona lo storage su Kubernetes (CSI, PVC e modalità di accesso)</li>
+            <li>Deployment con dati persistenti (PVC su local-path)</li>
+            <li>SMB StorageClass</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-6" aria-expanded="false" aria-controls="modulo-6">
+            <span class="syllabus-num">6</span>
+            <span class="syllabus-name">Configurazione e segreti: ConfigMap e Secret</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-6" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>ConfigMap: cos'è e come si usa (env, envFrom)</li>
+            <li>Montare una ConfigMap come un file</li>
+            <li>Montare una ConfigMap come una cartella</li>
+            <li>Secret: cosa sono e come funzionano</li>
+            <li>Best practice sui Secret</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-7" aria-expanded="false" aria-controls="modulo-7">
+            <span class="syllabus-num">7</span>
+            <span class="syllabus-name">Health, risorse e ciclo di vita dei Pod</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-7" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Probe: liveness e readiness spiegate con esempi</li>
+            <li>Monitoraggio base delle risorse (get pods -w, top pods, top nodes)</li>
+            <li>Resource requests e limits: cosa succede se non li metti</li>
+            <li>Init container</li>
+            <li>Lifecycle hooks (postStart, preStop)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-8" aria-expanded="false" aria-controls="modulo-8">
+            <span class="syllabus-num">8</span>
+            <span class="syllabus-name">Workload oltre i Deployment: Job, CronJob, DaemonSet, StatefulSet</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-8" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Job: task una tantum (migrazioni, batch)</li>
+            <li>CronJob: schedulare task in modo nativo</li>
+            <li>DaemonSet: un Pod per nodo, casi d'uso reali</li>
+            <li>StatefulSet: identità, ordering e storage stabile</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-9" aria-expanded="false" aria-controls="modulo-9">
+            <span class="syllabus-num">9</span>
+            <span class="syllabus-name">Helm e Kustomize</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-9" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Deployment di un'app completa</li>
+            <li>Kustomize: quale problema risolve</li>
+            <li>Deployment di un'app con Helm (e comandi essenziali)</li>
+            <li>Anatomia di un chart Helm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-10" aria-expanded="false" aria-controls="modulo-10">
+            <span class="syllabus-num">10</span>
+            <span class="syllabus-name">HA infrastrutturale con Proxmox: la scorciatoia onesta</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-10" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Il dilemma dell'HA: Kubernetes nativo vs Proxmox VE</li>
+            <li>Cosa serve a Proxmox per farlo: quorum, Corosync e storage condiviso o replicato</li>
+            <li>Lab: configurazione HA, simulazione di guasto e analisi dei limiti</li>
+            <li>HA applicativo vs infrastrutturale: cosa Proxmox non può fare per te</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-11" aria-expanded="false" aria-controls="modulo-11">
+            <span class="syllabus-num">11</span>
+            <span class="syllabus-name">Manutenzione e troubleshooting</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-11" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Upgrade di Kubernetes con System Upgrade Controller</li>
+            <li>Upgrade del sistema operativo sottostante</li>
+            <li>Upgrade di Proxmox stesso</li>
+            <li>Debugging: leggere describe e capire gli errori comuni</li>
+            <li>kubectl debug ed ephemeral container</li>
+            <li>Rimozione e sostituzione di un nodo dal cluster: cordon e drain</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -468,7 +439,7 @@
   </section>
 
   <?php if($show_counters): ?>
-  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" style="margin-bottom: 9rem; color: #FFFFFF; background-color: #326ce5;">
+  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" style="color: #FFFFFF; background-color: var(--accent);">
     <div class="container text-center">
     <h2>Numeri che parlano<br></h2>
       <p class="mb-5">
