@@ -214,3 +214,63 @@ function increment(){
     tick();
   });
 })();
+
+
+// Selettore del tema: automatico -> chiaro -> scuro -> automatico.
+// "automatico" non salva nulla, così la pagina continua a seguire il sistema
+// anche se la preferenza cambia. La classe sta su <html>: snippets/theme-init.php
+// la applica già in <head>, questo qui si limita a sincronizzare l'icona.
+(function() {
+  var btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  var root  = document.documentElement;
+  var ORDER = ['auto', 'light', 'dark'];
+  var ICON  = { auto: 'fa-adjust', light: 'fa-sun-o', dark: 'fa-moon-o' };
+  var LABEL = { auto:  'Tema: automatico (segue il sistema)',
+                light: 'Tema: chiaro',
+                dark:  'Tema: scuro' };
+
+  function current() {
+    for (var i = 0; i < ORDER.length; i++) {
+      if (root.classList.contains('theme-' + ORDER[i])) return ORDER[i];
+    }
+    return 'auto';
+  }
+
+  function apply(theme, save) {
+    for (var i = 0; i < ORDER.length; i++) root.classList.remove('theme-' + ORDER[i]);
+    root.classList.add('theme-' + theme);
+
+    var icon = btn.querySelector('i');
+    if (icon) icon.className = 'fa ' + ICON[theme];
+    btn.title = LABEL[theme];
+    btn.setAttribute('aria-label', LABEL[theme]);
+
+    if (!save) return;
+    try {
+      if (theme === 'auto') localStorage.removeItem('theme');
+      else localStorage.setItem('theme', theme);
+    } catch (e) { /* storage non disponibile: la scelta vale solo per questa pagina */ }
+  }
+
+  apply(current(), false);   // allinea l'icona a quanto già applicato in <head>
+
+  btn.addEventListener('click', function() {
+    apply(ORDER[(ORDER.indexOf(current()) + 1) % ORDER.length], true);
+  });
+
+  // La pastiglia compare solo quando l'hero è uscito di scena: lì sopra non
+  // serve, e su un hero scuro in tema chiaro è il punto in cui stona di più.
+  // La classe che abilita il comportamento la mette lo script: senza JS, o
+  // senza IntersectionObserver, il pulsante resta sempre visibile invece di
+  // sparire per sempre. Con threshold 0 la soglia scatta quando l'hero è
+  // completamente fuori dalla finestra.
+  var hero = document.querySelector('.landing');
+  if (hero && 'IntersectionObserver' in window) {
+    btn.classList.add('auto-hide');
+    new IntersectionObserver(function(entries) {
+      btn.classList.toggle('is-visible', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(hero);
+  }
+})();

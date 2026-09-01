@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="theme-auto">
 
 <head>
   <script defer src="https://analytics.morrolinux.it/script.js" data-website-id="a24a12a5-ee97-49b1-8fb0-ff80b73816f1"></script>
@@ -19,9 +19,11 @@
   <meta name="description" content="Docker Per Comuni Mortali è il modo più semplice per imparare Docker dalle basi senza essere sopraffatti dalla complessità.">
 
   <title>Impara Linux: il corso bestseller in italiano di Morrolinux | Corso Linux</title>
+
+<?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="landing-page" style="--accent: #2495ed;">
 
   <?php
 
@@ -72,6 +74,8 @@
     </div>
   </nav>
 
+<?php include 'snippets/theme-toggle.php';?>
+
   <header class="landing">
     <div class="bg"></div>
     <video style="filter: brightness(25%);" autoplay loop muted>
@@ -95,20 +99,20 @@
 
   <section> <!-- style="margin-top: -9rem;"> -->
     <div class="container text-center">
-      <h2 id="docker" class="my-5">Perché imparare Docker</h2>
-      <p class="mb-1 text-justify">
+      <h2 id="docker" class="section-title">Perché imparare Docker</h2>
+      <p class="section-note text-justify">
 
       Docker è uno strumento <b>potente</b> e versatile, in grado di <b>semplificare</b> i processi di <i>sviluppo</i>, <i>distribuzione</i> e <i>manutenzione</i> del software. 
       Ma se non hai mai affrontato la <i>containerizzazione</i>, potresti pensare che sia riservato solo a sistemisti, sviluppatori esperti e "addetti ai lavori".
       <br><br>
       </p>
 
-      <p class="mb-1 text-center">
+      <p class="section-note text-center my-4">
       Bene, io non la penso così. <br>
       Benvenuto su Docker Per Comuni Mortali. <br><br>
       </p>
 
-      <p class="mb-1 text-justify">
+      <p class="section-note text-justify">
       Questo corso è progettato per <b>sviluppatori</b>, <b>sistemisti</b> e appassionati di informatica e <b>self-hosting</b> che vogliono imparare Docker tramite esempi pratici e concreti. 
       Partendo dalle basi, ti guiderò attraverso la <b>creazione delle tue prime immagini</b>, la <b>gestione dei container</b> e la <b>distribuzione</b> delle tue applicazioni senza la complessa gestione delle dipendenze o di complicate configurazioni.<br><br>
 	    </p>
@@ -297,10 +301,10 @@
     </div>
   </section>
 
-  <section id="batterie" style="margin-top: -3rem;">
+  <section id="batterie">
     <div class="container text-center">
-      <h2 class="my-5">BATTERIE INCLUSE</h2>
-      <p class="mb-2 text-justify">
+      <h2 class="section-title">BATTERIE INCLUSE</h2>
+      <p class="section-note text-justify">
 
       Qui imparerai tutto ciò che c'è da sapere su Docker e l'ecosistema dei <i>container OCI</i> tramite <b>spiegazioni semplici</b> ed esempi.
       <br><br>
@@ -312,6 +316,7 @@
       A differenza dei corsi più avanzati, il focus è sull'accessibilità e la comprensione. <i>Il tono è discorsivo e rilassato</i>, ogni argomento viene trattato quando più opportuno e approfondito successivamente negli appositi capitoli.
       <br><br>
       </p>
+    </div>
   </section>
 
   <section data-umami-event="docker_section_statistiche" id="statistiche" style="background-color: #2495ed">

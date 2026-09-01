@@ -45,6 +45,9 @@ function drawChart(){
         var fontSize = (height / 114).toFixed(2);
         ctx.font = fontSize + "em sans-serif";
         ctx.textBaseline = "middle";
+        // senza fillStyle il canvas scrive in nero: invisibile in tema scuro
+        ctx.fillStyle = getComputedStyle(document.body)
+                          .getPropertyValue('--ink').trim() || '#000';
         var text = chart.data.datasets[0]["data"][0] + "%",
             textX = Math.round((width - ctx.measureText(text).width) / 2),
             textY = height / 2;

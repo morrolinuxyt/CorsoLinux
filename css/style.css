@@ -63,6 +63,11 @@ img.rounded-corners {
   mix-blend-mode: multiply;
 }
 
+.landing-page img.rounded-corners {
+  mix-blend-mode: var(--img-blend);
+  border: 1px solid var(--img-border);
+}
+
 blockquote {
   margin: 0;
 }
@@ -145,6 +150,11 @@ blockquote p::after {
 .carousel-control-next,
 .carousel-control-prev {
   filter: invert(100%);
+}
+
+.landing-page .carousel-control-next,
+.landing-page .carousel-control-prev {
+  filter: var(--carousel-invert);
 }
 
 .socials .fa {
@@ -361,16 +371,35 @@ span.keeptogether {
 /* ============================================================
    Blocchi riutilizzabili per le landing dei corsi
    L'accento è per-pagina, impostato sul body:
-     <body style="--accent: #326ce5; --accent-soft: rgba(50,108,229,.09)">
+     <body style="--accent: #326ce5">
+   La velatura --accent-soft ne viene derivata qui sotto, per tema.
    ============================================================ */
 
 :root {
   --accent: #ff651c;
-  --accent-soft: rgba(255, 101, 28, 0.09);
+  --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
   --ink: #2f3437;
   --ink-muted: #6b7378;
   --surface: #f6f8fa;
+  --panel: #ffffff;
   --hairline: #e3e6ea;
+
+  --page-bg: #ffffff;
+  --nav-bg: #343a40;
+  --nav-border: transparent;
+  --link: #007bff;
+  --link-hover: #0056b3;
+  --shadow-md: 0 8px 18px rgba(0, 0, 0, .07);
+  --shadow-lg: 0 10px 20px gray;
+
+  /* gli screenshot delle testimonianze hanno fondo bianco: su pagina chiara
+     il multiply lo fonde con la pagina, su fondo scuro li annerirebbe */
+  --img-blend: multiply;
+  --img-border: transparent;
+  /* le frecce del carosello sono bianche: invertite diventano nere,
+     giusto su fondo chiaro, invisibili su fondo scuro */
+  --carousel-invert: invert(100%);
 }
 
 /* Ritmo verticale: sezioni alternate al posto dei margini negativi */
@@ -404,7 +433,7 @@ span.keeptogether {
   align-items: flex-start;
   height: 100%;
   padding: 1.25rem;
-  background-color: #fff;
+  background-color: var(--panel);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   transition: all .2s ease-in-out;
@@ -413,7 +442,7 @@ span.keeptogether {
 .feature-item:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, .07);
+  box-shadow: var(--shadow-md);
 }
 
 .feature-item .fa {
@@ -438,7 +467,7 @@ span.keeptogether {
 .info-panel {
   height: 100%;
   padding: 1.75rem;
-  background-color: #fff;
+  background-color: var(--panel);
   border: 1px solid var(--hairline);
   border-top: 4px solid var(--accent);
   border-radius: 10px;
@@ -483,7 +512,7 @@ span.keeptogether {
 
 .syllabus-module {
   margin-bottom: .75rem;
-  background-color: #fff;
+  background-color: var(--panel);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   overflow: hidden;
@@ -607,7 +636,7 @@ span.keeptogether {
 
 .landing-page #faq .accordion > .card {
   margin-bottom: .75rem;
-  background-color: #fff;
+  background-color: var(--panel);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   overflow: hidden;
@@ -623,7 +652,7 @@ span.keeptogether {
 
 .landing-page #faq .card-header {
   padding: 0;
-  background-color: #fff;
+  background-color: var(--panel);
   border-bottom: 0;
 }
 
@@ -757,4 +786,215 @@ span.keeptogether {
 
 .landing--dark .lead {
   opacity: .75;
+}
+
+/* ============================================================
+   Tema (chiaro/scuro) delle landing rinnovate.
+
+   Le regole qui sotto sono scritte UNA volta sola e leggono solo token:
+   con la tavolozza chiara di :root rendono esattamente come Bootstrap,
+   quindi non cambiano nulla finché non si commuta la tavolozza.
+
+   La tavolozza scura sta in fondo, in due blocchi gemelli:
+   - html.theme-auto  -> segue la preferenza di sistema
+   - html.theme-dark  -> la forza comunque
+   (html.theme-light non ha bisogno di regole: è la tavolozza di :root)
+   La classe sta su <html> perché uno script in <head> possa applicarla
+   prima del primo disegno; i token restano dichiarati sul <body>, dove
+   var(--accent) legge l'accento della pagina.
+   Se ne modifichi uno, allinea l'altro.
+   ============================================================ */
+
+.landing-page {
+  background-color: var(--page-bg);
+  color: var(--ink);
+}
+
+/* Bootstrap cabla fondo bianco e bordo nero trasparente sulle .card */
+.landing-page .card {
+  background-color: var(--panel);
+  border-color: var(--hairline);
+  color: var(--ink);
+}
+
+.landing-page .card:hover,
+.landing-page .card:focus {
+  box-shadow: var(--shadow-lg);
+}
+
+.landing-page .avatar,
+.landing-page .testimonial {
+  box-shadow: var(--shadow-lg);
+}
+
+/* solo i link nel corpo del testo: non i bottoni, non la navbar */
+.landing-page section p a:not(.btn),
+.landing-page .footer a {
+  color: var(--link);
+}
+
+.landing-page section p a:not(.btn):hover,
+.landing-page .footer a:hover {
+  color: var(--link-hover);
+}
+
+.landing-page #mainNav.bg-dark,
+.landing-page footer.bg-dark {
+  background-color: var(--nav-bg) !important;
+}
+
+.landing-page #mainNav {
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.landing-page footer.bg-dark {
+  border-top: 1px solid var(--nav-border);
+}
+
+/* --- sezioni con colori cablati, ora tokenizzate --- */
+
+.landing-page #recensioni {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* #percorso era forzato bianco perché il diagramma LPI è disegnato per fondo
+   chiaro. Ora la sezione segue il tema e il bianco resta solo sotto
+   all'immagine, come un vassoio: si legge come una scelta, non come una toppa. */
+.landing-page #percorso {
+  background-color: var(--surface);
+  color: var(--ink);
+}
+
+.landing-page #percorso img {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.landing-page blockquote p {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+/* riquadri a tinta fissa: il testo dentro deve restare scuro in ogni tema */
+.landing-page .callout-flat,
+.landing-page .callout-flat h2,
+.landing-page .callout-flat h5,
+.landing-page .callout-flat p,
+.landing-page .callout-flat .counting {
+  color: #212529;
+}
+
+/* --- tavolozza scura: segue la preferenza di sistema --- */
+@media (prefers-color-scheme: dark) {
+  html.theme-auto body {
+    --ink: #e7eaed;
+    --ink-muted: #98a2ab;
+    --surface: #161c22;
+    --panel: #222a32;
+    --hairline: #333c45;
+
+    --page-bg: #0e1216;
+    --nav-bg: #222a32;
+    --nav-border: #333c45;
+    --link: #74aaff;
+    --link-hover: #a3c8ff;
+    --shadow-md: 0 10px 22px rgba(0, 0, 0, .5);
+    --shadow-lg: 0 12px 26px rgba(0, 0, 0, .55);
+
+    --img-blend: normal;
+    --img-border: #333c45;
+    --carousel-invert: none;
+
+    --accent-soft: rgba(255, 255, 255, .08);                          /* ripiego */
+    --accent-soft: color-mix(in srgb, var(--accent) 26%, transparent);
+  }
+}
+
+/* --- tavolozza scura: forzata, a prescindere dal sistema --- */
+html.theme-dark body {
+  --ink: #e7eaed;
+  --ink-muted: #98a2ab;
+  --surface: #161c22;
+  --panel: #222a32;
+  --hairline: #333c45;
+
+  --page-bg: #0e1216;
+  --nav-bg: #222a32;
+  --nav-border: #333c45;
+  --link: #74aaff;
+  --link-hover: #a3c8ff;
+  --shadow-md: 0 10px 22px rgba(0, 0, 0, .5);
+  --shadow-lg: 0 12px 26px rgba(0, 0, 0, .55);
+
+  --img-blend: normal;
+  --img-border: #333c45;
+  --carousel-invert: none;
+
+  --accent-soft: rgba(255, 255, 255, .08);                          /* ripiego */
+  --accent-soft: color-mix(in srgb, var(--accent) 26%, transparent);
+}
+
+/* #compara elenca descrizioni brevi sotto a ciascun titolo di corso.
+   Alla dimensione di 1.1em e giustificate risultavano pesanti: qui il corpo
+   base e il testo a bandiera si leggono meglio. */
+.landing-page #compara p {
+  font-size: 1rem;
+}
+
+
+/* Selettore del tema: pastiglia discreta in basso a destra, fuori dal flusso.
+   Compare solo dopo che l'hero è uscito di scena: lì sopra non serve, e su
+   un hero scuro in tema chiaro sarebbe il punto in cui stona di più.
+   Senza JS resta semplicemente sempre visibile (la classe .auto-hide la
+   aggiunge lo script, non il markup). Usa i token, quindi segue il tema. */
+.theme-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1040;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--hairline);
+  border-radius: 50%;
+  background-color: var(--panel);
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1;
+  opacity: .5;
+  cursor: pointer;
+  transition: opacity .25s ease-in-out, visibility .25s ease-in-out,
+              color .2s ease-in-out, box-shadow .2s ease-in-out,
+              transform .25s ease-in-out;
+}
+
+.theme-toggle.auto-hide {
+  opacity: 0;
+  visibility: hidden;      /* nascosta anche alla tastiera e ai lettori di schermo */
+  transform: translateY(10px);
+}
+
+.theme-toggle.auto-hide.is-visible {
+  opacity: .5;
+  visibility: visible;
+  transform: none;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  opacity: 1;
+  color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* su desktop c'è spazio: la si stacca un po' di più dai bordi */
+@media (min-width: 992px) {
+  .theme-toggle {
+    right: 2rem;
+    bottom: 2rem;
+  }
 }

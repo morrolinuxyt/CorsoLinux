@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="theme-auto">
 
 <head>
   <script defer src="https://analytics.morrolinux.it/script.js" data-website-id="a24a12a5-ee97-49b1-8fb0-ff80b73816f1"></script>
@@ -19,9 +19,11 @@
   <meta name="description" content="Ottieni la certificazione Linux e inizia la tua carriera come professionista IT in un settore in rapida crescita grazie al corso bestseller italiano su Linux. Scopri la nostra selezione di corsi ideati su misura per te!">
 
   <title>Impara Linux: il corso bestseller in italiano di Morrolinux | Corso Linux</title>
+
+<?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="landing-page" style="--accent: #ff651c;">
 
   <?php
 
@@ -87,6 +89,8 @@
     </div>
   </nav>
 
+<?php include 'snippets/theme-toggle.php';?>
+
   <header class="landing">
     <div class="bg"></div>
     <video src="assets/landing_video.mp4" autoplay loop muted></video>
@@ -105,9 +109,9 @@
     </div>
   </header>
 
-  <section id="novita" style="margin-top: -3rem; margin-bottom: -3rem;">
+  <section id="novita">
     <div class="container text-center">
-      <h2 id="corsi" class="my-5">NOVITÀ</h2>
+      <h2 id="corsi" class="section-title">NOVITÀ</h2>
 
       <div class="container text-left">
         <div class="card mb-3" style="margin-top: 2rem;"> <!-- style="max-width: 540px;"> -->
@@ -140,6 +144,7 @@
             <div class="col-md-4">
             <a data-umami-event="goto_proxmox_INVISIBLE" class="invisible-link" href="proxmox.php">
               <img src="assets/proxmox-per-comuni-mortali-notext.png" class="card-img">
+            </a>
             </div>
             <div class="col-md-8">
               <div class="card-body d-flex flex-column">
@@ -164,6 +169,7 @@
             <div class="col-md-4">
             <a data-umami-event="goto_docker_INVISIBLE" class="invisible-link" href="docker.php">
               <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img">
+            </a>
             </div>
             <div class="col-md-8">
               <div class="card-body d-flex flex-column">
@@ -186,9 +192,9 @@
   </section>
 
 
-  <section id="corsi" style="margin-top: -9rem;"> 
+  <section id="corsi">
     <div class="container text-center">
-      <h2 class="my-5">SCEGLI IL TUO CORSO LINUX</h2>
+      <h2 class="section-title">SCEGLI IL TUO CORSO LINUX</h2>
       <p class="mb-1 text-justify">
 		Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
 		Ciascuna delle seguenti schede è relativa ad un corso di <b><a data-umami-event="link_intro_LPI" class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
@@ -207,7 +213,7 @@
 
   <section id="recensioni">
     <div class="text-center">
-      <h2>Fidati di chi l'ha già acquistato</h2>
+      <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
       <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
@@ -362,9 +368,9 @@
     </div>
   </section>
   <!---
-  <section id="why" style="margin-top: -9rem;">
+  <section id="why">
     <div class="container text-center">
-      <h2 class="my-5">PERCHÈ IMPARARE LINUX?</h2>
+      <h2 class="section-title">PERCHÈ IMPARARE LINUX?</h2>
       <p class="my-5 text-justify">
         Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al router multifunzione domestico. 
         Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b>, senza tralasciare il suo <b>importante ruolo nei sistemi industriali di ultima generazione</b>. 
@@ -375,10 +381,10 @@
   </section>
   --->
 
-  <section id="lavoro" style="margin-top: -3rem;">
+  <section id="lavoro" class="section-alt">
     <div class="container text-center">
 
-      <h2 class="my-5">SBOCCHI OCCUPAZIONALI</h2>
+      <h2 class="section-title">SBOCCHI OCCUPAZIONALI</h2>
       <p class="my-5 text-justify">
         Secondo l'<a data-umami-event="link_OSJB" target="_blank" href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
         il 97% dei responsabili delle assunzioni indica 
@@ -417,7 +423,7 @@
     </div>
   </section>
 
-  <section data-umami-event="section_statistiche" id="statistiche">
+  <section data-umami-event="section_statistiche" id="statistiche" class="callout-flat">
     <div class="container text-center">
       <p class="mb-5">
         Unisciti agli oltre ventimila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
@@ -444,9 +450,9 @@
   </section>
 
 
-  <section id="esame" style="margin-top: -6rem;">
+  <section id="esame">
     <div class="container text-center">
-        <h2 class="my-5"><br>Il tuo successo è il mio successo.</h2>
+        <h2 class="section-title">Il tuo successo è il mio successo.</h2>
         <p class="mb-2 text-center">
           Guarda questo video con i miei consigli su come <b>affrontare al meglio l'esame</b> di certificazione:
         </p>
@@ -458,7 +464,7 @@
 
     <br>
     <div class="container text-center">
-      <div class="my-5" style="padding: 1em; background:#FEC224;">
+      <div class="my-5 callout-flat" style="padding: 1em; background:#FEC224;">
           <h2>Pronto per l'esame?</h2>
           <p  class="mb-2 text-center">
             <br>
@@ -472,16 +478,19 @@
   </section>
 
 
-  <section id="testimonianze">
-    <div class="container" style="margin-top: -6rem; margin-bottom: -3rem;">
-      <h2 class="mb-5 text-center">TESTIMONIANZE</h2>
+  <section id="testimonianze" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">TESTIMONIANZE</h2>
       <p class="text-justify">
-      Una domanda che ricevo spesso: 
+        Una domanda che ricevo spesso:
+      </p>
+
       <blockquote>
         <p>il video corso è davvero sufficiente per superare l'esame?</p>
         <footer><cite><b>Assolutamente sì!</b></cite></footer>
       </blockquote>
-      <br>
+
+      <p class="text-justify">
       In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
       è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
       Per levare ogni dubbio, ti lascio alcune testimonianze dei miei studenti.
@@ -520,9 +529,9 @@
     </div>
   </section>
 
-  <section id="lpi" style="margin-top: -9rem;">
+  <section id="lpi">
     <div class="container text-center">
-      <h2 class="my-5">BATTERIE INCLUSE</h2>
+      <h2 class="section-title">BATTERIE INCLUSE</h2>
       <p class="mb-2 text-justify">
         Qui imparerai tutto ciò che c'è da sapere su GNU/Linux e l'ecosistema Open Source tramite <b>spiegazioni approfondite</b> e comprensibili ed <b>esempi pratici</b> ad accompagnare ogni concetto teorico.
         <br><br>
@@ -605,11 +614,12 @@
       </div>
 
     </div>
+    </div>
   </section>
 
   <section id="percorso">
-    <div class="container" style="margin-top: -6rem;">
-      <h2 class="mb-5 text-center">PERCORSO FORMATIVO</h2>
+    <div class="container">
+      <h2 class="section-title">PERCORSO FORMATIVO</h2>
       <p class="text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
         Ad esempio, non è possibile sostenere la certificazione LPIC-2 senza aver sostenuto LPIC-1, mentre non è necessario "Linux Essentials" per accedere ad LPIC-1.
@@ -626,14 +636,16 @@
   </section>
 
   <section id="dazero">
-    <div class="container" style="margin-top: -6rem;">
-      <h2 class="mb-5 text-center">Cerchi un approccio più graduale?</h2>
+    <div class="container">
+      <h2 class="section-title">Cerchi un approccio più graduale?</h2>
       <p class="mb-2 text-justify">
         Lo sappiamo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
         Se non ti senti pronto, dà un'occhiata a questo <b>corso introduttivo</b> non orientato alle certificazioni.
         È pensato per <b>guidarti passo passo</b> attraverso ogni aspetto di una distribuzione GNU/Linux: dalla sua <b>anatomia</b>
         all'installazione accanto a Windows, fino all'utilizzo come <b>sistema operativo principale</b>!
         <br><br>
+      </p>
+
         <div class="card-deck row">
           <div class="col-md-6" style="margin: 10px auto;">
           <a data-umami-event="goto_Arch_INVISIBLE" class="invisible-link" href="<?php echo $archlinux; ?>">
@@ -658,31 +670,37 @@
               </div>
             </a>
         </div>
-      </p>
+        </div>
     </div>
   </section>
-  <section id="compara">
-    <div class="container" style="margin-top: -3rem;">
-      <h2 class="mb-5 text-center">Quale corso scegliere?</h2>
-      <p class="text-justify">
-        La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare: 
-        <br><br>
-        <h5><b><a class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></b> </h5>
+  <section id="compara" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Quale corso scegliere?</h2>
+      <p>
+        La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare:
+      </p>
+
+      <h5><b><a class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></b></h5>
+      <p>
         È un corso teorico e pratico rivolto a chi ha <b>poca o nessuna esperienza</b> e vuole imparare ad installare, configurare e gestire un sistema Linux flessibile e moderno sul proprio PC. 
         Studiamo assieme l’<b>anatomia</b> di una distribuzione Linux per capirne a fondo il funzionamento e iniziamo a mettere le mani in pasta con una serie di <b>lezioni pratiche</b> 
         che spaziano dalle <b>basi della riga di comando</b> al backup, ripristino e <b>modifica delle configurazioni</b> software, <b>monitoraggio</b> delle risorse e gestione delle applicazioni in <b>avvio automatico</b>. 
         Infine, viene dedicato un intero capitolo alla <b>risoluzione dei problemi</b> in ambiente Linux. 
         L'obiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile <a data-umami-event="goto_Arch_COMPARE" href="<?php echo $archlinux; ?>">per tutti i nuovi utenti</a>.
-        <br><br>
+      </p>
 
-        <h5><b><a class="js-scroll-trigger" href="#corsi">Linux Essentials</a></b></h5> È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
+      <h5><b><a class="js-scroll-trigger" href="#corsi">Linux Essentials</a></b></h5>
+      <p>
+        È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
         ci soffermiamo sulla distinzione tra <b>licenze</b> Open Source, Copyleft e Permissive, studiamo i <b>business model</b> dell'Open Source, le <b>opportunità lavorative</b> 
         e naturalmente tutte le basi per la <b>gestione personale di un sistema LINUX</b>.<br>
         Il <a data-umami-event="goto_LE_COMPARE" href="<?php echo $essentials; ?>">programma del corso</a> segue fedelmente l'omonimo percorso LPI, perciò al termine, se vorrai, potrai sostenere l'esame <a data-umami-event="link_LE-EXAM-OBJ" target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">010 - Linux Essentials</a> 
         ed ottenere un certificato che attesta le tue competenze linux in ambito lavorativo.
-        <br><br>
+      </p>
 
-        <h5><b><a class="js-scroll-trigger" href="#corsi">LPIC-1</a></b></h5> È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
+      <h5><b><a class="js-scroll-trigger" href="#corsi">LPIC-1</a></b></h5>
+      <p>
+        È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
         dalla gestione delle <b>quote</b> e dei limiti sulle risorse condivise all’<b>automazione</b>, senza tralasciare i concetti fondamentali di <b>sicurezza</b> informatica 
         e <b>networking</b> che caratterizzano questo tipo di sistemi. Il livello di partenza è più alto rispetto ai precedenti e si presuppone la conoscenza della terminologia di base. <br>
         Il percorso è diviso in due moduli, <a data-umami-event="goto_LPIC-101_COMPARE" target=blank href="<?php echo $e101; ?>">101</a> e <a data-umami-event="goto_LPIC-102_COMPARE" target=blank href="<?php echo $e102; ?>">102</a>, al termine dei quali potrai sostenere i rispettivi esami LPI  
@@ -692,9 +710,9 @@
     </div>
   </section>
 
-  <section id="faq" style="margin-top: -3rem;">
+  <section id="faq">
     <div class="container">
-      <h2 class="my-5 text-center">FAQ - Domande Frequenti</h2>
+      <h2 class="section-title">FAQ - Domande Frequenti</h2>
       <div class="tab-content" id="faq-tab-content">
         <div class="tab-pane show active" id="tab1" role="tabpanel" aria-labelledby="tab1">
             <div class="accordion" id="accordion-tab-1">

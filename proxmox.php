@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="theme-auto">
 
 <head>
   <script defer src="https://analytics.morrolinux.it/script.js" data-website-id="a24a12a5-ee97-49b1-8fb0-ff80b73816f1"></script>
@@ -19,9 +19,11 @@
   <meta name="description" content="Proxmox Per Comuni Mortali è il modo più semplice per imparare Proxmox dalle basi senza essere sopraffatti dalla complessità.">
 
   <title>Proxmox Per Comuni Mortali | Corso Linux</title>
+
+<?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top">
+<body id="page-top" class="landing-page" style="--accent: #e57000;">
 
   <?php
 
@@ -70,6 +72,8 @@
     </div>
   </nav>
 
+<?php include 'snippets/theme-toggle.php';?>
+
   <header class="landing">
     <div class="bg"></div>
     <video style="filter: brightness(25%);" autoplay loop muted>
@@ -92,8 +96,8 @@
 
   <section> <!-- style="margin-top: -9rem;"> -->
     <div class="container text-center">
-      <h2 id="proxmox" class="my-5">Perché imparare Proxmox</h2>
-      <p class="mb-1 text-justify">
+      <h2 id="proxmox" class="section-title">Perché imparare Proxmox</h2>
+      <p class="section-note text-justify">
 
       Proxmox è una piattaforma di virtualizzazione <b>Open Source</b> incredibilmente <b>versatile e potente</b>, ma se non hai mai affrontato tematiche 
       come <i>storage distribuito, SDN</i> e <i>containerizzazione</i>, <b>potresti pensare che sia troppo difficile</b> e riservato solo a sysadmin esperti 
@@ -101,12 +105,12 @@
       <br><br>
       </p>
 
-      <p class="mb-1 text-center">
+      <p class="section-note text-center my-4">
       Bene, io non la penso così. <br>
       Benvenuto su Proxmox Per Comuni Mortali. <br><br>
       </p>
 
-      <p class="mb-1 text-justify">
+      <p class="section-note text-justify">
 
       Questo corso è progettato per <i>homelabbers, sistemisti</i> e appassionati di informatica e <i>self-hosting</i> 
       che vogliono imparare a <b>gestire la propria infrastruttura</b> in maniera affidabile e <b>sicura</b>, senza downtime e senza perdite di dati.<br><br>
@@ -114,7 +118,7 @@
 	    </p>
 	  </div>
 
-    <div class="container text-center" style="margin-top: 3rem;>
+    <div class="container text-center" style="margin-top: 3rem;">
       <div class="card-deck row">
         <div class="col-md-6" style="margin: 10px auto;">
           <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
@@ -299,10 +303,10 @@
   </section>
   -->
 
-  <section id="esperti" style="margin-top: -6rem;">
+  <section id="esperti" class="section-alt">
     <div class="container text-center">
-      <h2 class="my-5">Affidati agli esperti</h2>
-      <p class="mb-2 text-justify">
+      <h2 class="section-title">Affidati agli esperti</h2>
+      <p class="section-note text-justify">
 
       Ho realizzato questo corso con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=proxmox"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
       Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponibilità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
@@ -313,6 +317,7 @@
 
       Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
       </p>
+    </div>
   </section>
 
   

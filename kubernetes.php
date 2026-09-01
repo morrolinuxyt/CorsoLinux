@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="theme-auto">
 
 <head>
   <script defer src="https://analytics.morrolinux.it/script.js" data-website-id="a24a12a5-ee97-49b1-8fb0-ff80b73816f1"></script>
@@ -19,9 +19,11 @@
   <meta name="description" content="Kubernetes Per Comuni Mortali è il modo più semplice per passare da Docker all'orchestrazione dei container, senza essere sopraffatti dalla complessità.">
 
   <title>Kubernetes Per Comuni Mortali | Corso Linux</title>
+
+<?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top" class="landing-page" style="--accent: #326ce5; --accent-soft: rgba(50, 108, 229, .09);">
+<body id="page-top" class="landing-page" style="--accent: #326ce5;">
 
   <?php
 
@@ -80,6 +82,8 @@
       </div>
     </div>
   </nav>
+
+<?php include 'snippets/theme-toggle.php';?>
 
   <header class="landing landing--dark">
     <div class="bg"></div>
