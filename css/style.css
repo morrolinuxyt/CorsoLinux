@@ -33,20 +33,42 @@ section {
   font-weight: 600;
 }
 
+/* Le schede corso parlano la stessa lingua di .feature-item / .info-panel /
+   .syllabus-module: stesso raggio, stessa hairline, stessa reazione al hover.
+   Il vecchio "box-shadow: gray" era l'unica ombra piatta rimasta in pagina. */
 .card {
-  transition: all .2s ease-in-out;
+  background-color: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  overflow: hidden;                 /* la copertina segue gli angoli tondi */
+  transition: transform .2s ease-in-out, border-color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
-.card:hover, .card:focus {
-  transform: scale(1.01);
-  box-shadow: 0 10px 20px gray;
+.card:hover, .card:focus, .card:focus-within {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.card-body {
+  padding: 1.75rem;
+}
+
+.card-title {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-text {
+  color: var(--ink-muted);
+  line-height: 1.75;
 }
 
 .testimonial {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 5px 10px gray;
+  box-shadow: var(--shadow-md);
   border-radius: 5px;
   margin-bottom: 2rem; 
   margin-top: 2rem;
@@ -55,7 +77,7 @@ section {
 
 .testimonial:hover, .testimonial:focus {
   transform: scale(1.01);
-  box-shadow: 0 10px 20px gray;
+  box-shadow: var(--shadow-lg);
 }
 
 img.rounded-corners {
@@ -335,11 +357,11 @@ span.keeptogether {
 }
 
 .banner div {
-  background-color:#ff651c;
+  background-color: var(--promo);
   padding:20px;
   border-radius:10px;
   text-align:center;
-  color:rgb(255, 255, 255);
+  color: var(--promo-ink);
   font-size:1.1em;
   opacity:1
 }
@@ -355,17 +377,48 @@ span.keeptogether {
   margin-top:-3px
 }
 
-.btn-special-offer {
-  color: #ffffff;
+/* Il giallo promo non regge il testo bianco (contrasto ~1.7:1): l'inchiostro
+   resta scuro in ogni tema, come nei riquadri a tinta fissa. */
+.btn-special-offer,
+.btn-special-offer:hover,
+.btn-special-offer:focus,
+.btn-special-offer:not(:disabled):not(.disabled):active {
+  color: var(--promo-ink);
   font-weight: bold;
-  background-color: #ff651c;
-  border-color: #ffffff;
+  background-color: var(--promo);
+  border-color: var(--promo);
 }
 
-.btn-special-offer:hover {
+.btn-special-offer:hover,
+.btn-special-offer:focus,
+.btn-special-offer:not(:disabled):not(.disabled):active {
+  background-color: var(--promo-hover);
+  border-color: var(--promo-hover);
+}
+
+.btn-special-offer:focus {
+  box-shadow: 0 0 0 .2rem rgba(254, 194, 36, .4);
+}
+
+/* "Vai al corso" era blu Bootstrap su tutte e quattro le landing, unico
+   elemento sordo all'accento di pagina. */
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: var(--accent);
+  border-color: var(--accent);
   color: #ffffff;
-  background-color: #ff5100;
-  border-color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: color-mix(in srgb, var(--accent) 85%, #000);
+  border-color: color-mix(in srgb, var(--accent) 85%, #000);
+  color: #ffffff;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 .2rem var(--accent-soft);
 }
 
 /* ============================================================
@@ -379,6 +432,18 @@ span.keeptogether {
   --accent: #ff651c;
   --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
+
+  /* Il giallo dell'offerta è uguale su ogni pagina: è il colore della promo,
+     non dell'accento, e deve restare distinguibile dalla CTA normale. */
+  /* Colonna di lettura: testo, programma e FAQ condividono lo stesso bordo
+     sinistro e destro. Le griglie (tessere, pannelli, schede) restano piene:
+     due larghezze in tutta la pagina, non tre. */
+  --measure: 780px;
+
+  --promo: #FEC224;
+  --promo-hover: #f0b400;
+  --promo-ink: #2f3437;
+
   --ink: #2f3437;
   --ink-muted: #6b7378;
   --surface: #f6f8fa;
@@ -415,16 +480,65 @@ span.keeptogether {
 }
 
 .section-lead {
-  max-width: 780px;
+  max-width: var(--measure);
   margin-left: auto;
   margin-right: auto;
   color: var(--ink-muted);
 }
 
 .section-note {
-  max-width: 780px;
+  max-width: var(--measure);
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Il testo corrente era l'unico blocco rimasto senza trattamento: colore di
+   default, interlinea 1.5 e 1.1em di corpo giustificato: denso e slegato dai
+   pannelli accanto. Stessi token e più respiro fra le righe. */
+.container .section-note,
+.container .section-lead {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.section-note {
+  color: var(--ink);
+}
+
+.section-note + .section-note {
+  margin-top: 1.5rem;
+}
+
+/* Il grassetto marcava le parole chiave a peso 700 su testo lungo: troppo
+   "a macchia". A 600 segnala senza spezzare la riga. */
+.section-note b,
+.section-note strong,
+.section-lead b,
+.section-lead strong {
+  font-weight: 600;
+}
+
+.section-note i,
+.section-note em {
+  color: var(--ink-muted);
+}
+
+/* Frase-manifesto in mezzo al testo corrente: unico blocco centrato, ora ha
+   un peso suo invece di essere un paragrafo come gli altri. */
+.container .section-claim {
+  max-width: 620px;
+  margin: 3rem auto;
+  padding-top: 1.75rem;
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  text-align: center;
+  border-top: 3px solid var(--accent);
+}
+
+.section-claim b,
+.section-claim strong {
+  font-weight: 700;
 }
 
 /* Tessere con icona (es. "Cosa imparerai") */
@@ -506,7 +620,7 @@ span.keeptogether {
 
 /* Programma del corso */
 .syllabus {
-  max-width: 880px;
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
@@ -630,7 +744,7 @@ span.keeptogether {
 }
 
 .landing-page #faq .accordion {
-  max-width: 880px;
+  max-width: var(--measure);
   margin: 0 auto;
 }
 
@@ -659,10 +773,14 @@ span.keeptogether {
 .landing-page #faq .card-header h5 button {
   display: flex;
   align-items: center;
+  gap: 1rem;
+  width: 100%;
   padding: 1.1rem 1.25rem;
   color: var(--ink);
   font-size: 1.05rem;
   font-weight: 700;
+  text-align: left;
+  white-space: normal;
 }
 
 .landing-page #faq .card-header h5 button:hover,
@@ -674,8 +792,8 @@ span.keeptogether {
 .landing-page #faq .card-header h5 button::after {
   content: "\f078";
   font-family: FontAwesome;
+  flex: 0 0 auto;
   margin-left: auto;
-  padding-left: 1rem;
   color: var(--ink-muted);
   font-weight: normal;
   transition: transform .2s ease-in-out;
@@ -834,7 +952,7 @@ span.keeptogether {
 
 .landing-page .card:hover,
 .landing-page .card:focus {
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .landing-page .avatar,
@@ -1012,4 +1130,119 @@ html.theme-dark body {
     right: 2rem;
     bottom: 2rem;
   }
+}
+
+/* ============================================================
+   Hero alternativo: ruota Kubernetes che gira lenta al posto del
+   teaser. Qui non c'è un video da domare, quindi niente velo sopra:
+   il contrasto col testo si regola all'origine, abbassando l'opacità
+   della ruota, esattamente come le altre landing fanno col teaser.
+   ============================================================ */
+.landing--logo .bg {
+  background: radial-gradient(ellipse 90% 80% at 50% 45%, #16233f 0%, #0b1120 55%, #070a12 100%);
+  filter: none;
+}
+
+.landing--logo .wheel {
+  position: absolute;
+  z-index: -98;
+  top: 50%;
+  left: 50%;
+  /* La ruota resta quadrata e legata al lato corto: su schermi larghi non
+     deborda, su quelli alti non diventa un francobollo. */
+  width: min(78vh, 78vw);
+  height: min(78vh, 78vw);
+  margin: -1px 0 0 -1px;                 /* compensa l'arrotondamento del translate */
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.landing--logo .wheel img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: .24;
+  /* L'icona bianca prende il blu Kubernetes senza dover servire un secondo file. */
+  filter: drop-shadow(0 0 60px rgba(50, 108, 229, .55));
+  animation: kwheel-spin 90s linear infinite;
+  will-change: transform;
+}
+
+/* Una rotazione completa dura un minuto e mezzo: il movimento si nota solo
+   se ci si sofferma, che è esattamente quello che deve fare uno sfondo. */
+@keyframes kwheel-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.landing--logo h1 {
+  text-shadow: 0 2px 24px rgba(7, 10, 18, .9);
+}
+
+.landing--logo .lead {
+  opacity: .62;
+}
+
+@media (max-width: 767.98px) {
+  .landing--logo .wheel {
+    width: min(92vw, 60vh);
+    height: min(92vw, 60vh);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing--logo .wheel img {
+    animation: none;
+  }
+}
+
+/* Schede "Novità": copertina a sinistra e testo a destra. Il corpo deve
+   stare dentro l'altezza dell'immagine, altrimenti la scheda cresce e resta
+   una fascia vuota sotto la copertina. Meno padding, titolo più vicino al
+   testo e interlinea da scheda invece che da paragrafo lungo. */
+#novita .card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+/* Con il pulsante ancorato in basso (mt-auto) lo spazio recuperato si può
+   spendere qui: il titolo respira senza far crescere la scheda. */
+#novita .card-title {
+  margin-bottom: 1.1rem;
+}
+
+#novita .card-text {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Il mt-auto del pulsante non spingeva niente: la colonna del testo è un
+   blocco, quindi .card-body si fermava all'altezza del suo contenuto e lo
+   spazio libero restava sotto, fuori dal flex. Resa flex la colonna, il
+   corpo si allunga fino in fondo e il pulsante scende con lui.
+   In mobile le colonne sono impilate e alte quanto il contenuto: lì non
+   cambia nulla. */
+#novita .row.no-gutters > [class^="col-"]:last-child {
+  display: flex;
+}
+
+#novita .row.no-gutters .card-body {
+  flex: 1 1 auto;
+}
+
+/* Rete di sicurezza: se un testo più lungo fa comunque crescere la scheda,
+   la copertina si allunga con lei invece di lasciare il vuoto sotto. */
+#novita .row.no-gutters > [class^="col-"]:first-child {
+  display: flex;
+}
+
+#novita .row.no-gutters .invisible-link {
+  display: block;
+  width: 100%;
+}
+
+#novita .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -125,7 +125,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"><b>Kubernetes non è solo roba da grandi aziende!</b></h5>
                 <p class="card-text text-left">
-                  <br> È online il nuovo corso per chi conosce già <b>Docker</b> e vuole fare il salto all'<b>orchestrazione</b>: dal primo <i>Pod</i> al cluster <i>k3s</i> con TLS automatico, storage persistente e Helm... <a data-umami-event="goto_kubernetes-page" href="kubernetes.php">Leggi di più</a><br>
+                  È online il nuovo corso per chi conosce già <b>Docker</b> e vuole fare il salto all'<b>orchestrazione</b>: dal primo <i>Pod</i> al cluster <i>k3s</i> con TLS automatico, storage persistente e Helm... <a data-umami-event="goto_kubernetes-page" href="kubernetes.php">Leggi di più</a>
                 </p>
                 <?php if($show_promo): ?>
                 <a data-umami-event="goto_kubernetes_SPECIAL_OFFER" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>
@@ -150,7 +150,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"><b>Proxmox alla portata di tutti!</b></h5>
                 <p class="card-text text-left">
-                  <br> È online il nuovo corso <b>adatto a tutti</b> per iniziare il proprio <i>homelab</i> e <b>crescere professionalmente</b>, fino alla gestione di un'infrastruttura IT <i>aziendale</i>... <a data-umami-event="goto_proxmox-page" href="proxmox.php">Leggi di più</a><br>
+                  È online il nuovo corso <b>adatto a tutti</b> per iniziare il proprio <i>homelab</i> e <b>crescere professionalmente</b>, fino alla gestione di un'infrastruttura IT <i>aziendale</i>... <a data-umami-event="goto_proxmox-page" href="proxmox.php">Leggi di più</a>
                 </p>
                 <?php if($show_promo): ?>
                 <a data-umami-event="goto_proxmox_SPECIAL_OFFER" href="<?php echo $PPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>
@@ -175,7 +175,7 @@
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title"><b>Qualcuno ha detto Docker?</b></h5>
                 <p class="card-text text-left">
-                  <br> Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a data-umami-event="goto_docker-page" href="docker.php">Leggi di più</a><br>
+                  Docker Per Comuni Mortali si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare con un <b>approccio pratico</b> e stimolante... <a data-umami-event="goto_docker-page" href="docker.php">Leggi di più</a>
                 </p>
                 <?php if($show_promo): ?>
                 <a data-umami-event="goto_docker_SPECIAL_OFFER" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><b>Vai all'offerta!</b></a>

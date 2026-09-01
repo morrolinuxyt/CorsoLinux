@@ -85,12 +85,27 @@
 
 <?php include 'snippets/theme-toggle.php';?>
 
+  <?php
+    // Hero: 'logo' = ruota Kubernetes che gira lenta, 'video' = teaser.
+    // Il teaser è su fondo nero, quindi i contrasti col testo sono critici:
+    // qui si può passare da una versione all'altra cambiando questa riga.
+    $hero_mode = 'logo';
+  ?>
+
+  <?php if ($hero_mode === 'logo'): ?>
+  <header class="landing landing--logo">
+    <div class="bg"></div>
+    <div class="wheel" aria-hidden="true">
+      <img src="assets/kubernetes-logo-white.svg" alt="">
+    </div>
+  <?php else: ?>
   <header class="landing landing--dark">
     <div class="bg"></div>
     <video autoplay loop muted>
       <source src="assets/teaser-kpcm.mp4" width="100%">
     </video>
     <div class="scrim"></div>
+  <?php endif ?>
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center text-white">
@@ -115,7 +130,7 @@
       <b>potresti pensare che sia roba da grandi aziende</b> con team <i>DevOps</i> dedicati e infrastrutture complesse.
       </p>
 
-      <p class="section-note text-center my-4">
+      <p class="section-claim">
       Bene, io non la penso così. <br>
       <b>Benvenuto su Kubernetes Per Comuni Mortali.</b>
       </p>
