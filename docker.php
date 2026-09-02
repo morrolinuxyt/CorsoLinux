@@ -28,17 +28,15 @@
 <body id="page-top" class="landing-page" style="--accent: #2495ed;">
 
   <?php
+    // Statistiche pubbliche del corso su Udemy. Passano dal catalogo, che
+    // conosce gli id e sa cavarsela se l'API non risponde: prima erano tre
+    // chiamate nude, e bastava un timeout per riempire la pagina di Warning.
+    include_once 'snippets/catalogo.php';
 
-    //UDEMY STATS
-    ini_set("allow_url_fopen", 1);
-
-    $json = file_get_contents('https://www.udemy.com/api-2.0/courses/6190731?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-    $DPCM_STATS = json_decode($json);
-
-    $subs = $DPCM_STATS->num_subscribers;
-    $reviews = $DPCM_STATS->num_reviews;
-    $lessons = $DPCM_STATS->num_lectures;
-
+    $stats   = catalogo_statistiche(null, array('docker'));
+    $subs    = $stats['subs'];
+    $lessons = $stats['lessons'];
+    $reviews = $stats['reviews'];
   ?>
 
   <?php include 'snippets/promo-banner.php';?>

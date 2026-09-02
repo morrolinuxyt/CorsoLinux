@@ -25,7 +25,7 @@
 <?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top" class="landing-page" style="--accent: #ff651c;">
+<body id="page-top" class="landing-page type-lg" style="--accent: #ff651c;">
 
   <?php include 'snippets/promo-banner.php';?>
   <?php include 'snippets/udemy-coupons.php';?>
@@ -96,8 +96,9 @@
     <div class="container">
       <h2 class="section-title">Tutti i corsi</h2>
 
-      <p class="section-lead text-center">
-        Due famiglie, un solo modo di insegnare: <b>partire da dove sei</b> e arrivare a qualcosa che funziona davvero.
+      <p class="section-claim">
+        Due famiglie di corsi, <b>un solo modo di insegnare</b>:<br>
+        partire da dove sei e arrivare a <b class="marker">farlo come si deve</b>.
       </p>
 
       <h3 class="section-subtitle">Per Comuni Mortali</h3>

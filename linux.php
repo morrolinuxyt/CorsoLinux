@@ -25,29 +25,17 @@
 <?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top" class="landing-page" style="--accent: #ff651c;">
+<body id="page-top" class="landing-page type-lg" style="--accent: #ff651c;">
 
   <?php
+    // Statistiche pubbliche dei tre corsi LPI, sommate. Passano dal catalogo,
+    // che conosce gli id e sa cavarsela se l'API non risponde.
+    include_once 'snippets/catalogo.php';
 
-    //UDEMY STATS
-    ini_set("allow_url_fopen", 1);
-
-    $json = file_get_contents('https://www.udemy.com/api-2.0/courses/1705118?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-    $stats_101 = json_decode($json);
-
-    $json = file_get_contents('https://www.udemy.com/api-2.0/courses/1894304?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-    $stats_102 = json_decode($json);
-
-    $json = file_get_contents('https://www.udemy.com/api-2.0/courses/1912136?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-    $stats_essentials = json_decode($json);
-
-    $subs = $stats_101->num_subscribers + $stats_102->num_subscribers + $stats_essentials->num_subscribers;
-
-    $reviews = $stats_101->num_reviews + $stats_102->num_reviews + $stats_essentials->num_reviews;
-
-    $lessons = $stats_101->num_lectures + $stats_102->num_lectures + $stats_essentials->num_lectures;
-
-
+    $stats   = catalogo_statistiche('lpi');
+    $subs    = $stats['subs'];
+    $lessons = $stats['lessons'];
+    $reviews = $stats['reviews'];
   ?>
 
   <?php include 'snippets/promo-banner.php';?>
@@ -111,14 +99,13 @@
   <section id="corsi">
     <div class="container text-center">
       <h2 class="section-title">SCEGLI IL TUO CORSO LINUX</h2>
-      <p class="mb-1 text-justify">
-		Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. <br>
+      <p class="section-note mb-1 text-justify">
+		Qualunque sia il tuo livello di partenza e il tuo obiettivo, in questa pagina troverai il corso che fa per te. 
 		Ciascuna delle seguenti schede è relativa ad un corso di <b><a data-umami-event="link_intro_LPI" class="js-scroll-trigger" href="#lpi">certificazione LPI</a></b>.
 		Consulta <a data-umami-event="link_percorso" class="js-scroll-trigger" href="#percorso"> questo diagramma</a> e guarda il <a data-umami-event="link_LPI_video" class="js-scroll-trigger" href="#video_lpi"> video dedicato</a> per saperne di più sul percorso formativo completo.
 		<br><br>
-        <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a data-umami-event="link_dazero" class="js-scroll-trigger" href="#dazero">approccio più graduale</a>.
-        <br>
-        <b>Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a data-umami-event="link_compara" class="js-scroll-trigger" href="#compara"> comparativa</a> e sarà tutto più chiaro :)
+        <b>Se parti da zero</b> e non ti interessano le certificazioni professionali, ti consiglio di cominciare con un <a data-umami-event="link_dazero" class="js-scroll-trigger" href="#dazero">approccio più graduale</a>. 
+        Se non sai scegliere</b> il corso più adatto a te, leggi questa breve <a data-umami-event="link_compara" class="js-scroll-trigger" href="#compara"> comparativa</a> e sarà tutto più chiaro :)
 		<br><br><br>
 	  </p>
 	</div>
@@ -288,7 +275,7 @@
   <section id="why">
     <div class="container text-center">
       <h2 class="section-title">PERCHÈ IMPARARE LINUX?</h2>
-      <p class="my-5 text-justify">
+      <p class="section-note my-5 text-justify">
         Grazie alla sua grande versatilità e snellezza, GNU/Linux può funzionare su qualunque genere di dispositivo, scalando verticalmente <span class="keeptogether">dal <i>server</i> in un <i>datacenter</i></span> al router multifunzione domestico. 
         Non è quindi un caso che Linux sia oggi lo <b>standard "de facto"</b> su innumerevoli dispositivi per le più disparate applicazioni, dai sistemi di <i>infotainment</i> in ambito <i>automotive</i> all'<b>IoT</b> e alla <b>domotica</b>. Linux è nei nostri smartphone e perfino nei nostri <b>elettrodomestici</b>, senza tralasciare il suo <b>importante ruolo nei sistemi industriali di ultima generazione</b>. 
         <br>Per questo motivo <b>la sua conoscenza è un requisito </b>per una vastissima varietà di ambiti tecnologici e posizioni lavorative.<br>
@@ -302,20 +289,16 @@
     <div class="container text-center">
 
       <h2 class="section-title">SBOCCHI OCCUPAZIONALI</h2>
-      <p class="my-5 text-justify">
-        Secondo l'<a data-umami-event="link_OSJB" target="_blank" href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>, 
-        il 97% dei responsabili delle assunzioni indica 
-        <b>assumere talenti Open Source</b> come una priorità e il 92% afferma di riscontrare difficoltà 
-        nel reperire personale qualificato.
-        L'88% dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione 
-        di <b>professionisti certificati</b> per svolgere il lavoro ed il 39% delle aziende dichiara di aver fornito 
-        maggiori <b>aumenti salariali</b> rispetto ad altre aree di business come forma di ritenzione del personale.
-        Tra le competenze Open Source più richieste, Linux risulta al secondo posto con il 32% di domanda complessiva,
-        surclassato soltanto dalle tecnologie <b>Cloud</b> per cui <i>Linux è tipicamente un prerequisito</i>.
-        Il dominio di applicazione delle competenze Linux e Open Source più in generale non è limitato 
-        all'amministrazione di sistemi e infrastrutture IT: Un numero sempre crescente di aziende sta adottando
-        approcci e metodologie <b>DevOps</b> richiedendo agli sviluppatori software competenze trasversali in ambito sistemistico 
-        o di sviluppo sulla piattaforma.
+      <p class="section-note my-5 text-justify">
+        Secondo l'<a data-umami-event="link_OSJB" target="_blank" href="https://www.linuxfoundation.org/tools/the-2021-open-source-jobs-report/">Open Source Jobs Report 2021</a>
+        le competenze Open Source sono fra le più richieste, e fra le più difficili da trovare.<br><br>
+
+        Il <b>39% delle aziende</b> dichiara di aver concesso <b>aumenti salariali</b> più alti che in altre aree di business
+        pur di trattenere queste figure. Fra le competenze più ricercate, <b>Linux è al secondo posto</b> con il 32% della
+        domanda complessiva, superato soltanto dalle tecnologie <b>Cloud</b> &mdash; <i>per cui Linux è tipicamente un prerequisito</i>.<br><br>
+
+        E il campo di applicazione non si ferma all'amministrazione di sistemi: sempre più aziende adottano approcci
+        <b>DevOps</b>, e chiedono anche agli sviluppatori competenze trasversali in ambito sistemistico.
       </p>
 
       <div id="lf-statistics" class="container text-center">
@@ -335,14 +318,14 @@
 
       <br><br><br>
       <div id="video_lpi" class="yt_video">
-        <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
+        <iframe src="https://www.youtube-nocookie.com/embed/N-7Uan8tML0?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
   <section data-umami-event="section_statistiche" id="statistiche" class="callout-flat">
     <div class="container text-center">
-      <p class="mb-5">
+      <p class="section-note mb-5">
         Unisciti agli oltre trentamila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
       </p>
       <div id="counters" class="row">
@@ -370,12 +353,12 @@
   <section id="esame">
     <div class="container text-center">
         <h2 class="section-title">Il tuo successo è il mio successo.</h2>
-        <p class="mb-2 text-center">
+        <p class="section-note mb-2 text-center">
           Guarda questo video con i miei consigli su come <b>affrontare al meglio l'esame</b> di certificazione:
         </p>
         <br><br>
         <div class="yt_video">
-          <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw?rel=0" frameborder="0" allowfullscreen></iframe><br /><br />
+          <iframe src="https://www.youtube-nocookie.com/embed/uH5UxNDhEgw?rel=0" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
 
@@ -383,13 +366,12 @@
     <div class="container text-center">
       <div class="my-5 callout-flat" style="padding: 1em;">
           <h2>Pronto per l'esame?</h2>
-          <p  class="mb-2 text-center">
+          <p class="section-note mb-2 text-center">
             <br>
-            Tutti i miei studenti hanno diritto ad uno speciale <b>COUPON</b> per affrontare l'esame ad un prezzo molto vantaggioso.
-            Compila questo modulo per ottenere subito la riduzione: 
+            Reclama il tuo <b>coupon</b> per affrontare gli esami LPI ad un prezzo molto vantaggioso.
           </p>
           <br>
-          <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://budibase.morrolinux.it/app/lpi-form" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
+          <a data-umami-event="coupon_request_LPI" target="_blank" style="margin: 0 auto;" href="https://requests.morrolinux.it/form/lpi-coupon" class="btn btn-primary mt-auto js-scroll-trigger">Richiedi il tuo COUPON</a>
         </div>
     </div>
   </section>
@@ -398,7 +380,7 @@
   <section id="testimonianze" class="section-alt">
     <div class="container">
       <h2 class="section-title">TESTIMONIANZE</h2>
-      <p class="text-justify">
+      <p class="section-note text-justify">
         Una domanda che ricevo spesso:
       </p>
 
@@ -406,8 +388,8 @@
         <p>il video corso è davvero sufficiente per superare l'esame?</p>
         <footer><cite><b>Assolutamente sì!</b></cite></footer>
       </blockquote>
-
-      <p class="text-justify">
+      <br>
+      <p class="section-note text-justify">
       In qualità di <b>training partner autorizzato</b> della Linux Professional Institute (LPI)
       è mio compito garantire la <b>piena copertura</b> degli obbiettivi d'esame e mantenere il corso <b>sempre aggiornato</b>.<br><br>
       Per levare ogni dubbio, ti lascio alcune testimonianze dei miei studenti.
@@ -449,7 +431,7 @@
   <section id="lpi">
     <div class="container text-center">
       <h2 class="section-title">BATTERIE INCLUSE</h2>
-      <p class="mb-2 text-justify">
+      <p class="section-note mb-2 text-justify">
         Qui imparerai tutto ciò che c'è da sapere su GNU/Linux e l'ecosistema Open Source tramite <b>spiegazioni approfondite</b> e comprensibili ed <b>esempi pratici</b> ad accompagnare ogni concetto teorico.
         <br><br>
         Al termine, se vorrai, potrai affrontare gli esami ufficiali di <b><a data-umami-event="link_LPI_exams" target=”_blank” href="https://www.lpi.org/it">Linux Professional Institute</a></b>
@@ -472,7 +454,7 @@
   <section id="percorso">
     <div class="container">
       <h2 class="section-title">PERCORSO FORMATIVO</h2>
-      <p class="text-justify">
+      <p class="section-note text-justify">
         Ogni corso del programma LPI è caratterizzato da un livello di partenza, un <b>set di competenze</b> e una serie di <b>requisiti d'accesso</b>.<br>
         Ad esempio, non è possibile sostenere la certificazione LPIC-2 senza aver sostenuto LPIC-1, mentre non è necessario "Linux Essentials" per accedere ad LPIC-1.
         Lo schema seguente riassume queste caratteristiche per aiutarti a decidere quale corso fa per te.
@@ -490,29 +472,29 @@
   <section id="dazero">
     <div class="container">
       <h2 class="section-title">Cerchi un approccio più graduale?</h2>
-      <p class="mb-2 text-justify">
-        Lo sappiamo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b><br>
+      <p class="section-note mb-2 text-justify">
+        Lo sappiamo, il mondo delle certificazioni professionali può risultare ostico e scoraggiante <b>per chi parte da zero.</b>
         Se non ti senti pronto, dà un'occhiata a questo <b>corso introduttivo</b> non orientato alle certificazioni.
         È pensato per <b>guidarti passo passo</b> attraverso ogni aspetto di una distribuzione GNU/Linux: dalla sua <b>anatomia</b>
         all'installazione accanto a Windows, fino all'utilizzo come <b>sistema operativo principale</b>!
         <br><br>
       </p>
 
-        <div class="row justify-content-center">
-          <?php include_once 'snippets/catalogo.php'; ?>
-          <?php catalogo_scheda('arch', $CORSI['arch'], 'col-lg-8 col-md-10'); ?>
-        </div>
+      <div class="card-list">
+        <?php include_once 'snippets/catalogo.php'; ?>
+        <?php catalogo_scheda_orizzontale('arch', $CORSI['arch']); ?>
+      </div>
     </div>
   </section>
   <section id="compara" class="section-alt">
     <div class="container">
       <h2 class="section-title">Quale corso scegliere?</h2>
-      <p>
+      <p class="section-note">
         La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare:
       </p>
 
       <h5><b><a class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></b></h5>
-      <p>
+      <p class="section-note">
         È un corso teorico e pratico rivolto a chi ha <b>poca o nessuna esperienza</b> e vuole imparare ad installare, configurare e gestire un sistema Linux flessibile e moderno sul proprio PC. 
         Studiamo assieme l’<b>anatomia</b> di una distribuzione Linux per capirne a fondo il funzionamento e iniziamo a mettere le mani in pasta con una serie di <b>lezioni pratiche</b> 
         che spaziano dalle <b>basi della riga di comando</b> al backup, ripristino e <b>modifica delle configurazioni</b> software, <b>monitoraggio</b> delle risorse e gestione delle applicazioni in <b>avvio automatico</b>. 
@@ -521,7 +503,7 @@
       </p>
 
       <h5><b><a class="js-scroll-trigger" href="#corsi">Linux Essentials</a></b></h5>
-      <p>
+      <p class="section-note">
         È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
         ci soffermiamo sulla distinzione tra <b>licenze</b> Open Source, Copyleft e Permissive, studiamo i <b>business model</b> dell'Open Source, le <b>opportunità lavorative</b> 
         e naturalmente tutte le basi per la <b>gestione personale di un sistema LINUX</b>.<br>
@@ -530,7 +512,7 @@
       </p>
 
       <h5><b><a class="js-scroll-trigger" href="#corsi">LPIC-1</a></b></h5>
-      <p>
+      <p class="section-note">
         È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
         dalla gestione delle <b>quote</b> e dei limiti sulle risorse condivise all’<b>automazione</b>, senza tralasciare i concetti fondamentali di <b>sicurezza</b> informatica 
         e <b>networking</b> che caratterizzano questo tipo di sistemi. Il livello di partenza è più alto rispetto ai precedenti e si presuppone la conoscenza della terminologia di base. <br>
@@ -686,7 +668,7 @@
                             <p>
 			      Per ottenere la certificazione LPI devi sostenere un esame per ciascun modulo di apprendimento. <br>
 			      Ad esempio, LPIC-1 è composto da due moduli: 101 e 102, mentre Linux Essentials è costituito da un solo esame.<br>
-            Gli esami Essentials hanno un costo di 110€ e gli LPIC di 176€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a data-umami-event="coupon_request_LPI_FAQ" href=https://budibase.morrolinux.it/app/lpi-form> questo modulo </a>.
+            Gli esami Essentials hanno un costo di 110€ e gli LPIC di 176€, ma puoi richiedere un <b>COUPON sconto studente</b> scrivendomi al termine del corso, oppure un <b>COUPON generico</b> tramite <a data-umami-event="coupon_request_LPI_FAQ" href=https://requests.morrolinux.it/form/lpi-coupon> questo modulo </a>.
 
                             </p>
                         </div>

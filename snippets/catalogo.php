@@ -154,7 +154,7 @@ if (!function_exists('catalogo_scheda_orizzontale')) {
                         e nessuna delle due azioni aveva la precedenza. */ ?>
               <p class="card-text">
                 <?php echo $testo; ?><?php if ($landing !== null): ?>
-                <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>">leggi di più</a><?php endif ?>
+                <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>"><i>leggi di più</i></a><?php endif ?>
               </p>
 
               <div class="card-actions mt-auto">
@@ -193,10 +193,11 @@ if (!function_exists('catalogo_statistiche')) {
    * contato, ma la pagina esce lo stesso. Prima le chiamate erano cablate in
    * index.php senza rete di sicurezza, e un'API lenta bloccava tutta la home.
    */
-  function catalogo_statistiche($famiglia = null) {
+  function catalogo_statistiche($famiglia = null, $slugs = null) {
     $tot = array('subs' => 0, 'lessons' => 0, 'reviews' => 0);
 
-    foreach (catalogo_corsi($famiglia) as $corso) {
+    foreach (catalogo_corsi($famiglia) as $slug => $corso) {
+      if ($slugs !== null && !in_array($slug, $slugs, true)) continue;
       if (empty($corso['udemy_id'])) continue;
 
       $url = 'https://www.udemy.com/api-2.0/courses/' . $corso['udemy_id']
