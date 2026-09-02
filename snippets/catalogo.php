@@ -82,13 +82,16 @@ if (!function_exists('catalogo_scheda')) {
           <img src="<?php echo $corso['immagine']; ?>" class="card-img-top" alt="<?php echo $corso['alt']; ?>" title="<?php echo $corso['title']; ?>">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title"><?php echo $corso['nome']; ?></h3>
-            <p class="card-text"><?php echo $corso['testo']; ?></p>
+
+            <?php /* Come nella scheda orizzontale: l'approfondimento è un link
+                      in coda al testo, e il pulsante d'acquisto resta l'unica
+                      azione forte, a tutta larghezza. */ ?>
+            <p class="card-text">
+              <?php echo $corso['testo']; ?><?php if ($landing !== null): ?>
+              <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>">leggi di più</a><?php endif ?>
+            </p>
 
             <div class="card-actions mt-auto">
-              <?php if ($landing !== null): ?>
-              <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>" class="btn btn-outline-cta">Approfondisci</a>
-              <?php endif ?>
-
               <?php if ($show_promo): ?>
               <a data-umami-event="<?php echo $pagina; ?>_goto_<?php echo $evento; ?>_SPECIAL_OFFER" title="<?php echo $corso['nome']; ?>" href="<?php echo $url; ?>" class="btn btn-special-offer"><?php echo $promo_cta_text; ?></a>
               <?php else: ?>
@@ -144,13 +147,17 @@ if (!function_exists('catalogo_scheda_orizzontale')) {
           <div class="col-md-8">
             <div class="card-body d-flex flex-column">
               <h3 class="card-title"><?php echo $corso['nome']; ?></h3>
-              <p class="card-text"><?php echo $testo; ?></p>
+
+              <?php /* L'approfondimento è un link in coda al testo, non un
+                        secondo pulsante: nella scheda orizzontale due pulsanti
+                        affiancati lasciavano mezza riga vuota alla loro destra,
+                        e nessuna delle due azioni aveva la precedenza. */ ?>
+              <p class="card-text">
+                <?php echo $testo; ?><?php if ($landing !== null): ?>
+                <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>">leggi di più</a><?php endif ?>
+              </p>
 
               <div class="card-actions mt-auto">
-                <?php if ($landing !== null): ?>
-                <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>" class="btn btn-outline-cta">Approfondisci</a>
-                <?php endif ?>
-
                 <?php if ($show_promo): ?>
                 <a data-umami-event="<?php echo $pagina; ?>_goto_<?php echo $evento; ?>_SPECIAL_OFFER" title="<?php echo $corso['nome']; ?>" href="<?php echo $url; ?>" class="btn btn-special-offer"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>

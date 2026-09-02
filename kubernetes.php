@@ -91,7 +91,7 @@
     // Hero: 'logo' = ruota Kubernetes che gira lenta, 'video' = teaser.
     // Il teaser è su fondo nero, quindi i contrasti col testo sono critici:
     // qui si può passare da una versione all'altra cambiando questa riga.
-    $hero_mode = 'logo';
+    $hero_mode = 'video';
   ?>
 
   <?php if ($hero_mode === 'logo'): ?>

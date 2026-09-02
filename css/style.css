@@ -448,28 +448,6 @@ span.keeptogether {
   box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
 }
 
-/* Variante in punta di penna della CTA: "Approfondisci" porta alla landing,
-   "Vai al corso" alla pagina d'acquisto. Il secondario non deve competere col
-   primario, ma resta un pulsante a tutti gli effetti. */
-.btn-outline-cta,
-.btn-outline-cta:not(:disabled):not(.disabled):active {
-  background-color: transparent;
-  border-color: var(--cta);
-  color: var(--cta);
-}
-
-.btn-outline-cta:hover,
-.btn-outline-cta:focus,
-.btn-outline-cta:not(:disabled):not(.disabled):active {
-  background-color: var(--cta);
-  border-color: var(--cta);
-  color: var(--cta-ink);
-}
-
-.btn-outline-cta:focus {
-  box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
-}
-
 /* I pulsanti in fondo alla scheda: affiancati e di pari larghezza, in colonna
    quando lo spazio non basta. mt-auto sul contenitore li tiene incollati in
    fondo, così le schede di una riga chiudono tutte allo stesso modo. */
@@ -596,7 +574,7 @@ body {
    sezione, senza competere col titolo. */
 .section-subtitle {
   margin: 3rem 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   text-align: center;
 }
@@ -1358,23 +1336,19 @@ html.theme-dark body {
 }
 
 /* Con il pulsante ancorato in basso (mt-auto) lo spazio recuperato si può
-   spendere qui: il titolo respira senza far crescere la scheda. */
+   spendere qui: il titolo respira senza far crescere la scheda.
+   Il corpo scende invece a 1.35rem: qui la scheda è una voce d'elenco, e con
+   l'h3 di Bootstrap (1.75rem, in grassetto) risultava più grande e più pesante
+   del titolo della famiglia che la introduce. */
 .card-h .card-title {
   margin-bottom: 1.1rem;
+  font-size: 1.35rem;
 }
 
 .card-h .card-text {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
-}
-
-/* Qui i pulsanti hanno tutta la larghezza della colonna di testo: se li si
-   lascia crescere diventano due bandoni. Larghezza sul contenuto, allineati
-   a sinistra come il testo che li precede. */
-.card-h .card-actions .btn {
-  flex: 0 0 auto;
-  min-width: 9rem;
 }
 
 /* La pastiglia va sulla copertina, che qui sta a sinistra: a destra finirebbe
@@ -1410,11 +1384,5 @@ html.theme-dark body {
 @media (max-width: 767.98px) {
   .card-h .card-img {
     height: auto;
-  }
-
-  /* In colonna i pulsanti a larghezza del contenuto sembrano sperduti: qui
-     prendono tutta la riga, come nelle schede verticali. */
-  .card-h .card-actions .btn {
-    flex: 1 1 100%;
   }
 }
