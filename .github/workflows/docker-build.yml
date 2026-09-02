@@ -3,7 +3,7 @@ name: Build and Push Docker image
 on:
   push:
     branches:
-      - master  # main o master, dipende dal tuo branch principale
+      - master
 
 jobs:
   build:
@@ -19,10 +19,10 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: get app version
+      - name: Get app version
         id: get_app_version
         run: |
-          APP_VERSION=$(grep "APP_VERSION=" Dockerfile | cut -d= -f2 | tr -d '"' | tr -d "'")
+          APP_VERSION=$(grep -i "APP_VERSION" Dockerfile | cut -d= -f2 | tr -d ' "' "'")
           if [ -z "$APP_VERSION" ]; then
             APP_VERSION="latest"
           fi
@@ -32,5 +32,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: morrolinux/corsolinux-com:${{ APP_VERSION }}
-
+          tags: morrolinux/corsolinux-com:${{ env.APP_VERSION }}
