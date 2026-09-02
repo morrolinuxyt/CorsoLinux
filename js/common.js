@@ -379,3 +379,25 @@ function increment(){
     }, { threshold: 0 }).observe(hero);
   }
 })();
+
+/* Evidenziatore: il tratto si disegna quando la frase arriva in campo.
+   Con threshold .35 parte quando la spanna è entrata per un terzo, non al
+   primo pixel: così il gesto si vede tutto invece di finire mentre la riga
+   è ancora sul bordo. Una volta disegnato l'osservatore molla la presa, il
+   segno non si ridisegna a ogni passaggio. */
+(function() {
+  var segni = document.querySelectorAll('.marker');
+  if (!segni.length) return;
+
+  if (!('IntersectionObserver' in window)) return;   // resta già disegnato
+
+  var osservatore = new IntersectionObserver(function(voci) {
+    voci.forEach(function(voce) {
+      if (!voce.isIntersecting) return;
+      voce.target.classList.add('is-inview');
+      osservatore.unobserve(voce.target);
+    });
+  }, { threshold: .35 });
+
+  segni.forEach(function(segno) { osservatore.observe(segno); });
+})();

@@ -654,24 +654,38 @@ body {
   z-index: -1;
   left: -.35em;
   right: -.4em;
-  top: -.16em;
-  bottom: -.12em;
+  /* il segno stringe il testo da sopra e da sotto: un evidenziatore vero
+     lascia poco margine sulle maiuscole, non una fascia intera. Sotto
+     rientra più che sopra: le lettere non hanno discendenti qui, e il tratto
+     appoggiato alla linea di base si legge come una passata, non come un
+     riquadro. I due valori si spostano in coppia: cambiarne uno solo
+     cambierebbe lo spessore invece della quota */
+  top: .21em;
+  bottom: .16em;
   background: var(--accent);
-  /* raggi tutti diversi, e diversi fra orizzontale e verticale: il segno
-     sembra ritagliato a mano invece che disegnato col righello */
-  border-radius: .45em .7em .4em .65em / .7em .4em .75em .45em;
-  transform: rotate(-1.6deg) skewX(-4deg);
+  /* appena smussati: quel tanto che basta a togliere lo spigolo netto senza
+     tornare alla pastiglia di prima. Raggi disuguali, e diversi fra
+     orizzontale e verticale, così il taglio non sembra fatto col righello */
+  border-radius: .16em .24em .14em .22em / .22em .14em .24em .16em;
+  transform: rotate(-1.2deg) skewX(-4deg);
   transform-origin: left center;
+}
+
+/* Il tratto si disegna quando la frase entra in campo, non al caricamento:
+   la classe la mette lo script quando l'osservatore lo segnala. Senza JS il
+   segno è semplicemente già disegnato — lo stato di riposo qui sopra è
+   quello finito, non quello vuoto. */
+.marker.is-inview::before {
   animation: marker-in .8s cubic-bezier(.2, .75, .3, 1) both;
 }
 
 @keyframes marker-in {
-  from { transform: rotate(-1.6deg) skewX(-4deg) scaleX(0); }
-  to   { transform: rotate(-1.6deg) skewX(-4deg) scaleX(1); }
+  from { transform: rotate(-1.2deg) skewX(-4deg) scaleX(0); }
+  to   { transform: rotate(-1.2deg) skewX(-4deg) scaleX(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marker::before {
+  .marker.is-inview::before {
     animation: none;
   }
 }
