@@ -1,4 +1,4 @@
-var recensioniVisible = false;
+var programmaVisible = false;
 var countersVisible = false;
 
 function track_scroll(){
@@ -9,10 +9,10 @@ function track_scroll(){
     umami.track('scroll_proxmox_counters');
     return;
   }
-  if(isInViewport($('#recensioni'), 1)){
-    if(recensioniVisible) return;
-    recensioniVisible = true;
-    umami.track('scroll_proxmox_recensioni');
+  if(isInViewport($('#programma'), 1)){
+    if(programmaVisible) return;
+    programmaVisible = true;
+    umami.track('scroll_proxmox_programma');
     return;
   }
 }
@@ -26,6 +26,4 @@ $(window).scroll(function(){
 
 $(document).ready(function(){
   track_scroll();
-  // increment();
-  drawChart();
 });

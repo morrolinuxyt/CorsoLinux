@@ -59,10 +59,13 @@
             <a data-umami-event="proxmox_navbar_recensioni" class="nav-link js-scroll-trigger" href="#recensioni">Recensioni</a>
           </li> -->
           <li class="nav-item">
+            <a data-umami-event="proxmox_navbar_programma" class="nav-link js-scroll-trigger" href="#programma">Programma</a>
+          </li>
+          <li class="nav-item">
             <a data-umami-event="proxmox_navbar_faq" class="nav-link js-scroll-trigger" href="#faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a data-umami-event="proxmox_navbar_faq" class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
+            <a data-umami-event="proxmox_navbar_altri_corsi" class="nav-link js-scroll-trigger" href="#corsi">Corsi</a>
           </li>
           <li class="nav-item">
             <a data-umami-event="proxmox_navbar_docente" class="nav-link js-scroll-trigger" href="#docente">Docente</a>
@@ -94,13 +97,13 @@
     </div>
   </header>
 
-  <section> <!-- style="margin-top: -9rem;"> -->
-    <div class="container text-center">
+  <section>
+    <div class="container">
       <h2 id="proxmox" class="section-title">Perché imparare Proxmox</h2>
-      <p class="section-note text-justify">
 
-      Proxmox è una piattaforma di virtualizzazione <b>Open Source</b> incredibilmente <b>versatile e potente</b>, ma se non hai mai affrontato tematiche 
-      come <i>storage distribuito, SDN</i> e <i>containerizzazione</i>, <b>potresti pensare che sia troppo difficile</b> e riservato solo a sysadmin esperti 
+      <p class="section-note text-justify">
+      Proxmox è una piattaforma di virtualizzazione <b>Open Source</b> incredibilmente <b>versatile e potente</b>, ma se non hai mai affrontato tematiche
+      come <i>storage distribuito, SDN</i> e <i>containerizzazione</i>, <b>potresti pensare che sia troppo difficile</b> e riservato solo a sysadmin esperti
       e professionisti del settore.
       </p>
 
@@ -110,16 +113,13 @@
       </p>
 
       <p class="section-note text-justify">
-
-      Questo corso è progettato per <i>homelabbers, sistemisti</i> e appassionati di informatica e <i>self-hosting</i> 
+      Questo corso è progettato per <i>homelabbers, sistemisti</i> e appassionati di informatica e <i>self-hosting</i>
       che vogliono imparare a <b>gestire la propria infrastruttura</b> in maniera affidabile e <b>sicura</b>, senza downtime e senza perdite di dati.<br><br>
-      Partendo dalle basi, ti guiderò attraverso la creazione della tua prima macchina virtuale fino al deploy su un <b>cluster in Alta Disponibilità</b> (HA). Insieme, vedremo anche implementare <b>backup automatici</b>, accessi controllati e misure di <i>sicurezza infrastrutturale</i> per un setup <b>a prova di ransomware</b>.
-	    </p>
-	  </div>
+      Partendo dalle basi, ti guiderò attraverso la creazione della tua prima macchina virtuale fino al deploy su un <b>cluster in Alta Disponibilità</b> (HA). Insieme, vedremo anche come implementare <b>backup automatici</b>, accessi controllati e misure di <i>sicurezza infrastrutturale</i> per un setup <b>a prova di ransomware</b>.
+      </p>
 
-    <div class="container text-center" style="margin-top: 3rem;">
-      <div class="card-deck row">
-        <div class="col-md-6" style="margin: 10px auto;">
+      <div class="row justify-content-center" style="margin-top: 3.5rem;">
+        <div class="col-lg-7 col-md-9">
           <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
             <div class="card">
               <img src="assets/proxmox-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
@@ -130,7 +130,7 @@
 
                   Dopo ogni lezione, potrai replicare quanto visto nel tuo <i>homelab</i> o <i>in azienda</i>, per mettere in produzione servizi in modo <b>sicuro e affidabile</b> sulla tua infrastruttura.<br><br>
 
-                  L'obbiettivo di questo è migliorare le tue skill sistemistiche integrando competenze professionali spendibili lavorativamente.<br><br>
+                  L'obbiettivo di questo corso è migliorare le tue skill sistemistiche integrando competenze professionali spendibili lavorativamente.<br><br>
                 </p>
                 <?php if($show_promo): ?>
                 <a data-umami-event="proxmox_goto_proxmox_SPECIAL_OFFER" title="Proxmox Per Comuni Mortali" href="<?php echo $PPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
@@ -144,7 +144,6 @@
         </div>
       </div>
     </div>
-
   </section>
 
   <!--
@@ -302,24 +301,262 @@
   </section>
   -->
 
-  <section id="esperti" class="section-alt">
-    <div class="container text-center">
+  <section id="imparerai" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Cosa imparerai</h2>
+
+      <p class="section-lead text-center">
+        Affronteremo Proxmox con un <b>approccio pratico</b>: si parte dal singolo nodo e si arriva al <b>cluster iperconvergente</b>,
+        introducendo ogni concetto nel momento in cui serve davvero per andare avanti.
+      </p>
+
+      <div class="row" style="margin-top: 3rem;">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-server" aria-hidden="true"></i>
+            <span>Scegliere l'<b>hardware</b> giusto e installare <b>Proxmox VE</b> da zero</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-clone" aria-hidden="true"></i>
+            <span>Creare <b>VM</b> e <b>container</b>, con <i>snapshot</i>, <i>template</i> e <b>cloud-init</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-hdd-o" aria-hidden="true"></i>
+            <span>Gestire lo <b>storage</b>: dischi, <b>LVM</b>, <b>ZFS</b> e NAS di rete</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-shield" aria-hidden="true"></i>
+            <span><b>Backup</b> e ripristino con <b>Proxmox Backup Server</b>, anche <i>offsite</i></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-sitemap" aria-hidden="true"></i>
+            <span>Costruire un <b>cluster</b> con <b>Ceph</b> e <b>Alta Disponibilità</b></span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="feature-item">
+            <i class="fa fa-line-chart" aria-hidden="true"></i>
+            <span><b>Monitorare</b> l'infrastruttura con <b>Zabbix</b> e le <i>best practice</i></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="section-note text-justify" style="margin-top: 2rem;">
+        Allegato a ciascuna lezione troverai <b>link per approfondire</b> e le risorse utilizzate, e potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.<br><br>
+        Il focus è sull'<b>accessibilità</b> e la <b>comprensione</b>: <i>il tono è discorsivo e rilassato</i>, gli argomenti vengono introdotti con gradualità e approfonditi nei capitoli dedicati, man mano che il quadro d'insieme diventa più chiaro.
+      </p>
+
+      <div class="row" style="margin-top: 3rem;">
+        <div class="col-md-6 mb-4">
+          <div class="info-panel">
+            <h5><i class="fa fa-users mr-2" aria-hidden="true"></i>A chi è rivolto</h5>
+            <ul class="icon-list">
+              <li>Appassionati di informatica e <i>self-hosting</i></li>
+              <li><i>Homelabber</i> che vogliono fare sul serio</li>
+              <li>Sistemisti e professionisti IT</li>
+              <li>Chi deve mandare in produzione servizi <b>affidabili</b></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="info-panel">
+            <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
+            <ul class="icon-list">
+              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Fondamenti di <a href="https://corsoreti.it"><b>networking</b></a></li>
+              <li>Un PC o server da dedicare a <b>Proxmox</b> (anche virtualizzato)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="esperti">
+    <div class="container">
       <h2 class="section-title">Affidati agli esperti</h2>
+
       <p class="section-note text-justify">
+        Ho realizzato questo corso con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=proxmox"><b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
+        Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponibilità</i> (HA) seguendo tutte le <b>best practice</b>.
+      </p>
 
-      Ho realizzato questo corso con la partnership di <a href="https://axolserver.com/?utm_source=morrolinux&utm_medium=corso&utm_campaign=proxmox"> <b>AXOL Server</b></a>, che vanta 15 anni di esperienza sul campo.
-      Insieme vedremo ciò che c'è da sapere su Proxmox, dalla gestione di un singolo nodo fino al cluster <i>iperconvergente</i> in <i>Alta Disponibilità</i> (HA) seguendo tutte le <b>best practice</b>.<br><br>
+      <img src="assets/axol-blade-crop.jpg" class="section-figure" alt="AXOL Server">
 
-      <img src="assets/axol-blade-crop.jpg" alt="AXOL Server">
-      
-      Non tralasceremo proprio niente: dalla <b>sicurezza infrastrutturale</b> alla gestione di utenti e ruoli secondo il <i>principio del minimo privilegio</i>, oltre ai backup automatici secondo la <i>regola 3-2-1</i> con <b>Proxmox Backup Server</b> (PBS).<br><br>
+      <p class="section-note text-justify">
+        Non tralasceremo proprio niente: dalla <b>sicurezza infrastrutturale</b> alla gestione di utenti e ruoli secondo il <i>principio del minimo privilegio</i>, oltre ai backup automatici secondo la <i>regola 3-2-1</i> con <b>Proxmox Backup Server</b> (PBS).<br><br>
 
-      Allegato a ciascuna lezione troverai <b>link per approfondire</b> e risorse utilizzate. Inoltre, potrai verificare il tuo apprendimento tramite gli appositi <b>quiz di fine capitolo</b>.
+        Vedremo anche come si <b>mantiene</b> un cluster nel tempo: aggiornamenti senza downtime, <b>metriche da tenere d'occhio</b> in produzione e diagnostica dei guasti, perché un'infrastruttura non si costruisce una volta sola.
       </p>
     </div>
   </section>
 
-  
+  <section id="programma" class="section-alt">
+    <div class="container">
+      <h2 class="section-title">Programma del corso</h2>
+
+      <p class="section-lead text-center">
+        Nove moduli, dalla scelta dell'hardware al cluster in Alta Disponibilità monitorato.
+      </p>
+
+      <div class="syllabus" id="syllabus">
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-1" aria-expanded="true" aria-controls="modulo-1">
+            <span class="syllabus-num">1</span>
+            <span class="syllabus-name">Introduzione</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse show" id="modulo-1" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Abstract e panoramica del corso</li>
+            <li>Perché usare Proxmox</li>
+            <li>Per chi è questo corso</li>
+            <li>Ottenere il massimo dal corso</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-2" aria-expanded="false" aria-controls="modulo-2">
+            <span class="syllabus-num">2</span>
+            <span class="syllabus-name">Scelta ottimale dell'hardware</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-2" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Introduzione</li>
+            <li>Compute</li>
+            <li>Storage</li>
+            <li>Networking</li>
+            <li>Creazione di un Homelab con hardware di base</li>
+            <li>Creazione di un Cluster di livello Enterprise</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-3" aria-expanded="false" aria-controls="modulo-3">
+            <span class="syllabus-num">3</span>
+            <span class="syllabus-name">Primi passi</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-3" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Installazione di Proxmox</li>
+            <li>Operazioni post-installazione</li>
+            <li>La Web UI di Proxmox</li>
+            <li>Utenti e ruoli</li>
+            <li>Macchine virtuali vs Container: pro e contro</li>
+            <li>Creare una VM</li>
+            <li>VM: Snapshot e Template</li>
+            <li>VM: Opzioni avanzate</li>
+            <li>Cloud-init</li>
+            <li>Container su Proxmox</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-4" aria-expanded="false" aria-controls="modulo-4">
+            <span class="syllabus-num">4</span>
+            <span class="syllabus-name">Storage e backup</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-4" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Tipi di storage e gestione dei dischi</li>
+            <li>Storage LVM e Directory</li>
+            <li>Usare un NAS come storage</li>
+            <li>ZFS</li>
+            <li>Backup e ripristino</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-5" aria-expanded="false" aria-controls="modulo-5">
+            <span class="syllabus-num">5</span>
+            <span class="syllabus-name">Proxmox Backup Server</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-5" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Introduzione a PBS</li>
+            <li>Installazione di PBS</li>
+            <li>Configurazione e opzioni di backup e ripristino</li>
+            <li>Backup offsite con PBS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-6" aria-expanded="false" aria-controls="modulo-6">
+            <span class="syllabus-num">6</span>
+            <span class="syllabus-name">Networking di base</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-6" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Bridge: il mattoncino fondamentale in PVE</li>
+            <li>Bonding delle interfacce</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-7" aria-expanded="false" aria-controls="modulo-7">
+            <span class="syllabus-num">7</span>
+            <span class="syllabus-name">Clustering e Alta Disponibilità (HA)</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-7" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Tipi di Cluster Proxmox</li>
+            <li>Ceph: lo storage distribuito del cluster</li>
+            <li>Componenti e terminologia di Ceph</li>
+            <li>Corosync: il coordinatore del cluster</li>
+            <li>Creazione del cluster Proxmox</li>
+            <li>Configurazione del cluster con Ceph</li>
+            <li>Configurazione dell'HA</li>
+            <li>Diagnostica e riparazione del cluster Ceph</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-8" aria-expanded="false" aria-controls="modulo-8">
+            <span class="syllabus-num">8</span>
+            <span class="syllabus-name">Networking avanzato</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-8" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>SDN in Proxmox</li>
+            <li>Il Firewall di Proxmox</li>
+            </ul>
+          </div>
+        </div>
+        <div class="syllabus-module">
+          <button class="syllabus-toggle" type="button" data-toggle="collapse" data-target="#modulo-9" aria-expanded="false" aria-controls="modulo-9">
+            <span class="syllabus-num">9</span>
+            <span class="syllabus-name">Monitoraggio e Best Practices</span>
+            <i class="fa fa-chevron-down syllabus-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="collapse" id="modulo-9" data-parent="#syllabus">
+            <ul class="syllabus-lessons">
+            <li>Best practices</li>
+            <li>Come aggiornare Proxmox</li>
+            <li>Metriche da monitorare in un cluster di produzione</li>
+            <li>Installazione e configurazione di Zabbix</li>
+            <li>Setup di Zabbix + HAProxy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section data-umami-event="proxmox_section_statistiche" id="statistiche" class="section-accent">
     <div class="container text-center">
     <h2 class="section-title">Numeri che parlano</h2>

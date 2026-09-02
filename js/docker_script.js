@@ -1,4 +1,5 @@
 var recensioniVisible = false;
+var programmaVisible = false;
 var countersVisible = false;
 
 function track_scroll(){
@@ -6,6 +7,12 @@ function track_scroll(){
     if(recensioniVisible) return;
     recensioniVisible = true;
     umami.track('scroll_docker_recensioni');
+    return;
+  }
+  if(isInViewport($('#programma'), 1)){
+    if(programmaVisible) return;
+    programmaVisible = true;
+    umami.track('scroll_docker_programma');
     return;
   }
   if(isInViewport($('#counters'), 1)){
@@ -27,6 +34,4 @@ $(window).scroll(function(){
 
 $(document).ready(function(){
   track_scroll();
-  // increment();
-  drawChart();
 });

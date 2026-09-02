@@ -445,8 +445,6 @@ span.keeptogether {
 
 :root {
   --accent: #ff651c;
-  --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
-  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
 
   /* Colonna di lettura: testo, programma e FAQ condividono lo stesso bordo
      sinistro e destro. Le griglie (tessere, pannelli, schede) restano piene:
@@ -487,6 +485,11 @@ span.keeptogether {
   /* le frecce del carosello sono bianche: invertite diventano nere,
      giusto su fondo chiaro, invisibili su fondo scuro */
   --carousel-invert: invert(100%);
+}
+
+body {
+  --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 /* Fascia a tinta piena (i contatori "Numeri che parlano"): prende l'accento
