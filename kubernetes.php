@@ -286,10 +286,10 @@
           <div class="collapse show" id="modulo-1" data-parent="#syllabus">
             <ul class="syllabus-lessons">
             <li>Presentazione del corso</li>
-            <li>A chi si rivolge questo corso e prerequisiti</li>
-            <li>Cosa imparerai e cosa NON copriremo</li>
-            <li>Lo sponsor: AXOL Server e perché useremo Proxmox</li>
-            <li>Come ottenere il massimo dal corso</li>
+            <li>Per chi è questo corso</li>
+            <li>Cosa imparerai</li>
+            <li>Perché virtualizzare Kubernetes</li>
+            <li>Ottenere il massimo dal corso</li>
             </ul>
           </div>
         </div>
@@ -320,8 +320,8 @@
             <li>Approccio dichiarativo e reconciliation loop</li>
             <li>Namespace: organizzare e isolare i workload</li>
             <li>Labels e annotations: il collante invisibile di Kubernetes</li>
-            <li>Lab completo: deploy, scale, update, rollback</li>
-            <li>Multi-container Pod e sidecar pattern</li>
+            <li>Deploy, scale, update, rollback</li>
+            <li>Multi-container Pod e sidecar containers</li>
             </ul>
           </div>
         </div>
@@ -333,10 +333,10 @@
           </button>
           <div class="collapse" id="modulo-4" data-parent="#syllabus">
             <ul class="syllabus-lessons">
-            <li>Service ClusterIP, NodePort e LoadBalancer</li>
-            <li>App frontend + backend con Service per entrambi</li>
+            <li>Service ClusterIP vs NodePort vs LoadBalancer</li>
+            <li>Deploy di una app fullstack con Servizi ClusterIP e LoadBalancer</li>
             <li>Ingress: il reverse proxy nativo del cluster</li>
-            <li>HTTP vs DNS challenge</li>
+            <li>Ottenere i certificati TLS: HTTP-01 vs DNS-01 challenge</li>
             <li>TLS automatico con cert-manager e Let's Encrypt</li>
             </ul>
           </div>
@@ -350,8 +350,8 @@
           <div class="collapse" id="modulo-5" data-parent="#syllabus">
             <ul class="syllabus-lessons">
             <li>Come funziona lo storage su Kubernetes (CSI, PVC e modalità di accesso)</li>
-            <li>Deployment con dati persistenti (PVC su local-path)</li>
-            <li>SMB StorageClass</li>
+            <li>Deployment con dati persistenti</li>
+            <li>SMB StorageClass (RWX)</li>
             </ul>
           </div>
         </div>
@@ -363,7 +363,7 @@
           </button>
           <div class="collapse" id="modulo-6" data-parent="#syllabus">
             <ul class="syllabus-lessons">
-            <li>ConfigMap: cos'è e come si usa (env, envFrom)</li>
+            <li>Variabili d'ambiente e ConfigMap</li>
             <li>Montare una ConfigMap come un file</li>
             <li>Montare una ConfigMap come una cartella</li>
             <li>Secret: cosa sono e come funzionano</li>
@@ -380,9 +380,9 @@
           <div class="collapse" id="modulo-7" data-parent="#syllabus">
             <ul class="syllabus-lessons">
             <li>Probe: liveness e readiness spiegate con esempi</li>
-            <li>Monitoraggio base delle risorse (get pods -w, top pods, top nodes)</li>
-            <li>Resource requests e limits: cosa succede se non li metti</li>
-            <li>Init container</li>
+            <li>Monitoraggio base delle risorse</li>
+            <li>Resource requests e limits</li>
+            <li>Init containers</li>
             <li>Lifecycle hooks (postStart, preStop)</li>
             </ul>
           </div>
@@ -425,10 +425,8 @@
           </button>
           <div class="collapse" id="modulo-10" data-parent="#syllabus">
             <ul class="syllabus-lessons">
-            <li>Il dilemma dell'HA: Kubernetes nativo vs Proxmox VE</li>
-            <li>Cosa serve a Proxmox per farlo: quorum, Corosync e storage condiviso o replicato</li>
-            <li>Lab: configurazione HA, simulazione di guasto e analisi dei limiti</li>
             <li>HA applicativo vs infrastrutturale: cosa Proxmox non può fare per te</li>
+            <li>Test dell'HA infrastrutturale con Proxmox</li>
             </ul>
           </div>
         </div>
@@ -440,12 +438,11 @@
           </button>
           <div class="collapse" id="modulo-11" data-parent="#syllabus">
             <ul class="syllabus-lessons">
-            <li>Upgrade di Kubernetes con System Upgrade Controller</li>
-            <li>Upgrade del sistema operativo sottostante</li>
-            <li>Upgrade di Proxmox stesso</li>
-            <li>Debugging: leggere describe e capire gli errori comuni</li>
-            <li>kubectl debug ed ephemeral container</li>
-            <li>Rimozione e sostituzione di un nodo dal cluster: cordon e drain</li>
+            <li>Aggiornare Kubernetes con System Upgrade Controller</li>
+            <li>Aggiornare sistema operativo sottostante</li>
+            <li>Aggiornare Proxmox stesso</li>
+            <li>Capire e risolvere i problemi più comuni</li>
+            <li>Debugging di un Pod: kubectl debug ed ephemeral container</li>
             </ul>
           </div>
         </div>
