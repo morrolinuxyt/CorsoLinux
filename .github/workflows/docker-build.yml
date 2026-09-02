@@ -22,7 +22,7 @@ jobs:
       - name: Get app version
         id: get_app_version
         run: |
-          APP_VERSION=$(grep -i "APP_VERSION" Dockerfile | cut -d= -f2 | tr -d ' "' "'")
+          APP_VERSION=$(grep -i "APP_VERSION" Dockerfile | sed -E "s/.*APP_VERSION=['\"]?([^'\" ]+)['\"]?.*/\1/")
           if [ -z "$APP_VERSION" ]; then
             APP_VERSION="latest"
           fi
