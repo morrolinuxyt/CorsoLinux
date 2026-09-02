@@ -489,40 +489,65 @@
   <section id="compara" class="section-alt">
     <div class="container">
       <h2 class="section-title">Quale corso scegliere?</h2>
-      <p class="section-note">
-        La scelta del corso più adatto a te dipende dal tuo livello di partenza e da cosa vuoi imparare:
+
+      <p class="section-lead text-center">
+        Dipende da dove parti e da cosa ti serve alla fine. I tre percorsi si possono anche fare in fila.
       </p>
 
-      <h5><b><a class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></b></h5>
-      <p class="section-note">
-        È un corso teorico e pratico rivolto a chi ha <b>poca o nessuna esperienza</b> e vuole imparare ad installare, configurare e gestire un sistema Linux flessibile e moderno sul proprio PC. 
-        Studiamo assieme l’<b>anatomia</b> di una distribuzione Linux per capirne a fondo il funzionamento e iniziamo a mettere le mani in pasta con una serie di <b>lezioni pratiche</b> 
-        che spaziano dalle <b>basi della riga di comando</b> al backup, ripristino e <b>modifica delle configurazioni</b> software, <b>monitoraggio</b> delle risorse e gestione delle applicazioni in <b>avvio automatico</b>. 
-        Infine, viene dedicato un intero capitolo alla <b>risoluzione dei problemi</b> in ambiente Linux. 
-        L'obiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile <a data-umami-event="goto_Arch_COMPARE" href="<?php echo $archlinux; ?>">per tutti i nuovi utenti</a>.
-      </p>
+      <div class="row confronto" style="margin-top: 3rem;">
 
-      <h5><b><a class="js-scroll-trigger" href="#corsi">Linux Essentials</a></b></h5>
-      <p class="section-note">
-        È un corso introduttivo a GNU/Linux ed il panorama Free & Open Source: facciamo una breve panoramica su <b>tecnologie e software Open Source popolari</b>, 
-        ci soffermiamo sulla distinzione tra <b>licenze</b> Open Source, Copyleft e Permissive, studiamo i <b>business model</b> dell'Open Source, le <b>opportunità lavorative</b> 
-        e naturalmente tutte le basi per la <b>gestione personale di un sistema LINUX</b>.<br>
-        Il <a data-umami-event="goto_LE_COMPARE" href="<?php echo $essentials; ?>">programma del corso</a> segue fedelmente l'omonimo percorso LPI, perciò al termine, se vorrai, potrai sostenere l'esame <a data-umami-event="link_LE-EXAM-OBJ" target=blank href="https://www.lpi.org/our-certifications/exam-010-objectives">010 - Linux Essentials</a> 
-        ed ottenere un certificato che attesta le tue competenze linux in ambito lavorativo.
-      </p>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="info-panel">
+            <p class="confronto-livello">Se parti da zero</p>
+            <h5><a data-umami-event="compara_Arch" class="js-scroll-trigger" href="#dazero">Arch Linux Per Comuni Mortali</a></h5>
+            <ul class="icon-list">
+              <li>Per chi ha <b>poca o nessuna esperienza</b></li>
+              <li>Installare, configurare e gestire Linux <b>sul proprio PC</b></li>
+              <li>Riga di comando, backup, configurazioni, monitoraggio, avvio automatico</li>
+              <li>Un capitolo dedicato alla <b>risoluzione dei problemi</b></li>
+            </ul>
+            <p class="confronto-esame">Nessun esame: è un corso introduttivo</p>
+          </div>
+        </div>
 
-      <h5><b><a class="js-scroll-trigger" href="#corsi">LPIC-1</a></b></h5>
-      <p class="section-note">
-        È un corso orientato all’amministrazione di sistemi GNU/Linux. Qui imparerai tutto ciò che c’è da sapere sull’<b>amministrazione di server</b> e ambienti multi-utente, 
-        dalla gestione delle <b>quote</b> e dei limiti sulle risorse condivise all’<b>automazione</b>, senza tralasciare i concetti fondamentali di <b>sicurezza</b> informatica 
-        e <b>networking</b> che caratterizzano questo tipo di sistemi. Il livello di partenza è più alto rispetto ai precedenti e si presuppone la conoscenza della terminologia di base. <br>
-        Il percorso è diviso in due moduli, <a data-umami-event="goto_LPIC-101_COMPARE" target=blank href="<?php echo $e101; ?>">101</a> e <a data-umami-event="goto_LPIC-102_COMPARE" target=blank href="<?php echo $e102; ?>">102</a>, al termine dei quali potrai sostenere i rispettivi esami LPI  
-        (<a data-umami-event="link_LPIC-101-OBJ" target=blank href="https://www.lpi.org/our-certifications/exam-101-objectives">LPIC-1 101</a> ed <a data-umami-event="link_LPIC-102-OBJ" target=blank href="https://www.lpi.org/our-certifications/exam-102-objectives">LPIC-1 102</a>) 
-        ed ottenere una <b>certificazione professionale</b> riconosciuta internazionalmente come <b>Linux System Administrator</b>.
-      </p>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="info-panel">
+            <p class="confronto-livello">Le basi, con certificato</p>
+            <h5><a data-umami-event="compara_LE" class="js-scroll-trigger" href="#corsi">Linux Essentials</a></h5>
+            <ul class="icon-list">
+              <li>Introduzione a <b>GNU/Linux</b> e al panorama Open Source</li>
+              <li>Licenze, <i>business model</i> e opportunità lavorative</li>
+              <li>Gestione personale di un sistema Linux</li>
+              <li>Segue fedelmente il programma LPI omonimo</li>
+            </ul>
+            <p class="confronto-esame">
+              Esame <a data-umami-event="link_LE-EXAM-OBJ" target="_blank" href="https://www.lpi.org/our-certifications/exam-010-objectives">010 &ndash; Linux Essentials</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="info-panel">
+            <p class="confronto-livello">Amministrazione di sistema</p>
+            <h5><a data-umami-event="compara_LPIC1" class="js-scroll-trigger" href="#corsi">LPIC-1</a></h5>
+            <ul class="icon-list">
+              <li>Richiede la <b>terminologia di base</b>: il livello di partenza è più alto</li>
+              <li><b>Amministrazione di server</b> e ambienti multi-utente</li>
+              <li>Quote, limiti sulle risorse condivise, <b>automazione</b></li>
+              <li>Fondamenti di <b>sicurezza</b> e <b>networking</b></li>
+            </ul>
+            <p class="confronto-esame">
+              Due esami,
+              <a data-umami-event="link_LPIC-101-OBJ" target="_blank" href="https://www.lpi.org/our-certifications/exam-101-objectives">101</a> e
+              <a data-umami-event="link_LPIC-102-OBJ" target="_blank" href="https://www.lpi.org/our-certifications/exam-102-objectives">102</a>
+              &rarr; <b>Linux System Administrator</b>
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
-
   <section id="faq">
     <div class="container">
       <h2 class="section-title">FAQ - Domande Frequenti</h2>

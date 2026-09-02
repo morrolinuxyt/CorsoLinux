@@ -1320,6 +1320,46 @@ html.theme-dark body {
   --accent-soft: color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
+/* Schema di confronto fra i corsi: tre pannelli affiancati con lo stesso
+   scheletro — livello di partenza, nome, cosa impari, esame finale — così il
+   confronto si fa scorrendo le righe invece di leggere tre paragrafi. */
+.confronto > [class^="col-"] {
+  display: flex;
+}
+
+.confronto .info-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.confronto-livello {
+  margin-bottom: .35rem;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.confronto .info-panel h5 {
+  margin-bottom: 1.25rem;
+}
+
+/* la riga sull'esame chiude il pannello, staccata dall'elenco e appoggiata
+   in fondo: così le tre colonne si chiudono tutte allo stesso modo */
+.confronto-esame {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-muted);
+  font-size: .95rem;
+}
+
+.confronto .icon-list {
+  flex: 1 1 auto;
+}
+
 /* In #compara i titoli dei corsi stanno fra un paragrafo e l'altro: senza
    questa regola resterebbero larghi quanto il contenitore mentre i paragrafi
    si stringono sulla colonna di lettura, e le due colonne non si
@@ -1343,11 +1383,6 @@ html.theme-dark body {
   max-width: var(--measure);
   margin-left: auto;
   margin-right: auto;
-}
-
-#compara h5 {
-  max-width: var(--measure);
-  margin: 2.5rem auto 1rem;
 }
 
 /* #compara elenca descrizioni brevi sotto a ciascun titolo di corso: erano
