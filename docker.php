@@ -18,6 +18,8 @@
 
   <meta name="description" content="Docker Per Comuni Mortali è il modo più semplice per imparare Docker dalle basi senza essere sopraffatti dalla complessità.">
 
+  <link rel="canonical" href="https://corsolinux.com/docker">
+
   <title>Impara Linux: il corso bestseller in italiano di Morrolinux | Corso Linux</title>
 
 <?php include 'snippets/theme-init.php';?>
@@ -121,7 +123,6 @@
 
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
-          <a data-umami-event="docker_goto_Docker" class="invisible-link" href="<?php echo $DPCM; ?>">
             <div class="card">
               <img src="assets/docker-per-comuni-mortali-notext.png" class="card-img-top" alt="Copertina corso Docker Per Comuni Mortali" title="Docker Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
@@ -134,14 +135,13 @@
                   L'obbiettivo di questo corso è rendere Docker <b>alla portata di tutti</b>, riducendo il più possibile la curva di apprendimento.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto stretched-link"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+                <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto stretched-link"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>
             </div>
-          </a>
         </div>
       </div>
     </div>
@@ -216,7 +216,7 @@
           <div class="info-panel">
             <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
             <ul class="icon-list">
-              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Conoscenza base di <a data-umami-event="docker_prereq_linux" href="linux.php"><b>Linux</b></a></li>
               <li>Un po' di confidenza con la <b>riga di comando</b></li>
               <li>Nessuna esperienza pregressa con i <b>container</b></li>
             </ul>

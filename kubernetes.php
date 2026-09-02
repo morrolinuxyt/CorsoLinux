@@ -18,6 +18,8 @@
 
   <meta name="description" content="Kubernetes Per Comuni Mortali è il modo più semplice per passare da Docker all'orchestrazione dei container, senza essere sopraffatti dalla complessità.">
 
+  <link rel="canonical" href="https://corsolinux.com/kubernetes">
+
   <title>Kubernetes Per Comuni Mortali | Corso Linux</title>
 
 <?php include 'snippets/theme-init.php';?>
@@ -143,7 +145,6 @@
 
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
-          <a data-umami-event="kubernetes_goto_Kubernetes" class="invisible-link" href="<?php echo $KPCM; ?>">
             <div class="card">
               <img src="assets/kubernetes-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
@@ -156,14 +157,13 @@
                   L'obbiettivo di questo corso è rendere Kubernetes uno strumento <b>alla portata di tutti</b>, abbattendo la barriera d'ingresso che troppo spesso scoraggia chi vuole crescere.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="kubernetes_goto_kubernetes_SPECIAL_OFFER" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="kubernetes_goto_kubernetes_SPECIAL_OFFER" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto stretched-link"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="kubernetes_goto_Kubernetes" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
+                <a data-umami-event="kubernetes_goto_Kubernetes" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto stretched-link"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>
             </div>
-          </a>
         </div>
       </div>
     </div>
@@ -238,7 +238,7 @@
           <div class="info-panel">
             <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
             <ul class="icon-list">
-              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Conoscenza base di <a data-umami-event="kubernetes_prereq_linux" href="linux.php"><b>Linux</b></a></li>
               <li>Buona conoscenza di <a href="docker.php"><b>Docker</b> o <b>Podman</b></a></li>
               <li>Fondamenti di <a href="https://corsoreti.it"><b>networking</b></a></li>
             </ul>

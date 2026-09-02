@@ -1,7 +1,7 @@
   <section style="margin-top: -6rem;">
     <div class="container text-center">
-      <h2 id="docker" class="section-title">Corsi orientati alle certificazioni</h2>
-      <p class="mb-1 text-justify">
+      <h2 class="section-title">Corsi orientati alle certificazioni</h2>
+      <p class="section-note text-justify">
         Le certificazioni professionali sono il miglior modo per facilitare l'inserimento lavorativo, attestare competenze già acquisite, o appianare le tipiche lacune della formazione autodidatta.<br>
       </p>
         

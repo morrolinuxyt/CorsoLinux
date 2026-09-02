@@ -448,6 +448,79 @@ span.keeptogether {
   box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
 }
 
+/* Variante in punta di penna della CTA: "Approfondisci" porta alla landing,
+   "Vai al corso" alla pagina d'acquisto. Il secondario non deve competere col
+   primario, ma resta un pulsante a tutti gli effetti. */
+.btn-outline-cta,
+.btn-outline-cta:not(:disabled):not(.disabled):active {
+  background-color: transparent;
+  border-color: var(--cta);
+  color: var(--cta);
+}
+
+.btn-outline-cta:hover,
+.btn-outline-cta:focus,
+.btn-outline-cta:not(:disabled):not(.disabled):active {
+  background-color: var(--cta);
+  border-color: var(--cta);
+  color: var(--cta-ink);
+}
+
+.btn-outline-cta:focus {
+  box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
+}
+
+/* I pulsanti in fondo alla scheda: affiancati e di pari larghezza, in colonna
+   quando lo spazio non basta. mt-auto sul contenitore li tiene incollati in
+   fondo, così le schede di una riga chiudono tutte allo stesso modo. */
+/* Aria fra il testo che introduce una famiglia di corsi e la griglia che la
+   mostra: prima erano 16px, o dei <br> in coda al paragrafo. */
+.section-note + .card-deck,
+.section-lead + .card-deck,
+.section-subtitle + .card-deck,
+.section-note + .container,
+.section-lead + .container {
+  margin-top: 3rem;
+}
+
+/* Le schede del catalogo sono le stesse ovunque: quelle LPI ereditavano il
+   text-center del contenitore e il loro testo restava centrato, a differenza
+   di tutte le altre. */
+.card-deck .card-body {
+  text-align: left;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.card-actions .btn {
+  /* base stretta apposta: nelle colonne da un terzo i due pulsanti devono
+     starci affiancati come in quelle da metà, non impilarsi. */
+  flex: 1 1 7rem;
+}
+
+/* Pastiglia "Novità": appoggiata sull'angolo della copertina. Accanto al
+   titolo finiva a capo da sola su tutti i titoli lunghi, e sembrava un pezzo
+   di testo smarrito. */
+.card-badge {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  z-index: 2;
+  padding: .3em .75em;
+  border-radius: 999px;
+  background-color: var(--promo);
+  color: var(--promo-ink);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+}
+
 /* ============================================================
    Blocchi riutilizzabili per le landing dei corsi
    L'accento è per-pagina, impostato sul body:
@@ -514,6 +587,15 @@ body {
 .section-title {
   text-align: center;
   margin-bottom: 2.5rem;
+}
+
+/* Sottotitolo di sezione: separa le famiglie del catalogo dentro un'unica
+   sezione, senza competere col titolo. */
+.section-subtitle {
+  margin: 3rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
 }
 
 .section-lead {

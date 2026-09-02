@@ -1,5 +1,5 @@
 FROM php:8.2-apache
-ENV APP_VERSION=v1.0
+ENV APP_VERSION=v2.0
 
 # Enable mod_rewrite
 RUN a2enmod rewrite \
