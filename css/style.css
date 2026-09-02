@@ -1394,16 +1394,21 @@ html.theme-dark body {
   right: 1rem;
   bottom: 1rem;
   z-index: 1040;
-  width: 40px;
-  height: 40px;
+  /* 44px è anche la misura minima comoda per un bersaglio da toccare */
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 1px solid var(--hairline);
   border-radius: 50%;
   background-color: var(--panel);
-  color: var(--ink-muted);
-  font-size: 1rem;
+  color: var(--ink);
+  font-size: 1.15rem;
   line-height: 1;
-  opacity: .5;
+  /* a riposo era al 50% di opacità con l'inchiostro smorzato: si confondeva
+     col fondo. Ora è piena e staccata dalla pagina da un'ombra, ma resta un
+     cerchietto in un angolo. */
+  opacity: .92;
+  box-shadow: var(--shadow-md);
   cursor: pointer;
   transition: opacity .25s ease-in-out, visibility .25s ease-in-out,
               color .2s ease-in-out, box-shadow .2s ease-in-out,
@@ -1417,7 +1422,7 @@ html.theme-dark body {
 }
 
 .theme-toggle.auto-hide.is-visible {
-  opacity: .5;
+  opacity: .92;
   visibility: visible;
   transform: none;
 }
@@ -1426,7 +1431,8 @@ html.theme-dark body {
 .theme-toggle:focus {
   opacity: 1;
   color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
   outline: none;
 }
