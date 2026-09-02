@@ -1,7 +1,7 @@
   <section style="margin-top: -6rem;">
     <div class="container text-center">
-      <h2 id="docker" class="section-title">Corsi orientati alle certificazioni</h2>
-      <p class="mb-1 text-justify">
+      <h2 class="section-title">Corsi orientati alle certificazioni</h2>
+      <p class="section-note text-justify">
         Le certificazioni professionali sono il miglior modo per facilitare l'inserimento lavorativo, attestare competenze già acquisite, o appianare le tipiche lacune della formazione autodidatta.<br>
       </p>
         
@@ -9,8 +9,8 @@
         <?php include 'snippets/schede-corsi-lpi.php';?>
       </section>
 
-      <p>
-        Scopri di più sulle certificazioni ufficiali <b>Linux Professional Institute</b> (LPI) in <a href="https://corsolinux.com"> questa pagina</a>.
-	    </p>
+      <p class="section-note">
+        Scopri di più sulle certificazioni ufficiali <b>Linux Professional Institute</b> (LPI) nella <a href="linux.php">pagina dedicata</a>.
+      </p>
 	  </div>
   </section>

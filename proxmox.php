@@ -18,6 +18,8 @@
 
   <meta name="description" content="Proxmox Per Comuni Mortali è il modo più semplice per imparare Proxmox dalle basi senza essere sopraffatti dalla complessità.">
 
+  <link rel="canonical" href="https://corsolinux.com/proxmox">
+
   <title>Proxmox Per Comuni Mortali | Corso Linux</title>
 
 <?php include 'snippets/theme-init.php';?>
@@ -26,17 +28,15 @@
 <body id="page-top" class="landing-page" style="--accent: #e57000;">
 
   <?php
+    // Statistiche pubbliche del corso su Udemy. Passano dal catalogo, che
+    // conosce gli id e sa cavarsela se l'API non risponde: prima erano tre
+    // chiamate nude, e bastava un timeout per riempire la pagina di Warning.
+    include_once 'snippets/catalogo.php';
 
-    //UDEMY STATS
-    ini_set("allow_url_fopen", 1);
-
-    $json = file_get_contents('https://www.udemy.com/api-2.0/courses/6836885?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-    $PPCM_STATS = json_decode($json);
-
-    $subs = $PPCM_STATS->num_subscribers;
-    $reviews = $PPCM_STATS->num_reviews;
-    $lessons = $PPCM_STATS->num_lectures;
-
+    $stats   = catalogo_statistiche(null, array('proxmox'));
+    $subs    = $stats['subs'];
+    $lessons = $stats['lessons'];
+    $reviews = $stats['reviews'];
   ?>
 
   <?php include 'snippets/promo-banner.php';?>
@@ -120,7 +120,6 @@
 
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
-          <a data-umami-event="proxmox_goto_Proxmox" class="invisible-link" href="<?php echo $PPCM; ?>">
             <div class="card">
               <img src="assets/proxmox-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
@@ -140,7 +139,6 @@
 
               </div>
             </div>
-          </a>
         </div>
       </div>
     </div>
@@ -370,7 +368,7 @@
           <div class="info-panel">
             <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
             <ul class="icon-list">
-              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Conoscenza base di <a data-umami-event="proxmox_prereq_linux" href="linux.php"><b>Linux</b></a></li>
               <li>Fondamenti di <a href="https://corsoreti.it"><b>networking</b></a></li>
               <li>Un PC o server da dedicare a <b>Proxmox</b> (anche virtualizzato)</li>
             </ul>

@@ -84,20 +84,50 @@ function increment(){
 }
 
 
-// "Torcia" sull'hero con teaser scuro: il velo si buca sotto al cursore e
-// lascia vedere il video com'è. A riposo il raggio è 0, quindi senza mouse
-// (o senza JS) l'hero resta esattamente com'era.
+// "Torcia" sull'hero: il velo si buca sotto al cursore e lascia vedere il
+// video che ci sta dietro. A riposo il raggio è 0, quindi senza mouse (o
+// senza JS) l'hero resta esattamente com'era.
+//
+// Due usi: su un teaser scuro il velo è la patina nera (.scrim), sull'hero di
+// Kubernetes è il logo che gira sul fondo blu (.veil). Il meccanismo è lo
+// stesso, cambia solo cosa si buca.
 (function() {
-  var hero = document.querySelector('.landing--dark');
+  var hero = document.querySelector('.landing--torch');
   if (!hero) return;
   if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
 
-  var RADIUS = 250;                       // raggio del faro, in px
+  // Il video sotto al velo si vede solo con la torcia, che qui sopra abbiamo
+  // già escluso su touch: lì scaricarlo sarebbe qualche megabyte buttato.
+  // Per questo la sorgente sta in data-src e la si monta solo adesso.
+  var teaser = hero.querySelector('video[data-src]');
+  if (teaser && !teaser.getAttribute('src')) {
+    teaser.src = teaser.getAttribute('data-src');
+  }
+
+  // Il faro si "carica" muovendo il mouse: parte piccolo, cresce quanto più lo
+  // si agita, resta grande qualche secondo e poi torna piano alla misura di
+  // partenza. Chi passa di lì distrattamente vede un fascio discreto; chi ci
+  // gioca si apre una finestra grande sul teaser.
+  var R_BASE = 20;                       // raggio a riposo, in px
+  var R_MAX  = 3000;                       // raggio col faro completamente carico
+  // Il suggerimento iniziale cresce insieme al massimo: se restasse fisso e
+  // piccolo, chi guarda solo quella passata non immaginerebbe quanto si può
+  // aprire il faro giocandoci.
+  var R_HINT = R_MAX * 0.55;              // raggio del suggerimento iniziale
+  var GAIN   = 1 / 4000;                  // px di mouse per passare da base a massimo
+  var HOLD   = 2000;                      // ms di tenuta prima di iniziare a calare
+  var FADE   = 2500;                      // ms per tornare alla misura di partenza
+
   var TEXT_MARGIN = 40;                   // quanto "prima" il testo si fa da parte
   var text = hero.querySelector('h1');
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   var x = 0, y = 0, r = 0, target = 0, pending = false, running = false;
+  var energia = 0, ultimoMovimento = 0, ultimoFrame = 0, dentro = false, puntoPrec = null;
+
+  function raggioTarget() {
+    return dentro ? R_BASE + (R_MAX - R_BASE) * energia : 0;
+  }
 
   // rettangolo che avvolge il testo effettivo di h1 + .lead
   function textRect() {
@@ -117,8 +147,19 @@ function increment(){
     return box || { left: 0, right: 0, top: 0, bottom: 0 };
   }
 
-  function paint() {
+  function paint(ts) {
     running = false;
+    if (!ultimoFrame) ultimoFrame = ts;
+    // un fotogramma saltato (scheda in secondo piano) non deve consumare
+    // di colpo tutta l'energia accumulata
+    var dt = Math.min(ts - ultimoFrame, 100);
+    ultimoFrame = ts;
+
+    if (energia > 0 && ts - ultimoMovimento > HOLD) {
+      energia = Math.max(0, energia - dt / FADE);
+    }
+    target = raggioTarget();
+
     // avvicina r al target: entrata e uscita morbide invece che a scatto
     var d = target - r;
     r = Math.abs(d) < 0.5 ? target : r + d * (reduced ? 1 : 0.18);
@@ -127,7 +168,7 @@ function increment(){
     hero.style.setProperty('--torch-y', y + 'px');
     hero.style.setProperty('--torch-r', r + 'px');
 
-    if (r !== target) tick();
+    if (r !== target || energia > 0) tick();
   }
 
   function tick() {
@@ -155,7 +196,8 @@ function increment(){
     // passa per la fascia centrale: è l'unica parte del teaser che ha
     // davvero contenuto da scoprire (le altre sono quasi sempre nere).
     var y0 = box.height * 0.5;
-    var x0 = box.width * 0.38, x1 = box.width * 0.62;
+    // var x0 = box.width * 0.38, x1 = box.width * 0.62;
+    var x0 = box.width * 0.5;
     var DUR = 2600, start = null;
 
     hintRAF = window.requestAnimationFrame(function step(ts) {
@@ -165,9 +207,9 @@ function increment(){
       // apre, tiene, richiude
       var env = p < 0.25 ? p / 0.25 : (p > 0.75 ? (1 - p) / 0.25 : 1);
 
-      x = x0 + (x1 - x0) * p;
+      x = x0; // + (x1 - x0) * p;
       y = y0;
-      r = RADIUS * env;
+      r = R_HINT * env;
       hero.style.setProperty('--torch-x', x + 'px');
       hero.style.setProperty('--torch-y', y + 'px');
       hero.style.setProperty('--torch-r', r + 'px');
@@ -197,7 +239,19 @@ function increment(){
     var box = hero.getBoundingClientRect();
     x = e.clientX - box.left;
     y = e.clientY - box.top;
-    target = RADIUS;
+    dentro = true;
+
+    // l'energia si accumula con la strada percorsa dal puntatore: una
+    // passata tranquilla la alza appena, qualche scrollata avanti e indietro
+    // la porta al massimo.
+    var ora = window.performance && performance.now ? performance.now() : Date.now();
+    if (puntoPrec) {
+      var passo = Math.abs(e.clientX - puntoPrec.x) + Math.abs(e.clientY - puntoPrec.y);
+      energia = Math.min(1, energia + passo * GAIN);
+    }
+    puntoPrec = { x: e.clientX, y: e.clientY };
+    ultimoMovimento = ora;
+    target = raggioTarget();
 
     // il testo sfuma solo quando il faro lo sta effettivamente investendo.
     // Serve il rettangolo del testo renderizzato, non quello dell'elemento:
@@ -214,10 +268,52 @@ function increment(){
   });
 
   hero.addEventListener('mouseleave', function() {
+    // uscendo il faro si spegne e si scarica: rientrando si riparte piccoli
+    dentro = false;
+    energia = 0;
+    puntoPrec = null;
     target = 0;
     hero.classList.remove('is-peeking');
     tick();
   });
+})();
+
+
+// Logo dell'hero: si ribalta da solo poco dopo il caricamento, e poi a ogni
+// passaggio del mouse (o tocco). È sempre lo stesso giro, avviato aggiungendo
+// una classe e chiuso togliendola a fine animazione.
+(function() {
+  var logo = document.querySelector('.hero-logo');
+  if (!logo) return;
+
+  var img = logo.querySelector('img');
+  if (!img) return;
+
+  if (!window.matchMedia) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function ribalta() {
+    // un ribaltamento alla volta: tornare sul logo a metà giro non lo fa
+    // ripartire da capo
+    if (img.classList.contains('is-flipping')) return;
+    img.classList.add('is-flipping');
+  }
+
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    // col mouse basta passarci sopra
+    logo.addEventListener('mouseenter', ribalta);
+  } else {
+    // su touch l'hover resterebbe attaccato al primo tocco: qui si ribalta
+    // al tocco, così l'animazione esiste anche da telefono
+    logo.addEventListener('click', ribalta);
+  }
+
+  img.addEventListener('animationend', function(e) {
+    if (e.animationName === 'hero-flip') img.classList.remove('is-flipping');
+  });
+
+  // il primo giro, quello di presentazione
+  setTimeout(ribalta, 1000);
 })();
 
 
@@ -282,4 +378,26 @@ function increment(){
       btn.classList.toggle('is-visible', !entries[0].isIntersecting);
     }, { threshold: 0 }).observe(hero);
   }
+})();
+
+/* Evidenziatore: il tratto si disegna quando la frase arriva in campo.
+   Con threshold .35 parte quando la spanna è entrata per un terzo, non al
+   primo pixel: così il gesto si vede tutto invece di finire mentre la riga
+   è ancora sul bordo. Una volta disegnato l'osservatore molla la presa, il
+   segno non si ridisegna a ogni passaggio. */
+(function() {
+  var segni = document.querySelectorAll('.marker');
+  if (!segni.length) return;
+
+  if (!('IntersectionObserver' in window)) return;   // resta già disegnato
+
+  var osservatore = new IntersectionObserver(function(voci) {
+    voci.forEach(function(voce) {
+      if (!voce.isIntersecting) return;
+      voce.target.classList.add('is-inview');
+      osservatore.unobserve(voce.target);
+    });
+  }, { threshold: .35 });
+
+  segni.forEach(function(segno) { osservatore.observe(segno); });
 })();

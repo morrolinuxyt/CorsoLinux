@@ -144,6 +144,14 @@ blockquote p::after {
   font-weight: 700;
 }
 
+/* Le didascalie sotto ai grafici a ciambella sono h5, quindi 1.25rem: erano
+   più grandi del testo corrente che le precede. Sono didascalie, stanno un
+   gradino sotto. */
+.doughnut h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 .stats .fa {
   color: white;
   font-size: 60px;
@@ -164,8 +172,10 @@ blockquote p::after {
   border-bottom: 1px solid var(--hairline);
 }
 
+/* Il titolo delle recensioni aveva una misura sua, 1.75rem: era l'unico
+   titolo di sezione più piccolo degli altri. Resta il maiuscoletto, la
+   dimensione la prende da .section-title come tutti. */
 #recensioni h2 {
-  font-size: 1.75rem;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
@@ -184,8 +194,10 @@ blockquote p::after {
   }
 }
 
+/* i 25px di margine laterale rendevano la citazione più stretta del nome che
+   la firma, dentro allo stesso riquadro */
 .review-body {
-  margin: 0 25px;
+  margin: 0;
 }
 
 .fa-quote-left {
@@ -248,8 +260,7 @@ blockquote p::after {
 
 .yt_video {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+  aspect-ratio: 16 / 9;
 }
 
 .yt_video iframe {
@@ -448,6 +459,60 @@ span.keeptogether {
   box-shadow: 0 0 0 .2rem rgba(50, 108, 229, .4);
 }
 
+/* I pulsanti in fondo alla scheda: affiancati e di pari larghezza, in colonna
+   quando lo spazio non basta. mt-auto sul contenitore li tiene incollati in
+   fondo, così le schede di una riga chiudono tutte allo stesso modo. */
+/* Aria fra il testo che introduce una famiglia di corsi e la griglia che la
+   mostra: prima erano 16px, o dei <br> in coda al paragrafo. */
+.section-note + .card-deck,
+.section-lead + .card-deck,
+.section-subtitle + .card-deck,
+.section-note + .card-list,
+.section-lead + .card-list,
+.section-subtitle + .card-list,
+.section-note + .container,
+.section-lead + .container {
+  margin-top: 3rem;
+}
+
+/* Le schede del catalogo sono le stesse ovunque: quelle LPI ereditavano il
+   text-center del contenitore e il loro testo restava centrato, a differenza
+   di tutte le altre. */
+.card-deck .card-body {
+  text-align: left;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.card-actions .btn {
+  /* base stretta apposta: nelle colonne da un terzo i due pulsanti devono
+     starci affiancati come in quelle da metà, non impilarsi. */
+  flex: 1 1 7rem;
+}
+
+/* Pastiglia "Novità": appoggiata sull'angolo della copertina. Accanto al
+   titolo finiva a capo da sola su tutti i titoli lunghi, e sembrava un pezzo
+   di testo smarrito. */
+.card-badge {
+  position: absolute;
+  top: .75rem;
+  right: .75rem;
+  z-index: 2;
+  padding: .3em .75em;
+  border-radius: 999px;
+  background-color: var(--promo);
+  color: var(--promo-ink);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+}
+
 /* ============================================================
    Blocchi riutilizzabili per le landing dei corsi
    L'accento è per-pagina, impostato sul body:
@@ -462,6 +527,10 @@ span.keeptogether {
      sinistro e destro. Le griglie (tessere, pannelli, schede) restano piene:
      due larghezze in tutta la pagina, non tre. */
   --measure: 780px;
+
+  /* Colonna larga: griglie ed elenchi di schede. Sta fra la colonna di
+     lettura e la larghezza piena del contenitore. */
+  --measure-wide: 960px;
 
   /* Il pulsante "Vai al corso" è lo stesso ovunque: la CTA è un elemento
      dell'interfaccia, non dell'identità della singola landing. Riconoscibile
@@ -502,6 +571,25 @@ span.keeptogether {
 body {
   --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
+
+}
+
+/* Sopra alla prima sezione c'è l'hero, alto quanto lo schermo: i 6rem di
+   respiro servono a separare due blocchi di contenuto, non a staccarsi da un
+   video a tutta pagina. */
+.landing + section {
+  padding-top: 3.5rem;
+}
+
+/* Container annidati: Bootstrap dà a ognuno 15px di padding orizzontale e un
+   max-width proprio, quindi un .container dentro un altro rientra di 15px per
+   lato e finisce disallineato rispetto ai blocchi al primo livello (1110
+   contro 1140). Nelle pagine nate per aggregazione ce ne sono parecchi: qui
+   il secondo livello smette di stringere. */
+.container .container {
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 /* Ritmo verticale: sezioni alternate al posto dei margini negativi */
@@ -516,11 +604,90 @@ body {
   margin-bottom: 2.5rem;
 }
 
+/* Sottotitolo di sezione: separa le famiglie del catalogo dentro un'unica
+   sezione, senza competere col titolo. */
+/* Un titolo di famiglia che arriva dopo un blocco di schede ha bisogno di
+   più aria di uno che segue del testo: deve staccarsi dalla griglia sopra,
+   non solo dal paragrafo. */
+.card-list + .section-subtitle,
+.card-deck + .section-subtitle {
+  margin-top: 5.5rem;
+}
+
+.section-subtitle {
+  margin: 3rem 0 1.75rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 .section-lead {
   max-width: var(--measure);
   margin-left: auto;
   margin-right: auto;
-  color: var(--ink-muted);
+  /* Inchiostro pieno, non smorzato: è la frase che presenta la sezione,
+     non una nota a margine. */
+  color: var(--ink);
+}
+
+/* Evidenziatore: un segno tirato a mano, storto e che sborda dalle lettere.
+   Sta in un ::before dietro al testo e non in un background, perché gli
+   elementi inline non si possono ruotare: solo così il segno può essere
+   inclinato e uscire dai bordi invece di ricalcare la scatola del testo.
+   Il prezzo è che la spanna evidenziata non può andare a capo (è un
+   inline-block), quindi va usata su poche parole — che è poi il modo in cui
+   un evidenziatore vero si usa. */
+.marker {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  padding: 0 .1em;
+  /* il segno sborda a sinistra e a destra: senza questi margini finirebbe
+     addosso alle parole vicine */
+  margin: 0 .45em 0 .4em;
+  color: #1a1d20;
+}
+
+.marker::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -.35em;
+  right: -.4em;
+  /* il segno stringe il testo da sopra e da sotto: un evidenziatore vero
+     lascia poco margine sulle maiuscole, non una fascia intera. Sotto
+     rientra più che sopra: le lettere non hanno discendenti qui, e il tratto
+     appoggiato alla linea di base si legge come una passata, non come un
+     riquadro. I due valori si spostano in coppia: cambiarne uno solo
+     cambierebbe lo spessore invece della quota */
+  top: .21em;
+  bottom: .16em;
+  background: var(--accent);
+  /* appena smussati: quel tanto che basta a togliere lo spigolo netto senza
+     tornare alla pastiglia di prima. Raggi disuguali, e diversi fra
+     orizzontale e verticale, così il taglio non sembra fatto col righello */
+  border-radius: .16em .24em .14em .22em / .22em .14em .24em .16em;
+  transform: rotate(-1.2deg) skewX(-4deg);
+  transform-origin: left center;
+}
+
+/* Il tratto si disegna quando la frase entra in campo, non al caricamento:
+   la classe la mette lo script quando l'osservatore lo segnala. Senza JS il
+   segno è semplicemente già disegnato — lo stato di riposo qui sopra è
+   quello finito, non quello vuoto. */
+.marker.is-inview::before {
+  animation: marker-in .8s cubic-bezier(.2, .75, .3, 1) both;
+}
+
+@keyframes marker-in {
+  from { transform: rotate(-1.2deg) skewX(-4deg) scaleX(0); }
+  to   { transform: rotate(-1.2deg) skewX(-4deg) scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marker.is-inview::before {
+    animation: none;
+  }
 }
 
 .section-note {
@@ -530,12 +697,22 @@ body {
 }
 
 /* Il testo corrente era l'unico blocco rimasto senza trattamento: colore di
-   default, interlinea 1.5 e 1.1em di corpo giustificato: denso e slegato dai
-   pannelli accanto. Stessi token e più respiro fra le righe. */
+   default, interlinea 1.5 e 1.1em di corpo giustificato — denso e slegato dai
+   pannelli accanto.
+   Il corpo è 17,5px: a 20,8 — la misura della frase-manifesto — il testo
+   corrente diventava lui stesso un titolo e la gerarchia si appiattiva; ai
+   16,8 di partenza era faticoso da leggere. */
 .container .section-note,
 .container .section-lead {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 1.09375rem;                                            /* 17,5px */
+  line-height: 1.75;
+}
+
+/* L'h2 di Bootstrap vale 2rem, appena sopra ai 1.75rem del titolo di
+   famiglia: troppo vicini perché il secondo si legga come subordinato al
+   primo. Qui il salto è netto. */
+.section-title {
+  font-size: 2.6rem;
 }
 
 .section-note {
@@ -872,9 +1049,12 @@ body {
   }
 }
 
-/* Hero con teaser scuro (es. Kubernetes: luminanza media 0.08 contro lo 0.95
-   dei teaser Docker/Proxmox). Qui il dim globale non crea contrasto — lo sfondo
-   è già nero — spegne solo i tratti del video: si lavora dietro al testo. */
+/* Hero con teaser scuro: la patina nera (.scrim) fa da velo e la torcia la
+   buca. Nessuna pagina lo usa più — Kubernetes ha unito logo e teaser in un
+   unico hero (.landing--logo + .landing--torch) — ma le regole restano qui
+   come variante pronta all'uso: la torcia ormai è generica.
+   Il dim globale su un teaser già scuro non crea contrasto, spegne solo i
+   tratti del video: si lavora dietro al testo. */
 .landing--dark video {
   /* Nessun filtro qui: tutto lo scurimento sta nello scrim, così la
      "torcia" può bucarlo e scoprire il video originale. Il livello piatto
@@ -907,32 +1087,33 @@ body {
    raggio è 0, quindi l'hero è identico alla versione senza effetto.
    Solo su puntatori di precisione: su touch l'hover resterebbe incastrato. */
 @media (hover: hover) and (pointer: fine) {
-  .landing--dark .scrim {
+  .landing--torch .scrim,
+  .landing--torch .veil {
     -webkit-mask-image: radial-gradient(circle var(--torch-r, 0px) at var(--torch-x, -999px) var(--torch-y, -999px),
                         transparent 0%, transparent 38%, #000 100%);
     mask-image: radial-gradient(circle var(--torch-r, 0px) at var(--torch-x, -999px) var(--torch-y, -999px),
                 transparent 0%, transparent 38%, #000 100%);
   }
 
-  /* Col cursore sul titolo il faro scoprirebbe il diagramma proprio dietro
+  /* Col cursore sul titolo il faro scoprirebbe il video proprio dietro
      alle scritte: il testo si fa da parte. La CTA resta piena. */
-  .landing--dark h1,
-  .landing--dark .lead {
+  .landing--torch h1,
+  .landing--torch .lead {
     transition: opacity .25s ease;
   }
 
-  .landing--dark.is-peeking h1 {
+  .landing--torch.is-peeking h1 {
     opacity: .3;
   }
 
-  .landing--dark.is-peeking .lead {
+  .landing--torch.is-peeking .lead {
     opacity: .2;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .landing--dark h1,
-  .landing--dark .lead {
+  .landing--torch h1,
+  .landing--torch .lead {
     transition: none;
   }
 }
@@ -1079,6 +1260,23 @@ body {
   color: #212529;
 }
 
+/* Le didascalie sotto ai grafici a ciambella sono h5, quindi 1.25rem: erano
+   più grandi del testo corrente che le precede. Sono didascalie, stanno un
+   gradino sotto. */
+.doughnut h5 {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Il riquadro del coupon sta dentro al discorso della sezione: si ferma alla
+   colonna di lettura invece di attraversare tutto il contenitore. */
+#esame .callout-flat {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
 /* --- tavolozza scura: segue la preferenza di sistema --- */
 @media (prefers-color-scheme: dark) {
   html.theme-auto body {
@@ -1129,12 +1327,75 @@ html.theme-dark body {
   --accent-soft: color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
-/* #compara elenca descrizioni brevi sotto a ciascun titolo di corso.
-   Alla dimensione di 1.1em e giustificate risultavano pesanti: qui il corpo
-   base e il testo a bandiera si leggono meglio. */
-.landing-page #compara p {
-  font-size: 1rem;
+/* Schema di confronto fra i corsi: tre pannelli affiancati con lo stesso
+   scheletro — livello di partenza, nome, cosa impari, esame finale — così il
+   confronto si fa scorrendo le righe invece di leggere tre paragrafi. */
+.confronto > [class^="col-"] {
+  display: flex;
 }
+
+.confronto .info-panel {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.confronto-livello {
+  margin-bottom: .35rem;
+  color: var(--accent);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.confronto .info-panel h5 {
+  margin-bottom: 1.25rem;
+}
+
+/* la riga sull'esame chiude il pannello, staccata dall'elenco e appoggiata
+   in fondo: così le tre colonne si chiudono tutte allo stesso modo */
+.confronto-esame {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--hairline);
+  color: var(--ink-muted);
+  font-size: .95rem;
+}
+
+.confronto .icon-list {
+  flex: 1 1 auto;
+}
+
+/* In #compara i titoli dei corsi stanno fra un paragrafo e l'altro: senza
+   questa regola resterebbero larghi quanto il contenitore mentre i paragrafi
+   si stringono sulla colonna di lettura, e le due colonne non si
+   allineerebbero. */
+/* Figure, video e diagrammi stanno sulla stessa colonna del testo che li
+   introduce, come già fa .section-figure. Prima ereditavano la larghezza del
+   contenitore e restavano larghi 1110 contro i 780 dei paragrafi. */
+.yt_video,
+#lf-statistics {
+  display: block;
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* La citazione e le testimonianze stanno dentro al discorso: vanno sulla
+   stessa colonna dei paragrafi che le introducono, altrimenti il testo si
+   stringe e loro no. */
+#testimonianze blockquote,
+#testimonianze .testimonial {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* #compara elenca descrizioni brevi sotto a ciascun titolo di corso: erano
+   a 1.1em e giustificate, e risultavano pesanti. Ora i paragrafi portano
+   .section-note come il resto del testo corrente, quindi la misura la
+   prendono da lì e questa regola non serve più. */
 
 
 /* Selettore del tema: pastiglia discreta in basso a destra, fuori dal flusso.
@@ -1147,16 +1408,21 @@ html.theme-dark body {
   right: 1rem;
   bottom: 1rem;
   z-index: 1040;
-  width: 40px;
-  height: 40px;
+  /* 44px è anche la misura minima comoda per un bersaglio da toccare */
+  width: 44px;
+  height: 44px;
   padding: 0;
   border: 1px solid var(--hairline);
   border-radius: 50%;
   background-color: var(--panel);
-  color: var(--ink-muted);
-  font-size: 1rem;
+  color: var(--ink);
+  font-size: 1.15rem;
   line-height: 1;
-  opacity: .5;
+  /* a riposo era al 50% di opacità con l'inchiostro smorzato: si confondeva
+     col fondo. Ora è piena e staccata dalla pagina da un'ombra, ma resta un
+     cerchietto in un angolo. */
+  opacity: .92;
+  box-shadow: var(--shadow-md);
   cursor: pointer;
   transition: opacity .25s ease-in-out, visibility .25s ease-in-out,
               color .2s ease-in-out, box-shadow .2s ease-in-out,
@@ -1170,7 +1436,7 @@ html.theme-dark body {
 }
 
 .theme-toggle.auto-hide.is-visible {
-  opacity: .5;
+  opacity: .92;
   visibility: visible;
   transform: none;
 }
@@ -1179,7 +1445,8 @@ html.theme-dark body {
 .theme-toggle:focus {
   opacity: 1;
   color: var(--accent);
-  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
   outline: none;
 }
@@ -1198,6 +1465,94 @@ html.theme-dark body {
    il contrasto col testo si regola all'origine, abbassando l'opacità
    della ruota, esattamente come le altre landing fanno col teaser.
    ============================================================ */
+/* Hero senza media: il fondo è una velatura dell'accento della pagina sul
+   nero. Serve alle landing per cui non esiste un teaser, e non richiede di
+   inventare un'immagine solo per riempire lo schermo. */
+.landing--tinta .bg {
+  background: radial-gradient(ellipse 90% 80% at 50% 45%,
+    color-mix(in srgb, var(--accent) 34%, #0b1120) 0%,
+    #0b1120 55%,
+    #070a12 100%);
+  background-color: #0b1120;                                        /* ripiego */
+  filter: none;
+}
+
+/* Logo sopra al titolo: dopo un secondo si gira su se stesso come una
+   moneta. È rotateY, non rotateZ: il logo si ribalta sull'asse verticale
+   invece di girare in tondo. Il simbolo di Arch è simmetrico, quindi a
+   180 gradi torna identico e l'animazione si può fermare lì.
+   La prospettiva sta sul contenitore: applicata all'immagine stessa
+   ripartirebbe da capo a ogni fotogramma e il ribaltamento sembrerebbe
+   piatto. */
+.hero-logo {
+  /* inline-block: il contenitore si stringe sul logo. Da blocco occupava
+     tutta la colonna (1110px contro i 190 dell'immagine) e il ribaltamento
+     partiva passando col mouse a mezzo schermo di distanza. */
+  display: inline-block;
+  perspective: 900px;
+  margin-bottom: 2rem;
+}
+
+.hero-logo img {
+  display: block;
+  width: min(190px, 34vw);
+  margin: 0 auto;
+  /* il logo reagisce al tocco: niente ritardo di 300ms né evidenziazione
+     azzurra al tap */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Il ribaltamento è UNA sola animazione, applicata da js/common.js con una
+   classe: quello d'ingresso e quelli al passaggio del mouse sono lo stesso
+   giro. Tenerne due — una sul selettore base e una sulla classe — sembrava
+   più semplice, ma alla rimozione della classe il nome dell'animazione
+   tornava a cambiare e il browser rifaceva partire quella d'ingresso, con il
+   suo ritardo: si vedeva un secondo giro un secondo dopo il primo. */
+.hero-logo img.is-flipping {
+  animation: hero-flip 1.2s cubic-bezier(.5, .05, .3, 1) both;
+}
+
+/* Il giro completo lascia il logo esattamente com'era: a 180 gradi resterebbe
+   speculare, e il simbolo di Arch non è perfettamente simmetrico. */
+@keyframes hero-flip {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.landing--tinta h1 {
+  text-shadow: 0 2px 24px rgba(7, 10, 18, .9);
+}
+
+.landing--tinta .lead {
+  opacity: .72;
+}
+
+/* Hero di Kubernetes: il logo che gira sul fondo blu è un velo sopra al
+   teaser, non uno sfondo. La torcia lo buca e sotto c'è il video: si parte
+   dalla versione calma e il video si scopre solo se lo si cerca. */
+.landing--logo video {
+  z-index: -99;
+  filter: none;
+}
+
+.landing--logo .veil {
+  position: absolute;
+  z-index: -98;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Dentro al velo l'impilamento riparte da zero: qui gli z-index negativi
+   globali di .bg e .wheel finirebbero dietro al velo stesso. */
+.landing--logo .veil .bg,
+.landing--logo .veil .wheel {
+  z-index: auto;
+}
+
 .landing--logo .bg {
   background: radial-gradient(ellipse 90% 80% at 50% 45%, #16233f 0%, #0b1120 55%, #070a12 100%);
   filter: none;
@@ -1260,49 +1615,77 @@ html.theme-dark body {
    stare dentro l'altezza dell'immagine, altrimenti la scheda cresce e resta
    una fascia vuota sotto la copertina. Meno padding, titolo più vicino al
    testo e interlinea da scheda invece che da paragrafo lungo. */
-#novita .card-body {
-  padding: 1.25rem 1.5rem;
+/* Scheda orizzontale: copertina a sinistra, testo a destra. È il formato del
+   catalogo, dove le schede sono molte e servono a smistare più che a
+   raccontare. Sotto ai 768px le colonne di Bootstrap si impilano e la scheda
+   torna verticale da sola. */
+/* L'elenco del catalogo è più largo della colonna di lettura, ma non a filo
+   del contenitore: così le schede sporgono dal testo di un margine
+   riconoscibile invece di sembrare due impaginazioni diverse. */
+.card-list {
+  max-width: var(--measure-wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-list .card-h {
+  margin-bottom: 1.5rem;
+}
+
+.card-h .card-body {
+  padding: 1.5rem 1.75rem;
 }
 
 /* Con il pulsante ancorato in basso (mt-auto) lo spazio recuperato si può
-   spendere qui: il titolo respira senza far crescere la scheda. */
-#novita .card-title {
+   spendere qui: il titolo respira senza far crescere la scheda.
+   Il corpo scende invece a 1.35rem: qui la scheda è una voce d'elenco, e con
+   l'h3 di Bootstrap (1.75rem, in grassetto) risultava più grande e più pesante
+   del titolo della famiglia che la introduce. */
+/* Il titolo della scheda orizzontale: l'h3 di Bootstrap vale 1.75rem in
+   grassetto, troppo per una voce d'elenco ripetuta sette volte. */
+.card-h .card-title {
   margin-bottom: 1.1rem;
+  font-size: 1.35rem;
 }
 
-#novita .card-text {
+.card-h .card-text {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Il mt-auto del pulsante non spingeva niente: la colonna del testo è un
-   blocco, quindi .card-body si fermava all'altezza del suo contenuto e lo
-   spazio libero restava sotto, fuori dal flex. Resa flex la colonna, il
-   corpo si allunga fino in fondo e il pulsante scende con lui.
+/* La pastiglia va sulla copertina, che qui sta a sinistra: a destra finirebbe
+   addosso al titolo. */
+.card-h .card-badge {
+  right: auto;
+  left: .75rem;
+}
+
+/* Il mt-auto del pulsante non spingerebbe niente: la colonna del testo è un
+   blocco, quindi .card-body si fermerebbe all'altezza del suo contenuto e lo
+   spazio libero resterebbe sotto, fuori dal flex. Resa flex la colonna, il
+   corpo si allunga fino in fondo e i pulsanti scendono con lui.
    In mobile le colonne sono impilate e alte quanto il contenuto: lì non
    cambia nulla. */
-#novita .row.no-gutters > [class^="col-"]:last-child {
+.card-h .row.no-gutters > [class^="col-"] {
   display: flex;
 }
 
-#novita .row.no-gutters .card-body {
+.card-h .row.no-gutters .card-body {
   flex: 1 1 auto;
 }
 
-/* Rete di sicurezza: se un testo più lungo fa comunque crescere la scheda,
-   la copertina si allunga con lei invece di lasciare il vuoto sotto. */
-#novita .row.no-gutters > [class^="col-"]:first-child {
-  display: flex;
-}
-
-#novita .row.no-gutters .invisible-link {
-  display: block;
-  width: 100%;
-}
-
-#novita .card-img {
+/* Se un testo più lungo fa comunque crescere la scheda, la copertina si
+   allunga con lei invece di lasciare il vuoto sotto. */
+.card-h .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  .card-h .card-img {
+    height: auto;
+  }
 }

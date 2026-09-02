@@ -18,6 +18,8 @@
 
   <meta name="description" content="Kubernetes Per Comuni Mortali è il modo più semplice per passare da Docker all'orchestrazione dei container, senza essere sopraffatti dalla complessità.">
 
+  <link rel="canonical" href="https://corsolinux.com/kubernetes">
+
   <title>Kubernetes Per Comuni Mortali | Corso Linux</title>
 
 <?php include 'snippets/theme-init.php';?>
@@ -26,28 +28,17 @@
 <body id="page-top" class="landing-page" style="--accent: #326ce5;">
 
   <?php
+    // Statistiche pubbliche del corso su Udemy. Finché non c'è un id in
+    // data/corsi.php il catalogo restituisce zero e la fascia dei contatori
+    // resta nascosta.
+    include_once 'snippets/catalogo.php';
 
-    //UDEMY STATS
-    ini_set("allow_url_fopen", 1);
-
-    // TODO: sostituire con l'ID Udemy definitivo di "Kubernetes Per Comuni Mortali"
-    $KPCM_COURSE_ID = "";
-
-    $subs = $reviews = $lessons = 0;
-
-    if ($KPCM_COURSE_ID != "") {
-      $json = @file_get_contents('https://www.udemy.com/api-2.0/courses/' . $KPCM_COURSE_ID . '?fields[course]=title,num_subscribers,num_lectures,num_reviews');
-      $KPCM_STATS = json_decode($json);
-
-      if ($KPCM_STATS) {
-        $subs = $KPCM_STATS->num_subscribers;
-        $reviews = $KPCM_STATS->num_reviews;
-        $lessons = $KPCM_STATS->num_lectures;
-      }
-    }
+    $stats   = catalogo_statistiche(null, array('kubernetes'));
+    $subs    = $stats['subs'];
+    $lessons = $stats['lessons'];
+    $reviews = $stats['reviews'];
 
     $show_counters = ($subs > 0 || $lessons > 0 || $reviews > 0);
-
   ?>
 
   <?php include 'snippets/promo-banner.php';?>
@@ -85,27 +76,17 @@
 
 <?php include 'snippets/theme-toggle.php';?>
 
-  <?php
-    // Hero: 'logo' = ruota Kubernetes che gira lenta, 'video' = teaser.
-    // Il teaser è su fondo nero, quindi i contrasti col testo sono critici:
-    // qui si può passare da una versione all'altra cambiando questa riga.
-    $hero_mode = 'logo';
-  ?>
-
-  <?php if ($hero_mode === 'logo'): ?>
-  <header class="landing landing--logo">
-    <div class="bg"></div>
-    <div class="wheel" aria-hidden="true">
-      <img src="assets/kubernetes-logo-white.svg" alt="">
+  <?php /* Hero: il logo che gira è un velo sopra al teaser. Col mouse la
+             "torcia" lo buca e scopre il video (js/common.js); su touch la
+             torcia non esiste e resta il solo logo, senza scaricare il video. */ ?>
+  <header class="landing landing--logo landing--torch">
+    <video data-src="assets/teaser-kpcm.mp4" autoplay loop muted playsinline></video>
+    <div class="veil" aria-hidden="true">
+      <div class="bg"></div>
+      <div class="wheel">
+        <img src="assets/kubernetes-logo-white.svg" alt="">
+      </div>
     </div>
-  <?php else: ?>
-  <header class="landing landing--dark">
-    <div class="bg"></div>
-    <video autoplay loop muted>
-      <source src="assets/teaser-kpcm.mp4" width="100%">
-    </video>
-    <div class="scrim"></div>
-  <?php endif ?>
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-12 text-center text-white">
@@ -143,7 +124,6 @@
 
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
-          <a data-umami-event="kubernetes_goto_Kubernetes" class="invisible-link" href="<?php echo $KPCM; ?>">
             <div class="card">
               <img src="assets/kubernetes-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
@@ -163,7 +143,6 @@
 
               </div>
             </div>
-          </a>
         </div>
       </div>
     </div>
@@ -238,7 +217,7 @@
           <div class="info-panel">
             <h5><i class="fa fa-check-square-o mr-2" aria-hidden="true"></i>Prerequisiti</h5>
             <ul class="icon-list">
-              <li>Conoscenza base di <a href="index.php#compara"><b>Linux</b></a></li>
+              <li>Conoscenza base di <a data-umami-event="kubernetes_prereq_linux" href="linux.php"><b>Linux</b></a></li>
               <li>Buona conoscenza di <a href="docker.php"><b>Docker</b> o <b>Podman</b></a></li>
               <li>Fondamenti di <a href="https://corsoreti.it"><b>networking</b></a></li>
             </ul>

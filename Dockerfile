@@ -1,5 +1,5 @@
 FROM php:8.2-apache
-ENV APP_VERSION=v1.0
+ENV APP_VERSION=v2.0
 
 # Enable mod_rewrite
 RUN a2enmod rewrite \
@@ -16,6 +16,14 @@ RUN a2enmod rewrite \
         RewriteRule ^(.+)$ $1.php [L]\n\
     </Directory>\n\
 </VirtualHost>' > /etc/apache2/sites-available/000-default.conf
+
+# Configurazione PHP di produzione: gli errori finiscono nel log del container,
+# non in cima alla pagina. Senza un php.ini l'immagine lascia display_errors
+# acceso, e un servizio esterno irraggiungibile basta a stampare Warning e
+# percorsi del filesystem ai visitatori.
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
+ && printf 'display_errors=Off\nlog_errors=On\nerror_log=/dev/stderr\n' \
+    > "$PHP_INI_DIR/conf.d/zz-errori.ini"
 
 COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html
