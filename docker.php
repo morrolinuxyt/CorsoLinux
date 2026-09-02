@@ -229,7 +229,7 @@
   <section id="recensioni">
     <div class="text-center">
       <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
-      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
+      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
           <div class="carousel-item active">
@@ -536,7 +536,7 @@
     </div>
   </section>
 
-  <section data-umami-event="docker_section_statistiche" id="statistiche" class="section-accent">
+  <section data-umami-event="docker_section_statistiche" id="statistiche" class="callout-flat">
     <div class="container text-center">
     <h2 class="section-title">Numeri che parlano</h2>
       <div id="counters" class="row">

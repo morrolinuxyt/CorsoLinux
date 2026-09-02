@@ -38,6 +38,11 @@ function isInViewport(el, partially) {
     el = el[0];
   }
 
+  // selettore che non trova nulla (sezione commentata o assente da questa
+  // pagina): non è in viewport, e soprattutto non deve far esplodere il resto
+  // dei controlli in track_scroll().
+  if (!el) return false;
+
   var rect = el.getBoundingClientRect();
   var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
   var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
@@ -246,6 +251,10 @@ function increment(){
     if (icon) icon.className = 'fa ' + ICON[theme];
     btn.title = LABEL[theme];
     btn.setAttribute('aria-label', LABEL[theme]);
+
+    // Chi disegna su canvas (i grafici a ciambella) non è raggiunto dal CSS:
+    // deve rileggere la tavolozza da sé quando il tema cambia.
+    document.dispatchEvent(new CustomEvent('themechange', { detail: theme }));
 
     if (!save) return;
     try {

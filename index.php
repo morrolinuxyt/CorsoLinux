@@ -214,7 +214,7 @@
   <section id="recensioni">
     <div class="text-center">
       <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
-      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%; height: 130px !important;">
+      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%;">
         <div class="carousel-inner col-sm-9 ml-auto mr-auto">
 
           <div class="carousel-item active">
@@ -404,13 +404,13 @@
       <div id="lf-statistics" class="container text-center">
         <div class="row">
 
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="#6960C4" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart1" value="97" color="--accent" tint="1" desc="dei responsabili delle assunzioni indica assumere <b>talenti Open Source</b> come una priorità">
           </div>
 
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="#F4BD47" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart2" value="92" color="--accent" tint=".78" desc="afferma di riscontrare <b>difficoltà nel reperire personale</b> qualificato da mettere sul campo">
           </div>
 
-          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="#D1509F" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
+          <div style="line-height:50%;" class="col-lg-4 stats doughnut" id="statsChart3" value="88" color="--accent" tint=".6" desc="dei responsabili intervistati ha dichiarato di prioritizzare l'assunzione di <b>professionisti certificati">
           </div>
 
         </div>
@@ -426,7 +426,7 @@
   <section data-umami-event="section_statistiche" id="statistiche" class="callout-flat">
     <div class="container text-center">
       <p class="mb-5">
-        Unisciti agli oltre ventimila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
+        Unisciti agli oltre trentamila studenti già iscritti al <b>corso bestseller italiano su Linux</b>, costruisci solide basi e <b>inizia la tua carriera come professionista in un settore in rapida crescita!</b>
       </p>
       <div id="counters" class="row">
         <div class="col-lg-4 stats">

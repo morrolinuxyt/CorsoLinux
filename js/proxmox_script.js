@@ -1,19 +1,20 @@
 var programmaVisible = false;
 var countersVisible = false;
 
+// Ogni sezione ha il suo controllo indipendente: prima ciascun ramo faceva
+// "return", quindi bastava che una sezione più in alto fosse ancora anche solo
+// parzialmente a schermo per non arrivare mai a quelle sotto. I contatori, che
+// stanno in fondo alla catena, partivano così con parecchio ritardo.
 function track_scroll(){
-  if(isInViewport($('#counters'), 1)){
-    if(countersVisible) return;
+  if(!programmaVisible && isInViewport($('#programma'), 1)){
+    programmaVisible = true;
+    umami.track('scroll_proxmox_programma');
+  }
+
+  if(!countersVisible && isInViewport($('#counters'), 1)){
     countersVisible = true;
     increment();
     umami.track('scroll_proxmox_counters');
-    return;
-  }
-  if(isInViewport($('#programma'), 1)){
-    if(programmaVisible) return;
-    programmaVisible = true;
-    umami.track('scroll_proxmox_programma');
-    return;
   }
 }
 

@@ -2,25 +2,25 @@ var recensioniVisible = false;
 var programmaVisible = false;
 var countersVisible = false;
 
+// Ogni sezione ha il suo controllo indipendente: prima ciascun ramo faceva
+// "return", quindi bastava che una sezione più in alto fosse ancora anche solo
+// parzialmente a schermo per non arrivare mai a quelle sotto. I contatori, che
+// stanno in fondo alla catena, partivano così con parecchio ritardo.
 function track_scroll(){
-  if(isInViewport($('#recensioni'), 1)){
-    if(recensioniVisible) return;
+  if(!recensioniVisible && isInViewport($('#recensioni'), 1)){
     recensioniVisible = true;
     umami.track('scroll_docker_recensioni');
-    return;
   }
-  if(isInViewport($('#programma'), 1)){
-    if(programmaVisible) return;
+
+  if(!programmaVisible && isInViewport($('#programma'), 1)){
     programmaVisible = true;
     umami.track('scroll_docker_programma');
-    return;
   }
-  if(isInViewport($('#counters'), 1)){
-    if(countersVisible) return;
+
+  if(!countersVisible && isInViewport($('#counters'), 1)){
     countersVisible = true;
     increment();
     umami.track('scroll_docker_counters');
-    return;
   }
 }
 

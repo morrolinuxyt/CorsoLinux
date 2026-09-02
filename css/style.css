@@ -149,10 +149,6 @@ blockquote p::after {
   font-size: 60px;
 }
 
-#statistiche {
-  background-color: #FEC224;
-}
-
 .testimonials-header {
   font-size: 18pt;
   line-height: 1.1;
@@ -162,14 +158,30 @@ blockquote p::after {
 }
 
 #recensioni {
-  color: #5d564f;
-  background: #f7f7f7;
+  color: var(--ink);
+  background: var(--page-bg);
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
 }
 
 #recensioni h2 {
   font-size: 1.75rem;
   text-transform: uppercase;
   margin-bottom: 50px;
+}
+
+/* Il carosello aveva height:130px inline e le recensioni più lunghe
+   traboccavano sulla sezione successiva. Qui l'altezza è libera di crescere,
+   e il minimo — pari alla slide più alta — evita che la pagina sobbalzi
+   quando le recensioni ruotano. */
+#recensioni .carousel-inner {
+  min-height: 184px;
+}
+
+@media (max-width: 767.98px) {
+  #recensioni .carousel-inner {
+    min-height: 280px;
+  }
 }
 
 .review-body {
@@ -490,21 +502,6 @@ span.keeptogether {
 body {
   --accent-soft: rgba(0, 0, 0, .06);                                /* ripiego */
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
-}
-
-/* Fascia a tinta piena (i contatori "Numeri che parlano"): prende l'accento
-   della pagina invece di un colore cablato diverso per landing. Il testo è
-   bianco fisso perché il fondo è saturo in entrambi i temi. */
-.section-accent {
-  background-color: var(--accent);
-}
-
-.section-accent,
-.section-accent h2,
-.section-accent h5,
-.section-accent .counting,
-.section-accent .fa {
-  color: #ffffff;
 }
 
 /* Ritmo verticale: sezioni alternate al posto dei margini negativi */
@@ -1029,11 +1026,6 @@ body {
 
 /* --- sezioni con colori cablati, ora tokenizzate --- */
 
-.landing-page #recensioni {
-  background: var(--surface);
-  color: var(--ink);
-}
-
 /* #percorso era forzato bianco perché il diagramma LPI è disegnato per fondo
    chiaro. Ora la sezione segue il tema e il bianco resta solo sotto
    all'immagine, come un vassoio: si legge come una scelta, non come una toppa. */
@@ -1053,12 +1045,37 @@ body {
   color: var(--ink);
 }
 
-/* riquadri a tinta fissa: il testo dentro deve restare scuro in ogni tema */
-.landing-page .callout-flat,
-.landing-page .callout-flat h2,
-.landing-page .callout-flat h5,
-.landing-page .callout-flat p,
-.landing-page .callout-flat .counting {
+/* Fascia gialla a tinta fissa (i contatori "Numeri che parlano" e il richiamo
+   della index): stesso giallo su tutte le pagine, in entrambi i temi. Il testo
+   resta scuro perché sul giallo il bianco arriva a malapena a 1.7:1. */
+.callout-flat {
+  background-color: #FEC224;
+
+  /* Il titolo aveva 6rem d'aria sopra e 2.5 sotto, con le icone che partono
+     subito: sembrava incollato ai numeri mentre in alto lo spazio avanzava.
+     La fascia cede un po' sopra e lo restituisce in mezzo. */
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+}
+
+.callout-flat .section-title {
+  margin-bottom: 4rem;
+}
+
+/* In colonna i tre blocchi si toccano: l'etichetta di uno finisce attaccata
+   all'icona del successivo. */
+@media (max-width: 991.98px) {
+  .callout-flat .stats + .stats {
+    margin-top: 2.5rem;
+  }
+}
+
+.callout-flat,
+.callout-flat h2,
+.callout-flat h5,
+.callout-flat p,
+.callout-flat .counting,
+.callout-flat .stats .fa {
   color: #212529;
 }
 

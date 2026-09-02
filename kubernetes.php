@@ -451,7 +451,7 @@
   </section>
 
   <?php if($show_counters): ?>
-  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" class="section-accent">
+  <section data-umami-event="kubernetes_section_statistiche" id="statistiche" class="callout-flat">
     <div class="container text-center">
     <h2 class="section-title">Numeri che parlano</h2>
       <div id="counters" class="row">
