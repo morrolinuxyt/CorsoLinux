@@ -136,9 +136,9 @@
                   L'obbiettivo di questo corso è rendere Kubernetes uno strumento <b>alla portata di tutti</b>, abbattendo la barriera d'ingresso che troppo spesso scoraggia chi vuole crescere.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="kubernetes_goto_kubernetes_SPECIAL_OFFER" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto stretched-link"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="kubernetes_goto_kubernetes_SPECIAL_OFFER" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="kubernetes_goto_Kubernetes" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto stretched-link"><b>Vai al corso</b></a>
+                <a data-umami-event="kubernetes_goto_Kubernetes" title="Kubernetes Per Comuni Mortali" href="<?php echo $KPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>

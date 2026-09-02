@@ -25,7 +25,7 @@
 <?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top" class="landing-page type-lg" style="--accent: #ff651c;">
+<body id="page-top" class="landing-page" style="--accent: #ff651c;">
 
   <?php
     // Statistiche pubbliche dei tre corsi LPI, sommate. Passano dal catalogo,

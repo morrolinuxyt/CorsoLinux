@@ -25,7 +25,7 @@
 <?php include 'snippets/theme-init.php';?>
 </head>
 
-<body id="page-top" class="landing-page type-lg" style="--accent: #ff651c;">
+<body id="page-top" class="landing-page" style="--accent: #ff651c;">
 
   <?php include 'snippets/promo-banner.php';?>
   <?php include 'snippets/udemy-coupons.php';?>
@@ -138,7 +138,7 @@
               e dalla riga di comando, senza pensare agli esami.
             </p>
             <ul class="icon-list">
-              <li><a data-umami-event="home_percorso_zero_arch" href="<?php echo $archlinux; ?>">Arch Linux Per Comuni Mortali</a></li>
+              <li><a data-umami-event="home_percorso_zero_arch" href="arch.php">Arch Linux Per Comuni Mortali</a></li>
               <li><a data-umami-event="home_percorso_zero_linux" href="linux.php#dazero">Cerchi un approccio più graduale?</a></li>
             </ul>
           </div>

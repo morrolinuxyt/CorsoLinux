@@ -98,12 +98,12 @@ $CORSI = array(
     'udemy_id' => null,
     'sommario' => 'Impara Linux su una distribuzione fresca, <b>stimolante</b> e sfidante al punto giusto, con illustrazioni animate ed esempi che puoi replicare subito...',
     'coupon'   => 'archlinux',
-    'landing'  => null,
+    'landing'  => 'arch.php',
     'evento'   => 'Arch',
     'novita'   => false,
     'testo'    => 'Questo corso si rivolge a chi ha poca o nessuna esperienza e vuole imparare Linux su una distribuzione fresca, <b>stimolante</b> e sfidante al punto giusto.<br><br>
 
-                Ti insegnerò <b>teoria e pratica</b>, con illustrazioni animate ed esempi concreti che potrai applicare alla tua installazione per ottenere il massimo dalla tua distro preferita.<br><br>
+                Ti insegnerò <b>teoria e pratica</b>, con esempi concreti che potrai applicare alla tua installazione per ottenere il massimo dalla tua distro preferita.<br><br>
 
                 L\'obbiettivo di questo corso è rendere la curva di apprendimento meno ripida possibile per tutti i nuovi utenti.',
   ),

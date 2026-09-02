@@ -279,6 +279,44 @@ function increment(){
 })();
 
 
+// Logo dell'hero: si ribalta da solo poco dopo il caricamento, e poi a ogni
+// passaggio del mouse (o tocco). È sempre lo stesso giro, avviato aggiungendo
+// una classe e chiuso togliendola a fine animazione.
+(function() {
+  var logo = document.querySelector('.hero-logo');
+  if (!logo) return;
+
+  var img = logo.querySelector('img');
+  if (!img) return;
+
+  if (!window.matchMedia) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  function ribalta() {
+    // un ribaltamento alla volta: tornare sul logo a metà giro non lo fa
+    // ripartire da capo
+    if (img.classList.contains('is-flipping')) return;
+    img.classList.add('is-flipping');
+  }
+
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    // col mouse basta passarci sopra
+    logo.addEventListener('mouseenter', ribalta);
+  } else {
+    // su touch l'hover resterebbe attaccato al primo tocco: qui si ribalta
+    // al tocco, così l'animazione esiste anche da telefono
+    logo.addEventListener('click', ribalta);
+  }
+
+  img.addEventListener('animationend', function(e) {
+    if (e.animationName === 'hero-flip') img.classList.remove('is-flipping');
+  });
+
+  // il primo giro, quello di presentazione
+  setTimeout(ribalta, 1000);
+})();
+
+
 // Selettore del tema: automatico -> chiaro -> scuro -> automatico.
 // "automatico" non salva nulla, così la pagina continua a seguire il sistema
 // anche se la preferenza cambia. La classe sta su <html>: snippets/theme-init.php

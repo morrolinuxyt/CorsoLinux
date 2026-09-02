@@ -132,9 +132,9 @@
                   L'obbiettivo di questo corso è migliorare le tue skill sistemistiche integrando competenze professionali spendibili lavorativamente.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="proxmox_goto_proxmox_SPECIAL_OFFER" title="Proxmox Per Comuni Mortali" href="<?php echo $PPCM; ?>" class="btn btn-special-offer mt-auto stretched-link"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="proxmox_goto_proxmox_SPECIAL_OFFER" title="Proxmox Per Comuni Mortali" href="<?php echo $PPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="proxmox_goto_Proxmox" title="Proxmox Per Comuni Mortali" href="<?php echo $PPCM; ?>" class="btn btn-primary mt-auto stretched-link"><b>Vai al corso</b></a>
+                <a data-umami-event="proxmox_goto_Proxmox" title="Proxmox Per Comuni Mortali" href="<?php echo $PPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>

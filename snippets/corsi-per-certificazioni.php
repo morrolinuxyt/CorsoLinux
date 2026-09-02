@@ -9,8 +9,8 @@
         <?php include 'snippets/schede-corsi-lpi.php';?>
       </section>
 
-      <p>
-        Scopri di più sulle certificazioni ufficiali <b>Linux Professional Institute</b> (LPI) in <a href="https://corsolinux.com"> questa pagina</a>.
-	    </p>
+      <p class="section-note">
+        Scopri di più sulle certificazioni ufficiali <b>Linux Professional Institute</b> (LPI) nella <a href="linux.php">pagina dedicata</a>.
+      </p>
 	  </div>
   </section>

@@ -172,8 +172,10 @@ blockquote p::after {
   border-bottom: 1px solid var(--hairline);
 }
 
+/* Il titolo delle recensioni aveva una misura sua, 1.75rem: era l'unico
+   titolo di sezione più piccolo degli altri. Resta il maiuscoletto, la
+   dimensione la prende da .section-title come tutti. */
 #recensioni h2 {
-  font-size: 1.75rem;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
@@ -681,22 +683,13 @@ body {
 }
 
 /* Il testo corrente era l'unico blocco rimasto senza trattamento: colore di
-   default, interlinea 1.5 e 1.1em di corpo giustificato: denso e slegato dai
-   pannelli accanto. Stessi token e più respiro fra le righe. */
+   default, interlinea 1.5 e 1.1em di corpo giustificato — denso e slegato dai
+   pannelli accanto.
+   Il corpo è 17,5px: a 20,8 — la misura della frase-manifesto — il testo
+   corrente diventava lui stesso un titolo e la gerarchia si appiattiva; ai
+   16,8 di partenza era faticoso da leggere. */
 .container .section-note,
 .container .section-lead {
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-/* Tipografia ampia: si applica alle pagine che portano .type-lg sul body, e
-   la si sta estendendo una pagina alla volta. Quando ci saranno tutte, basta
-   togliere `.type-lg` da questi selettori e la classe dai <body>.
-   Il corpo del testo sale da 16,8 a 17px: a 20,8 — la misura della
-   frase-manifesto — il testo corrente diventava lui stesso un titolo e la
-   gerarchia si appiattiva. */
-.type-lg .container .section-note,
-.type-lg .container .section-lead {
   font-size: 1.09375rem;                                            /* 17,5px */
   line-height: 1.75;
 }
@@ -704,7 +697,7 @@ body {
 /* L'h2 di Bootstrap vale 2rem, appena sopra ai 1.75rem del titolo di
    famiglia: troppo vicini perché il secondo si legga come subordinato al
    primo. Qui il salto è netto. */
-.type-lg .section-title {
+.section-title {
   font-size: 2.6rem;
 }
 
@@ -1367,8 +1360,8 @@ html.theme-dark body {
 /* Figure, video e diagrammi stanno sulla stessa colonna del testo che li
    introduce, come già fa .section-figure. Prima ereditavano la larghezza del
    contenitore e restavano larghi 1110 contro i 780 dei paragrafi. */
-.type-lg .yt_video,
-.type-lg #lf-statistics {
+.yt_video,
+#lf-statistics {
   display: block;
   max-width: var(--measure);
   margin-left: auto;
@@ -1452,6 +1445,69 @@ html.theme-dark body {
    il contrasto col testo si regola all'origine, abbassando l'opacità
    della ruota, esattamente come le altre landing fanno col teaser.
    ============================================================ */
+/* Hero senza media: il fondo è una velatura dell'accento della pagina sul
+   nero. Serve alle landing per cui non esiste un teaser, e non richiede di
+   inventare un'immagine solo per riempire lo schermo. */
+.landing--tinta .bg {
+  background: radial-gradient(ellipse 90% 80% at 50% 45%,
+    color-mix(in srgb, var(--accent) 34%, #0b1120) 0%,
+    #0b1120 55%,
+    #070a12 100%);
+  background-color: #0b1120;                                        /* ripiego */
+  filter: none;
+}
+
+/* Logo sopra al titolo: dopo un secondo si gira su se stesso come una
+   moneta. È rotateY, non rotateZ: il logo si ribalta sull'asse verticale
+   invece di girare in tondo. Il simbolo di Arch è simmetrico, quindi a
+   180 gradi torna identico e l'animazione si può fermare lì.
+   La prospettiva sta sul contenitore: applicata all'immagine stessa
+   ripartirebbe da capo a ogni fotogramma e il ribaltamento sembrerebbe
+   piatto. */
+.hero-logo {
+  /* inline-block: il contenitore si stringe sul logo. Da blocco occupava
+     tutta la colonna (1110px contro i 190 dell'immagine) e il ribaltamento
+     partiva passando col mouse a mezzo schermo di distanza. */
+  display: inline-block;
+  perspective: 900px;
+  margin-bottom: 2rem;
+}
+
+.hero-logo img {
+  display: block;
+  width: min(190px, 34vw);
+  margin: 0 auto;
+  /* il logo reagisce al tocco: niente ritardo di 300ms né evidenziazione
+     azzurra al tap */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Il ribaltamento è UNA sola animazione, applicata da js/common.js con una
+   classe: quello d'ingresso e quelli al passaggio del mouse sono lo stesso
+   giro. Tenerne due — una sul selettore base e una sulla classe — sembrava
+   più semplice, ma alla rimozione della classe il nome dell'animazione
+   tornava a cambiare e il browser rifaceva partire quella d'ingresso, con il
+   suo ritardo: si vedeva un secondo giro un secondo dopo il primo. */
+.hero-logo img.is-flipping {
+  animation: hero-flip 1.2s cubic-bezier(.5, .05, .3, 1) both;
+}
+
+/* Il giro completo lascia il logo esattamente com'era: a 180 gradi resterebbe
+   speculare, e il simbolo di Arch non è perfettamente simmetrico. */
+@keyframes hero-flip {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.landing--tinta h1 {
+  text-shadow: 0 2px 24px rgba(7, 10, 18, .9);
+}
+
+.landing--tinta .lead {
+  opacity: .72;
+}
+
 /* Hero di Kubernetes: il logo che gira sul fondo blu è un velo sopra al
    teaser, non uno sfondo. La torcia lo buca e sotto c'è il video: si parte
    dalla versione calma e il video si scopre solo se lo si cerca. */

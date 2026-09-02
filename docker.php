@@ -133,9 +133,9 @@
                   L'obbiettivo di questo corso è rendere Docker <b>alla portata di tutti</b>, riducendo il più possibile la curva di apprendimento.<br><br>
                 </p>
                 <?php if($show_promo): ?>
-                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto stretched-link"><?php echo $promo_cta_text; ?></a>
+                <a data-umami-event="docker_goto_Docker_SPECIAL_OFFER" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-special-offer mt-auto"><?php echo $promo_cta_text; ?></a>
                 <?php else: ?>
-                <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto stretched-link"><b>Vai al corso</b></a>
+                <a data-umami-event="docker_goto_Docker" title="Docker Per Comuni Mortali" href="<?php echo $DPCM; ?>" class="btn btn-primary mt-auto"><b>Vai al corso</b></a>
                 <?php endif ?>
 
               </div>
