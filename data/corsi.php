@@ -22,6 +22,7 @@
  *   evento    suffisso storico usato negli eventi Umami, per non spezzare le
  *             serie già raccolte; se assente si usa lo slug
  *   novita    true per mostrare il corso come nuova uscita
+ *   sommario  una o due righe, per la scheda orizzontale del catalogo
  *   testo     corpo della scheda (HTML)
  *   testo_esteso  variante più lunga, usata quando la scheda ricompare in
  *             fondo a una pagina lunga come secondo invito all'acquisto
@@ -38,6 +39,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso Kubernetes Per Comuni Mortali',
     'title'    => 'Kubernetes Per Comuni Mortali',
     'udemy_id' => null,
+    'sommario' => 'Per chi conosce già <b>Docker</b> e vuole fare il salto all\'<b>orchestrazione</b>: dal primo <i>Pod</i> al cluster <i>k3s</i>, con TLS automatico, storage persistente e Helm.',
     'coupon'   => 'KPCM',
     'landing'  => 'kubernetes.php',
     'evento'   => 'Kubernetes',
@@ -56,6 +58,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso Proxmox Per Comuni Mortali',
     'title'    => 'Proxmox Per Comuni Mortali',
     'udemy_id' => 6836885,
+    'sommario' => 'Il corso adatto a tutti per iniziare il proprio <i>homelab</i> e <b>crescere professionalmente</b>, fino alla gestione di un\'infrastruttura IT <i>aziendale</i> in Alta Disponibilità.',
     'coupon'   => 'PPCM',
     'landing'  => 'proxmox.php',
     'evento'   => 'Proxmox',
@@ -74,6 +77,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso Docker Per Comuni Mortali',
     'title'    => 'Docker Per Comuni Mortali',
     'udemy_id' => 6190731,
+    'sommario' => 'Si rivolge a chi ha <b>poca o nessuna esperienza</b> e vuole imparare Docker con un <b>approccio pratico</b> e stimolante, un mini progetto alla volta.',
     'coupon'   => 'DPCM',
     'landing'  => 'docker.php',
     'evento'   => 'Docker',
@@ -92,6 +96,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso Arch Linux Per Comuni Mortali',
     'title'    => 'Arch Linux Per Comuni Mortali',
     'udemy_id' => null,
+    'sommario' => 'Impara Linux su una distribuzione fresca, <b>stimolante</b> e sfidante al punto giusto, con illustrazioni animate ed esempi che puoi replicare subito.',
     'coupon'   => 'archlinux',
     'landing'  => null,
     'evento'   => 'Arch',
@@ -111,6 +116,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso LPI Linux Essentials',
     'title'    => 'Corso per certificazione LPI Linux Essentials online in italiano',
     'udemy_id' => 1912136,
+    'sommario' => 'Il punto di partenza: introduce a <b>GNU/Linux</b> e al mondo Open Source, e prepara al certificato <b>Linux Essentials</b>.',
     'coupon'   => 'essentials',
     'testo_esteso' => 'Il corso LPI Linux Essentials parte "da zero" e introduce a GNU/Linux e al mondo dell\'Open Source.<br><br>
                 Si rivolge ad un pubblico di utenti alle prime armi con Linux, ma anche a chi ha qualche lacuna da appianare.<br><br>
@@ -129,6 +135,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso LPIC-1 Exam 101',
     'title'    => 'Corso per certificazione LPIC-1 esame 101',
     'udemy_id' => 1705118,
+    'sommario' => 'Certificazione professionale LPI di primo livello, per aspiranti <b>System Administrator</b>.',
     'coupon'   => 'e101',
     'testo_esteso' => 'LPIC-1 è il corso di certificazione professionale LPI di primo livello.<br><br>
                 Partendo dalle conoscenze di base, arriverai a conoscere Linux in ogni suo aspetto, dalla diagnostica dei problemi più comuni all\'amministrazione di Server e PC Desktop.<br><br>
@@ -147,6 +154,7 @@ $CORSI = array(
     'alt'      => 'Copertina corso LPIC-1 Exam 102',
     'title'    => 'Corso per certificazione LPIC-1 esame 102',
     'udemy_id' => 1894304,
+    'sommario' => 'Secondo e ultimo esame del percorso LPIC-1: al termine ottieni la certificazione di <b>Linux System Administrator</b>.',
     'coupon'   => 'e102',
     'testo_esteso' => 'Seconda parte del programma di certificazione LPI di primo livello.<br><br>
                 Questo modulo ti dà la preparazione necessaria a passare il secondo e ultimo esame per la certificazione professionale di primo livello.<br><br>

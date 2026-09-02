@@ -478,6 +478,9 @@ span.keeptogether {
 .section-note + .card-deck,
 .section-lead + .card-deck,
 .section-subtitle + .card-deck,
+.section-note + .card-list,
+.section-lead + .card-list,
+.section-subtitle + .card-list,
 .section-note + .container,
 .section-lead + .container {
   margin-top: 3rem;
@@ -1342,49 +1345,76 @@ html.theme-dark body {
    stare dentro l'altezza dell'immagine, altrimenti la scheda cresce e resta
    una fascia vuota sotto la copertina. Meno padding, titolo più vicino al
    testo e interlinea da scheda invece che da paragrafo lungo. */
-#novita .card-body {
-  padding: 1.25rem 1.5rem;
+/* Scheda orizzontale: copertina a sinistra, testo a destra. È il formato del
+   catalogo, dove le schede sono molte e servono a smistare più che a
+   raccontare. Sotto ai 768px le colonne di Bootstrap si impilano e la scheda
+   torna verticale da sola. */
+.card-list .card-h {
+  margin-bottom: 1.5rem;
+}
+
+.card-h .card-body {
+  padding: 1.5rem 1.75rem;
 }
 
 /* Con il pulsante ancorato in basso (mt-auto) lo spazio recuperato si può
    spendere qui: il titolo respira senza far crescere la scheda. */
-#novita .card-title {
+.card-h .card-title {
   margin-bottom: 1.1rem;
 }
 
-#novita .card-text {
+.card-h .card-text {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Il mt-auto del pulsante non spingeva niente: la colonna del testo è un
-   blocco, quindi .card-body si fermava all'altezza del suo contenuto e lo
-   spazio libero restava sotto, fuori dal flex. Resa flex la colonna, il
-   corpo si allunga fino in fondo e il pulsante scende con lui.
+/* Qui i pulsanti hanno tutta la larghezza della colonna di testo: se li si
+   lascia crescere diventano due bandoni. Larghezza sul contenuto, allineati
+   a sinistra come il testo che li precede. */
+.card-h .card-actions .btn {
+  flex: 0 0 auto;
+  min-width: 9rem;
+}
+
+/* La pastiglia va sulla copertina, che qui sta a sinistra: a destra finirebbe
+   addosso al titolo. */
+.card-h .card-badge {
+  right: auto;
+  left: .75rem;
+}
+
+/* Il mt-auto del pulsante non spingerebbe niente: la colonna del testo è un
+   blocco, quindi .card-body si fermerebbe all'altezza del suo contenuto e lo
+   spazio libero resterebbe sotto, fuori dal flex. Resa flex la colonna, il
+   corpo si allunga fino in fondo e i pulsanti scendono con lui.
    In mobile le colonne sono impilate e alte quanto il contenuto: lì non
    cambia nulla. */
-#novita .row.no-gutters > [class^="col-"]:last-child {
+.card-h .row.no-gutters > [class^="col-"] {
   display: flex;
 }
 
-#novita .row.no-gutters .card-body {
+.card-h .row.no-gutters .card-body {
   flex: 1 1 auto;
 }
 
-/* Rete di sicurezza: se un testo più lungo fa comunque crescere la scheda,
-   la copertina si allunga con lei invece di lasciare il vuoto sotto. */
-#novita .row.no-gutters > [class^="col-"]:first-child {
-  display: flex;
-}
-
-#novita .row.no-gutters .invisible-link {
-  display: block;
-  width: 100%;
-}
-
-#novita .card-img {
+/* Se un testo più lungo fa comunque crescere la scheda, la copertina si
+   allunga con lei invece di lasciare il vuoto sotto. */
+.card-h .card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  .card-h .card-img {
+    height: auto;
+  }
+
+  /* In colonna i pulsanti a larghezza del contenuto sembrano sperduti: qui
+     prendono tutta la riga, come nelle schede verticali. */
+  .card-h .card-actions .btn {
+    flex: 1 1 100%;
+  }
 }

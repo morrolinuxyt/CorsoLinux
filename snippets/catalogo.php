@@ -115,6 +115,68 @@ if (!function_exists('catalogo_griglia')) {
   }
 }
 
+if (!function_exists('catalogo_scheda_orizzontale')) {
+  /**
+   * Scheda in orizzontale: copertina a sinistra, testo a destra.
+   *
+   * È il formato del catalogo, dove le schede sono tante e servono soprattutto
+   * a smistare: qui si usa il sommario breve, non la descrizione completa che
+   * vive nella scheda verticale delle landing.
+   */
+  function catalogo_scheda_orizzontale($slug, $corso) {
+    global $show_promo, $promo_cta_text;
+
+    $pagina  = catalogo_pagina();
+    $evento  = isset($corso['evento']) ? $corso['evento'] : $slug;
+    $url     = catalogo_url($corso);
+    $landing = isset($corso['landing']) ? $corso['landing'] : null;
+    if ($landing !== null && basename($landing, '.php') === $pagina) {
+      $landing = null;
+    }
+    $testo = !empty($corso['sommario']) ? $corso['sommario'] : $corso['testo'];
+    ?>
+      <div class="card card-h">
+        <?php if (!empty($corso['novita'])): ?><span class="card-badge">Novità</span><?php endif ?>
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="<?php echo $corso['immagine']; ?>" class="card-img" alt="<?php echo $corso['alt']; ?>" title="<?php echo $corso['title']; ?>">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title"><?php echo $corso['nome']; ?></h3>
+              <p class="card-text"><?php echo $testo; ?></p>
+
+              <div class="card-actions mt-auto">
+                <?php if ($landing !== null): ?>
+                <a data-umami-event="<?php echo $pagina; ?>_landing_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $landing; ?>" class="btn btn-outline-cta">Approfondisci</a>
+                <?php endif ?>
+
+                <?php if ($show_promo): ?>
+                <a data-umami-event="<?php echo $pagina; ?>_goto_<?php echo $evento; ?>_SPECIAL_OFFER" title="<?php echo $corso['nome']; ?>" href="<?php echo $url; ?>" class="btn btn-special-offer"><?php echo $promo_cta_text; ?></a>
+                <?php else: ?>
+                <a data-umami-event="<?php echo $pagina; ?>_goto_<?php echo $evento; ?>" title="<?php echo $corso['nome']; ?>" href="<?php echo $url; ?>" class="btn btn-primary"><b>Vai al corso</b></a>
+                <?php endif ?>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php
+  }
+}
+
+if (!function_exists('catalogo_elenco')) {
+  /** Elenco di schede orizzontali, una per riga. */
+  function catalogo_elenco($famiglia = null, $escludi = array()) {
+    echo '    <div class="card-list">' . "\n";
+    foreach (catalogo_corsi($famiglia, $escludi) as $slug => $corso) {
+      catalogo_scheda_orizzontale($slug, $corso);
+    }
+    echo '    </div>' . "\n";
+  }
+}
+
 if (!function_exists('catalogo_statistiche')) {
   /**
    * Numeri aggregati dei corsi (iscrizioni, lezioni, recensioni) presi

@@ -107,7 +107,7 @@
         seguire il classico approccio "a compartimenti stagni" della didattica vecchia scuola.
       </p>
 
-      <?php catalogo_griglia('pcm'); ?>
+      <?php catalogo_elenco('pcm'); ?>
 
       <h3 class="section-subtitle">Certificazioni LPI</h3>
       <p class="section-note text-justify">
@@ -116,7 +116,7 @@
         gli sbocchi occupazionali e il confronto fra i corsi nella <a data-umami-event="home_link_linux" href="linux.php">pagina dedicata</a>.
       </p>
 
-      <?php catalogo_griglia('lpi', array(), 'col-lg-4 col-md-6 mb-4'); ?>
+      <?php catalogo_elenco('lpi'); ?>
     </div>
   </section>
 
