@@ -121,6 +121,12 @@
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
             <div class="card">
+              <?php /* Superficie cliccabile della scheda: qui la landing è la pagina
+                       stessa, quindi porta al corso come il pulsante. Ancora vuota
+                       stesa sopra, non un wrapper (conterrebbe il pulsante, e le
+                       ancore annidate non sono valide). Vedi .card-link nel CSS. */ ?>
+              <a data-umami-event="proxmox_goto_Proxmox_INVISIBLE" class="card-link" href="<?php echo $PPCM; ?>"
+                 tabindex="-1" aria-hidden="true" title="Proxmox Per Comuni Mortali"></a>
               <img src="assets/proxmox-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Proxmox Per Comuni Mortali" title="Proxmox Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
                 <h3 class="card-title">Proxmox Per Comuni Mortali</h3>

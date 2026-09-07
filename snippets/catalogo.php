@@ -75,10 +75,26 @@ if (!function_exists('catalogo_scheda')) {
     }
 
     $novita = !empty($corso['novita']);
+
+    // Superficie cliccabile della scheda: nelle analytics il click sulla
+    // scheda batte quello sul pulsante, quindi tutta la scheda deve restare un
+    // bersaglio. Porta dove porta "leggi di più" — approfondire, non comprare:
+    // il gesto grosso e impreciso apre la landing, quello mirato sul pulsante
+    // porta all'acquisto. Dove la landing non c'è (o è la pagina su cui siamo
+    // già) la superficie punta al corso, come unica destinazione rimasta.
+    $sup_url    = $landing !== null ? $landing : $url;
+    $sup_evento = $pagina . ($landing !== null ? '_landing_' : '_goto_') . $evento . '_INVISIBLE';
     ?>
       <div class="<?php echo $col; ?>">
         <div class="card">
           <?php if ($novita): ?><span class="card-badge">Novità</span><?php endif ?>
+          <?php /* Non è un <a> che AVVOLGE la scheda: conterrebbe il pulsante,
+                    e l'HTML non ammette ancore annidate. È un'ancora vuota
+                    stesa sopra, con il pulsante davanti (vedi .card-link in
+                    css/style.css). Fuori dal giro di tastiera e lettori di
+                    schermo: il link c'è già, ed è il pulsante. */ ?>
+          <a data-umami-event="<?php echo $sup_evento; ?>" class="card-link" href="<?php echo $sup_url; ?>"
+             tabindex="-1" aria-hidden="true" title="<?php echo $corso['nome']; ?>"></a>
           <img src="<?php echo $corso['immagine']; ?>" class="card-img-top" alt="<?php echo $corso['alt']; ?>" title="<?php echo $corso['title']; ?>">
           <div class="card-body d-flex flex-column">
             <h3 class="card-title"><?php echo $corso['nome']; ?></h3>
@@ -137,9 +153,16 @@ if (!function_exists('catalogo_scheda_orizzontale')) {
       $landing = null;
     }
     $testo = !empty($corso['sommario']) ? $corso['sommario'] : $corso['testo'];
+
+    // Come nella scheda verticale: la superficie porta ad approfondire, il
+    // pulsante a comprare.
+    $sup_url    = $landing !== null ? $landing : $url;
+    $sup_evento = $pagina . ($landing !== null ? '_landing_' : '_goto_') . $evento . '_INVISIBLE';
     ?>
       <div class="card card-h">
         <?php if (!empty($corso['novita'])): ?><span class="card-badge">Novità</span><?php endif ?>
+        <a data-umami-event="<?php echo $sup_evento; ?>" class="card-link" href="<?php echo $sup_url; ?>"
+           tabindex="-1" aria-hidden="true" title="<?php echo $corso['nome']; ?>"></a>
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="<?php echo $corso['immagine']; ?>" class="card-img" alt="<?php echo $corso['alt']; ?>" title="<?php echo $corso['title']; ?>">
