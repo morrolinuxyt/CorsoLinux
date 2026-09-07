@@ -1544,6 +1544,11 @@ html.theme-dark body {
   width: 100%;
   height: 100%;
   pointer-events: none;
+  /* Ruotando, il quadrato del logo ha un ingombro pari alla sua diagonale:
+     senza taglio sporge oltre il bordo e su mobile la pagina scorre in
+     orizzontale. Il velo copre già tutto l'header, quindi è il punto giusto
+     dove fermarlo. */
+  overflow: hidden;
 }
 
 /* Dentro al velo l'impilamento riparte da zero: qui gli z-index negativi
@@ -1675,17 +1680,32 @@ html.theme-dark body {
   flex: 1 1 auto;
 }
 
-/* Se un testo più lungo fa comunque crescere la scheda, la copertina si
-   allunga con lei invece di lasciare il vuoto sotto. */
+/* La copertina tiene il proprio rapporto invece di riempire la colonna. Con
+   height:100% l'altezza gliela dettava il testo accanto — che va a capo più
+   volte man mano che la finestra si stringe — e object-fit:cover mangiava i
+   lati: il 9% a 1280px, quasi la metà sotto i 900. Fissato il 16/9 delle
+   copertine, il taglio non c'è più a nessuna larghezza; lo spazio che avanza
+   quando il testo è più alto si divide sopra e sotto (align-self: center) e
+   resta fondo della scheda. */
 .card-h .card-img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  align-self: center;
   object-fit: cover;
   border-radius: 0;
 }
 
-@media (max-width: 767.98px) {
-  .card-h .card-img {
-    height: auto;
+/* Impila prima di quanto farebbe Bootstrap. La soglia è quella del contenitore
+   lg: sotto i 992px il .container scende da 960 a 720, quindi la copertina
+   passa di colpo da 309 a 229px di larghezza mentre il testo, ancora più
+   stretto, va a capo quattro o cinque volte. Lì la scheda diventa alta il
+   doppio della copertina e questa galleggia in mezzo al vuoto. Impilata, la
+   copertina va a piena larghezza e il vuoto non esiste. La regola sostituisce
+   le colonne di Bootstrap, che qui sono col-md-4 e col-md-8. */
+@media (max-width: 991.98px) {
+  .card-h .row.no-gutters > [class^="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
