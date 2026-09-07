@@ -125,6 +125,12 @@
       <div class="row justify-content-center" style="margin-top: 3.5rem;">
         <div class="col-lg-7 col-md-9">
             <div class="card">
+              <?php /* Superficie cliccabile della scheda: qui la landing è la pagina
+                       stessa, quindi porta al corso come il pulsante. Ancora vuota
+                       stesa sopra, non un wrapper (conterrebbe il pulsante, e le
+                       ancore annidate non sono valide). Vedi .card-link nel CSS. */ ?>
+              <a data-umami-event="kubernetes_goto_Kubernetes_INVISIBLE" class="card-link" href="<?php echo $KPCM; ?>"
+                 tabindex="-1" aria-hidden="true" title="Kubernetes Per Comuni Mortali"></a>
               <img src="assets/kubernetes-per-comuni-mortali.png" class="card-img-top" alt="Copertina corso Kubernetes Per Comuni Mortali" title="Kubernetes Per Comuni Mortali">
               <div class="card-body d-flex flex-column">
                 <h3 class="card-title">Kubernetes Per Comuni Mortali</h3>

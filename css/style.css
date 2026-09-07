@@ -482,6 +482,32 @@ span.keeptogether {
   text-align: left;
 }
 
+/* Tutta la scheda è cliccabile: un'ancora vuota stesa sopra, non un wrapper
+   (un <a> attorno alla scheda conterrebbe il pulsante, e le ancore annidate
+   lasciavano in pagina copie vuote che rompevano la griglia).
+   Sopra ci restano il pulsante e il "leggi di più" in coda al testo, che
+   mantengono i loro eventi: la superficie porta ad approfondire, il pulsante
+   all'acquisto. Il prezzo è che il testo della scheda non si seleziona più
+   col mouse. */
+.card-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Sopra alla superficie: il pulsante (anche quando non sta in .card-actions,
+   come nelle schede d'acquisto scritte a mano delle landing) e il "leggi di
+   più" in coda al testo. */
+.card-actions,
+.card-body > .btn,
+.card-text a {
+  position: relative;
+  z-index: 2;
+}
+
 .card-actions {
   display: flex;
   flex-wrap: wrap;
