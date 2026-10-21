@@ -1,4 +1,4 @@
-FROM php:8.2-apache
+FROM php:8.2.35-apache
 ENV APP_VERSION=v2.1
 
 # Enable mod_rewrite
