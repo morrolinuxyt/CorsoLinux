@@ -1,3 +1,4 @@
+var recensioniVisible = false;
 var countersVisible = false;
 var programmaVisible = false;
 
@@ -6,6 +7,11 @@ var programmaVisible = false;
 // parzialmente a schermo per non arrivare mai a quelle sotto. I contatori, che
 // stanno in fondo alla catena, partivano così con parecchio ritardo.
 function track_scroll(){
+  if(!recensioniVisible && isInViewport($('#recensioni'), 1)){
+    recensioniVisible = true;
+    umami.track('scroll_kubernetes_recensioni');
+  }
+
   if(!programmaVisible && isInViewport($('#programma'), 1)){
     programmaVisible = true;
     umami.track('scroll_kubernetes_programma');

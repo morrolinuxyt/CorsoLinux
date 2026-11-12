@@ -222,6 +222,24 @@ blockquote p::after {
   filter: var(--carousel-invert);
 }
 
+/* Su schermi stretti il testo delle recensioni occupa tutta la larghezza e le
+   frecce, centrate in verticale, ci finivano sopra. Qui scendono in una
+   fascia libera sotto al carosello. Il margin-top inline (-3rem) va annullato
+   con !important. */
+@media (max-width: 767.98px) {
+  #slider {
+    padding-bottom: 3rem;
+  }
+
+  #slider .carousel-control-prev,
+  #slider .carousel-control-next {
+    top: auto;
+    bottom: 0;
+    height: 3rem;
+    margin-top: 0 !important;
+  }
+}
+
 .socials .fa {
   font-size: 30px;
   transition: all .2s ease-in-out;

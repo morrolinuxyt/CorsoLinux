@@ -58,6 +58,9 @@
             <a data-umami-event="kubernetes_navbar_corsi" class="nav-link js-scroll-trigger" href="#kubernetes">Kubernetes</a>
           </li>
           <li class="nav-item">
+            <a data-umami-event="kubernetes_navbar_recensioni" class="nav-link js-scroll-trigger" href="#recensioni">Recensioni</a>
+          </li>
+          <li class="nav-item">
             <a data-umami-event="kubernetes_navbar_programma" class="nav-link js-scroll-trigger" href="#programma">Programma</a>
           </li>
           <li class="nav-item">
@@ -229,6 +232,158 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recensioni">
+    <div class="text-center">
+      <h2 class="section-title">Fidati di chi l'ha già acquistato</h2>
+      <div id="slider" class="carousel slide" data-ride="carousel" data-interval="8000" style="width:100%;">
+        <div class="carousel-inner col-sm-9 ml-auto mr-auto">
+
+          <div class="carousel-item active">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Moreno è fantastico, rende tutto così semplice da farti capire tutto al volo. Non ti lascia solo, affianca ogni lezione con risorse e laboratori per poter mettere le mani in pasta.<br>
+              In questo modo non è prettamente teoria ma ci si può sporcare le mani. Il costo è irrisorio per il valore di questo corso. Non pensateci due volte ad acquistarlo.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Lorenzo, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Io credo sia troppo sottovalutata la capacità di Moreno di spiegare!<br>
+              Corso che finalmente mi ha introdotto a Kubernetes in modo semplice e, come di consueto da parte di Moreno, pratico.<br>
+              Ora finalmente potrò parlare la stessa lingua del mio DevOps senza farmi fare un continuo parallelismo con Docker.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Roberto, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              🐧🐧🐧🐧🐧 (5 pinguini &gt; 5 stelle)<br>
+              Ottimo corso, Moreno sempre sul pezzo, spiegazioni chiare con esempi e dimostrazioni passo passo.<br>
+              L'approccio didattico secondo me è ottimo, si parte da "cose funzionanti" e si vedono i concetti man mano.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Denis, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Pur essendo un tema molto esteso, la chiarezza e la progressione degli argomenti rendono il corso piacevole e utile.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Mattia, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Bellissimo corso, spiegato veramente bene, conoscevo già Kubernetes ma ho scoperto chicche assurde. Grazie.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Guerino, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Ottima esposizione, sempre chiaro ed esaustivo. Anche questo corso non delude.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Silvestro, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Corso ottimo, soprattutto la parte dove si analizzano gli errori più comuni.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Siro, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <p class="review-body">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Chiaro e ricco di esempi.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </p>
+            <p class="review-name"><i>Andrea, studente "Kubernetes Per Comuni Mortali"</i></p>
+            <div class="stars">
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+              <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            </div>
+          </div>
+
+        </div>
+          <a style="margin-top: -3rem;" class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a style="margin-top: -3rem;" class="carousel-control-next" href="#slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
       </div>
     </div>
   </section>
